@@ -1,9 +1,7 @@
 package com.hyperion.DnDApi.entidades;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "RASGOS")
@@ -12,6 +10,8 @@ public class Rasgo {
     @Column(length = 100)
     private String nombre;
     private String descripcion;
+    @ManyToMany(mappedBy = "rasgos")
+    private List<Enemigo> enemigos;
 
     public String getNombre() {
         return nombre;
@@ -27,5 +27,13 @@ public class Rasgo {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public List<Enemigo> getEnemigos() {
+        return enemigos;
+    }
+
+    public void setEnemigos(List<Enemigo> enemigos) {
+        this.enemigos = enemigos;
     }
 }

@@ -1,6 +1,7 @@
 package com.hyperion.DnDApi.entidades;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "ENEMIGOS")
@@ -23,6 +24,13 @@ public class Enemigo {
     private String sentidos;
     @Column(length = 100)
     private String habilidades;
+    @ManyToMany
+    @JoinTable(
+            name = "rasgos_enemigos",
+            joinColumns = @JoinColumn(name = "nombre_enemigo"),
+            inverseJoinColumns = @JoinColumn(name = "nombre_rasgo")
+    )
+    private List<Rasgo> rasgos;
     private float desafio;
     private int claseArmadura;
     private int puntosGolpe;
@@ -167,5 +175,13 @@ public class Enemigo {
 
     public void setCarisma(int carisma) {
         this.carisma = carisma;
+    }
+
+    public List<Rasgo> getRasgos() {
+        return rasgos;
+    }
+
+    public void setRasgos(List<Rasgo> rasgos) {
+        this.rasgos = rasgos;
     }
 }
