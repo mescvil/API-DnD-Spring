@@ -1,5 +1,6 @@
 package com.hyperion.DnDApi.controladores;
 
+import com.hyperion.DnDApi.entidades.Accion;
 import com.hyperion.DnDApi.entidades.Enemigo;
 import com.hyperion.DnDApi.entidades.Rasgo;
 import com.hyperion.DnDApi.servicios.CriaturasService;
@@ -10,61 +11,87 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/criaturas")
 public class CriaturasController {
 
     @Autowired
     private CriaturasService servicio;
 
     // ----------------- ENEMIGOS -----------------
-    @GetMapping("/criaturas/enemigos")
+    @GetMapping("/enemigos")
     public List<Enemigo> obtenerEnemigos() {
         return servicio.obtenerEnemigos();
     }
 
-    @GetMapping("/criaturas/enemigos/{nombre}")
+    @GetMapping("/enemigos/{nombre}")
     public Enemigo obtenerEnemigoPorId(@PathVariable("nombre") String nombre) {
         return servicio.obtenerEnemigoPorNombre(nombre);
     }
 
-    @PutMapping("/criaturas/enemigos")
+    @PutMapping("/enemigos")
     public boolean agregarEnemigo(@Valid @RequestBody Enemigo enemigo) {
         return servicio.agregarEnemigo(enemigo);
     }
 
-    @PostMapping("/criaturas/enemigos")
+    @PostMapping("/enemigos")
     public boolean actualizaEnemigo(@Valid @RequestBody Enemigo enemigo) {
         return servicio.actualizarEnemigo(enemigo);
     }
 
-    @DeleteMapping("/criaturas/enemigos/{nombre}")
+    @DeleteMapping("/enemigos/{nombre}")
     public boolean eliminaEnemigo(@PathVariable("nombre") String nombre) {
         return servicio.eliminaEnemigo(nombre);
     }
 
     // ----------------- RASGOS -----------------
-    @GetMapping("/criaturas/rasgos")
+    @GetMapping("/rasgos")
     public List<Rasgo> obtenerRasgos() {
         return servicio.obtenerRasgos();
     }
 
-    @GetMapping("/criaturas/rasgos/{nombre}")
+    @GetMapping("/rasgos/{nombre}")
     public Rasgo obtenerRasgoPorId(@PathVariable("nombre") String nombre) {
         return servicio.obtenerRasgoPorNombre(nombre);
     }
 
-    @PutMapping("/criaturas/rasgos")
+    @PutMapping("/rasgos")
     public boolean agregarRasgo(@Valid @RequestBody Rasgo rasgo) {
         return servicio.agregarRasgo(rasgo);
     }
 
-    @PostMapping("/criaturas/rasgos")
+    @PostMapping("/rasgos")
     public boolean actualizarRasgo(@Valid @RequestBody Rasgo rasgo) {
-        return servicio.agregarRasgo(rasgo);
+        return servicio.actualizarRasgo(rasgo);
     }
 
-    @DeleteMapping("/criaturas/rasgos/{nombre}")
+    @DeleteMapping("/rasgos/{nombre}")
     public boolean eliminaRasgo(@PathVariable("nombre") String nombre) {
         return servicio.eliminaRasgo(nombre);
+    }
+
+    // ----------------- ACCIONES -----------------
+    @GetMapping("/acciones")
+    public List<Accion> obtenerAcciones() {
+        return servicio.obtenerAcciones();
+    }
+
+    @GetMapping("/acciones/{nombre}")
+    public Accion obtenerAccionPorId(@PathVariable("nombre") String nombre) {
+        return servicio.obtenerAccionPorNombre(nombre);
+    }
+
+    @PutMapping("/acciones")
+    public boolean agregarAccion(@Valid @RequestBody Accion accion) {
+        return servicio.agregarAccion(accion);
+    }
+
+    @PostMapping("/acciones")
+    public boolean actualizarAccion(@Valid @RequestBody Accion accion) {
+        return servicio.actualizarAccion(accion);
+    }
+
+    @DeleteMapping("/acciones/{nombre}")
+    public boolean eliminarAccion(@PathVariable("nombre") String nombre) {
+        return servicio.eliminaAccion(nombre);
     }
 }

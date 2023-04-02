@@ -1,7 +1,9 @@
 package com.hyperion.DnDApi.servicios;
 
+import com.hyperion.DnDApi.entidades.Accion;
 import com.hyperion.DnDApi.entidades.Enemigo;
 import com.hyperion.DnDApi.entidades.Rasgo;
+import com.hyperion.DnDApi.repositorios.AccionesRepository;
 import com.hyperion.DnDApi.repositorios.EnemigosRepository;
 import com.hyperion.DnDApi.repositorios.RasgosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,8 @@ public class CriaturasServiceImpl implements CriaturasService {
     private EnemigosRepository repositorioEnemigos;
     @Autowired
     private RasgosRepository repositorioRasgos;
+    @Autowired
+    private AccionesRepository repositorioAcciones;
 
     // ----------------- ENEMIGOS -----------------
     @Override
@@ -83,6 +87,41 @@ public class CriaturasServiceImpl implements CriaturasService {
         if (repositorioRasgos.findById(nombre).isPresent()) {
             Rasgo r = repositorioRasgos.findById(nombre).get();
             repositorioRasgos.delete(r);
+            return true;
+        } else
+            return false;
+    }
+
+    // ----------------- ACCIONES -----------------
+    @Override
+    public List<Accion> obtenerAcciones() {
+        return repositorioAcciones.findAll();
+    }
+
+    @Override
+    public Accion obtenerAccionPorNombre(String nombre) {
+        if (repositorioAcciones.findById(nombre).isPresent()) {
+            return repositorioAcciones.findById(nombre).get();
+        } else return new Accion();
+    }
+
+    @Override
+    public boolean agregarAccion(Accion accion) {
+        repositorioAcciones.save(accion);
+        return true;
+    }
+
+    @Override
+    public boolean actualizarAccion(Accion accion) {
+        repositorioAcciones.save(accion);
+        return true;
+    }
+
+    @Override
+    public boolean eliminaAccion(String nombre) {
+        if (repositorioAcciones.findById(nombre).isPresent()) {
+            Accion r = repositorioAcciones.findById(nombre).get();
+            repositorioAcciones.delete(r);
             return true;
         } else
             return false;

@@ -1,5 +1,6 @@
 package com.hyperion.DnDApi.servicios;
 
+import com.hyperion.DnDApi.entidades.Accion;
 import com.hyperion.DnDApi.entidades.Enemigo;
 import com.hyperion.DnDApi.entidades.Rasgo;
 
@@ -28,5 +29,16 @@ public interface CriaturasService {
     boolean actualizarRasgo(Rasgo rasgo);
 
     boolean eliminaRasgo(String nombre);
+
+    // ----------------- ACCIONES -----------------
+    List<Accion> obtenerAcciones();
+
+    Accion obtenerAccionPorNombre(String nombre);
+
+    boolean agregarAccion(Accion accion);
+
+    boolean actualizarAccion(Accion accion);
+
+    boolean eliminaAccion(String nombre);
 
 }
