@@ -3,18 +3,25 @@ package com.hyperion.DnDApi.entidades;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Enemigos")
+@Table(name = "ENEMIGOS")
 public class Enemigo {
 
     @Id
+    @Column(length = 100)
     private String nombre;
+    @Column(length = 100)
     private String imagen;
     @Enumerated(EnumType.STRING)
     private Alineamiento alineamiento;
+    @Column(length = 45)
     private String tipo;
+    @Column(length = 45)
     private String tamanio;
+    @Column(length = 100)
     private String idiomas;
+    @Column(length = 100)
     private String sentidos;
+    @Column(length = 100)
     private String habilidades;
     private float desafio;
     private int claseArmadura;
