@@ -2,6 +2,7 @@ package com.hyperion.DnDApi.entidades;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "ENEMIGOS")
@@ -24,13 +25,32 @@ public class Enemigo {
     private String sentidos;
     @Column(length = 100)
     private String habilidades;
-    @ManyToMany
+
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = {
+                    CascadeType.PERSIST,
+                    CascadeType.MERGE
+            })
     @JoinTable(
             name = "rasgos_enemigos",
             joinColumns = @JoinColumn(name = "nombre_enemigo"),
             inverseJoinColumns = @JoinColumn(name = "nombre_rasgo")
     )
-    private List<Rasgo> rasgos;
+    private Set<Rasgo> rasgos;
+
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = {
+                    CascadeType.PERSIST,
+                    CascadeType.MERGE
+            })
+    @JoinTable(
+            name = "acciones_enemigos",
+            joinColumns = @JoinColumn(name = "nombre_enemigo"),
+            inverseJoinColumns = @JoinColumn(name = "nombre_accion")
+    )
+    private Set<Accion> acciones;
     private float desafio;
     private int claseArmadura;
     private int puntosGolpe;
@@ -177,11 +197,19 @@ public class Enemigo {
         this.carisma = carisma;
     }
 
-    public List<Rasgo> getRasgos() {
+    public Set<Rasgo> getRasgos() {
         return rasgos;
     }
 
-    public void setRasgos(List<Rasgo> rasgos) {
+    public void setRasgos(Set<Rasgo> rasgos) {
         this.rasgos = rasgos;
+    }
+
+    public Set<Accion> getAcciones() {
+        return acciones;
+    }
+
+    public void setAcciones(Set<Accion> acciones) {
+        this.acciones = acciones;
     }
 }

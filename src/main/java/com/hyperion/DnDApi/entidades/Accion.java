@@ -1,9 +1,10 @@
 package com.hyperion.DnDApi.entidades;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "ACCIONES")
@@ -13,6 +14,14 @@ public class Accion {
     private String nombre;
     @Column(length = 300)
     private String descripcion;
+    @ManyToMany(fetch = FetchType.LAZY,
+            cascade = {
+                    CascadeType.PERSIST,
+                    CascadeType.MERGE
+            },
+            mappedBy = "acciones")
+    @JsonIgnore
+    private Set<Enemigo> enemigos;
 
     public String getNombre() {
         return nombre;
@@ -28,5 +37,13 @@ public class Accion {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public Set<Enemigo> getEnemigos() {
+        return enemigos;
+    }
+
+    public void setEnemigos(Set<Enemigo> enemigos) {
+        this.enemigos = enemigos;
     }
 }

@@ -4,6 +4,7 @@ import com.hyperion.DnDApi.entidades.Accion;
 import com.hyperion.DnDApi.entidades.Enemigo;
 import com.hyperion.DnDApi.entidades.Rasgo;
 import com.hyperion.DnDApi.servicios.CriaturasService;
+import com.hyperion.DnDApi.utilidades.Utilidades;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,6 +26,7 @@ public class CriaturasController {
 
     @GetMapping("/enemigos/{nombre}")
     public Enemigo obtenerEnemigoPorId(@PathVariable("nombre") String nombre) {
+        nombre = Utilidades.primeraMayuscula(nombre);
         return servicio.obtenerEnemigoPorNombre(nombre);
     }
 
@@ -40,6 +42,7 @@ public class CriaturasController {
 
     @DeleteMapping("/enemigos/{nombre}")
     public boolean eliminaEnemigo(@PathVariable("nombre") String nombre) {
+        nombre = Utilidades.primeraMayuscula(nombre);
         return servicio.eliminaEnemigo(nombre);
     }
 
@@ -51,6 +54,7 @@ public class CriaturasController {
 
     @GetMapping("/rasgos/{nombre}")
     public Rasgo obtenerRasgoPorId(@PathVariable("nombre") String nombre) {
+        nombre = Utilidades.primeraMayuscula(nombre);
         return servicio.obtenerRasgoPorNombre(nombre);
     }
 
@@ -66,6 +70,7 @@ public class CriaturasController {
 
     @DeleteMapping("/rasgos/{nombre}")
     public boolean eliminaRasgo(@PathVariable("nombre") String nombre) {
+        nombre = Utilidades.primeraMayuscula(nombre);
         return servicio.eliminaRasgo(nombre);
     }
 
@@ -77,6 +82,7 @@ public class CriaturasController {
 
     @GetMapping("/acciones/{nombre}")
     public Accion obtenerAccionPorId(@PathVariable("nombre") String nombre) {
+        nombre = Utilidades.primeraMayuscula(nombre);
         return servicio.obtenerAccionPorNombre(nombre);
     }
 
@@ -92,6 +98,7 @@ public class CriaturasController {
 
     @DeleteMapping("/acciones/{nombre}")
     public boolean eliminarAccion(@PathVariable("nombre") String nombre) {
+        nombre = Utilidades.primeraMayuscula(nombre);
         return servicio.eliminaAccion(nombre);
     }
 }
