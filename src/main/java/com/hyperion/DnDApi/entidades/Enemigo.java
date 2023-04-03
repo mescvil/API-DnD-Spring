@@ -1,7 +1,6 @@
 package com.hyperion.DnDApi.entidades;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Set;
 
 @Entity
