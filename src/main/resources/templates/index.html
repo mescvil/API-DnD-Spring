@@ -129,6 +129,11 @@
         nisi alias obcaecati reprehenderit tempore cum eaque. Assumenda id unde cum earum ex quos dolores voluptatem
         magnam itaque!
     </section>
+    <section>
+        <div th:each="enemigo : ${enemigos}">
+            <a th:text="${enemigo.nombre}"></a>
+        </div>
+    </section>
 </div>
 </body>
 
