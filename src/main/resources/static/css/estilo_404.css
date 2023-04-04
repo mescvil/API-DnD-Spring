@@ -26,7 +26,15 @@
     font-size: 85px;
 }
 
+#contenedor-error>h2 {
+    color: #b40c0c;
+
+    font-family: Kelm;
+    text-align: center;
+    font-size: 45px;
+}
+
 #contenedor-error>p {
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
 }
