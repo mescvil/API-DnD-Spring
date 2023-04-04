@@ -1,3 +1,22 @@
+/* ===== Barra de desplazamiento ===== */
+
+aside::-webkit-scrollbar {
+	width: 6px;
+}
+
+aside::-webkit-scrollbar-track {
+	background: var(--fondo-azul);
+}
+
+aside::-webkit-scrollbar-thumb {
+	background: var(--color-equipo);
+	border-radius: 8px;
+}
+
+aside::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
 /* ===== Barra lateral ===== */
 
 aside {
@@ -7,7 +26,8 @@ aside {
 	background-color: var(--fondo-azul);
 
 	position: fixed;
-	overflow: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 aside>img {

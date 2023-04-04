@@ -13,6 +13,25 @@ body {
     font-family: NotoSans;
 }
 
+/* ===== Barra de desplazamiento ===== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--fondo-negro);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-inicio);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--fondo-rojo);
+}
+
 /* ===== Interior ===== */
 
 #main {
