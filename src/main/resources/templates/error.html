@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script th:src="@{/js/scripts.js}"></script>
+
+    <link rel="stylesheet" th:href="@{/css/colores_fuentes.css}">
+    <link rel="stylesheet" th:href="@{/css/estilo_general.css}">
+    <link rel="stylesheet" th:href="@{/css/estilo_lista.css}">
+    <link rel="stylesheet" th:href="@{/css/estilo_404.css}">
+
+    <title>D&D API - Error</title>
+</head>
+
+<body>
+<aside>
+    <img th:src="@{/img/logo.png}">
+    <nav>
+        <ul>
+            <a th:href="@{/#inicio}">
+                <li class="lista lista-inicio inicio">Inicio</li>
+            </a>
+            <a th:href="@{/#enemigos}">
+                <li class="lista lista-enemigo enemigos">Enemigos</li>
+            </a>
+            <a th:href="@{/#rasgos-enemigos}">
+                <li class="lista lista-enemigo rasgos-enemigos">Rasgos enemigos</li>
+            </a>
+            <a th:href="@{/#acciones-enemigas}">
+                <li class="lista lista-enemigo">Accciones enemigas</li>
+            </a>
+            <a th:href="@{/#razas}">
+                <li class="lista lista-raza">Razas</li>
+            </a>
+            <a th:href="@{/#rasgos-razas}">
+                <li class="lista lista-raza">Rasgos razas</li>
+            </a>
+            <a th:href="@{/#clases}">
+                <li class="lista lista-clase">Clases</li>
+            </a>
+            <a th:href="@{/#rasgos-clases}">
+                <li class="lista lista-clase">Rasgos clases</li>
+            </a>
+            <a th:href="@{/#especialidades}">
+                <li class="lista lista-clase">Especialidad clases</li>
+            </a>
+            <a th:href="@{/#armas}">
+                <li class="lista lista-equipo">Armas</li>
+            </a>
+            <a th:href="@{/#armaduras}">
+                <li class="lista lista-equipo">Armaduras</li>
+            </a>
+            <a th:href="@{/#magic}">
+                <li class="lista lista-magic">Hechizos</li>
+            </a>
+            <a th:href="@{/#trasfondo}">
+                <li class="lista lista-vida">Trasfondos</li>
+            </a>
+            <a th:href="@{/#idiomas}">
+                <li class="lista lista-vida">Idiomas</li>
+            </a>
+            <a th:href="@{/#competencias}">
+                <li class="lista lista-comp">Competencias</li>
+            </a>
+        </ul>
+    </nav>
+</aside>
+<div id="main">
+    <div id="contenedor-error">
+        <h1>ERROR <span th:text="${status}">Status</span></h1>
+        <p>Un Cacodemonio se ha llevado el recurso que buscabas o no esta disponible</p>
+        <img th:src="@{/img/caco.png}">
+    </div>
+</div>
+</body>
+
+</html>
