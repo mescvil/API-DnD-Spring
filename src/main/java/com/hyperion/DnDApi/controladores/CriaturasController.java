@@ -19,28 +19,28 @@ public class CriaturasController {
     private CriaturasService servicio;
 
     // ----------------- ENEMIGOS -----------------
-    @GetMapping("/enemigos")
+    @GetMapping
     public List<Enemigo> obtenerEnemigos() {
         return servicio.obtenerEnemigos();
     }
 
-    @GetMapping("/enemigos/{nombre}")
+    @GetMapping("/{nombre}")
     public Enemigo obtenerEnemigoPorId(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.primeraMayuscula(nombre);
         return servicio.obtenerEnemigoPorNombre(nombre);
     }
 
-    @PutMapping("/enemigos")
+    @PutMapping
     public boolean agregarEnemigo(@Valid @RequestBody Enemigo enemigo) {
         return servicio.agregarEnemigo(enemigo);
     }
 
-    @PostMapping("/enemigos")
+    @PostMapping
     public boolean actualizaEnemigo(@Valid @RequestBody Enemigo enemigo) {
         return servicio.actualizarEnemigo(enemigo);
     }
 
-    @DeleteMapping("/enemigos/{nombre}")
+    @DeleteMapping("/{nombre}")
     public boolean eliminaEnemigo(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.primeraMayuscula(nombre);
         return servicio.eliminaEnemigo(nombre);
