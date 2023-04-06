@@ -18,8 +18,6 @@ public class IndexController {
 
     @GetMapping
     public String cargaInicio(Model model) {
-        List<Enemigo> enemigos = servicio.obtenerEnemigos();
-        model.addAttribute("enemigos", enemigos);
         return "index";
     }
 }
