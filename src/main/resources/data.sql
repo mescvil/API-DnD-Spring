@@ -87,7 +87,7 @@ values
 ('Zombi','img/zombi.png','Neutral_malo','Muerto viviente','Mediano','','Vision en la Oscuridad, Percepcion Pasiva 8','',0.25,8,22,13,6,16,3,6,5);
 
 /*---------RASGOS---------*/
-insert into rasgos (nombre,descripcion) values
+insert into rasgos_criaturas (nombre,descripcion) values
 ('Resistencia a Contundente','Recibe la mitad de daño de este tipo'),
 ('Resistencia a Cortante','Recibe la mitad de daño de este tipo'),
 ('Resistencia a Perforante','Recibe la mitad de daño de este tipo'),
@@ -1194,3 +1194,14 @@ A niveles superiores. El daño del conjuro aumenta en 1d8 cuando alcanzas nivel 
 La CA del objetivo pasa a ser 13 + su modificador de Destreza.
 El conjuro termina si el objetivo se pone una armadura o si utilizas una acción para finalizarlo.",
 "8 horas",1,"1 acción","No tiene");
+
+/*RAZAS*/
+insert into razas (nombre, edad_maxima, altura_maxima, altura_minima,velocidad) values
+("Dracónidos",80,8,6,30),
+("Tiefling",110,6,5,30);
+
+/*RASGOS_RAZAS*/
+insert into rasgos_razas (nombre,descripcion) values
+("Visión en la Oscuridad","Eres capaz de percibir hasta luz tenue a 60 pies, y hasta esa distancia es como si estuvieras en una luz tenua.
+No puedes percibir colores, solo tonos de gris"),
+("Linaje Draconido Azul","Daño de Aliento tipo Relámpàgo en un cono de 5 por 30 pies (Salvación DES)");

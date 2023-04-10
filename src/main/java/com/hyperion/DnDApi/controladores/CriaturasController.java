@@ -2,7 +2,7 @@ package com.hyperion.DnDApi.controladores;
 
 import com.hyperion.DnDApi.entidades.criaturas.Accion;
 import com.hyperion.DnDApi.entidades.criaturas.Enemigo;
-import com.hyperion.DnDApi.entidades.criaturas.Rasgo;
+import com.hyperion.DnDApi.entidades.criaturas.RasgoCriatura;
 import com.hyperion.DnDApi.servicios.CriaturasService;
 import com.hyperion.DnDApi.utilidades.Utilidades;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,24 +48,24 @@ public class CriaturasController {
 
     // ----------------- RASGOS -----------------
     @GetMapping("/rasgos")
-    public List<Rasgo> obtenerRasgos() {
+    public List<RasgoCriatura> obtenerRasgos() {
         return servicio.obtenerRasgos();
     }
 
     @GetMapping("/rasgos/{nombre}")
-    public Rasgo obtenerRasgoPorId(@PathVariable("nombre") String nombre) {
+    public RasgoCriatura obtenerRasgoPorId(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.primeraMayuscula(nombre);
         return servicio.obtenerRasgoPorNombre(nombre);
     }
 
     @PutMapping("/rasgos")
-    public boolean agregarRasgo(@Valid @RequestBody Rasgo rasgo) {
-        return servicio.agregarRasgo(rasgo);
+    public boolean agregarRasgo(@Valid @RequestBody RasgoCriatura rasgoCriatura) {
+        return servicio.agregarRasgo(rasgoCriatura);
     }
 
     @PostMapping("/rasgos")
-    public boolean actualizarRasgo(@Valid @RequestBody Rasgo rasgo) {
-        return servicio.actualizarRasgo(rasgo);
+    public boolean actualizarRasgo(@Valid @RequestBody RasgoCriatura rasgoCriatura) {
+        return servicio.actualizarRasgo(rasgoCriatura);
     }
 
     @DeleteMapping("/rasgos/{nombre}")

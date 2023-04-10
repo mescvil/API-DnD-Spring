@@ -1,9 +1,9 @@
 package com.hyperion.DnDApi.repositorios.criaturas;
 
-import com.hyperion.DnDApi.entidades.criaturas.Rasgo;
+import com.hyperion.DnDApi.entidades.criaturas.RasgoCriatura;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RasgosRepository extends JpaRepository<Rasgo, String> {
+public interface RasgosCriaturasRepository extends JpaRepository<RasgoCriatura, String> {
 }

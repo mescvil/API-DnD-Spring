@@ -6,8 +6,8 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "RASGOS")
-public class Rasgo {
+@Table(name = "RASGOS_CRIATURAS")
+public class RasgoCriatura {
     @Id
     @Column(length = 100)
     private String nombre;
@@ -17,7 +17,7 @@ public class Rasgo {
                     CascadeType.PERSIST,
                     CascadeType.MERGE
             },
-            mappedBy = "rasgos")
+            mappedBy = "rasgoCriaturas")
     @JsonIgnore
     private Set<Enemigo> enemigos;
 
