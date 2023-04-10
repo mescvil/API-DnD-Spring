@@ -38,7 +38,7 @@ public class Enemigo {
             joinColumns = @JoinColumn(name = "nombre_enemigo"),
             inverseJoinColumns = @JoinColumn(name = "nombre_rasgo")
     )
-    private Set<Rasgo> rasgos;
+    private Set<RasgoCriatura> rasgoCriaturas;
 
     @ManyToMany(
             fetch = FetchType.LAZY,
@@ -198,12 +198,12 @@ public class Enemigo {
         this.carisma = carisma;
     }
 
-    public Set<Rasgo> getRasgos() {
-        return rasgos;
+    public Set<RasgoCriatura> getRasgos() {
+        return rasgoCriaturas;
     }
 
-    public void setRasgos(Set<Rasgo> rasgos) {
-        this.rasgos = rasgos;
+    public void setRasgos(Set<RasgoCriatura> rasgoCriaturas) {
+        this.rasgoCriaturas = rasgoCriaturas;
     }
 
     public Set<Accion> getAcciones() {

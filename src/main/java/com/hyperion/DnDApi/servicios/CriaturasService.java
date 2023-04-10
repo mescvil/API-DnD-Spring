@@ -2,7 +2,7 @@ package com.hyperion.DnDApi.servicios;
 
 import com.hyperion.DnDApi.entidades.criaturas.Accion;
 import com.hyperion.DnDApi.entidades.criaturas.Enemigo;
-import com.hyperion.DnDApi.entidades.criaturas.Rasgo;
+import com.hyperion.DnDApi.entidades.criaturas.RasgoCriatura;
 
 import java.util.List;
 
@@ -20,13 +20,13 @@ public interface CriaturasService {
     boolean eliminaEnemigo(String nombre);
 
     // ----------------- RASGOGS -----------------
-    List<Rasgo> obtenerRasgos();
+    List<RasgoCriatura> obtenerRasgos();
 
-    Rasgo obtenerRasgoPorNombre(String nombre);
+    RasgoCriatura obtenerRasgoPorNombre(String nombre);
 
-    boolean agregarRasgo(Rasgo rasgo);
+    boolean agregarRasgo(RasgoCriatura rasgoCriatura);
 
-    boolean actualizarRasgo(Rasgo rasgo);
+    boolean actualizarRasgo(RasgoCriatura rasgoCriatura);
 
     boolean eliminaRasgo(String nombre);
 

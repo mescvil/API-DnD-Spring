@@ -2,10 +2,10 @@ package com.hyperion.DnDApi.servicios;
 
 import com.hyperion.DnDApi.entidades.criaturas.Accion;
 import com.hyperion.DnDApi.entidades.criaturas.Enemigo;
-import com.hyperion.DnDApi.entidades.criaturas.Rasgo;
+import com.hyperion.DnDApi.entidades.criaturas.RasgoCriatura;
 import com.hyperion.DnDApi.repositorios.criaturas.AccionesRepository;
 import com.hyperion.DnDApi.repositorios.criaturas.EnemigosRepository;
-import com.hyperion.DnDApi.repositorios.criaturas.RasgosRepository;
+import com.hyperion.DnDApi.repositorios.criaturas.RasgosCriaturasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ public class CriaturasServiceImpl implements CriaturasService {
     @Autowired
     private EnemigosRepository repositorioEnemigos;
     @Autowired
-    private RasgosRepository repositorioRasgos;
+    private RasgosCriaturasRepository repositorioRasgos;
     @Autowired
     private AccionesRepository repositorioAcciones;
 
@@ -59,33 +59,33 @@ public class CriaturasServiceImpl implements CriaturasService {
 
     // ----------------- RASGOS -----------------
     @Override
-    public List<Rasgo> obtenerRasgos() {
+    public List<RasgoCriatura> obtenerRasgos() {
         return repositorioRasgos.findAll();
     }
 
     @Override
-    public Rasgo obtenerRasgoPorNombre(String nombre) {
+    public RasgoCriatura obtenerRasgoPorNombre(String nombre) {
         if (repositorioRasgos.findById(nombre).isPresent()) {
             return repositorioRasgos.findById(nombre).get();
-        } else return new Rasgo();
+        } else return new RasgoCriatura();
     }
 
     @Override
-    public boolean agregarRasgo(Rasgo rasgo) {
-        repositorioRasgos.save(rasgo);
+    public boolean agregarRasgo(RasgoCriatura rasgoCriatura) {
+        repositorioRasgos.save(rasgoCriatura);
         return true;
     }
 
     @Override
-    public boolean actualizarRasgo(Rasgo rasgo) {
-        repositorioRasgos.save(rasgo);
+    public boolean actualizarRasgo(RasgoCriatura rasgoCriatura) {
+        repositorioRasgos.save(rasgoCriatura);
         return true;
     }
 
     @Override
     public boolean eliminaRasgo(String nombre) {
         if (repositorioRasgos.findById(nombre).isPresent()) {
-            Rasgo r = repositorioRasgos.findById(nombre).get();
+            RasgoCriatura r = repositorioRasgos.findById(nombre).get();
             repositorioRasgos.delete(r);
             return true;
         } else
