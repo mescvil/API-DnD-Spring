@@ -38,6 +38,8 @@ public class RazasServiceImpl implements RazasService {
 
     @Override
     public RasgoRaza pbtenerRasgoPorNombre(String nombre) {
-        return repositorioRasgos.findById(nombre).get();
+        if (repositorioRasgos.findById(nombre).isPresent()){
+            return repositorioRasgos.findById(nombre).get();
+        } else return new RasgoRaza();
     }
 }
