@@ -1,6 +1,8 @@
 package com.hyperion.DnDApi.entidades.razas;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="RAZAS")

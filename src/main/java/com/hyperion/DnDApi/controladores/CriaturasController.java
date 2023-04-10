@@ -26,7 +26,7 @@ public class CriaturasController {
 
     @GetMapping("/{nombre}")
     public Enemigo obtenerEnemigoPorId(@PathVariable("nombre") String nombre) {
-        nombre = Utilidades.primeraMayuscula(nombre);
+        nombre = Utilidades.capitalizaCadena(nombre);
         return servicio.obtenerEnemigoPorNombre(nombre);
     }
 
@@ -42,7 +42,7 @@ public class CriaturasController {
 
     @DeleteMapping("/{nombre}")
     public boolean eliminaEnemigo(@PathVariable("nombre") String nombre) {
-        nombre = Utilidades.primeraMayuscula(nombre);
+        nombre = Utilidades.capitalizaCadena(nombre);
         return servicio.eliminaEnemigo(nombre);
     }
 
@@ -54,7 +54,7 @@ public class CriaturasController {
 
     @GetMapping("/rasgos/{nombre}")
     public RasgoCriatura obtenerRasgoPorId(@PathVariable("nombre") String nombre) {
-        nombre = Utilidades.primeraMayuscula(nombre);
+        nombre = Utilidades.capitalizaCadena(nombre);
         return servicio.obtenerRasgoPorNombre(nombre);
     }
 
@@ -70,7 +70,7 @@ public class CriaturasController {
 
     @DeleteMapping("/rasgos/{nombre}")
     public boolean eliminaRasgo(@PathVariable("nombre") String nombre) {
-        nombre = Utilidades.primeraMayuscula(nombre);
+        nombre = Utilidades.capitalizaCadena(nombre);
         return servicio.eliminaRasgo(nombre);
     }
 
@@ -82,7 +82,7 @@ public class CriaturasController {
 
     @GetMapping("/acciones/{nombre}")
     public Accion obtenerAccionPorId(@PathVariable("nombre") String nombre) {
-        nombre = Utilidades.primeraMayuscula(nombre);
+        nombre = Utilidades.capitalizaCadena(nombre);
         return servicio.obtenerAccionPorNombre(nombre);
     }
 
@@ -98,7 +98,7 @@ public class CriaturasController {
 
     @DeleteMapping("/acciones/{nombre}")
     public boolean eliminarAccion(@PathVariable("nombre") String nombre) {
-        nombre = Utilidades.primeraMayuscula(nombre);
+        nombre = Utilidades.capitalizaCadena(nombre);
         return servicio.eliminaAccion(nombre);
     }
 }
