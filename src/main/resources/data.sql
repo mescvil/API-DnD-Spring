@@ -8,7 +8,7 @@ values
 /*LETRA B*/
 ('Behir','img/behir.png','Neutral_malo','Monstruosidad','Enorme','Draconido','Vision en la Oscuridad, Percepcion Pasiva 16','Percepcion +6, Sigilo +7',11,17,168,23,16,18,7,14,12),
 ('Bestia de Trémula','img/tremula.png','Legal_malo','Monstruosidad','Grande','','Vision en la Oscuridad, Percepcion Pasiva 11','',3,13,85,18,15,16,6,12,8),
-('Broza movediza','img/broza.png','Neutral_puro','Planta','Grande','','Vision Ciega, Percepcion Pasiva 10','Sigilo +2',5,15,136,18,8,16,5,10,5),
+('Broza Movediza','img/broza.png','Neutral_puro','Planta','Grande','','Vision Ciega, Percepcion Pasiva 10','Sigilo +2',5,15,136,18,8,16,5,10,5),
 /*LETRA C*/
 ('Cocatriz','img/cocatriz.png','Neutral_puro','Monstruosidad','Pequeño','','Vision en la Oscuridad, Percepcion Pasiva 11','',0.5,11,27,6,12,12,2,13,5),
 ('Cambion','img/cambion.png','Legal_malo','Infernal','Mediano','Abisal, Comun, Infernal','Vision en la Oscuridad, Percepcion Pasiva 14','Engaño +6, Intimidacion +6, Percepcion +4',5,19,82,18,18,16,14,12,16),
@@ -19,15 +19,15 @@ values
 ('Hezrou','img/hezrou.png','Caótico_malo','Infernal','Grande','Abisal, Telepatia','Vision en la Oscuridad, Percepcion Pasiva 11','',8,16,136,19,17,20,5,12,13),
 ('Anjanath','img/anjanath.png','Neutral_puro','Bestia','Enorme','','Percepcion Pasiva 14','Percepcion +4',8,13,136,25,10,19,2,12,9),
 /*LETRA E*/
-('Elemental de aire','img/elementalAire.png','Neutral_puro','Elemental','Grande','Aurano','Vision en la Oscuridad, Percepcion Pasiva 10','',5,15,90,14,20,14,6,10,6),
+('Elemental de Aire','img/elementalAire.png','Neutral_puro','Elemental','Grande','Aurano','Vision en la Oscuridad, Percepcion Pasiva 10','',5,15,90,14,20,14,6,10,6),
 ('Estirge','img/estirge.png','Neutral_puro','Bestia','Diminuto','','Vision en la Oscuridad, Percepcion Pasiva 9','',0.12,14,2,4,16,11,12,8,6),
 ('Espectro','img/espectro.png','Caótico_malo','Muerto viviente','Mediano','','Vision en la Oscuridad, Percepcion Pasiva 10','',1,12,22,1,14,11,10,10,11),
 /*LETRA F*/
 ('Flumph','img/flumph.png','Legal_bueno','Aberración','Pequeño','Telepatia','Vision en la Oscuridad, Percepcion Pasiva 12','C.Arcano +4, Historia +4, Religion +4',0.12,12,7,6,15,10,14,14,11),
 ('Fomoré','img/fomore.png','Caótico_malo','Gigante','Enorme','Gigante, Infracomun','Vision en la Oscuridad, Percepcion Pasiva 18','Percepcion +8, Sigilo +3',8,14,149,23,10,20,9,14,6),
-('Fuego fatuo','img/fuegoFauto.png','Caótico_malo','Muerto viviente','Diminuto','','Vision en la Oscuridad, Percepcion Pasiva 12','',2,19,22,1,28,10,13,14,11),
+('Fuego Fatuo','img/fuegoFauto.png','Caótico_malo','Muerto viviente','Diminuto','','Vision en la Oscuridad, Percepcion Pasiva 12','',2,19,22,1,28,10,13,14,11),
 /*LETRA G*/
-('Garra reptante','img/garraReptante.png','Neutral_malo','Muerto viviente','Diminuto','','Vision Ciega, Percepcion Pasiva 10','',0,12,2,13,14,11,5,10,4),
+('Garra Reptante','img/garraReptante.png','Neutral_malo','Muerto viviente','Diminuto','','Vision Ciega, Percepcion Pasiva 10','',0,12,2,13,14,11,5,10,4),
 ('Gigante de Piedra','img/gigantePiedra.png','Neutral_puro','Gigante','Enorme','Gigante','Vision en la Oscuridad, Percepcion Pasiva 14','Atletismo +12, Percepcion +4',7,17,126,23,15,20,10,12,9),
 ('Guardian Escudo','img/guardianEscudo.png','Neutral_puro','Automata','Grande','','Vision Ciega, Vision en la Oscuridad, Percepcion Pasiva 10','',7,17,142,18,8,18,7,10,3),
 /*LETRA H*/
@@ -44,7 +44,7 @@ values
 ('Lamia','img/lamia.png','Caótico_malo','Monstruosidad','Grande','Abisal, Comun','Vision en la Oscuridad, Percepcion Pasiva 12','Engaño +7, Perspicacia +4, Sigilo +3',4,13,97,16,13,15,14,15,16),
 /*LETRA M*/
 ('Mantoscuro','img/mantoscuro.png','Neutral_puro','Monstruosidad','Pequeño','','Vision Ciega, Percepcion Pasiva 10','Sigilo +3',0.5,11,22,16,12,13,2,10,5),
-('Mephit de polvo','img/mephit.png','Neutral_malo','Elemental','Pequeño','Aurano, Terrano','Vision en la Oscuridad, Percepcion Pasiva 12','Percepcion +2, Sigilo +4',0.5,12,17,5,14,10,9,11,10),
+('Mephit de Polvo','img/mephit.png','Neutral_malo','Elemental','Pequeño','Aurano, Terrano','Vision en la Oscuridad, Percepcion Pasiva 12','Percepcion +2, Sigilo +4',0.5,12,17,5,14,10,9,11,10),
 ('Mimico','img/mimico.png','Neutral_puro','Monstruosidad','Mediano','','Vision en la Oscuridad, Percepcion Pasiva 11','Sigilo +5',2,12,58,17,12,15,5,13,8),
 /*LETRA N*/
 ('Naga Guardiana','img/naga.png','Legal_bueno','Monstruosidad','Grande','Celestial, Comun','Vision en la Oscuridad, Percepcion Pasiva 14','',10,18,127,19,18,16,16,19,18),
@@ -80,7 +80,7 @@ values
 /*LETRA X*/
 ('Xorn','img/xorn.png','Neutral_puro','Elemental','Mediano','Terrano','Vision en la Oscuridad, Sentir Vibraciones, Percepcion Pasiva 16','Percepcion +6, Sigilo +3',5,19,73,17,10,22,11,10,11),
 /*LETRA Y*/
-('Yeti abominable','img/yeti.png','Caótico_malo','Monstruosidad','Enorme','Yeti','Vision en la Oscuridad, Percepcion Pasiva 15','Percepcion +5, Sigilo +4',9,15,137,24,10,22,9,13,9),
+('Yeti Abominable','img/yeti.png','Caótico_malo','Monstruosidad','Enorme','Yeti','Vision en la Oscuridad, Percepcion Pasiva 15','Percepcion +5, Sigilo +4',9,15,137,24,10,22,9,13,9),
 ('Yuan-ti Purasangre','img/yuanti.png','Neutral_malo','Humanoide','Mediano','Abisal, Comun, Draconido','Vision en la Oscuridad, Percepcion Pasiva 13','Engaño +6, Percepcion +3, Sigilo +3',1,11,40,11,12,11,13,12,14),
 ('Mezzoloth','img/mezzoloth.png','Neutral_malo','Infernal','Mediano','Abisal, Infernal, Telepatia','Vision Ciega, Vision en la Oscuridad, Percepcion Pasiva 13','Percepcion +3',5,18,75,18,11,16,7,10,11),
 /*LETRA Z*/
@@ -144,14 +144,14 @@ insert into rasgos_criaturas (nombre,descripcion) values
 ('Lanzamiento de Conjuros Innato','Tiene la capacidad de lanzar conjuros'),
 ('Resistencia Mágica','Tiene ventaja contra Tiradas de Salvacion para evitar conjuros'),
 ('Movimiento Incorpóreo','Puede moverse a través de otras criaturas y objetos, pero solo la mitad de su velocidad'),
-('Velocidad a pie 1','30'),
-('Velocidad a pie 2','60'),
-('Velocidad a vuelo 1','30'),
-('Velocidad a vuelo 2','60'),
-('Velocidad a nado 1','30'),
-('Velocidad a nado 2','60'),
-('Velocidad al trepar 1','30'),
-('Velocidad al trepar 2','60'),
+('Velocidad a Pie 1','30'),
+('Velocidad a Pie 2','60'),
+('Velocidad a Vuelo 1','30'),
+('Velocidad a Vuelo 2','60'),
+('Velocidad a Nado 1','30'),
+('Velocidad a Nado 2','60'),
+('Velocidad al Trepar 1','30'),
+('Velocidad al Trepar 2','60'),
 ('Evitar','Recibe la mitad de daño al fallar una Tirada de Salcavión y ningún daño si la pasa'),
 ('Desplazamiento','Proyecta una ilusión haciendo que las tiradas de ataque en su contra tengan desventaja, si recibe daño de esta forma este rasgo dejará de funcionar hasta el siguiente turno'),
 ('Comandar Muertos Vivientes','Cualquier Muerto Viviente a 60 pies tiene ventaja contra tiradas de Salvacion contra efectos de Expulsar Muertos Vivientes'),
@@ -163,7 +163,7 @@ insert into rasgos_criaturas (nombre,descripcion) values
 ('Forma de Aire','Puede ocupar el mismo espacio que otra criatura, ademas podrá pàsar por espacios de 1 sola pulgada'),
 ('Sensibilidad a la luz Solar','Desventaja en tiradas de Salvacion y de ataque que dependan de la vista bajo la luz del sol'),
 ('Telepatía Avanzada','Puede leer conversaciones telepatia a 60 pies y no puede ser sorprendido por ello'),
-('Vulnerable a ser Derribado','Si es derribado tira un dado, si es impar caera con la cabeza yq uedara incapacitado, deberá superar una Tirada de Salvacion de destreza 10 para incorporarse'),
+('Vulnerable a Ser Derribado','Si es derribado tira un dado, si es impar caera con la cabeza yq uedara incapacitado, deberá superar una Tirada de Salvacion de destreza 10 para incorporarse'),
 ('Velo Telepático','Su mente no puede ser leida de ninguna forma'),
 ('Devorar Vida','Se elige una criatura con 0 puntos de golpe pero que aun este viva, lanzará una Tirada de Salvación de Constitución 10, si la falla la criatura muere y el poseedor de este rasgo se cura 3d6'),
 ('Efímero','No puede vestir o llevar nada'),
@@ -218,15 +218,15 @@ insert into rasgos_criaturas (nombre,descripcion) values
 
 /*---------ACCIONES---------*/
 insert into acciones (nombre,descripcion) values
-('Ataque múltiple 1','Se realiza 2 acciones de atacar'),
-('Ataque múltiple 2','Se realiza 3 acciones de atacar'),
+('Ataque Múltiple 1','Se realiza 2 acciones de atacar'),
+('Ataque Múltiple 2','Se realiza 3 acciones de atacar'),
 ('Espadón','Ataque cuerpo a cuerpo, +12 a impactar, 4d6+7 de daño cortante y 5d8 radiante'),
 ('Toque Sanador','Tocas a otra criatura y esta recupera 6d8+3 puntos de golpe y queda liberada de cualquier maldición, enfermedad, veneno, ceguera o sordera'),
 ('Consumir Vida','Ataque cuerpo a cuerpo, +6 a impactar, 4d8+3 de daño necrotico. Tirada de Salvación de Constitucion 14 o sus puntos de golpe Máximos tambien se verán reducidos'),
 ('Crear Espectro','Eliges un humanoide recientemente muerto, el objetivo se alza como un espectro a tus ordenes'),
 ('Tentáculos 2','Ataque cuerpo a cuerpo, +7 a impactar, 2d10+4 de daño psíquico. Si el objetivo es mediano o menor, Tirada de Salvación de fuerza 15 para escapar y una de inteligencia 15 para no estar aturdido'),
-('Extraer cerebro',' Ataque cuerpo a cuerpo, +7 al impactar, solo a un objetivo agarrado. 10d10 de daño perforante, si este daño reduce sus puntos de golpe a 0, te alimentaras de su cerebor y morirá'),
-('Descarga mental','Ataque a distancia en area, cono de 60 pies desde el lanzador. Tirada de Salvación de inteligencia 15 o 4d8+4 de daño psíquico y aturdido durante 1 minuto'),
+('Extraer Cerebro',' Ataque cuerpo a cuerpo, +7 al impactar, solo a un objetivo agarrado. 10d10 de daño perforante, si este daño reduce sus puntos de golpe a 0, te alimentaras de su cerebor y morirá'),
+('Descarga Mental','Ataque a distancia en area, cono de 60 pies desde el lanzador. Tirada de Salvación de inteligencia 15 o 4d8+4 de daño psíquico y aturdido durante 1 minuto'),
 ('Mordisco 2','Ataque cuerpo a cuerpo, +10 a impactar, 3d10+6 de daño perforante'),
 ('Mordisco 3','Ataque cuerpo a cuerpo, +10 a impactar, 6d10+7 de daño perforante'),
 ('Constreñir','Ataque cuerpo a cuerpo, +10 a impactar, criatura Grande o menor. 2d10+6 de daño contundente y 2d10+6 cortante. Tirada de Salvacion de fuerza 16 para escapar del agarre'),
@@ -238,7 +238,7 @@ insert into acciones (nombre,descripcion) values
 ('Espada Larga','Ataque cuerpo a cuerpo,+11 a impactar,1d8 + 5 de daño cortante y 4d8 necrótico'),
 ('Orbe de Fuego Infernal','Ataque a distancia en area, esfera de 20 pìes, hasta 120 pies de distancia. Tirada de Salvacion de Destreza 18, 10d6 de daño de fuego y 10d6 necrótico al fallar, mitad de daño al pasar la tirada'),
 ('Lanza','Ataque con arma cuerpo a cuerpo o a distancia, +7 a impactar,1d6+4 de daño perforante y 1d6 de fuego'),
-('Rayo de fuego','Ataque a distancia, +7 a impactar, 120 pies, 3d6 de daño de fuego'),
+('Rayo de Fuego','Ataque a distancia, +7 a impactar, 120 pies, 3d6 de daño de fuego'),
 ('Encanto Infernal','Humanoide elegido, Tirada de Salvacion de Sabiduria 14 o quedará hechizado durante 1 día'),
 ('Mordisco Petrificante','Ataque cuerpo a cuerpo, +3 a impactar, 1d4+1 de daño perforante, Tirada de Salvación de Constitución 11 o quedará petrificado durasnte 24h'),
 ('Mordisco 1','Ataque cuerpo a cuerpo, +5 a impactar, 4d6 de daño perforante'),
@@ -339,7 +339,7 @@ insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
 ('Resistencia Mágica','Planetar');
 
 insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
-('Ataque múltiple 1','Planetar'),
+('Ataque Múltiple 1','Planetar'),
 ('Espadón','Planetar'),
 ('Toque Sanador','Planetar');
 
@@ -405,22 +405,22 @@ insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
 ('Ataque Múltiple 1','Bestia de Trémula'),
 ('Tentáculos 1','Bestia de Trémula');
 
-/*Broza movediza*/
+/*Broza Movediza*/
 insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
-('Velocidad a Pie 1','Broza movediza'),
-('Velocidad a Nado 1','Broza movediza'),
-('Resistencia a Frío','Broza movediza'),
-('Resistencia a Fuego','Broza movediza'),
-('Inmunidad a Relámpago','Broza movediza'),
-('Inmunidad a Cansancio','Broza movediza'),
-('Inmunidad a Cegado','Broza movediza'),
-('Inmunidad a Ensordecido','Broza movediza'),
-('Absorción de Relámpago','Broza movediza');
+('Velocidad a Pie 1','Broza Movediza'),
+('Velocidad a Nado 1','Broza Movediza'),
+('Resistencia a Frío','Broza Movediza'),
+('Resistencia a Fuego','Broza Movediza'),
+('Inmunidad a Relámpago','Broza Movediza'),
+('Inmunidad a Cansancio','Broza Movediza'),
+('Inmunidad a Cegado','Broza Movediza'),
+('Inmunidad a Ensordecido','Broza Movediza'),
+('Absorción de Relámpago','Broza Movediza');
 
 insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
-('Ataque Múltiple 1','Broza movediza'),
-('Golpe 1','Broza movediza'),
-('Absorber','Broza movediza');
+('Ataque Múltiple 1','Broza Movediza'),
+('Golpe 1','Broza Movediza'),
+('Absorber','Broza Movediza');
 
 /*Cocatriz*/
 insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
@@ -443,7 +443,7 @@ insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
 ('Lanzamiento de Conjuros Innato','Caballero de la Muerte');
 
 insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
-('Ataque múltiple 2','Caballero de la Muerte'),
+('Ataque Múltiple 2','Caballero de la Muerte'),
 ('Espada Larga','Caballero de la Muerte'),
 ('Orbe de Fuego Infernal','Caballero de la Muerte');
 
@@ -615,7 +615,7 @@ insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
 
 insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
 ('Descarga','Fuego Fatuo'),
-('INvisibilidad','Fuego Fatuo');
+('Invisibilidad','Fuego Fatuo');
 
 /*Garra Reptante*/
 insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
@@ -803,17 +803,17 @@ insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
 ('Aplastar','Mantoscuro'),
 ('Aura de Oscuridad','Mantoscuro');
 
-/*Mephit de polvo*/
+/*Mephit de Polvo*/
 insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
-('Vulnerabilidad a Fuego','Mephit de polvo'),
-('Inmunidad a Veneno','Mephit de polvo'),
-('Inmunidad a Envenenado','Mephit de polvo'),
-('Explotar al Morir - Polvo','Mephit de polvo'),
-('Lanzamiento de Conjuros Innato','Mephit de polvo');
+('Vulnerabilidad a Fuego','Mephit de Polvo'),
+('Inmunidad a Veneno','Mephit de Polvo'),
+('Inmunidad a Envenenado','Mephit de Polvo'),
+('Explotar al Morir - Polvo','Mephit de Polvo'),
+('Lanzamiento de Conjuros Innato','Mephit de Polvo');
 
 insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
-('Garras','Mephit de polvo'),
-('Aliento Cegador','Mephit de polvo');
+('Garras','Mephit de Polvo'),
+('Aliento Cegador','Mephit de Polvo');
 
 /*Mimico*/
 insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
@@ -1119,18 +1119,18 @@ insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
 ('Garra 1','Xorn'),
 ('Mordisco 1','Xorn');
 
-/*Yeti abominable*/
+/*Yeti Abominable*/
 insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
-('Inmunidad a Frío','Yeti abominable'),
-('Miedo al Fuego','Yeti abominable'),
-('Olfato Agudo','Yeti abominable'),
-('Camuflarse en la Nieve','Yeti abominable');
+('Inmunidad a Frío','Yeti Abominable'),
+('Miedo al Fuego','Yeti Abominable'),
+('Olfato Agudo','Yeti Abominable'),
+('Camuflarse en la Nieve','Yeti Abominable');
 
 insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
-('Ataque Múltiple 1','Yeti abominable'),
-('Garra 1','Yeti abominable'),
-('Mirada Escalofriante','Yeti abominable'),
-('Aliento Gélido','Yeti abominable');
+('Ataque Múltiple 1','Yeti Abominable'),
+('Garra 1','Yeti Abominable'),
+('Mirada Escalofriante','Yeti Abominable'),
+('Aliento Gélido','Yeti Abominable');
 
 /*Yuan-ti Purasangre*/
 insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
