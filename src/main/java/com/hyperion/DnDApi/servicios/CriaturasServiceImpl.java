@@ -1,11 +1,11 @@
 package com.hyperion.DnDApi.servicios;
 
-import com.hyperion.DnDApi.entidades.Accion;
-import com.hyperion.DnDApi.entidades.Enemigo;
-import com.hyperion.DnDApi.entidades.Rasgo;
-import com.hyperion.DnDApi.repositorios.AccionesRepository;
-import com.hyperion.DnDApi.repositorios.EnemigosRepository;
-import com.hyperion.DnDApi.repositorios.RasgosRepository;
+import com.hyperion.DnDApi.entidades.criaturas.Accion;
+import com.hyperion.DnDApi.entidades.criaturas.Enemigo;
+import com.hyperion.DnDApi.entidades.criaturas.Rasgo;
+import com.hyperion.DnDApi.repositorios.criaturas.AccionesRepository;
+import com.hyperion.DnDApi.repositorios.criaturas.EnemigosRepository;
+import com.hyperion.DnDApi.repositorios.criaturas.RasgosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

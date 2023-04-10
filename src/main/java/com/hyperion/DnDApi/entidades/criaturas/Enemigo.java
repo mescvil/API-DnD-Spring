@@ -1,4 +1,6 @@
-package com.hyperion.DnDApi.entidades;
+package com.hyperion.DnDApi.entidades.criaturas;
+
+import com.hyperion.DnDApi.entidades.Alineamiento;
 
 import javax.persistence.*;
 import java.util.Set;
