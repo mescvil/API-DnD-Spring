@@ -1173,3 +1173,24 @@ insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
 
 insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
 ('Golpe 1','Zombi');
+
+
+/*Equipamiento*/
+insert into armas (nombre,arrojadiza,danio,dos_manos,propiedad, precio) values
+("Espada Larga",false,"1d8 cortante",true,"Versátil 1d10","15 piezas de oro"),
+("Ballesta Pesada",false,"1d10 perforante",true,"Alcance 100/400 pies, Recarga","50 piezas de oro");
+
+insert into armaduras(nombre, clase_armadura,desventaja_sigilo,fuerza_requerida,peso,precio) values
+("Armadura de Placas", 18, true, 15, 65,"1500 piezas de oro"),
+("Cuero Tachonado",12,false,0,13,"45 piezas de oro");
+
+insert into hechizos(nombre, alcance,descripcion,duracion,nivel,tiempo_lanzamiento,tirada_salvacion) values
+("Agarre Electrizante", 0,
+"Un relámpago salta de tu mano para dar una descarga eléctrica a la criatura que intentas tocar. Haz un ataque de conjuro cuerpo a cuerpo contra el objetivo. Tienes ventaja en la tirada de ataque si la criatura lleva armadura de metal. Si impactas, el objetivo sufre 1d8 de daño de relámpago y no podrá llevar a cabo reacciones hasta el comienzo de su próximo turno.
+A niveles superiores. El daño del conjuro aumenta en 1d8 cuando alcanzas nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8)",
+"0",0,"1 acción","No Tiene"),
+("Armadura de Mago",0,
+"Tocas a una criatura voluntaria que no lleve armadura y una fuerza mágica protectora la rodea hasta que el conjuro termine.
+La CA del objetivo pasa a ser 13 + su modificador de Destreza.
+El conjuro termina si el objetivo se pone una armadura o si utilizas una acción para finalizarlo.",
+"8 horas",1,"1 acción","No tiene");
