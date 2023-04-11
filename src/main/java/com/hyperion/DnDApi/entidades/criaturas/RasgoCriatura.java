@@ -1,17 +1,25 @@
 package com.hyperion.DnDApi.entidades.criaturas;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
 @Table(name = "RASGOS_CRIATURAS")
+@Getter
+@Setter
+@NoArgsConstructor
 public class RasgoCriatura {
     @Id
     @Column(length = 100)
     private String nombre;
+
     private String descripcion;
+
     @ManyToMany(fetch = FetchType.LAZY,
             cascade = {
                     CascadeType.PERSIST,
@@ -20,28 +28,4 @@ public class RasgoCriatura {
             mappedBy = "rasgoCriaturas")
     @JsonIgnore
     private Set<Enemigo> enemigos;
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public Set<Enemigo> getEnemigos() {
-        return enemigos;
-    }
-
-    public void setEnemigos(Set<Enemigo> enemigos) {
-        this.enemigos = enemigos;
-    }
 }
