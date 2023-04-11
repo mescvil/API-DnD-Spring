@@ -1201,19 +1201,21 @@ insert into razas (nombre, edad_maxima, altura_maxima, altura_minima,velocidad) 
 ("Tiefling",110,6,5,30);
 
 /*RASGOS_RAZAS*/
-insert into rasgos_razas (nombre,descripcion) values
-("Visión en la Oscuridad","Eres capaz de percibir hasta luz tenue a 60 pies, y hasta esa distancia es como si estuvieras en una luz tenua.
-No puedes percibir colores, solo tonos de gris"),
+insert into rasgos_de_razas (nombre,descripcion) values
+("Visión en la Oscuridad","Eres capaz de percibir hasta luz tenue a 60 pies, y hasta esa distancia es como si estuvieras en una luz tenua.No puedes percibir colores, solo tonos de gris"),
 ("Linaje Draconido Azul","Daño de Aliento tipo Relámpàgo en un cono de 5 por 30 pies (Salvación DES)");
+
 /*IDIOMAS*/
 insert into idiomas values
 ("Dracónico"),("Elfico");
+
 /*TRASFONDOS*/
 insert into trasfondos (nombre, descripcion) values
 ("Acólito",
 "Has dedicado tu vida al servicio de un templo de un dios específico o un panteón de dioses. Actúas como intermediario entre el reino de lo sagrado y el mundo mortal, realizando ritos sagrados y ofreciendo sacrificios para conducir a los adoradores a la presencia de lo divino. No eres un clérigo necesariamente; realizar ritos sagrados no es lo mismo que canalizar el poder de una divinidad."),
 ("Héroe del Pueblo",
 "Vienes de una clase social humilde, pero estás destinado para mucho más. Ya la gente de tu pueblo natal te consideran como su campeón, y tu destino te llama a estar en contra de los tiranos y los monstruos que amenazan a la gente común en todas partes.");
+
 /*RAZAS-RASGO-RELACION*/
 insert into rasgos_raza (nombre_raza, nombre_rasgo) value
 ("Dracónidos","Visión en la Oscuridad"),
