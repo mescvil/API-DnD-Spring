@@ -1,11 +1,13 @@
 package com.hyperion.DnDApi.controladores;
 
+import com.hyperion.DnDApi.entidades.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.criaturas.Accion;
 import com.hyperion.DnDApi.entidades.criaturas.Enemigo;
 import com.hyperion.DnDApi.entidades.criaturas.RasgoCriatura;
 import com.hyperion.DnDApi.servicios.CriaturasService;
 import com.hyperion.DnDApi.utilidades.Utilidades;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -22,6 +24,12 @@ public class CriaturasController {
     @GetMapping
     public List<Enemigo> obtenerEnemigos() {
         return servicio.obtenerEnemigos();
+    }
+
+    @GetMapping(params = {"page", "size"})
+    public RespuestaPaginacion<Enemigo> obtenerEnemigos(Pageable pageable) {
+        List<Enemigo> enemigos = servicio.obtenerEnemigos(pageable).getContent();
+        return new RespuestaPaginacion<>(enemigos);
     }
 
     @GetMapping("/{nombre}")
@@ -50,6 +58,11 @@ public class CriaturasController {
     @GetMapping("/rasgos")
     public List<RasgoCriatura> obtenerRasgos() {
         return servicio.obtenerRasgos();
+    }
+
+    @GetMapping(value = "/rasgos", params = {"page", "size"})
+    public List<RasgoCriatura> obtenerRasgos(Pageable pageable) {
+        return servicio.obtenerRasgos(pageable).getContent();
     }
 
     @GetMapping("/rasgos/{nombre}")

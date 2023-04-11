@@ -3,6 +3,8 @@ package com.hyperion.DnDApi.servicios;
 import com.hyperion.DnDApi.entidades.criaturas.Accion;
 import com.hyperion.DnDApi.entidades.criaturas.Enemigo;
 import com.hyperion.DnDApi.entidades.criaturas.RasgoCriatura;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -10,6 +12,8 @@ public interface CriaturasService {
 
     // ----------------- ENEMIGOS -----------------
     List<Enemigo> obtenerEnemigos();
+
+    Page<Enemigo> obtenerEnemigos(Pageable pageable);
 
     Enemigo obtenerEnemigoPorNombre(String nombre);
 
@@ -21,6 +25,8 @@ public interface CriaturasService {
 
     // ----------------- RASGOGS -----------------
     List<RasgoCriatura> obtenerRasgos();
+
+    Page<RasgoCriatura> obtenerRasgos(Pageable pageable);
 
     RasgoCriatura obtenerRasgoPorNombre(String nombre);
 
