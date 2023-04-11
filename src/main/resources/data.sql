@@ -1214,3 +1214,7 @@ insert into trasfondos (nombre, descripcion) values
 "Has dedicado tu vida al servicio de un templo de un dios específico o un panteón de dioses. Actúas como intermediario entre el reino de lo sagrado y el mundo mortal, realizando ritos sagrados y ofreciendo sacrificios para conducir a los adoradores a la presencia de lo divino. No eres un clérigo necesariamente; realizar ritos sagrados no es lo mismo que canalizar el poder de una divinidad."),
 ("Héroe del Pueblo",
 "Vienes de una clase social humilde, pero estás destinado para mucho más. Ya la gente de tu pueblo natal te consideran como su campeón, y tu destino te llama a estar en contra de los tiranos y los monstruos que amenazan a la gente común en todas partes.");
+/*RAZAS-RASGO-RELACION*/
+insert into rasgos_raza (nombre_raza, nombre_rasgo) value
+("Dracónidos","Visión en la Oscuridad"),
+("Tiefling","Visión en la Oscuridad");

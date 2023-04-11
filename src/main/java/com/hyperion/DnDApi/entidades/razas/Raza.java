@@ -1,11 +1,12 @@
 package com.hyperion.DnDApi.entidades.razas;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import net.bytebuddy.agent.builder.AgentBuilder;
+
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
-@Table(name="RAZAS")
+@Table(name = "RAZAS")
 public class Raza {
     @Id
     private String nombre;
@@ -13,6 +14,16 @@ public class Raza {
     private float alturaMinima;
     private float alturaMaxima;
     private int velocidad;
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE}
+    )
+    @JoinTable(
+            name = "RASGOS_RAZA",
+            joinColumns = @JoinColumn(name = "nombre_raza"),
+            inverseJoinColumns = @JoinColumn(name = "nombre_rasgo")
+    )
+    private Set<RasgoRaza> rasgosRaza;
 
     public String getNombre() {
         return nombre;
@@ -52,5 +63,13 @@ public class Raza {
 
     public void setVelocidad(int velocidad) {
         this.velocidad = velocidad;
+    }
+
+    public Set<RasgoRaza> getRasgos() {
+        return rasgosRaza;
+    }
+
+    public void setRasgos(Set<RasgoRaza> rasgos) {
+        this.rasgosRaza = rasgos;
     }
 }
