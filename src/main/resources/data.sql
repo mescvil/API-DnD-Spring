@@ -1217,6 +1217,6 @@ insert into trasfondos (nombre, descripcion) values
 "Vienes de una clase social humilde, pero estás destinado para mucho más. Ya la gente de tu pueblo natal te consideran como su campeón, y tu destino te llama a estar en contra de los tiranos y los monstruos que amenazan a la gente común en todas partes.");
 
 /*RAZAS-RASGO-RELACION*/
-insert into rasgos_raza (nombre_raza, nombre_rasgo) value
+insert into rasgos_raza (nombre_raza, nombre_rasgo) values
 ("Dracónidos","Visión en la Oscuridad"),
 ("Tiefling","Visión en la Oscuridad");
