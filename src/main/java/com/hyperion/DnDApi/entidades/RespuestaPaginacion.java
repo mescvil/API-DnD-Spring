@@ -9,9 +9,16 @@ import java.util.List;
 @Setter
 public class RespuestaPaginacion<T> {
 
+    private int totalPaginas;
+    private int paginaAnterior;
+    private int siguientePagina;
+
     private List<T> resultado;
 
-    public RespuestaPaginacion(List<T> resultado) {
+    public RespuestaPaginacion(int totalPaginas, int paginaAnterior, int siguientePagina, List<T> resultado) {
+        this.totalPaginas = totalPaginas;
+        this.paginaAnterior = paginaAnterior;
+        this.siguientePagina = siguientePagina;
         this.resultado = resultado;
     }
 }
