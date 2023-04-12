@@ -37,9 +37,10 @@ public class CriaturasController {
         Page<Enemigo> pagina = servicio.obtenerEnemigos(configPagina);
 
         return new RespuestaPaginacion<>(
+                pagina.getTotalElements(),
                 pagina.getTotalPages(),
-                pagina.previousOrFirstPageable().getPageNumber(),
-                pagina.nextOrLastPageable().getPageNumber(),
+                pagina.hasPrevious() ? pagina.previousPageable().getPageNumber() : null,
+                pagina.hasNext() ? pagina.nextPageable().getPageNumber() : null,
                 pagina.getContent());
     }
 

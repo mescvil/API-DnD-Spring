@@ -3,22 +3,25 @@ package com.hyperion.DnDApi.entidades;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 @Getter
 @Setter
 public class RespuestaPaginacion<T> {
 
-    private int totalPaginas;
-    private int paginaAnterior;
-    private int siguientePagina;
+    private long elementos;
+    private long paginas;
+    private Integer anterior;
+    private Integer siguiente;
 
     private List<T> resultado;
 
-    public RespuestaPaginacion(int totalPaginas, int paginaAnterior, int siguientePagina, List<T> resultado) {
-        this.totalPaginas = totalPaginas;
-        this.paginaAnterior = paginaAnterior;
-        this.siguientePagina = siguientePagina;
+    public RespuestaPaginacion(long elementos, long paginas, Integer anterior, Integer siguiente, List<T> resultado) {
+        this.elementos = elementos;
+        this.paginas = paginas;
+        this.anterior = anterior;
+        this.siguiente = siguiente;
         this.resultado = resultado;
     }
 }
