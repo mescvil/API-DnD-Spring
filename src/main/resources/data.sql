@@ -1220,3 +1220,31 @@ insert into trasfondos (nombre, descripcion) values
 insert into rasgos_raza (nombre_raza, nombre_rasgo) values
 ("Dracónidos","Visión en la Oscuridad"),
 ("Tiefling","Visión en la Oscuridad");
+
+/*CLASES*/
+insert into clases (nombre,caracteristica_principal,dados_golpe,descripcion,tiradas_salvacion) values
+("Bárbaro","Fuerza y Constitución","1d12","Los bárbaros se definen por su furia: una ira desenfrenada, insaciable e irreflexiva.
+Para algunos bárbaros, su furia brota de la comunión con fieros espíritus animales.
+Otros extraen su poder de una turbia reserva de ira ante un mundo lleno de dolor.
+Para cada bárbaro, la furia es un poder que no solo aviva un frenesí de batalla, sino también reflejos, resistencia y hazañas de fuerza asombrosas.","Fuerza y Constitución"),
+("Pícaro","Destreza e Inteligencia o Carisma","1d8","La vida es una aventura sin fin para quienes viven por su ingenio. Siempre un paso por delante del peligro, los Pícaros se valen de su astucia, habilidad y encanto para doblegar el destino a su favor.
+Cualquiera que desee sonreír al destino y vivir la vida en sus propios términos, podría llegar a ser llamado como pícaro.","Destreza e Inteligencia");
+
+/*RASGOS_CLASES*/
+insert into rasgos_clases(nombre,descripcion) values
+("Ataque Furtivo","Sabes aprovechar la distracción de un enemigo para atacarlo por la espalda.
+Una vez por turno, puedes infligir daño adicional a una criatura a la que impactes con un ataque si tienes ventaja en la tirada de ataque.
+El ataque debe usar un arma sutil o a distancia.
+Este rasgo funciona aunque no tengas ventaja en la tirada de ataque si otro enemigo del objetivo no incapacitado está a menos de 5 pies de él y si tú no tienes desventaja en la tirada de ataque.
+Nivel 1 - 1d6 adicional,
+Nivel 3 - 2d6 adicional
+Nivel 5 - 3d6 adicional
+Nivel 7 - 4d6 adicional
+Nivel 9 - 5d6 adicional
+Nivel 11 - 6d6 adicional
+Nivel 13 - 7d6 adicional
+Nivel 15 - 8d6 adicional
+Nivel 17 - 9d6 adicional
+Nivel 19 - 10d6 adicional"),
+("Ataque Temerario","A partir del nivel 2, puedes dejar a un lado toda preocupación por defenderte para atacar con una desesperación feroz.
+Cuando ataques por primera vez en tu turno, puedes hacer un ataque temerario, que, durante ese turno, te da ventaja en las tiradas de ataque con armas cuerpo a cuerpo utilizando Fuerza, pero, a cambio, las tiradas de ataque que se hagan contra ti tienen ventaja hasta tu siguiente turno.");
