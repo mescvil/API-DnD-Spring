@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="RASGOS_CLASES")
+@Table(name="RASGOS_DE_CLASES")
 @Getter
 @Setter
 @NoArgsConstructor

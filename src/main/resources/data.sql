@@ -1227,11 +1227,15 @@ insert into clases (nombre,caracteristica_principal,dados_golpe,descripcion,tira
 Para algunos bárbaros, su furia brota de la comunión con fieros espíritus animales.
 Otros extraen su poder de una turbia reserva de ira ante un mundo lleno de dolor.
 Para cada bárbaro, la furia es un poder que no solo aviva un frenesí de batalla, sino también reflejos, resistencia y hazañas de fuerza asombrosas.","Fuerza y Constitución"),
+("Paladín","Fuerza y Carisma","1d10","Sean cuales sean sus orígenes y sus misiones, los paladines están unidos por sus juramentos para luchar en contra de las fuerzas del mal. El juramento de un paladín es un lazo muy poderoso. Es una fuente de poder que convierte a un devoto guerrero en un campeón bendecido.",
+"Sabiduría y Carisma"),
+("Mago","Inteligencia y Constitució o Carisma","1d6","Los magos son los practicantes supremos de la magia, definidos y unidos como una clase por los hechizos que conjuran. A partir de la sutil onda de la magia que impregna el cosmos, los magos lanzan explosivos hechizos de fuego, arcos voltaicos, sutiles engaños y brutales formas de control mental.",
+"Inteligencia y Sabiduría"),
 ("Pícaro","Destreza e Inteligencia o Carisma","1d8","La vida es una aventura sin fin para quienes viven por su ingenio. Siempre un paso por delante del peligro, los Pícaros se valen de su astucia, habilidad y encanto para doblegar el destino a su favor.
 Cualquiera que desee sonreír al destino y vivir la vida en sus propios términos, podría llegar a ser llamado como pícaro.","Destreza e Inteligencia");
 
 /*RASGOS_CLASES*/
-insert into rasgos_clases(nombre,descripcion) values
+insert into rasgos_de_clases(nombre,descripcion) values
 ("Ataque Furtivo","Sabes aprovechar la distracción de un enemigo para atacarlo por la espalda.
 Una vez por turno, puedes infligir daño adicional a una criatura a la que impactes con un ataque si tienes ventaja en la tirada de ataque.
 El ataque debe usar un arma sutil o a distancia.
@@ -1246,5 +1250,25 @@ Nivel 13 - 7d6 adicional
 Nivel 15 - 8d6 adicional
 Nivel 17 - 9d6 adicional
 Nivel 19 - 10d6 adicional"),
+("Libro de Conjuros","Posees un libro de conjuros que contiene seis conjuros de nivel 1 de tu eleccioón. Este libro es el depositario de los conjuros de magos que conces, con la excepción de los trucos, que están grabados en tu mente"),
+("Salud Divina","La magia que fluye a través de ti te hace inmune a las enfermedades"),
 ("Ataque Temerario","A partir del nivel 2, puedes dejar a un lado toda preocupación por defenderte para atacar con una desesperación feroz.
 Cuando ataques por primera vez en tu turno, puedes hacer un ataque temerario, que, durante ese turno, te da ventaja en las tiradas de ataque con armas cuerpo a cuerpo utilizando Fuerza, pero, a cambio, las tiradas de ataque que se hagan contra ti tienen ventaja hasta tu siguiente turno.");
+
+/*RELACIONES_CLASES_ARMAS*/
+insert into clases_armas (nombre_clase,nombre_arma) values
+("Bárbaro","Espada Larga"),
+("Pícaro","Espada Larga").
+("Paladín","Espada Larga");
+
+/*RELACIONES_CLASES_ARMADURAS*/
+insert into clases_armaduras (nombre_clase,nombre_armadura) values
+("Pícaro","Cuero Tachonado"),
+("Paladín","Armadura de Placas");
+
+/*RELACIONES_CLASES_HECHIZOS*/
+insert into clases_hechizos(nombre_clase,nombre_hechizo) values
+("Mago","Agarre Electrizante"),
+("Mago","Armadura de Mago");
+
+
