@@ -111,6 +111,11 @@ public class CriaturasServiceImpl implements CriaturasService {
     }
 
     @Override
+    public Page<Accion> obtenerAcciones(Pageable pageable) {
+        return repositorioAcciones.findAll(pageable);
+    }
+
+    @Override
     public Accion obtenerAccionPorNombre(String nombre) {
         if (repositorioAcciones.findById(nombre).isPresent()) {
             return repositorioAcciones.findById(nombre).get();

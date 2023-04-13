@@ -39,6 +39,8 @@ public interface CriaturasService {
     // ----------------- ACCIONES -----------------
     List<Accion> obtenerAcciones();
 
+    Page<Accion> obtenerAcciones(Pageable pageable);
+
     Accion obtenerAccionPorNombre(String nombre);
 
     boolean agregarAccion(Accion accion);
