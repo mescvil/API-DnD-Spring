@@ -11,6 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -32,14 +33,15 @@ public class CriaturasController {
         return servicio.obtenerEnemigos();
     }
 
-    @GetMapping(params = {"page", "size"})
+    @GetMapping("/")
     public RespuestaPaginacion<Enemigo> obtenerEnemigos(@RequestParam(name = "page", defaultValue = "0") int numeroPagina,
-                                                        @RequestParam(name = "size", defaultValue = "20") int tamanioPagina
+                                                        @RequestParam(name = "size", defaultValue = "20") int tamanioPagina,
+                                                        @RequestParam(name = "sort", defaultValue = "nombre") String orden
     ) {
-        Pageable configPagina = PageRequest.of(numeroPagina, tamanioPagina, Sort.by("nombre"));
+        Pageable configPagina = PageRequest.of(numeroPagina, tamanioPagina, Sort.by(orden));
         Page<Enemigo> pagina = servicio.obtenerEnemigos(configPagina);
 
-        if (numeroPagina == pagina.getTotalPages())
+        if (numeroPagina >= pagina.getTotalPages() || numeroPagina < 0)
             throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
 
         return new RespuestaPaginacion<>(
