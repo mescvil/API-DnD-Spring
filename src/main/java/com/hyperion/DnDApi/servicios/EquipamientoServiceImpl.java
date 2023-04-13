@@ -7,11 +7,14 @@ import com.hyperion.DnDApi.repositorios.equipamiento.ArmadurasRepository;
 import com.hyperion.DnDApi.repositorios.equipamiento.ArmasRepository;
 import com.hyperion.DnDApi.repositorios.equipamiento.HechizosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
-public class EquipamientoServiceImpl implements EquipamientoService{
+public class EquipamientoServiceImpl implements EquipamientoService {
 
     // ----------------- REPOSITORIOS -----------------
     @Autowired
@@ -27,9 +30,10 @@ public class EquipamientoServiceImpl implements EquipamientoService{
     public List<Arma> obtenerArmas() {
         return repositorioArmas.findAll();
     }
+
     @Override
     public Arma obtenerArmaPorNombre(String nombre) {
-        if (repositorioArmas.findById(nombre).isPresent()){
+        if (repositorioArmas.findById(nombre).isPresent()) {
             return repositorioArmas.findById(nombre).get();
         } else return new Arma();
     }
@@ -39,21 +43,29 @@ public class EquipamientoServiceImpl implements EquipamientoService{
     public List<Armadura> obtenerArmaduras() {
         return repositorioArmaduras.findAll();
     }
+
     @Override
     public Armadura obtenerArmaduraPorNombre(String nombre) {
-        if (repositorioArmaduras.findById(nombre).isPresent()){
+        if (repositorioArmaduras.findById(nombre).isPresent()) {
             return repositorioArmaduras.findById(nombre).get();
         } else return new Armadura();
 
     }
+
     // ----------------- HECHIZOS -----------------
     @Override
     public List<Hechizo> obtenerHechizos() {
         return repositorioHechizos.findAll();
     }
+
+    @Override
+    public Page<Hechizo> obtenerHechizos(Pageable pageable) {
+        return repositorioHechizos.findAll(pageable);
+    }
+
     @Override
     public Hechizo obtenerHechizoPorNombre(String nombre) {
-        if (repositorioHechizos.findById(nombre).isPresent()){
+        if (repositorioHechizos.findById(nombre).isPresent()) {
             return repositorioHechizos.findById(nombre).get();
         } else return new Hechizo();
     }
