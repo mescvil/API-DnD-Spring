@@ -1258,7 +1258,7 @@ Cuando ataques por primera vez en tu turno, puedes hacer un ataque temerario, qu
 /*RELACIONES_CLASES_ARMAS*/
 insert into clases_armas (nombre_clase,nombre_arma) values
 ("Bárbaro","Espada Larga"),
-("Pícaro","Espada Larga").
+("Pícaro","Espada Larga"),
 ("Paladín","Espada Larga");
 
 /*RELACIONES_CLASES_ARMADURAS*/
