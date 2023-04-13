@@ -5,7 +5,7 @@ import java.util.Set;
 public class Utilidades {
 
     private final static Set<String> listaNegra = Set.of("a", "ante", "bajo", "contra", "de", "desde", "en", "entre",
-            "hacia", "hasta", "para", "por", "según", "durante", "mediante", "sobre", "sin", "tras", "pro", "con", "la");
+            "hacia", "hasta", "para", "por", "según", "durante", "mediante", "sobre", "sin", "tras", "pro", "con", "la", "del");
 
     public static String primeraMayuscula(String cadena) {
         return cadena.substring(0, 1).toUpperCase() + cadena.substring(1);
