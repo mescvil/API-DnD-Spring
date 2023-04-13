@@ -79,6 +79,24 @@ public class CriaturasController {
         return servicio.obtenerRasgos();
     }
 
+    @GetMapping("/rasgos/")
+    public RespuestaPaginacion<RasgoCriatura> obtenerRagos(@RequestParam(name = "page", defaultValue = "0") int numeroPagina,
+                                                           @RequestParam(name = "size", defaultValue = "20") int tamanioPagina
+    ) {
+        Pageable configPagina = PageRequest.of(numeroPagina, tamanioPagina);
+        Page<RasgoCriatura> pagina = servicio.obtenerRasgos(configPagina);
+
+        if (numeroPagina >= pagina.getTotalPages() || numeroPagina < 0)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+
+        return new RespuestaPaginacion<>(
+                pagina.getTotalElements(),
+                pagina.getTotalPages(),
+                pagina.hasPrevious() ? pagina.previousPageable().getPageNumber() : null,
+                pagina.hasNext() ? pagina.nextPageable().getPageNumber() : null,
+                pagina.getContent());
+    }
+
     @GetMapping("/rasgos/{nombre}")
     public RasgoCriatura obtenerRasgoPorId(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
