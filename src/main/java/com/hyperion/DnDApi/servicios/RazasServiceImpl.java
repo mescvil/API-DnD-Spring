@@ -5,6 +5,8 @@ import com.hyperion.DnDApi.entidades.razas.Raza;
 import com.hyperion.DnDApi.repositorios.razas.RasgosRazasRepository;
 import com.hyperion.DnDApi.repositorios.razas.RazasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -37,8 +39,13 @@ public class RazasServiceImpl implements RazasService {
     }
 
     @Override
+    public Page<RasgoRaza> obtenerRasgos(Pageable pageable) {
+        return repositorioRasgos.findAll(pageable);
+    }
+
+    @Override
     public RasgoRaza pbtenerRasgoPorNombre(String nombre) {
-        if (repositorioRasgos.findById(nombre).isPresent()){
+        if (repositorioRasgos.findById(nombre).isPresent()) {
             return repositorioRasgos.findById(nombre).get();
         } else return new RasgoRaza();
     }

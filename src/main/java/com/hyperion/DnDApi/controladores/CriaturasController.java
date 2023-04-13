@@ -79,11 +79,6 @@ public class CriaturasController {
         return servicio.obtenerRasgos();
     }
 
-    @GetMapping(value = "/rasgos", params = {"page", "size"})
-    public List<RasgoCriatura> obtenerRasgos(Pageable pageable) {
-        return servicio.obtenerRasgos(pageable).getContent();
-    }
-
     @GetMapping("/rasgos/{nombre}")
     public RasgoCriatura obtenerRasgoPorId(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
