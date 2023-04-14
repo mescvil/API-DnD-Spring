@@ -1,16 +1,20 @@
 package com.hyperion.DnDApi.controladores;
 
+import com.hyperion.DnDApi.entidades.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.clases.Clase;
 import com.hyperion.DnDApi.entidades.clases.RasgoClase;
 import com.hyperion.DnDApi.servicios.ClasesService;
 import com.hyperion.DnDApi.utilidades.Utilidades;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+
+import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RestController
 @RequestMapping("/api/clases")
@@ -33,6 +37,23 @@ public class ClasesController {
     @GetMapping("/rasgos")
     public List<RasgoClase> obtenerRasgos(){
         return servicio.obtenerRasgos();
+    }
+    @GetMapping("/rasgos/")
+    public RespuestaPaginacion<RasgoClase> obtenerRasgos(@RequestParam(name = "page", defaultValue = "0") int numeroPagina,
+                                                         @RequestParam(name = "size", defaultValue = "20") int tamanioPagina
+    ){
+        Pageable configPagina = PageRequest.of(numeroPagina,tamanioPagina);
+        Page<RasgoClase> pagina = servicio.obtenerRasgos(configPagina);
+
+        if (numeroPagina >= pagina.getTotalPages() || numeroPagina < 0)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+
+        return new RespuestaPaginacion<>(
+                pagina.getTotalElements(),
+                pagina.getTotalPages(),
+                pagina.hasPrevious() ? pagina.previousPageable().getPageNumber() : null,
+                pagina.hasNext() ? pagina.nextPageable().getPageNumber() : null,
+                pagina.getContent());
     }
     @GetMapping("/rasgos/{nombre}")
     public RasgoClase obtenerRasgoPorNombre(@PathVariable("nombre") String nombre){

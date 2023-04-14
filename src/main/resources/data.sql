@@ -1236,20 +1236,7 @@ Cualquiera que desee sonreír al destino y vivir la vida en sus propios término
 
 /*RASGOS_CLASES*/
 insert into rasgos_de_clases(nombre,descripcion) values
-("Ataque Furtivo","Sabes aprovechar la distracción de un enemigo para atacarlo por la espalda.
-Una vez por turno, puedes infligir daño adicional a una criatura a la que impactes con un ataque si tienes ventaja en la tirada de ataque.
-El ataque debe usar un arma sutil o a distancia.
-Este rasgo funciona aunque no tengas ventaja en la tirada de ataque si otro enemigo del objetivo no incapacitado está a menos de 5 pies de él y si tú no tienes desventaja en la tirada de ataque.
-Nivel 1 - 1d6 adicional,
-Nivel 3 - 2d6 adicional
-Nivel 5 - 3d6 adicional
-Nivel 7 - 4d6 adicional
-Nivel 9 - 5d6 adicional
-Nivel 11 - 6d6 adicional
-Nivel 13 - 7d6 adicional
-Nivel 15 - 8d6 adicional
-Nivel 17 - 9d6 adicional
-Nivel 19 - 10d6 adicional"),
+("Ataque Furtivo","Sabes aprovechar la distracción de un enemigo para atacarlo por la espalda. \n Una vez por turno, puedes infligir daño adicional a una criatura a la que impactes con un ataque si tienes ventaja en la tirada de ataque. \n El ataque debe usar un arma sutil o a distancia. \n Este rasgo funciona aunque no tengas ventaja en la tirada de ataque si otro enemigo del objetivo no incapacitado está a menos de 5 pies de él y si tú no tienes desventaja en la tirada de ataque. \n Nivel 1 - 1d6 adicional, \n Nivel 3 - 2d6 adicional, \n Nivel 5 - 3d6 adicional, \n Nivel 7 - 4d6 adicional, \n Nivel 9 - 5d6 adicional, \n Nivel 11 - 6d6 adicional, \n Nivel 13 - 7d6 adicional, \n Nivel 15 - 8d6 adicional, \n Nivel 17 - 9d6 adicional, \n Nivel 19 - 10d6 adicional"),
 ("Libro de Conjuros","Posees un libro de conjuros que contiene seis conjuros de nivel 1 de tu eleccioón. Este libro es el depositario de los conjuros de magos que conces, con la excepción de los trucos, que están grabados en tu mente"),
 ("Salud Divina","La magia que fluye a través de ti te hace inmune a las enfermedades"),
 ("Ataque Temerario","A partir del nivel 2, puedes dejar a un lado toda preocupación por defenderte para atacar con una desesperación feroz.
