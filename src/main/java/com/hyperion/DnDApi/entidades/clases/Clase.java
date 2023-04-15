@@ -1,5 +1,6 @@
 package com.hyperion.DnDApi.entidades.clases;
 
+import com.hyperion.DnDApi.entidades.competencias.Competencia;
 import com.hyperion.DnDApi.entidades.equipamiento.Arma;
 import com.hyperion.DnDApi.entidades.equipamiento.Armadura;
 import com.hyperion.DnDApi.entidades.equipamiento.Hechizo;
@@ -53,5 +54,21 @@ public class Clase {
             inverseJoinColumns = @JoinColumn(name = "nombre_hechizo")
     )
     private Set<Hechizo> hechizos;
+    @OneToMany(mappedBy = "clases",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    private Set<Especialidad> especialidades;
+
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE}
+    )
+    @JoinTable(
+            name="COMPETENCIAS_CLASE",
+            joinColumns = @JoinColumn(name="nombre_clase"),
+            inverseJoinColumns =  @JoinColumn(name = "nombre_competencia")
+    )
+    private Set<Competencia> competencias;
 
 }

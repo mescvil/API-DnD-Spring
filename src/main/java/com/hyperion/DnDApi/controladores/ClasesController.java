@@ -2,6 +2,8 @@ package com.hyperion.DnDApi.controladores;
 
 import com.hyperion.DnDApi.entidades.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.clases.Clase;
+import com.hyperion.DnDApi.entidades.clases.Especialidad;
+import com.hyperion.DnDApi.entidades.clases.HabilidadEspecialidad;
 import com.hyperion.DnDApi.entidades.clases.RasgoClase;
 import com.hyperion.DnDApi.servicios.ClasesService;
 import com.hyperion.DnDApi.utilidades.Utilidades;
@@ -24,25 +26,27 @@ public class ClasesController {
 
     // ----------------- CLASES -----------------
     @GetMapping
-    public List<Clase> obtenerClases(){
+    public List<Clase> obtenerClases() {
         return servicio.obtenerClases();
     }
+
     @GetMapping("/{nombre}")
-    public Clase obtenerClasePorNombre(@PathVariable("nombre") String nombre){
+    public Clase obtenerClasePorNombre(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
         return servicio.obtenerClasePorNombre(nombre);
     }
 
     // ----------------- RASGOS DE CLASES -----------------
     @GetMapping("/rasgos")
-    public List<RasgoClase> obtenerRasgos(){
+    public List<RasgoClase> obtenerRasgos() {
         return servicio.obtenerRasgos();
     }
+
     @GetMapping("/rasgos/")
     public RespuestaPaginacion<RasgoClase> obtenerRasgos(@RequestParam(name = "page", defaultValue = "0") int numeroPagina,
                                                          @RequestParam(name = "size", defaultValue = "20") int tamanioPagina
-    ){
-        Pageable configPagina = PageRequest.of(numeroPagina,tamanioPagina);
+    ) {
+        Pageable configPagina = PageRequest.of(numeroPagina, tamanioPagina);
         Page<RasgoClase> pagina = servicio.obtenerRasgos(configPagina);
 
         if (numeroPagina >= pagina.getTotalPages() || numeroPagina < 0)
@@ -55,10 +59,34 @@ public class ClasesController {
                 pagina.hasNext() ? pagina.nextPageable().getPageNumber() : null,
                 pagina.getContent());
     }
+
     @GetMapping("/rasgos/{nombre}")
-    public RasgoClase obtenerRasgoPorNombre(@PathVariable("nombre") String nombre){
+    public RasgoClase obtenerRasgoPorNombre(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
         return servicio.obtenerRasgosPorNombre(nombre);
     }
 
+    // ----------------- ESPECIALIDADES -----------------
+    @GetMapping("/especialidades")
+    public List<Especialidad> obtenerEspecialidades() {
+        return servicio.obtenerEspecialidades();
+    }
+
+    @GetMapping("/especialidades/{nombre}")
+    public Especialidad obtenerEspecialidadPorNombre(@PathVariable("nombre") String nombre) {
+        nombre = Utilidades.capitalizaCadena(nombre);
+        return servicio.obtenerEspecialidadPorNombre(nombre);
+    }
+
+    // ----------------- HABILIDADES-ESPECIALIDADES -----------------
+    @GetMapping("/especialidades/habilidades")
+    public List<HabilidadEspecialidad> obtenerHabilidades() {
+        return servicio.obtenerHabilidades();
+    }
+
+    @GetMapping("/especialidades/habilidades/{nombre}")
+    public HabilidadEspecialidad obtenerHabilidadPorNombre(@PathVariable("nombre")String nombre){
+        nombre = Utilidades.capitalizaCadena(nombre);
+        return servicio.obtenerHabilidadPorNombre(nombre);
+    }
 }

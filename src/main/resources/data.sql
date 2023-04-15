@@ -1258,4 +1258,9 @@ insert into clases_hechizos(nombre_clase,nombre_hechizo) values
 ("Mago","Agarre Electrizante"),
 ("Mago","Armadura de Mago");
 
-
+/*ESPECIALIDADES*/
+insert into especialidades(nombre,descripcion,clase_id) values
+("Senda del Guerrero Totémico","La Senda del Guerrero Totémico es un viaje espiritual, en el que el bárbaro acepta un espíritu animal como guía, protector e inspiración. En combate, tu espíritu totémico te llena de fuerza sobrenatural, avivando con magia tu furia barbárica.
+La mayoría de tribus de bárbaros consideran un tótem animal como pariente de un clan en particular. En estos casos, es poco común que un individuo tenga más de un espíritu totémico, aunque hay excepciones.","Bárbaro");
+insert into habilidades_especialida(nombre,descripcion,especialidad_id) value
+("Buscador de Espiritus","La tuya es una senda que busca la vinculación con el mundo natural, otorgándote parentesco con bestias. Cuando adoptas esta senda al nivel 3, ganas la habilidad para lanzar los conjuros sentido de bestia y hablar con los animales, pero sólo como rituales.","Senda del Guerrero Totémico");

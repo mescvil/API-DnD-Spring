@@ -1,13 +1,12 @@
 package com.hyperion.DnDApi.entidades.trasfondos;
 
+import com.hyperion.DnDApi.entidades.competencias.Competencia;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "TRASFONDOS")
@@ -19,4 +18,14 @@ public class Trasfondo {
     private String nombre;
     @Column(length = 500)
     private String descripcion;
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE}
+    )
+    @JoinTable(
+            name="COMPETENCIAS_TRASFONDO",
+            joinColumns = @JoinColumn(name="nombre_trasfondo"),
+            inverseJoinColumns =  @JoinColumn(name = "nombre_competencia")
+    )
+    private Set<Competencia> competencias;
 }
