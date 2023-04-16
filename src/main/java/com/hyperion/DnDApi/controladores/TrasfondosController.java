@@ -1,6 +1,6 @@
 package com.hyperion.DnDApi.controladores;
 
-import com.hyperion.DnDApi.RespuestaPaginacion;
+import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Idioma;
 import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Trasfondo;
 import com.hyperion.DnDApi.servicios.TrasfondosService;

@@ -1,4 +1,4 @@
-package com.hyperion.DnDApi;
+package com.hyperion.DnDApi.configuraciones;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;

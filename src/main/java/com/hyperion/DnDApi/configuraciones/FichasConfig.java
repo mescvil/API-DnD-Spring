@@ -1,4 +1,4 @@
-package com.hyperion.DnDApi;
+package com.hyperion.DnDApi.configuraciones;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -20,23 +20,23 @@ import java.util.Map;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(
-        entityManagerFactoryRef = "caracteristicasEntityManagerFactory",
-        transactionManagerRef = "caracteristicasTransactionManager",
-        basePackages = {"com.hyperion.DnDApi.repositorios.caracteristicas"}
+        entityManagerFactoryRef = "fichasEntityManagerFactory",
+        transactionManagerRef = "fichasTransactionManager",
+        basePackages = {"com.hyperion.DnDApi.repositorios.fichas"}
 )
-public class CaracteristicasConfig {
+public class FichasConfig {
 
-    @Bean(name = "caracteristicasDataSource")
-    @ConfigurationProperties(prefix = "caracteristicas.datasource")
+    @Bean(name = "fichasDataSource")
+    @ConfigurationProperties(prefix = "fichas.datasource")
     public DataSource dataSource() {
         return DataSourceBuilder.create().build();
     }
 
-    @Bean(name = "caracteristicasEntityManagerFactory")
+    @Bean(name = "fichasEntityManagerFactory")
     public LocalContainerEntityManagerFactoryBean
-    caracteristicasEntityManagerFactory(
+    fichasEntityManagerFactory(
             EntityManagerFactoryBuilder builder,
-            @Qualifier("caracteristicasDataSource") DataSource dataSource
+            @Qualifier("fichasDataSource") DataSource dataSource
     ) {
         Map<String, String> propiedadesConexion = new HashMap<>();
         propiedadesConexion.put("hibernate.hbm2ddl.auto", "create");
@@ -44,15 +44,15 @@ public class CaracteristicasConfig {
         return
                 builder
                         .dataSource(dataSource)
-                        .packages("com.hyperion.DnDApi.entidades.caracteristicas")
-                        .persistenceUnit("caracteristicas")
+                        .packages("com.hyperion.DnDApi.entidades.fichas")
+                        .persistenceUnit("fichas")
                         .properties(propiedadesConexion)
                         .build();
     }
 
-    @Bean(name = "caracteristicasTransactionManager")
-    public PlatformTransactionManager caracteristicasransactionManager(
-            @Qualifier("caracteristicasEntityManagerFactory") EntityManagerFactory
+    @Bean(name = "fichasTransactionManager")
+    public PlatformTransactionManager fichasransactionManager(
+            @Qualifier("fichasEntityManagerFactory") EntityManagerFactory
                     barEntityManagerFactory
     ) {
         return new JpaTransactionManager(barEntityManagerFactory);

@@ -1,6 +1,6 @@
 package com.hyperion.DnDApi.controladores;
 
-import com.hyperion.DnDApi.RespuestaPaginacion;
+import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.caracteristicas.clases.Clase;
 import com.hyperion.DnDApi.entidades.caracteristicas.clases.Especialidad;
 import com.hyperion.DnDApi.entidades.caracteristicas.clases.HabilidadEspecialidad;
