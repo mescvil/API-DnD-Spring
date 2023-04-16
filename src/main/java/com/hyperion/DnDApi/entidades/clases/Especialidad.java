@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name="ESPECIALIDADES")
+@Table(name = "ESPECIALIDADES")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -19,7 +19,7 @@ public class Especialidad {
     @Column(length = 700)
     private String descripcion;
     @ManyToOne
-    @JoinColumn(name="clase_id")
+    @JoinColumn(name = "clase_id")
     @JsonIgnore
     private Clase clases;
 

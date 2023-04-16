@@ -14,19 +14,24 @@ import java.util.List;
 public interface ClasesService {
     // ----------------- CLASES -----------------
     List<Clase> obtenerClases();
+
     Clase obtenerClasePorNombre(String nombre);
 
     // ----------------- RASGOS DE CLASES -----------------
     List<RasgoClase> obtenerRasgos();
-    Page obtenerRasgos(Pageable pageable);
+
+    Page<RasgoClase> obtenerRasgos(Pageable pageable);
+
     RasgoClase obtenerRasgosPorNombre(String nombre);
 
     // ----------------- ESPECIALIDADES -----------------
     List<Especialidad> obtenerEspecialidades();
+
     Especialidad obtenerEspecialidadPorNombre(String nombre);
 
     // ----------------- HABILIDADES-ESPECIALIDADES -----------------
     List<HabilidadEspecialidad> obtenerHabilidades();
+
     HabilidadEspecialidad obtenerHabilidadPorNombre(String nombre);
 
 }

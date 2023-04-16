@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ClasesServiceImpl implements ClasesService{
+public class ClasesServiceImpl implements ClasesService {
     @Autowired
     private ClasesRepository repositorioClases;
     @Autowired
@@ -31,9 +31,10 @@ public class ClasesServiceImpl implements ClasesService{
     public List<Clase> obtenerClases() {
         return repositorioClases.findAll();
     }
+
     @Override
     public Clase obtenerClasePorNombre(String nombre) {
-        if (repositorioClases.findById(nombre).isPresent()){
+        if (repositorioClases.findById(nombre).isPresent()) {
             return repositorioClases.findById(nombre).get();
         } else return new Clase();
     }
@@ -45,12 +46,13 @@ public class ClasesServiceImpl implements ClasesService{
     }
 
     @Override
-    public Page obtenerRasgos(Pageable pageable) {
+    public Page<RasgoClase> obtenerRasgos(Pageable pageable) {
         return repositorioRasgos.findAll(pageable);
     }
+
     @Override
     public RasgoClase obtenerRasgosPorNombre(String nombre) {
-        if (repositorioRasgos.findById(nombre).isPresent()){
+        if (repositorioRasgos.findById(nombre).isPresent()) {
             return repositorioRasgos.findById(nombre).get();
         } else return new RasgoClase();
     }
@@ -63,7 +65,7 @@ public class ClasesServiceImpl implements ClasesService{
 
     @Override
     public Especialidad obtenerEspecialidadPorNombre(String nombre) {
-        if (repositorioEspecialidades.findById(nombre).isPresent()){
+        if (repositorioEspecialidades.findById(nombre).isPresent()) {
             return repositorioEspecialidades.findById(nombre).get();
         } else return new Especialidad();
     }
@@ -76,7 +78,7 @@ public class ClasesServiceImpl implements ClasesService{
 
     @Override
     public HabilidadEspecialidad obtenerHabilidadPorNombre(String nombre) {
-        if (repositorioHabilidades.findById(nombre).isPresent()){
+        if (repositorioHabilidades.findById(nombre).isPresent()) {
             return repositorioHabilidades.findById(nombre).get();
         } else return new HabilidadEspecialidad();
     }

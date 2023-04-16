@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CompetenciasServiceImpl implements CompetenciasService{
+public class CompetenciasServiceImpl implements CompetenciasService {
     @Autowired
     private CompetenciasRepository repositorio;
 
@@ -22,14 +22,14 @@ public class CompetenciasServiceImpl implements CompetenciasService{
 
     @Override
     public Competencia obtenerCompetenciaPorNombre(String nombre) {
-        if(repositorio.findById(nombre).isPresent()){
+        if (repositorio.findById(nombre).isPresent()) {
             return repositorio.findById(nombre).get();
         }
         return null;
     }
 
     @Override
-    public Page obtenerCompetencias(Pageable pageable) {
+    public Page<Competencia> obtenerCompetencias(Pageable pageable) {
         return repositorio.findAll(pageable);
     }
 }

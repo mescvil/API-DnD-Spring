@@ -12,7 +12,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name="CLASES")
+@Table(name = "CLASES")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -65,9 +65,9 @@ public class Clase {
             cascade = {CascadeType.PERSIST, CascadeType.MERGE}
     )
     @JoinTable(
-            name="COMPETENCIAS_CLASE",
-            joinColumns = @JoinColumn(name="nombre_clase"),
-            inverseJoinColumns =  @JoinColumn(name = "nombre_competencia")
+            name = "COMPETENCIAS_CLASE",
+            joinColumns = @JoinColumn(name = "nombre_clase"),
+            inverseJoinColumns = @JoinColumn(name = "nombre_competencia")
     )
     private Set<Competencia> competencias;
 

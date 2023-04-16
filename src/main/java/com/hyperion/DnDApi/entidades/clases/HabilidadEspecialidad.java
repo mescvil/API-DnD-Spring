@@ -8,7 +8,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name="HABILIDADES_ESPECIALIDA")
+@Table(name = "HABILIDADES_ESPECIALIDADES")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -17,9 +17,8 @@ public class HabilidadEspecialidad {
     private String nombre;
     @Column(length = 500)
     private String descripcion;
-
     @ManyToOne
-    @JoinColumn(name="especialidad_id")
+    @JoinColumn(name = "especialidad_id")
     @JsonIgnore
     private Especialidad especialidad;
 }

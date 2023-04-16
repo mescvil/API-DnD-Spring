@@ -11,7 +11,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name="COMPETENCIAS")
+@Table(name = "COMPETENCIAS")
 @Getter
 @Setter
 @NoArgsConstructor

@@ -8,6 +8,8 @@ import java.util.List;
 
 public interface CompetenciasService {
     List<Competencia> obtenerCompetencias();
+
     Competencia obtenerCompetenciaPorNombre(String nombre);
-    Page obtenerCompetencias(Pageable pageable);
+
+    Page<Competencia> obtenerCompetencias(Pageable pageable);
 }
