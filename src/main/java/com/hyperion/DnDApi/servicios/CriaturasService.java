@@ -1,8 +1,8 @@
 package com.hyperion.DnDApi.servicios;
 
-import com.hyperion.DnDApi.criaturas.entidades.Accion;
-import com.hyperion.DnDApi.criaturas.entidades.Enemigo;
-import com.hyperion.DnDApi.criaturas.entidades.RasgoCriatura;
+import com.hyperion.DnDApi.entidades.criaturas.Accion;
+import com.hyperion.DnDApi.entidades.criaturas.Enemigo;
+import com.hyperion.DnDApi.entidades.criaturas.RasgoCriatura;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

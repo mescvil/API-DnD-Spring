@@ -1,8 +1,8 @@
 package com.hyperion.DnDApi.servicios;
 
-import com.hyperion.DnDApi.caracteristricas.entidades.equipamiento.Arma;
-import com.hyperion.DnDApi.caracteristricas.entidades.equipamiento.Armadura;
-import com.hyperion.DnDApi.caracteristricas.entidades.equipamiento.Hechizo;
+import com.hyperion.DnDApi.entidades.caracteristicas.equipamiento.Arma;
+import com.hyperion.DnDApi.entidades.caracteristicas.equipamiento.Armadura;
+import com.hyperion.DnDApi.entidades.caracteristicas.equipamiento.Hechizo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

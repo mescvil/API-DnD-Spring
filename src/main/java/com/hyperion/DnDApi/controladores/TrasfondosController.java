@@ -1,8 +1,8 @@
 package com.hyperion.DnDApi.controladores;
 
 import com.hyperion.DnDApi.RespuestaPaginacion;
-import com.hyperion.DnDApi.caracteristricas.entidades.trasfondos.Idioma;
-import com.hyperion.DnDApi.caracteristricas.entidades.trasfondos.Trasfondo;
+import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Idioma;
+import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Trasfondo;
 import com.hyperion.DnDApi.servicios.TrasfondosService;
 import com.hyperion.DnDApi.utilidades.Utilidades;
 import org.springframework.beans.factory.annotation.Autowired;

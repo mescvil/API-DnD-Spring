@@ -22,7 +22,7 @@ import java.util.Map;
 @EnableTransactionManagement
 @EnableJpaRepositories(
         entityManagerFactoryRef = "entityManagerFactory",
-        basePackages = {"com.hyperion.DnDApi.criaturas.repositorios"}
+        basePackages = {"com.hyperion.DnDApi.repositorios.criaturas"}
 )
 public class CriaturasConfig {
 
@@ -42,11 +42,10 @@ public class CriaturasConfig {
     ) {
         Map<String, String> propiedadesConexion = new HashMap<>();
         propiedadesConexion.put("hibernate.hbm2ddl.auto", "create");
-        propiedadesConexion.put("initialization-mode", "always ");
 
         return builder
                 .dataSource(dataSource)
-                .packages("com.hyperion.DnDApi.criaturas.entidades")
+                .packages("com.hyperion.DnDApi.entidades.criaturas")
                 .persistenceUnit("criaturas")
                 .properties(propiedadesConexion)
                 .build();

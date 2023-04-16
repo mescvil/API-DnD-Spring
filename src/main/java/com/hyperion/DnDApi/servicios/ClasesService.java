@@ -1,9 +1,9 @@
 package com.hyperion.DnDApi.servicios;
 
-import com.hyperion.DnDApi.caracteristricas.entidades.clases.Clase;
-import com.hyperion.DnDApi.caracteristricas.entidades.clases.Especialidad;
-import com.hyperion.DnDApi.caracteristricas.entidades.clases.HabilidadEspecialidad;
-import com.hyperion.DnDApi.caracteristricas.entidades.clases.RasgoClase;
+import com.hyperion.DnDApi.entidades.caracteristicas.clases.Clase;
+import com.hyperion.DnDApi.entidades.caracteristicas.clases.Especialidad;
+import com.hyperion.DnDApi.entidades.caracteristicas.clases.HabilidadEspecialidad;
+import com.hyperion.DnDApi.entidades.caracteristicas.clases.RasgoClase;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

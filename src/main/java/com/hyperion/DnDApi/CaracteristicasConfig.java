@@ -22,7 +22,7 @@ import java.util.Map;
 @EnableJpaRepositories(
         entityManagerFactoryRef = "caracteristicasEntityManagerFactory",
         transactionManagerRef = "caracteristicasTransactionManager",
-        basePackages = {"com.hyperion.DnDApi.caracteristricas.respositorios"}
+        basePackages = {"com.hyperion.DnDApi.repositorios.caracteristicas"}
 )
 public class CaracteristicasConfig {
 
@@ -44,7 +44,7 @@ public class CaracteristicasConfig {
         return
                 builder
                         .dataSource(dataSource)
-                        .packages("com.hyperion.DnDApi.caracteristricas.entidades")
+                        .packages("com.hyperion.DnDApi.entidades.caracteristicas")
                         .persistenceUnit("caracteristicas")
                         .properties(propiedadesConexion)
                         .build();

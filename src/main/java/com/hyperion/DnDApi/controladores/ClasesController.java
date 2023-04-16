@@ -1,10 +1,10 @@
 package com.hyperion.DnDApi.controladores;
 
 import com.hyperion.DnDApi.RespuestaPaginacion;
-import com.hyperion.DnDApi.caracteristricas.entidades.clases.Clase;
-import com.hyperion.DnDApi.caracteristricas.entidades.clases.Especialidad;
-import com.hyperion.DnDApi.caracteristricas.entidades.clases.HabilidadEspecialidad;
-import com.hyperion.DnDApi.caracteristricas.entidades.clases.RasgoClase;
+import com.hyperion.DnDApi.entidades.caracteristicas.clases.Clase;
+import com.hyperion.DnDApi.entidades.caracteristicas.clases.Especialidad;
+import com.hyperion.DnDApi.entidades.caracteristicas.clases.HabilidadEspecialidad;
+import com.hyperion.DnDApi.entidades.caracteristicas.clases.RasgoClase;
 import com.hyperion.DnDApi.servicios.ClasesService;
 import com.hyperion.DnDApi.utilidades.Utilidades;
 import org.springframework.beans.factory.annotation.Autowired;
