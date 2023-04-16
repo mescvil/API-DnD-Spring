@@ -1,8 +1,7 @@
 package com.hyperion.DnDApi.controladores;
 
-import com.hyperion.DnDApi.entidades.RespuestaPaginacion;
-import com.hyperion.DnDApi.entidades.clases.RasgoClase;
-import com.hyperion.DnDApi.entidades.competencias.Competencia;
+import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
+import com.hyperion.DnDApi.entidades.caracteristicas.competencias.Competencia;
 import com.hyperion.DnDApi.servicios.CompetenciasService;
 import com.hyperion.DnDApi.utilidades.Utilidades;
 import org.springframework.beans.factory.annotation.Autowired;

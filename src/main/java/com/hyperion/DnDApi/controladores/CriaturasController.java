@@ -1,6 +1,6 @@
 package com.hyperion.DnDApi.controladores;
 
-import com.hyperion.DnDApi.entidades.RespuestaPaginacion;
+import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.criaturas.Accion;
 import com.hyperion.DnDApi.entidades.criaturas.Enemigo;
 import com.hyperion.DnDApi.entidades.criaturas.RasgoCriatura;

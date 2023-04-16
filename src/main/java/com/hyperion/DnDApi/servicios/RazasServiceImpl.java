@@ -1,9 +1,9 @@
 package com.hyperion.DnDApi.servicios;
 
-import com.hyperion.DnDApi.entidades.razas.RasgoRaza;
-import com.hyperion.DnDApi.entidades.razas.Raza;
-import com.hyperion.DnDApi.repositorios.razas.RasgosRazasRepository;
-import com.hyperion.DnDApi.repositorios.razas.RazasRepository;
+import com.hyperion.DnDApi.entidades.caracteristicas.razas.RasgoRaza;
+import com.hyperion.DnDApi.entidades.caracteristicas.razas.Raza;
+import com.hyperion.DnDApi.repositorios.caracteristicas.razas.RasgosRazasRepository;
+import com.hyperion.DnDApi.repositorios.caracteristicas.razas.RazasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

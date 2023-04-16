@@ -1,13 +1,13 @@
 package com.hyperion.DnDApi.servicios;
 
-import com.hyperion.DnDApi.entidades.clases.Clase;
-import com.hyperion.DnDApi.entidades.clases.Especialidad;
-import com.hyperion.DnDApi.entidades.clases.HabilidadEspecialidad;
-import com.hyperion.DnDApi.entidades.clases.RasgoClase;
-import com.hyperion.DnDApi.repositorios.clases.ClasesRepository;
-import com.hyperion.DnDApi.repositorios.clases.EspecialidadesRepository;
-import com.hyperion.DnDApi.repositorios.clases.HabilidadEspecialidadesRepository;
-import com.hyperion.DnDApi.repositorios.clases.RasgosClasesRepository;
+import com.hyperion.DnDApi.entidades.caracteristicas.clases.Clase;
+import com.hyperion.DnDApi.entidades.caracteristicas.clases.Especialidad;
+import com.hyperion.DnDApi.entidades.caracteristicas.clases.HabilidadEspecialidad;
+import com.hyperion.DnDApi.entidades.caracteristicas.clases.RasgoClase;
+import com.hyperion.DnDApi.repositorios.caracteristicas.clases.ClasesRepository;
+import com.hyperion.DnDApi.repositorios.caracteristicas.clases.EspecialidadesRepository;
+import com.hyperion.DnDApi.repositorios.caracteristicas.clases.HabilidadEspecialidadesRepository;
+import com.hyperion.DnDApi.repositorios.caracteristicas.clases.RasgosClasesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

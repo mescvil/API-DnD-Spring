@@ -1,3 +1,8 @@
+/* 
+
+========================= CRIATURAS =========================
+
+*/
 insert into enemigos
 (nombre,imagen,alineamiento,tipo,tamanio,idiomas,sentidos,habilidades,desafio,clase_armadura,puntos_golpe,fuerza,destreza,constitucion,inteligencia,sabiduria,carisma)
 values
@@ -1174,17 +1179,22 @@ insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
 insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
 ('Golpe 1','Zombi');
 
+/* 
+
+========================= CARACTERISTICAS =========================
+
+*/
 
 /*Equipamiento*/
-insert into armas (nombre,arrojadiza,danio,dos_manos,propiedad, precio) values
+insert into CaracteristicasDevelop.armas (nombre,arrojadiza,danio,dos_manos,propiedad, precio) values
 ("Espada Larga",false,"1d8 cortante",true,"Versátil 1d10","15 piezas de oro"),
 ("Ballesta Pesada",false,"1d10 perforante",true,"Alcance 100/400 pies, Recarga","50 piezas de oro");
 
-insert into armaduras(nombre, clase_armadura,desventaja_sigilo,fuerza_requerida,peso,precio) values
+insert into CaracteristicasDevelop.armaduras(nombre, clase_armadura,desventaja_sigilo,fuerza_requerida,peso,precio) values
 ("Armadura de Placas", 18, true, 15, 65,"1500 piezas de oro"),
 ("Cuero Tachonado",12,false,0,13,"45 piezas de oro");
 
-insert into hechizos(nombre, alcance,descripcion,duracion,nivel,tiempo_lanzamiento,tirada_salvacion) values
+insert into CaracteristicasDevelop.hechizos(nombre, alcance,descripcion,duracion,nivel,tiempo_lanzamiento,tirada_salvacion) values
 ("Agarre Electrizante", 0,
 "Un relámpago salta de tu mano para dar una descarga eléctrica a la criatura que intentas tocar. Haz un ataque de conjuro cuerpo a cuerpo contra el objetivo. Tienes ventaja en la tirada de ataque si la criatura lleva armadura de metal. Si impactas, el objetivo sufre 1d8 de daño de relámpago y no podrá llevar a cabo reacciones hasta el comienzo de su próximo turno.
 A niveles superiores. El daño del conjuro aumenta en 1d8 cuando alcanzas nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8)",
@@ -1196,33 +1206,33 @@ El conjuro termina si el objetivo se pone una armadura o si utilizas una acción
 "8 horas",1,"1 acción","No tiene");
 
 /*RAZAS*/
-insert into razas (nombre, edad_maxima, altura_maxima, altura_minima,velocidad) values
+insert into CaracteristicasDevelop.razas (nombre, edad_maxima, altura_maxima, altura_minima,velocidad) values
 ("Dracónidos",80,8,6,30),
 ("Tiefling",110,6,5,30);
 
 /*RASGOS_RAZAS*/
-insert into rasgos_de_razas (nombre,descripcion) values
+insert into CaracteristicasDevelop.rasgos_de_razas (nombre,descripcion) values
 ("Visión en la Oscuridad","Eres capaz de percibir hasta luz tenue a 60 pies, y hasta esa distancia es como si estuvieras en una luz tenua.No puedes percibir colores, solo tonos de gris"),
 ("Linaje Draconido Azul","Daño de Aliento tipo Relámpàgo en un cono de 5 por 30 pies (Salvación DES)");
 
 /*IDIOMAS*/
-insert into idiomas values
+insert into CaracteristicasDevelop.idiomas values
 ("Dracónico"),("Elfico");
 
 /*TRASFONDOS*/
-insert into trasfondos (nombre, descripcion) values
+insert into CaracteristicasDevelop.trasfondos (nombre, descripcion) values
 ("Acólito",
 "Has dedicado tu vida al servicio de un templo de un dios específico o un panteón de dioses. Actúas como intermediario entre el reino de lo sagrado y el mundo mortal, realizando ritos sagrados y ofreciendo sacrificios para conducir a los adoradores a la presencia de lo divino. No eres un clérigo necesariamente; realizar ritos sagrados no es lo mismo que canalizar el poder de una divinidad."),
 ("Héroe del Pueblo",
 "Vienes de una clase social humilde, pero estás destinado para mucho más. Ya la gente de tu pueblo natal te consideran como su campeón, y tu destino te llama a estar en contra de los tiranos y los monstruos que amenazan a la gente común en todas partes.");
 
 /*RAZAS-RASGO-RELACION*/
-insert into rasgos_raza (nombre_raza, nombre_rasgo) values
+insert into CaracteristicasDevelop.rasgos_raza (nombre_raza, nombre_rasgo) values
 ("Dracónidos","Visión en la Oscuridad"),
 ("Tiefling","Visión en la Oscuridad");
 
 /*CLASES*/
-insert into clases (nombre,caracteristica_principal,dados_golpe,descripcion,tiradas_salvacion) values
+insert into CaracteristicasDevelop.clases (nombre,caracteristica_principal,dados_golpe,descripcion,tiradas_salvacion) values
 ("Bárbaro","Fuerza y Constitución","1d12","Los bárbaros se definen por su furia: una ira desenfrenada, insaciable e irreflexiva.
 Para algunos bárbaros, su furia brota de la comunión con fieros espíritus animales.
 Otros extraen su poder de una turbia reserva de ira ante un mundo lleno de dolor.
@@ -1235,7 +1245,7 @@ Para cada bárbaro, la furia es un poder que no solo aviva un frenesí de batall
 Cualquiera que desee sonreír al destino y vivir la vida en sus propios términos, podría llegar a ser llamado como pícaro.","Destreza e Inteligencia");
 
 /*RASGOS_CLASES*/
-insert into rasgos_de_clases(nombre,descripcion) values
+insert into CaracteristicasDevelop.rasgos_de_clases(nombre,descripcion) values
 ("Ataque Furtivo","Sabes aprovechar la distracción de un enemigo para atacarlo por la espalda. \n Una vez por turno, puedes infligir daño adicional a una criatura a la que impactes con un ataque si tienes ventaja en la tirada de ataque. \n El ataque debe usar un arma sutil o a distancia. \n Este rasgo funciona aunque no tengas ventaja en la tirada de ataque si otro enemigo del objetivo no incapacitado está a menos de 5 pies de él y si tú no tienes desventaja en la tirada de ataque. \n Nivel 1 - 1d6 adicional, \n Nivel 3 - 2d6 adicional, \n Nivel 5 - 3d6 adicional, \n Nivel 7 - 4d6 adicional, \n Nivel 9 - 5d6 adicional, \n Nivel 11 - 6d6 adicional, \n Nivel 13 - 7d6 adicional, \n Nivel 15 - 8d6 adicional, \n Nivel 17 - 9d6 adicional, \n Nivel 19 - 10d6 adicional"),
 ("Libro de Conjuros","Posees un libro de conjuros que contiene seis conjuros de nivel 1 de tu eleccioón. Este libro es el depositario de los conjuros de magos que conces, con la excepción de los trucos, que están grabados en tu mente"),
 ("Salud Divina","La magia que fluye a través de ti te hace inmune a las enfermedades"),
@@ -1243,24 +1253,24 @@ insert into rasgos_de_clases(nombre,descripcion) values
 Cuando ataques por primera vez en tu turno, puedes hacer un ataque temerario, que, durante ese turno, te da ventaja en las tiradas de ataque con armas cuerpo a cuerpo utilizando Fuerza, pero, a cambio, las tiradas de ataque que se hagan contra ti tienen ventaja hasta tu siguiente turno.");
 
 /*RELACIONES_CLASES_ARMAS*/
-insert into clases_armas (nombre_clase,nombre_arma) values
+insert into CaracteristicasDevelop.clases_armas (nombre_clase,nombre_arma) values
 ("Bárbaro","Espada Larga"),
 ("Pícaro","Espada Larga"),
 ("Paladín","Espada Larga");
 
 /*RELACIONES_CLASES_ARMADURAS*/
-insert into clases_armaduras (nombre_clase,nombre_armadura) values
+insert into CaracteristicasDevelop.clases_armaduras (nombre_clase,nombre_armadura) values
 ("Pícaro","Cuero Tachonado"),
 ("Paladín","Armadura de Placas");
 
 /*RELACIONES_CLASES_HECHIZOS*/
-insert into clases_hechizos(nombre_clase,nombre_hechizo) values
+insert into CaracteristicasDevelop.clases_hechizos(nombre_clase,nombre_hechizo) values
 ("Mago","Agarre Electrizante"),
 ("Mago","Armadura de Mago");
 
 /*ESPECIALIDADES*/
-insert into especialidades(nombre,descripcion,clase_id) values
+insert into CaracteristicasDevelop.especialidades(nombre,descripcion,clase_id) values
 ("Senda del Guerrero Totémico","La Senda del Guerrero Totémico es un viaje espiritual, en el que el bárbaro acepta un espíritu animal como guía, protector e inspiración. En combate, tu espíritu totémico te llena de fuerza sobrenatural, avivando con magia tu furia barbárica.
 La mayoría de tribus de bárbaros consideran un tótem animal como pariente de un clan en particular. En estos casos, es poco común que un individuo tenga más de un espíritu totémico, aunque hay excepciones.","Bárbaro");
-insert into habilidades_especialida(nombre,descripcion,especialidad_id) value
+insert into CaracteristicasDevelop.habilidades_especialidad(nombre,descripcion,especialidad_id) value
 ("Buscador de Espiritus","La tuya es una senda que busca la vinculación con el mundo natural, otorgándote parentesco con bestias. Cuando adoptas esta senda al nivel 3, ganas la habilidad para lanzar los conjuros sentido de bestia y hablar con los animales, pero sólo como rituales.","Senda del Guerrero Totémico");

@@ -1,9 +1,9 @@
 package com.hyperion.DnDApi.servicios;
 
-import com.hyperion.DnDApi.entidades.trasfondos.Idioma;
-import com.hyperion.DnDApi.entidades.trasfondos.Trasfondo;
-import com.hyperion.DnDApi.repositorios.trasfondos.IdiomasRepository;
-import com.hyperion.DnDApi.repositorios.trasfondos.TrasfondosRepository;
+import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Idioma;
+import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Trasfondo;
+import com.hyperion.DnDApi.repositorios.caracteristicas.trasfondos.IdiomasRepository;
+import com.hyperion.DnDApi.repositorios.caracteristicas.trasfondos.TrasfondosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
