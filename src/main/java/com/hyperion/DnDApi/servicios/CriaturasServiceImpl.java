@@ -1,11 +1,11 @@
 package com.hyperion.DnDApi.servicios;
 
-import com.hyperion.DnDApi.entidades.criaturas.Accion;
-import com.hyperion.DnDApi.entidades.criaturas.Enemigo;
-import com.hyperion.DnDApi.entidades.criaturas.RasgoCriatura;
-import com.hyperion.DnDApi.repositorios.criaturas.AccionesRepository;
-import com.hyperion.DnDApi.repositorios.criaturas.EnemigosRepository;
-import com.hyperion.DnDApi.repositorios.criaturas.RasgosCriaturasRepository;
+import com.hyperion.DnDApi.criaturas.entidades.Accion;
+import com.hyperion.DnDApi.criaturas.entidades.Enemigo;
+import com.hyperion.DnDApi.criaturas.entidades.RasgoCriatura;
+import com.hyperion.DnDApi.criaturas.repositorios.AccionesRepository;
+import com.hyperion.DnDApi.criaturas.repositorios.EnemigosRepository;
+import com.hyperion.DnDApi.criaturas.repositorios.RasgosCriaturasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

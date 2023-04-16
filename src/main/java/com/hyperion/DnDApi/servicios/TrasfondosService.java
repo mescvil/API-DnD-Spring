@@ -1,7 +1,7 @@
 package com.hyperion.DnDApi.servicios;
 
-import com.hyperion.DnDApi.entidades.trasfondos.Idioma;
-import com.hyperion.DnDApi.entidades.trasfondos.Trasfondo;
+import com.hyperion.DnDApi.caracteristricas.entidades.trasfondos.Idioma;
+import com.hyperion.DnDApi.caracteristricas.entidades.trasfondos.Trasfondo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

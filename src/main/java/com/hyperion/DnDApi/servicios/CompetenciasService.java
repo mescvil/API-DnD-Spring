@@ -1,6 +1,6 @@
 package com.hyperion.DnDApi.servicios;
 
-import com.hyperion.DnDApi.entidades.competencias.Competencia;
+import com.hyperion.DnDApi.caracteristricas.entidades.competencias.Competencia;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

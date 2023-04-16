@@ -1,7 +1,7 @@
 package com.hyperion.DnDApi.servicios;
 
-import com.hyperion.DnDApi.entidades.competencias.Competencia;
-import com.hyperion.DnDApi.repositorios.competencias.CompetenciasRepository;
+import com.hyperion.DnDApi.caracteristricas.entidades.competencias.Competencia;
+import com.hyperion.DnDApi.caracteristricas.respositorios.competencias.CompetenciasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,10 +1,9 @@
 package com.hyperion.DnDApi.controladores;
 
-import com.hyperion.DnDApi.entidades.RespuestaPaginacion;
-import com.hyperion.DnDApi.entidades.criaturas.Enemigo;
-import com.hyperion.DnDApi.entidades.equipamiento.Arma;
-import com.hyperion.DnDApi.entidades.equipamiento.Armadura;
-import com.hyperion.DnDApi.entidades.equipamiento.Hechizo;
+import com.hyperion.DnDApi.RespuestaPaginacion;
+import com.hyperion.DnDApi.caracteristricas.entidades.equipamiento.Arma;
+import com.hyperion.DnDApi.caracteristricas.entidades.equipamiento.Armadura;
+import com.hyperion.DnDApi.caracteristricas.entidades.equipamiento.Hechizo;
 import com.hyperion.DnDApi.servicios.EquipamientoService;
 import com.hyperion.DnDApi.utilidades.Utilidades;
 import org.springframework.beans.factory.annotation.Autowired;
