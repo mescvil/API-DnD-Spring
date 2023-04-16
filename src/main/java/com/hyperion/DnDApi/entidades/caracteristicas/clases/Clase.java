@@ -12,60 +12,68 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "CLASES")
+@Table(name = "clases")
 @Getter
 @Setter
 @NoArgsConstructor
 public class Clase {
     @Id
     private String nombre;
+
+    @Column(name = "dados_golpe")
     private String dadosGolpe;
+
     @Column(length = 500)
     private String descripcion;
+
+    @Column(name = "caracteristica_principal")
     private String caracteristicaPrincipal;
+
+    @Column(name = "tiradas_salvacion")
     private String tiradasSalvacion;
     @ManyToMany(
-            fetch = FetchType.LAZY,
+            fetch = FetchType.EAGER,
             cascade = {CascadeType.PERSIST, CascadeType.MERGE}
     )
     @JoinTable(
-            name = "CLASES_ARMAS",
+            name = "clases_armas",
             joinColumns = @JoinColumn(name = "nombre_clase"),
             inverseJoinColumns = @JoinColumn(name = "nombre_arma")
     )
     private Set<Arma> armas;
     @ManyToMany(
-            fetch = FetchType.LAZY,
+            fetch = FetchType.EAGER,
             cascade = {CascadeType.PERSIST, CascadeType.MERGE}
     )
     @JoinTable(
-            name = "CLASES_ARMADURAS",
+            name = "clases_armaduras",
             joinColumns = @JoinColumn(name = "nombre_clase"),
             inverseJoinColumns = @JoinColumn(name = "nombre_armadura")
     )
     private Set<Armadura> armaduras;
     @ManyToMany(
-            fetch = FetchType.LAZY,
+            fetch = FetchType.EAGER,
             cascade = {CascadeType.PERSIST, CascadeType.MERGE}
     )
     @JoinTable(
-            name = "CLASES_HECHIZOS",
+            name = "clases_hechizos",
             joinColumns = @JoinColumn(name = "nombre_clase"),
             inverseJoinColumns = @JoinColumn(name = "nombre_hechizo")
     )
     private Set<Hechizo> hechizos;
     @OneToMany(mappedBy = "clases",
+            fetch = FetchType.EAGER,
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
     private Set<Especialidad> especialidades;
 
     @ManyToMany(
-            fetch = FetchType.LAZY,
+            fetch = FetchType.EAGER,
             cascade = {CascadeType.PERSIST, CascadeType.MERGE}
     )
     @JoinTable(
-            name = "COMPETENCIAS_CLASE",
+            name = "compentencias_clases",
             joinColumns = @JoinColumn(name = "nombre_clase"),
             inverseJoinColumns = @JoinColumn(name = "nombre_competencia")
     )

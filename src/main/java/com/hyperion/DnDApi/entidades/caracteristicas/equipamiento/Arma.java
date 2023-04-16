@@ -22,6 +22,7 @@ public class Arma {
     @Column(length = 20)
     private String danio;
 
+    @Column(name = "dos_manos")
     private boolean dosManos;
 
     private boolean arrojadiza;

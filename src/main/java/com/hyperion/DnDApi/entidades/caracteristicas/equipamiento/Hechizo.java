@@ -10,7 +10,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "HECHIZOS")
+@Table(name = "hechizos")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -20,12 +20,14 @@ public class Hechizo {
 
     private int nivel;
 
+    @Column(name = "tiempo_lanzamiento")
     private String tiempoLanzamiento;
 
     private int alcance;
 
     private String duracion;
 
+    @Column(name = "tirada_salvacion")
     private String tiradaSalvacion;
 
     @Column(length = 500)

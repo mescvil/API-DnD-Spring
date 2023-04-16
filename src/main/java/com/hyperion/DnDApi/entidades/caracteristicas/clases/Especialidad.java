@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "ESPECIALIDADES")
+@Table(name = "especialidades")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -24,6 +24,7 @@ public class Especialidad {
     private Clase clases;
 
     @OneToMany(mappedBy = "especialidad",
+            fetch = FetchType.EAGER,
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )

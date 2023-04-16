@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "IDIOMAS")
+@Table(name = "idiomas")
 @Getter
 @Setter
 @NoArgsConstructor

@@ -41,7 +41,7 @@ public class Enemigo {
     private String habilidades;
 
     @ManyToMany(
-            fetch = FetchType.LAZY,
+            fetch = FetchType.EAGER,
             cascade = {
                     CascadeType.PERSIST,
                     CascadeType.MERGE
@@ -54,7 +54,7 @@ public class Enemigo {
     private Set<RasgoCriatura> rasgoCriaturas;
 
     @ManyToMany(
-            fetch = FetchType.LAZY,
+            fetch = FetchType.EAGER,
             cascade = {
                     CascadeType.PERSIST,
                     CascadeType.MERGE
@@ -68,8 +68,10 @@ public class Enemigo {
 
     private float desafio;
 
+    @Column(name = "clase_armadura")
     private int claseArmadura;
 
+    @Column(name = "puntos_golpe")
     private int puntosGolpe;
 
     private int fuerza;

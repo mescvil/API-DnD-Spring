@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "RASGOS_DE_RAZAS")
+@Table(name = "rasgos_de_razas")
 @Getter
 @Setter
 @NoArgsConstructor

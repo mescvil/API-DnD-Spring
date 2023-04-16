@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "RAZAS")
+@Table(name = "razas")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -16,20 +16,23 @@ public class Raza {
     @Id
     private String nombre;
 
+    @Column(name = "edad_maxima")
     private int edadMaxima;
 
+    @Column(name = "altura_minima")
     private float alturaMinima;
 
+    @Column(name = "altura_maxima")
     private float alturaMaxima;
 
     private int velocidad;
 
     @ManyToMany(
-            fetch = FetchType.LAZY,
+            fetch = FetchType.EAGER,
             cascade = {CascadeType.PERSIST, CascadeType.MERGE}
     )
     @JoinTable(
-            name = "RASGOS_RAZA",
+            name = "rasgos_raza",
             joinColumns = @JoinColumn(name = "nombre_raza"),
             inverseJoinColumns = @JoinColumn(name = "nombre_rasgo")
     )

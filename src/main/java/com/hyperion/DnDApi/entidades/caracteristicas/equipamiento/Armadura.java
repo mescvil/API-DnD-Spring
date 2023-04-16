@@ -10,7 +10,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "ARMADURAS")
+@Table(name = "armaduras")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,12 +21,15 @@ public class Armadura {
 
     private int peso;
 
+    @Column(name = "clase_armadura")
     private int claseArmadura;
 
     private String precio;
 
+    @Column(name = "fuerza_requerida")
     private int fuerzaRequerida;
 
+    @Column(name = "desventaja_sigilo")
     private boolean desventajaSigilo;
     @ManyToMany(
             fetch = FetchType.LAZY,

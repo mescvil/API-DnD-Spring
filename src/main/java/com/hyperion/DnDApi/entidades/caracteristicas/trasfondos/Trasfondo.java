@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "TRASFONDOS")
+@Table(name = "trasfondos")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -23,9 +23,9 @@ public class Trasfondo {
             cascade = {CascadeType.PERSIST, CascadeType.MERGE}
     )
     @JoinTable(
-            name="COMPETENCIAS_TRASFONDO",
-            joinColumns = @JoinColumn(name="nombre_trasfondo"),
-            inverseJoinColumns =  @JoinColumn(name = "nombre_competencia")
+            name = "competencias_trasfondos",
+            joinColumns = @JoinColumn(name = "nombre_trasfondo"),
+            inverseJoinColumns = @JoinColumn(name = "nombre_competencia")
     )
     private Set<Competencia> competencias;
 }
