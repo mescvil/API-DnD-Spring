@@ -16,6 +16,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RestController
@@ -33,7 +34,12 @@ public class ClasesController {
     @GetMapping("/{nombre}")
     public Clase obtenerClasePorNombre(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
-        return servicio.obtenerClasePorNombre(nombre);
+        Clase clase = servicio.obtenerClasePorNombre(nombre);
+
+        if (clase == null)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        else
+            return clase;
     }
 
     // ----------------- RASGOS DE CLASES -----------------
@@ -46,24 +52,32 @@ public class ClasesController {
     public RespuestaPaginacion<RasgoClase> obtenerRasgos(@RequestParam(name = "page", defaultValue = "0") int numeroPagina,
                                                          @RequestParam(name = "size", defaultValue = "20") int tamanioPagina
     ) {
+        if (numeroPagina < 0)
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
+
         Pageable configPagina = PageRequest.of(numeroPagina, tamanioPagina);
         Page<RasgoClase> pagina = servicio.obtenerRasgos(configPagina);
 
-        if (numeroPagina >= pagina.getTotalPages() || numeroPagina < 0)
-            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
-
-        return new RespuestaPaginacion<>(
-                pagina.getTotalElements(),
-                pagina.getTotalPages(),
-                pagina.hasPrevious() ? pagina.previousPageable().getPageNumber() : null,
-                pagina.hasNext() ? pagina.nextPageable().getPageNumber() : null,
-                pagina.getContent());
+        if (numeroPagina >= pagina.getTotalPages())
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
+        else
+            return new RespuestaPaginacion<>(
+                    pagina.getTotalElements(),
+                    pagina.getTotalPages(),
+                    pagina.hasPrevious() ? pagina.previousPageable().getPageNumber() : null,
+                    pagina.hasNext() ? pagina.nextPageable().getPageNumber() : null,
+                    pagina.getContent());
     }
 
     @GetMapping("/rasgos/{nombre}")
     public RasgoClase obtenerRasgoPorNombre(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
-        return servicio.obtenerRasgosPorNombre(nombre);
+        RasgoClase rasgoClase = servicio.obtenerRasgosPorNombre(nombre);
+
+        if (rasgoClase == null)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        else
+            return rasgoClase;
     }
 
     // ----------------- ESPECIALIDADES -----------------
@@ -75,7 +89,12 @@ public class ClasesController {
     @GetMapping("/especialidades/{nombre}")
     public Especialidad obtenerEspecialidadPorNombre(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
-        return servicio.obtenerEspecialidadPorNombre(nombre);
+        Especialidad especialidad = servicio.obtenerEspecialidadPorNombre(nombre);
+
+        if (especialidad == null)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        else
+            return especialidad;
     }
 
     // ----------------- HABILIDADES-ESPECIALIDADES -----------------
@@ -85,8 +104,13 @@ public class ClasesController {
     }
 
     @GetMapping("/especialidades/habilidades/{nombre}")
-    public HabilidadEspecialidad obtenerHabilidadPorNombre(@PathVariable("nombre")String nombre){
+    public HabilidadEspecialidad obtenerHabilidadPorNombre(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
-        return servicio.obtenerHabilidadPorNombre(nombre);
+        HabilidadEspecialidad habilidadEspecialidad = servicio.obtenerHabilidadPorNombre(nombre);
+
+        if (habilidadEspecialidad == null)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        else
+            return habilidadEspecialidad;
     }
 }

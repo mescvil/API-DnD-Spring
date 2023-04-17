@@ -36,7 +36,7 @@ public class ClasesServiceImpl implements ClasesService {
     public Clase obtenerClasePorNombre(String nombre) {
         if (repositorioClases.findById(nombre).isPresent()) {
             return repositorioClases.findById(nombre).get();
-        } else return new Clase();
+        } else return null;
     }
 
     // ----------------- RASGOS DE CLASES -----------------
@@ -54,7 +54,7 @@ public class ClasesServiceImpl implements ClasesService {
     public RasgoClase obtenerRasgosPorNombre(String nombre) {
         if (repositorioRasgos.findById(nombre).isPresent()) {
             return repositorioRasgos.findById(nombre).get();
-        } else return new RasgoClase();
+        } else return null;
     }
 
     // ----------------- ESPECIALIDADES -----------------
@@ -67,7 +67,7 @@ public class ClasesServiceImpl implements ClasesService {
     public Especialidad obtenerEspecialidadPorNombre(String nombre) {
         if (repositorioEspecialidades.findById(nombre).isPresent()) {
             return repositorioEspecialidades.findById(nombre).get();
-        } else return new Especialidad();
+        } else return null;
     }
 
     // ----------------- HABILIDADES-ESPECIALIDADES -----------------
@@ -80,6 +80,6 @@ public class ClasesServiceImpl implements ClasesService {
     public HabilidadEspecialidad obtenerHabilidadPorNombre(String nombre) {
         if (repositorioHabilidades.findById(nombre).isPresent()) {
             return repositorioHabilidades.findById(nombre).get();
-        } else return new HabilidadEspecialidad();
+        } else return null;
     }
 }
