@@ -14,6 +14,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RestController
@@ -32,11 +33,14 @@ public class TrasfondosController {
     public RespuestaPaginacion<Trasfondo> obtenerTrasfondos(@RequestParam(name = "page", defaultValue = "0") int numeroPagina,
                                                             @RequestParam(name = "size", defaultValue = "20") int tamanioPagina
     ) {
+        if (numeroPagina < 0)
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
+
         Pageable configPagina = PageRequest.of(numeroPagina, tamanioPagina);
         Page<Trasfondo> pagina = servicio.obtenerTrasfondos(configPagina);
 
-        if (numeroPagina >= pagina.getTotalPages() || numeroPagina < 0)
-            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        if (numeroPagina >= pagina.getTotalPages())
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
 
         return new RespuestaPaginacion<>(
                 pagina.getTotalElements(),
@@ -49,7 +53,12 @@ public class TrasfondosController {
     @GetMapping("/{nombre}")
     public Trasfondo obtenerTrasfondoPorNombre(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
-        return servicio.obtenerTrasfondoPorNombre(nombre);
+        Trasfondo trasfondo = servicio.obtenerTrasfondoPorNombre(nombre);
+
+        if (trasfondo == null)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        else
+            return trasfondo;
     }
 
     // ----------------- IDIOMAS -----------------
@@ -61,6 +70,11 @@ public class TrasfondosController {
     @GetMapping("/idiomas/{nombre}")
     public Idioma obtenerIdiomaPorNombre(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
-        return servicio.obtenerIdiomaPorNombre(nombre);
+        Idioma idioma = servicio.obtenerIdiomaPorNombre(nombre);
+
+        if (idioma == null)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        else
+            return idioma;
     }
 }

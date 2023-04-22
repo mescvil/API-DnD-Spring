@@ -14,6 +14,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RestController
@@ -31,7 +32,12 @@ public class RazasController {
     @GetMapping("/{nombre}")
     public Raza obtenerRazaPorNombre(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
-        return servicio.obtenerRazaPorNombre(nombre);
+        Raza raza = servicio.obtenerRazaPorNombre(nombre);
+
+        if (raza == null)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        else
+            return raza;
     }
 
     // ----------------- RASGO ------------------
@@ -44,11 +50,14 @@ public class RazasController {
     public RespuestaPaginacion<RasgoRaza> obtenerRasgos(@RequestParam(name = "page", defaultValue = "0") int numeroPagina,
                                                         @RequestParam(name = "size", defaultValue = "20") int tamanioPagina
     ) {
+        if (numeroPagina < 0)
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
+
         Pageable configPagina = PageRequest.of(numeroPagina, tamanioPagina);
         Page<RasgoRaza> pagina = servicio.obtenerRasgos(configPagina);
 
-        if (numeroPagina >= pagina.getTotalPages() || numeroPagina < 0)
-            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        if (numeroPagina >= pagina.getTotalPages())
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
 
         return new RespuestaPaginacion<>(
                 pagina.getTotalElements(),
@@ -61,6 +70,11 @@ public class RazasController {
     @GetMapping("/rasgos/{nombre}")
     public RasgoRaza obtenerRasgoPorNombre(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
-        return servicio.pbtenerRasgoPorNombre(nombre);
+        RasgoRaza rasgoRaza = servicio.pbtenerRasgoPorNombre(nombre);
+
+        if (rasgoRaza == null)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        else
+            return rasgoRaza;
     }
 }

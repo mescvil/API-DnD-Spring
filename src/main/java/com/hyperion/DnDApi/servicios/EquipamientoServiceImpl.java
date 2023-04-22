@@ -35,7 +35,7 @@ public class EquipamientoServiceImpl implements EquipamientoService {
     public Arma obtenerArmaPorNombre(String nombre) {
         if (repositorioArmas.findById(nombre).isPresent()) {
             return repositorioArmas.findById(nombre).get();
-        } else return new Arma();
+        } else return null;
     }
 
     // ----------------- ARMADURAS -----------------
@@ -48,7 +48,7 @@ public class EquipamientoServiceImpl implements EquipamientoService {
     public Armadura obtenerArmaduraPorNombre(String nombre) {
         if (repositorioArmaduras.findById(nombre).isPresent()) {
             return repositorioArmaduras.findById(nombre).get();
-        } else return new Armadura();
+        } else return null;
 
     }
 
@@ -67,7 +67,7 @@ public class EquipamientoServiceImpl implements EquipamientoService {
     public Hechizo obtenerHechizoPorNombre(String nombre) {
         if (repositorioHechizos.findById(nombre).isPresent()) {
             return repositorioHechizos.findById(nombre).get();
-        } else return new Hechizo();
+        } else return null;
     }
 
 

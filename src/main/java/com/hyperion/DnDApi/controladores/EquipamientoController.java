@@ -16,6 +16,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RestController
@@ -33,7 +34,12 @@ public class EquipamientoController {
     @GetMapping("/armas/{nombre}")
     public Arma obtenerArmaPorNombre(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
-        return servicio.obtenerArmaPorNombre(nombre);
+        Arma arma = servicio.obtenerArmaPorNombre(nombre);
+
+        if (arma == null)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        else
+            return arma;
     }
 
     // ----------------- ARMADURAS -----------------
@@ -45,7 +51,12 @@ public class EquipamientoController {
     @GetMapping("/armaduras/{nombre}")
     public Armadura obtenerArmaduraPorNombre(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
-        return servicio.obtenerArmaduraPorNombre(nombre);
+        Armadura armadura = servicio.obtenerArmaduraPorNombre(nombre);
+
+        if (armadura == null)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        else
+            return armadura;
     }
 
     // ----------------- HECHIZOS -----------------
@@ -59,11 +70,14 @@ public class EquipamientoController {
                                                        @RequestParam(name = "size", defaultValue = "20") int tamanioPagina,
                                                        @RequestParam(name = "sort", defaultValue = "nombre") String orden
     ) {
+        if (numeroPagina < 0)
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
+
         Pageable configPagina = PageRequest.of(numeroPagina, tamanioPagina, Sort.by(orden));
         Page<Hechizo> pagina = servicio.obtenerHechizos(configPagina);
 
-        if (numeroPagina >= pagina.getTotalPages() || numeroPagina < 0)
-            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        if (numeroPagina >= pagina.getTotalPages())
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
 
         return new RespuestaPaginacion<>(
                 pagina.getTotalElements(),
@@ -76,7 +90,12 @@ public class EquipamientoController {
     @GetMapping("/hechizos/{nombre}")
     public Hechizo obtenerHechizoPorNombre(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
-        return servicio.obtenerHechizoPorNombre(nombre);
+        Hechizo hechizo = servicio.obtenerHechizoPorNombre(nombre);
+
+        if (hechizo == null)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        else
+            return hechizo;
     }
 
 
