@@ -29,7 +29,7 @@ public class RazasServiceImpl implements RazasService {
     public Raza obtenerRazaPorNombre(String nombre) {
         if (repositorioRaza.findById(nombre).isPresent()) {
             return repositorioRaza.findById(nombre).get();
-        } else return new Raza();
+        } else return null;
     }
 
     // ----------------- RASGOS-RAZAS -----------------
@@ -47,6 +47,6 @@ public class RazasServiceImpl implements RazasService {
     public RasgoRaza pbtenerRasgoPorNombre(String nombre) {
         if (repositorioRasgos.findById(nombre).isPresent()) {
             return repositorioRasgos.findById(nombre).get();
-        } else return new RasgoRaza();
+        } else return null;
     }
 }

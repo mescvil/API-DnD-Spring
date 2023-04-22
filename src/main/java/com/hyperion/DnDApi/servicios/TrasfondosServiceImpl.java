@@ -33,7 +33,7 @@ public class TrasfondosServiceImpl implements TrasfondosService {
     public Trasfondo obtenerTrasfondoPorNombre(String nombre) {
         if (repositorioTrasfondos.findById(nombre).isPresent()) {
             return repositorioTrasfondos.findById(nombre).get();
-        } else return new Trasfondo();
+        } else return null;
 
     }
 
@@ -47,6 +47,6 @@ public class TrasfondosServiceImpl implements TrasfondosService {
     public Idioma obtenerIdiomaPorNombre(String nombre) {
         if (repositorioIdiomas.findById(nombre).isPresent()) {
             return repositorioIdiomas.findById(nombre).get();
-        } else return new Idioma();
+        } else return null;
     }
 }

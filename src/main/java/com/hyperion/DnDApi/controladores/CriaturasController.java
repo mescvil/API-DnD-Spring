@@ -17,6 +17,7 @@ import org.springframework.web.server.ResponseStatusException;
 import javax.validation.Valid;
 import java.util.List;
 
+import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RestController
@@ -37,24 +38,32 @@ public class CriaturasController {
                                                         @RequestParam(name = "size", defaultValue = "20") int tamanioPagina,
                                                         @RequestParam(name = "sort", defaultValue = "nombre") String orden
     ) {
+        if (numeroPagina < 0)
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
+
         Pageable configPagina = PageRequest.of(numeroPagina, tamanioPagina, Sort.by(orden));
         Page<Enemigo> pagina = servicio.obtenerEnemigos(configPagina);
 
-        if (numeroPagina >= pagina.getTotalPages() || numeroPagina < 0)
-            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
-
-        return new RespuestaPaginacion<>(
-                pagina.getTotalElements(),
-                pagina.getTotalPages(),
-                pagina.hasPrevious() ? pagina.previousPageable().getPageNumber() : null,
-                pagina.hasNext() ? pagina.nextPageable().getPageNumber() : null,
-                pagina.getContent());
+        if (numeroPagina >= pagina.getTotalPages())
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
+        else
+            return new RespuestaPaginacion<>(
+                    pagina.getTotalElements(),
+                    pagina.getTotalPages(),
+                    pagina.hasPrevious() ? pagina.previousPageable().getPageNumber() : null,
+                    pagina.hasNext() ? pagina.nextPageable().getPageNumber() : null,
+                    pagina.getContent());
     }
 
     @GetMapping("/{nombre}")
     public Enemigo obtenerEnemigoPorId(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
-        return servicio.obtenerEnemigoPorNombre(nombre);
+        Enemigo enemigo = servicio.obtenerEnemigoPorNombre(nombre);
+
+        if (enemigo == null)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        else
+            return enemigo;
     }
 
     @PutMapping
@@ -83,24 +92,32 @@ public class CriaturasController {
     public RespuestaPaginacion<RasgoCriatura> obtenerRagos(@RequestParam(name = "page", defaultValue = "0") int numeroPagina,
                                                            @RequestParam(name = "size", defaultValue = "20") int tamanioPagina
     ) {
+        if (numeroPagina < 0)
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
+
         Pageable configPagina = PageRequest.of(numeroPagina, tamanioPagina);
         Page<RasgoCriatura> pagina = servicio.obtenerRasgos(configPagina);
 
-        if (numeroPagina >= pagina.getTotalPages() || numeroPagina < 0)
-            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
-
-        return new RespuestaPaginacion<>(
-                pagina.getTotalElements(),
-                pagina.getTotalPages(),
-                pagina.hasPrevious() ? pagina.previousPageable().getPageNumber() : null,
-                pagina.hasNext() ? pagina.nextPageable().getPageNumber() : null,
-                pagina.getContent());
+        if (numeroPagina >= pagina.getTotalPages())
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
+        else
+            return new RespuestaPaginacion<>(
+                    pagina.getTotalElements(),
+                    pagina.getTotalPages(),
+                    pagina.hasPrevious() ? pagina.previousPageable().getPageNumber() : null,
+                    pagina.hasNext() ? pagina.nextPageable().getPageNumber() : null,
+                    pagina.getContent());
     }
 
     @GetMapping("/rasgos/{nombre}")
     public RasgoCriatura obtenerRasgoPorId(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
-        return servicio.obtenerRasgoPorNombre(nombre);
+        RasgoCriatura rasgoCriatura = servicio.obtenerRasgoPorNombre(nombre);
+
+        if (rasgoCriatura == null)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        else
+            return rasgoCriatura;
     }
 
     @PutMapping("/rasgos")
@@ -129,24 +146,32 @@ public class CriaturasController {
     public RespuestaPaginacion<Accion> obtenerAcciones(@RequestParam(name = "page", defaultValue = "0") int numeroPagina,
                                                        @RequestParam(name = "size", defaultValue = "20") int tamanioPagina
     ) {
+        if (numeroPagina < 0)
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
+
         Pageable configPagina = PageRequest.of(numeroPagina, tamanioPagina);
         Page<Accion> pagina = servicio.obtenerAcciones(configPagina);
 
-        if (numeroPagina >= pagina.getTotalPages() || numeroPagina < 0)
-            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
-
-        return new RespuestaPaginacion<>(
-                pagina.getTotalElements(),
-                pagina.getTotalPages(),
-                pagina.hasPrevious() ? pagina.previousPageable().getPageNumber() : null,
-                pagina.hasNext() ? pagina.nextPageable().getPageNumber() : null,
-                pagina.getContent());
+        if (numeroPagina >= pagina.getTotalPages())
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
+        else
+            return new RespuestaPaginacion<>(
+                    pagina.getTotalElements(),
+                    pagina.getTotalPages(),
+                    pagina.hasPrevious() ? pagina.previousPageable().getPageNumber() : null,
+                    pagina.hasNext() ? pagina.nextPageable().getPageNumber() : null,
+                    pagina.getContent());
     }
 
     @GetMapping("/acciones/{nombre}")
     public Accion obtenerAccionPorId(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
-        return servicio.obtenerAccionPorNombre(nombre);
+        Accion accion = servicio.obtenerAccionPorNombre(nombre);
+
+        if (accion == null)
+            throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
+        else
+            return accion;
     }
 
     @PutMapping("/acciones")
