@@ -1,4 +1,4 @@
-package com.hyperion.DnDApi.controladores;
+package com.hyperion.DnDApi.controladores.rest;
 
 import com.hyperion.DnDApi.configuraciones.RespuestaNoPaginada;
 import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;

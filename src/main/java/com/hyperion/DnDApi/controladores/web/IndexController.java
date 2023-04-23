@@ -1,4 +1,4 @@
-package com.hyperion.DnDApi.controladores;
+package com.hyperion.DnDApi.controladores.web;
 
 import com.hyperion.DnDApi.servicios.CriaturasService;
 import org.springframework.beans.factory.annotation.Autowired;
