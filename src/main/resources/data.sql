@@ -1219,11 +1219,11 @@ insert into CaracteristicasDevelop.armas (nombre,arrojadiza,danio,dos_manos,prop
 ("Pica",false,"1d10 perforante",false,"Marcial, Gran Alcance, Pesada","5 piezas de oro"),
 ("Pico de Guerra",false,"1d8 poerforante",false,"Marcial","5 piezas de oro"),
 ("Tridente",true,"1d6 perforante",false,"Marcial, Alcance 20/60 pies, Versátil 1d8","5 piezas de oro"),
-(),
-(),
-(),
-(),
-("Ballesta Pesada",false,"1d10 perforante",true,"Marcial, Alcance 100/400 pies, Recarga","50 piezas de oro");
+("Arco Largo",false,"1d8 perforante",true,"Marcial, Alcance 150/600 pies, Pesada","50 piezas de oro"),
+("Ballesta de Mano",false,"1d6 perforante",false,"Marcial, Alcance 30/120 pies, Ligera, Recarga","75 piezas de oro"),
+("Ballesta Pesada",false,"1d10 perforante",true,"Marcial, Alcance 100/400 pies, Recarga","50 piezas de oro"),
+("Cerbatana",false,"1 perforante",false,"Marcial, Alcance 25/100, Recarga","10 piezas de oro"),
+("Red",true,"No tiene",false,"Marcial, Alcance 5/15 pies, Especial","1 pieza de oro");
 
 insert into CaracteristicasDevelop.armaduras(nombre, clase_armadura,desventaja_sigilo,fuerza_requerida,peso,precio) values
 ("Armadura de Placas", 18, true, 15, 65,"1500 piezas de oro"),
