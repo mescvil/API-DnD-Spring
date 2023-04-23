@@ -4,6 +4,7 @@ import com.hyperion.DnDApi.entidades.caracteristicas.competencias.Competencia;
 import com.hyperion.DnDApi.entidades.caracteristicas.equipamiento.Arma;
 import com.hyperion.DnDApi.entidades.caracteristicas.equipamiento.Armadura;
 import com.hyperion.DnDApi.entidades.caracteristicas.equipamiento.Hechizo;
+import com.hyperion.DnDApi.entidades.caracteristicas.razas.RasgoRaza;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -31,6 +32,16 @@ public class Clase {
 
     @Column(name = "tiradas_salvacion")
     private String tiradasSalvacion;
+    @ManyToMany(
+            fetch = FetchType.EAGER,
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE}
+    )
+    @JoinTable(
+            name = "rasgos_clase",
+            joinColumns = @JoinColumn(name = "nombre_clase"),
+            inverseJoinColumns = @JoinColumn(name = "nombre_rasgo")
+    )
+    private Set<RasgoClase> rasgosClase;
     @ManyToMany(
             fetch = FetchType.EAGER,
             cascade = {CascadeType.PERSIST, CascadeType.MERGE}

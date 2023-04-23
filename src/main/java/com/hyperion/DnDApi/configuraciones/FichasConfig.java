@@ -39,7 +39,7 @@ public class FichasConfig {
             @Qualifier("fichasDataSource") DataSource dataSource
     ) {
         Map<String, String> propiedadesConexion = new HashMap<>();
-        propiedadesConexion.put("hibernate.hbm2ddl.auto", "update");
+        propiedadesConexion.put("hibernate.hbm2ddl.auto", "create");
 
         return
                 builder

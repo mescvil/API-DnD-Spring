@@ -1,13 +1,13 @@
 package com.hyperion.DnDApi.entidades.caracteristicas.clases;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.hyperion.DnDApi.entidades.caracteristicas.razas.Raza;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "rasgos_de_clases")
@@ -19,4 +19,11 @@ public class RasgoClase {
     private String nombre;
     @Column(length = 800)
     private String descripcion;
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+            mappedBy = "rasgosClase"
+    )
+    @JsonIgnore
+    private Set<Clase> clases;
 }
