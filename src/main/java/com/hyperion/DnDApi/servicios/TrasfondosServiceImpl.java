@@ -1,5 +1,6 @@
 package com.hyperion.DnDApi.servicios;
 
+import com.hyperion.DnDApi.entidades.caracteristicas.Alineamiento;
 import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Idioma;
 import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Trasfondo;
 import com.hyperion.DnDApi.repositorios.caracteristicas.trasfondos.IdiomasRepository;
@@ -9,6 +10,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -48,5 +50,18 @@ public class TrasfondosServiceImpl implements TrasfondosService {
         if (repositorioIdiomas.findById(nombre).isPresent()) {
             return repositorioIdiomas.findById(nombre).get();
         } else return null;
+    }
+
+    // ----------------- ALINEAMIENTOS -----------------
+    @Override
+    public List<String> obtenerAlineamientos() {
+        List<String> alineamientos = new ArrayList<>();
+
+        for (Alineamiento a : Alineamiento.values()) {
+            alineamientos.add(
+                    a.name().replace("_", " ")
+            );
+        }
+        return alineamientos;
     }
 }

@@ -2,6 +2,7 @@ package com.hyperion.DnDApi.controladores.rest;
 
 import com.hyperion.DnDApi.configuraciones.RespuestaNoPaginada;
 import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
+import com.hyperion.DnDApi.entidades.caracteristicas.Alineamiento;
 import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Idioma;
 import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Trasfondo;
 import com.hyperion.DnDApi.servicios.TrasfondosService;
@@ -77,5 +78,11 @@ public class TrasfondosController {
             throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
         else
             return idioma;
+    }
+
+    // ----------------- ALINEAMIENTOS -----------------
+    @GetMapping("/alineamientos")
+    public RespuestaNoPaginada<String> obtenerAlineamientos() {
+        return new RespuestaNoPaginada<>(servicio.obtenerAlineamientos(), String.class);
     }
 }
