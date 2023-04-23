@@ -7,6 +7,7 @@ import com.hyperion.DnDApi.repositorios.criaturas.AccionesRepository;
 import com.hyperion.DnDApi.repositorios.criaturas.EnemigosRepository;
 import com.hyperion.DnDApi.repositorios.criaturas.RasgosCriaturasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -66,6 +67,7 @@ public class CriaturasServiceImpl implements CriaturasService {
 
     // ----------------- RASGOS -----------------
     @Override
+    @Cacheable("ragos-criaturas")
     public List<RasgoCriatura> obtenerRasgos() {
         return repositorioRasgos.findAll();
     }
@@ -111,6 +113,7 @@ public class CriaturasServiceImpl implements CriaturasService {
     }
 
     @Override
+    @Cacheable("acciones-criaturas")
     public Page<Accion> obtenerAcciones(Pageable pageable) {
         return repositorioAcciones.findAll(pageable);
     }

@@ -7,6 +7,7 @@ import com.hyperion.DnDApi.repositorios.caracteristicas.equipamiento.ArmadurasRe
 import com.hyperion.DnDApi.repositorios.caracteristicas.equipamiento.ArmasRepository;
 import com.hyperion.DnDApi.repositorios.caracteristicas.equipamiento.HechizosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -54,6 +55,7 @@ public class EquipamientoServiceImpl implements EquipamientoService {
 
     // ----------------- HECHIZOS -----------------
     @Override
+    @Cacheable("hechizos")
     public List<Hechizo> obtenerHechizos() {
         return repositorioHechizos.findAll();
     }

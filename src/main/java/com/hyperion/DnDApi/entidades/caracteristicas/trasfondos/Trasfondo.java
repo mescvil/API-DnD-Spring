@@ -19,7 +19,7 @@ public class Trasfondo {
     @Column(length = 500)
     private String descripcion;
     @ManyToMany(
-            fetch = FetchType.LAZY,
+            fetch = FetchType.EAGER,
             cascade = {CascadeType.PERSIST, CascadeType.MERGE}
     )
     @JoinTable(
