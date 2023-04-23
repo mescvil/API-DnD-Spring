@@ -19,10 +19,12 @@ public class Armadura {
     @Column(length = 100)
     private String nombre;
 
+    private String tipo;
+
     private int peso;
 
     @Column(name = "clase_armadura")
-    private int claseArmadura;
+    private String claseArmadura;
 
     private String precio;
 
