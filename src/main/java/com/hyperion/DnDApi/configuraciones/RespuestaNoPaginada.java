@@ -5,13 +5,13 @@ import lombok.Getter;
 import java.util.List;
 
 @Getter
-public class RespuestaColeccion<T> {
+public class RespuestaNoPaginada<T> {
 
     private final String tipo;
     private final int elementos;
     private final List<T> resultado;
 
-    public RespuestaColeccion(List<T> resultado, Class<T> tipo) {
+    public RespuestaNoPaginada(List<T> resultado, Class<T> tipo) {
         this.resultado = resultado;
 
         this.tipo = tipo.getSimpleName();

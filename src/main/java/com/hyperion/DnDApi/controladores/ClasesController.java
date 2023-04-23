@@ -1,6 +1,6 @@
 package com.hyperion.DnDApi.controladores;
 
-import com.hyperion.DnDApi.configuraciones.RespuestaColeccion;
+import com.hyperion.DnDApi.configuraciones.RespuestaNoPaginada;
 import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.caracteristicas.clases.Clase;
 import com.hyperion.DnDApi.entidades.caracteristicas.clases.Especialidad;
@@ -28,8 +28,8 @@ public class ClasesController {
 
     // ----------------- CLASES -----------------
     @GetMapping
-    public RespuestaColeccion<Clase> obtenerClases() {
-        return new RespuestaColeccion<>(servicio.obtenerClases(), Clase.class);
+    public RespuestaNoPaginada<Clase> obtenerClases() {
+        return new RespuestaNoPaginada<>(servicio.obtenerClases(), Clase.class);
     }
 
     @GetMapping("/{nombre}")
@@ -45,8 +45,8 @@ public class ClasesController {
 
     // ----------------- RASGOS DE CLASES -----------------
     @GetMapping("/rasgos")
-    public RespuestaColeccion<RasgoClase> obtenerRasgos() {
-        return new RespuestaColeccion<>(servicio.obtenerRasgos(), RasgoClase.class);
+    public RespuestaNoPaginada<RasgoClase> obtenerRasgos() {
+        return new RespuestaNoPaginada<>(servicio.obtenerRasgos(), RasgoClase.class);
     }
 
     @GetMapping("/rasgos/")
@@ -83,8 +83,8 @@ public class ClasesController {
 
     // ----------------- ESPECIALIDADES -----------------
     @GetMapping("/especialidades")
-    public RespuestaColeccion<Especialidad> obtenerEspecialidades() {
-        return new RespuestaColeccion<>(servicio.obtenerEspecialidades(), Especialidad.class);
+    public RespuestaNoPaginada<Especialidad> obtenerEspecialidades() {
+        return new RespuestaNoPaginada<>(servicio.obtenerEspecialidades(), Especialidad.class);
     }
 
     @GetMapping("/especialidades/{nombre}")

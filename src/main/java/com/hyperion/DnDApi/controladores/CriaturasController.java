@@ -1,5 +1,6 @@
 package com.hyperion.DnDApi.controladores;
 
+import com.hyperion.DnDApi.configuraciones.RespuestaNoPaginada;
 import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.criaturas.Accion;
 import com.hyperion.DnDApi.entidades.criaturas.Enemigo;
@@ -29,8 +30,8 @@ public class CriaturasController {
 
     // ----------------- ENEMIGOS -----------------
     @GetMapping
-    public List<Enemigo> obtenerEnemigos() {
-        return servicio.obtenerEnemigos();
+    public RespuestaNoPaginada<Enemigo> obtenerEnemigos() {
+        return new RespuestaNoPaginada<>(servicio.obtenerEnemigos(), Enemigo.class);
     }
 
     @GetMapping("/")
@@ -84,8 +85,8 @@ public class CriaturasController {
 
     // ----------------- RASGOS -----------------
     @GetMapping("/rasgos")
-    public List<RasgoCriatura> obtenerRasgos() {
-        return servicio.obtenerRasgos();
+    public RespuestaNoPaginada<RasgoCriatura> obtenerRasgos() {
+        return new RespuestaNoPaginada<>(servicio.obtenerRasgos(), RasgoCriatura.class);
     }
 
     @GetMapping("/rasgos/")
@@ -138,8 +139,8 @@ public class CriaturasController {
 
     // ----------------- ACCIONES -----------------
     @GetMapping("/acciones")
-    public List<Accion> obtenerAcciones() {
-        return servicio.obtenerAcciones();
+    public RespuestaNoPaginada<Accion> obtenerAcciones() {
+        return new RespuestaNoPaginada<>(servicio.obtenerAcciones(), Accion.class);
     }
 
     @GetMapping("/acciones/")

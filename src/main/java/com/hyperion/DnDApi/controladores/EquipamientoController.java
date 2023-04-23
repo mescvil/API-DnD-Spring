@@ -1,5 +1,6 @@
 package com.hyperion.DnDApi.controladores;
 
+import com.hyperion.DnDApi.configuraciones.RespuestaNoPaginada;
 import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.caracteristicas.equipamiento.Arma;
 import com.hyperion.DnDApi.entidades.caracteristicas.equipamiento.Armadura;
@@ -27,8 +28,8 @@ public class EquipamientoController {
 
     // ----------------- ARMAS -----------------
     @GetMapping("/armas")
-    public List<Arma> obtenerArmas() {
-        return servicio.obtenerArmas();
+    public RespuestaNoPaginada<Arma> obtenerArmas() {
+        return new RespuestaNoPaginada<>(servicio.obtenerArmas(), Arma.class);
     }
 
     @GetMapping("/armas/{nombre}")
@@ -44,8 +45,8 @@ public class EquipamientoController {
 
     // ----------------- ARMADURAS -----------------
     @GetMapping("/armaduras")
-    public List<Armadura> obtenerArmaduras() {
-        return servicio.obtenerArmaduras();
+    public RespuestaNoPaginada<Armadura> obtenerArmaduras() {
+        return new RespuestaNoPaginada<>(servicio.obtenerArmaduras(), Armadura.class);
     }
 
     @GetMapping("/armaduras/{nombre}")
@@ -61,8 +62,8 @@ public class EquipamientoController {
 
     // ----------------- HECHIZOS -----------------
     @GetMapping("/hechizos")
-    public List<Hechizo> obtenerHechizos() {
-        return servicio.obtenerHechizos();
+    public RespuestaNoPaginada<Hechizo> obtenerHechizos() {
+        return new RespuestaNoPaginada<>(servicio.obtenerHechizos(), Hechizo.class);
     }
 
     @GetMapping("/hechizos/")

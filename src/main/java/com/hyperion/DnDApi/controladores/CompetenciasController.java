@@ -1,5 +1,6 @@
 package com.hyperion.DnDApi.controladores;
 
+import com.hyperion.DnDApi.configuraciones.RespuestaNoPaginada;
 import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.caracteristicas.competencias.Competencia;
 import com.hyperion.DnDApi.servicios.CompetenciasService;
@@ -23,8 +24,8 @@ public class CompetenciasController {
     private CompetenciasService servicio;
 
     @GetMapping
-    public List<Competencia> obtenerCompetencias() {
-        return servicio.obtenerCompetencias();
+    public RespuestaNoPaginada<Competencia> obtenerCompetencias() {
+        return new RespuestaNoPaginada<>(servicio.obtenerCompetencias(), Competencia.class);
     }
 
     @GetMapping("/")
