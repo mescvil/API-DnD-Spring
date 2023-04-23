@@ -6,13 +6,12 @@ import lombok.Setter;
 import java.util.List;
 
 @Getter
-@Setter
 public class RespuestaPaginacion<T> {
 
-    private long elementos;
-    private long paginas;
-    private Integer anterior;
-    private Integer siguiente;
+    private final long elementos;
+    private final long paginas;
+    private final Integer anterior;
+    private final Integer siguiente;
 
     private List<T> resultado;
 
