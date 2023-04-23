@@ -100,8 +100,8 @@ public class ClasesController {
 
     // ----------------- HABILIDADES-ESPECIALIDADES -----------------
     @GetMapping("/especialidades/habilidades")
-    public List<HabilidadEspecialidad> obtenerHabilidades() {
-        return servicio.obtenerHabilidades();
+    public RespuestaNoPaginada<HabilidadEspecialidad> obtenerHabilidades() {
+        return new RespuestaNoPaginada<>(servicio.obtenerHabilidades(), HabilidadEspecialidad.class);
     }
 
     @GetMapping("/especialidades/habilidades/{nombre}")
