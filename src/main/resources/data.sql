@@ -1225,14 +1225,24 @@ insert into CaracteristicasDevelop.armas (nombre,arrojadiza,danio,dos_manos,prop
 ("Cerbatana",false,"1 perforante",false,"Marcial, Alcance 25/100, Recarga","10 piezas de oro"),
 ("Red",true,"No tiene",false,"Marcial, Alcance 5/15 pies, Especial","1 pieza de oro");
 
-insert into CaracteristicasDevelop.armaduras(nombre, clase_armadura,desventaja_sigilo,fuerza_requerida,peso,precio) values
-("Armadura de Placas", 18, true, 15, 65,"1500 piezas de oro"),
-("Cuero Tachonado",12,false,0,13,"45 piezas de oro");
+insert into CaracteristicasDevelop.armaduras(nombre,tipo,clase_armadura,desventaja_sigilo,fuerza_requerida,peso,precio) values
+("Acolchada","Ligera","11 + Des",false,0,8,"5 piezas de oro"),
+("Cuero","Ligera","11 + Des",false,0,10,"10 piezas de oro"),
+("Cuero Tachonado","Ligera","12 + Des",false,0,13,"45 piezas de oro"),
+("Camisa de Malla","Media","13 + Des (máx. 2)",false,0,20,"50 piezas de oro"),
+("Cota de Escamas","Media","14 + Des (máx. 2)",true,0,45,"50 piezas de oro"),
+("Coraza","Media","14 + Des (máx. 2)",false,0,20,"400 piezas de oro"),
+("Media Armadura","Media","15 + Des(máx. 2)",true,0,40,"750 piezas de oro"),
+("Pieles","Media","12 + Des (máx. 2)",false,0,12,"10 piezas de oro"),
+("Armadura de Bandas","Pesada","17",true,15,60,"200 piezas de oro"),
+("Armadura de Placas","Pesada","18", true, 15, 65,"1500 piezas de oro"),
+("Cota Guarnecida","Pesada","14",true,0,40,"30 piezas de oro"),
+("Cota de Malla","Pesada","16",true,13,55,"75 piezas de oro"),
+("Escudo","Escudo","+2",false,0,6,"10 piezas de oro");
 
 insert into CaracteristicasDevelop.hechizos(nombre, alcance,descripcion,duracion,nivel,tiempo_lanzamiento,tirada_salvacion) values
 ("Agarre Electrizante", 0,
-"Un relámpago salta de tu mano para dar una descarga eléctrica a la criatura que intentas tocar. Haz un ataque de conjuro cuerpo a cuerpo contra el objetivo. Tienes ventaja en la tirada de ataque si la criatura lleva armadura de metal. Si impactas, el objetivo sufre 1d8 de daño de relámpago y no podrá llevar a cabo reacciones hasta el comienzo de su próximo turno.
-A niveles superiores. El daño del conjuro aumenta en 1d8 cuando alcanzas nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8)",
+"Un relámpago salta de tu mano para dar una descarga eléctrica a la criatura que intentas tocar. Haz un ataque de conjuro cuerpo a cuerpo contra el objetivo. Tienes ventaja en la tirada de ataque si la criatura lleva armadura de metal. Si impactas, el objetivo sufre 1d8 de daño de relámpago y no podrá llevar a cabo reacciones hasta el comienzo de su próximo turno. A niveles superiores. El daño del conjuro aumenta en 1d8 cuando alcanzas nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8)",
 "0",0,"1 acción","No Tiene"),
 ("Armadura de Mago",0,
 "Tocas a una criatura voluntaria que no lleve armadura y una fuerza mágica protectora la rodea hasta que el conjuro termine.
