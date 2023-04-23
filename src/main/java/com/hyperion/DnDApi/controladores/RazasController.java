@@ -1,5 +1,6 @@
 package com.hyperion.DnDApi.controladores;
 
+import com.hyperion.DnDApi.configuraciones.RespuestaNoPaginada;
 import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.caracteristicas.razas.RasgoRaza;
 import com.hyperion.DnDApi.entidades.caracteristicas.razas.Raza;
@@ -25,8 +26,8 @@ public class RazasController {
 
     // ----------------- RAZAS -----------------
     @GetMapping
-    public List<Raza> obtenerRazas() {
-        return servicio.obtenerRazas();
+    public RespuestaNoPaginada<Raza> obtenerRazas() {
+        return new RespuestaNoPaginada<>(servicio.obtenerRazas(), Raza.class);
     }
 
     @GetMapping("/{nombre}")
@@ -42,8 +43,8 @@ public class RazasController {
 
     // ----------------- RASGO ------------------
     @GetMapping("/rasgos")
-    public List<RasgoRaza> obtenerRasgos() {
-        return servicio.obtenerRasgos();
+    public RespuestaNoPaginada<RasgoRaza> obtenerRasgos() {
+        return new RespuestaNoPaginada<>(servicio.obtenerRasgos(), RasgoRaza.class);
     }
 
     @GetMapping("/rasgos/")

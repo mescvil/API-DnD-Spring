@@ -1,5 +1,6 @@
 package com.hyperion.DnDApi.controladores;
 
+import com.hyperion.DnDApi.configuraciones.RespuestaNoPaginada;
 import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Idioma;
 import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Trasfondo;
@@ -25,8 +26,8 @@ public class TrasfondosController {
 
     // ----------------- TRASFONDOS -----------------
     @GetMapping
-    public List<Trasfondo> obtenerTrasfondos() {
-        return servicio.obtenerTrasfondos();
+    public RespuestaNoPaginada<Trasfondo> obtenerTrasfondos() {
+        return new RespuestaNoPaginada<>(servicio.obtenerTrasfondos(), Trasfondo.class);
     }
 
     @GetMapping("/")
@@ -63,8 +64,8 @@ public class TrasfondosController {
 
     // ----------------- IDIOMAS -----------------
     @GetMapping("/idiomas")
-    public List<Idioma> obtenerIdiomas() {
-        return servicio.obtenerIdiomas();
+    public RespuestaNoPaginada<Idioma> obtenerIdiomas() {
+        return new RespuestaNoPaginada<>(servicio.obtenerIdiomas(), Idioma.class);
     }
 
     @GetMapping("/idiomas/{nombre}")
