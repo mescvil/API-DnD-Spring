@@ -9,6 +9,7 @@ import com.hyperion.DnDApi.repositorios.caracteristicas.clases.EspecialidadesRep
 import com.hyperion.DnDApi.repositorios.caracteristicas.clases.HabilidadEspecialidadesRepository;
 import com.hyperion.DnDApi.repositorios.caracteristicas.clases.RasgosClasesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -41,6 +42,7 @@ public class ClasesServiceImpl implements ClasesService {
 
     // ----------------- RASGOS DE CLASES -----------------
     @Override
+    @Cacheable("rasgos-clase")
     public List<RasgoClase> obtenerRasgos() {
         return repositorioRasgos.findAll();
     }
@@ -59,6 +61,7 @@ public class ClasesServiceImpl implements ClasesService {
 
     // ----------------- ESPECIALIDADES -----------------
     @Override
+    @Cacheable("especialidad-clase")
     public List<Especialidad> obtenerEspecialidades() {
         return repositorioEspecialidades.findAll();
     }
@@ -72,6 +75,7 @@ public class ClasesServiceImpl implements ClasesService {
 
     // ----------------- HABILIDADES-ESPECIALIDADES -----------------
     @Override
+    @Cacheable("habilidad-especialidad")
     public List<HabilidadEspecialidad> obtenerHabilidades() {
         return repositorioHabilidades.findAll();
     }
