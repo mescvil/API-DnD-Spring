@@ -1,5 +1,6 @@
 package com.hyperion.DnDApi.controladores;
 
+import com.hyperion.DnDApi.configuraciones.RespuestaNoPaginada;
 import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.caracteristicas.clases.Clase;
 import com.hyperion.DnDApi.entidades.caracteristicas.clases.Especialidad;
@@ -27,8 +28,8 @@ public class ClasesController {
 
     // ----------------- CLASES -----------------
     @GetMapping
-    public List<Clase> obtenerClases() {
-        return servicio.obtenerClases();
+    public RespuestaNoPaginada<Clase> obtenerClases() {
+        return new RespuestaNoPaginada<>(servicio.obtenerClases(), Clase.class);
     }
 
     @GetMapping("/{nombre}")
@@ -44,8 +45,8 @@ public class ClasesController {
 
     // ----------------- RASGOS DE CLASES -----------------
     @GetMapping("/rasgos")
-    public List<RasgoClase> obtenerRasgos() {
-        return servicio.obtenerRasgos();
+    public RespuestaNoPaginada<RasgoClase> obtenerRasgos() {
+        return new RespuestaNoPaginada<>(servicio.obtenerRasgos(), RasgoClase.class);
     }
 
     @GetMapping("/rasgos/")
@@ -82,8 +83,8 @@ public class ClasesController {
 
     // ----------------- ESPECIALIDADES -----------------
     @GetMapping("/especialidades")
-    public List<Especialidad> obtenerEspecialidades() {
-        return servicio.obtenerEspecialidades();
+    public RespuestaNoPaginada<Especialidad> obtenerEspecialidades() {
+        return new RespuestaNoPaginada<>(servicio.obtenerEspecialidades(), Especialidad.class);
     }
 
     @GetMapping("/especialidades/{nombre}")
