@@ -16,7 +16,7 @@ import java.util.Set;
 public class Trasfondo {
     @Id
     private String nombre;
-    @Column(length = 500)
+    @Column(length = 700)
     private String descripcion;
     @ManyToMany(
             fetch = FetchType.EAGER,
