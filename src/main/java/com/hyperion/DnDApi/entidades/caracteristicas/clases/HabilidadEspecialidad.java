@@ -15,7 +15,7 @@ import javax.persistence.*;
 public class HabilidadEspecialidad {
     @Id
     private String nombre;
-    @Column(length = 500)
+    @Column(length = 1000)
     private String descripcion;
     @ManyToOne
     @JoinColumn(name = "especialidad_id")
