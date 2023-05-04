@@ -1323,7 +1323,7 @@ insert into CaracteristicasDevelop.rasgos_de_clases(nombre,descripcion) values
 ("Salud Divina","La magia que fluye a través de ti te hace inmune a las enfermedades");
 
 /*RELACIONES_CLASES_RASGOS*/
-insert into caracteristicasdevelop.rasgos_clase(nombre_clase,nombre_rasgo) values
+insert into CaracteristicasDevelop.rasgos_clase (nombre_clase,nombre_rasgo) values
 /*BARBARO*/
 ("Bárbaro","Furia"),
 ("Bárbaro","Tabla de Furia"),
