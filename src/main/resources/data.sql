@@ -1241,6 +1241,7 @@ insert into CaracteristicasDevelop.armaduras(nombre,tipo,clase_armadura,desventa
 ("Escudo","Escudo","+2",false,0,6,"10 piezas de oro");
 
 insert into CaracteristicasDevelop.hechizos(nombre, alcance,descripcion,duracion,nivel,tiempo_lanzamiento,tirada_salvacion) values
+/*A*/
 ("Abrir",60,
 "Un objetivo que esté cerrado mediante una cerradura normal o que esté atascado o atrancado se abre, si tiene varios cerrojos solo 1 se abre. Si la cerradura es arcana, ese conjuro se anula. Se escucha un gran ruido a 300 pies cuando se lanza este conjuro",
 "0",2,"1 acción","No tiene"),
@@ -1270,8 +1271,32 @@ insert into CaracteristicasDevelop.hechizos(nombre, alcance,descripcion,duracion
 "Concentración, hasta 1 hora",3,"1 acción","No tiene"),
 ("Armadura de Mago",0,
 "Tocas a una criatura voluntaria que no lleve armadura y una fuerza mágica protectora la rodea hasta que el conjuro termine. La CA del objetivo pasa a ser 13 + su modificador de Destreza. El conjuro termina si el objetivo se pone una armadura o si utilizas una acción para finalizarlo.",
-"8 horas",1,"1 acción","No tiene");
+"8 horas",1,"1 acción","No tiene"),
+/*B*/
+("Barrera de Cuchillas",90,
+"Creas un muro vertical de cuchillas giratorias, afiladas y hechas de energía mágica. Este aparece dentro del alcance y permanece hasta el final de la duración del conjuro. Puedes crear un muro recto de hasta 100 pies de largo, 20 de alto y 5 de ancho o un muro en forma de anillo de 60 pies de diámetro, 20 de alto y 5 de ancho. En cualquiera caso, proporciona cobertura tres cuartos a las criaturas detrás de él y su espacio se considera terreno difícil. Cuando una criatura entre en el área del muro por primera vez en un turno, o cuando empiece su turno en ella, deberá realizar una tirada de salvación de Destreza. Si falla, sufrirá 6d10 de daño cortante. Si tiene éxito, recibirá la mitad de daño",
+"Concentración, hasta 10 min",6,"1 acción","Destreza"),
+("Bendición",30,
+"Bendices hasta tres criaturas de tu elección dentro del alcance. Hasta el final de la duración del conjuro, cuando uno de los objetivos haga una tirada de ataque o una tirada de salvación, puede tirar 1d4 y añadir el resultado a esa tirada. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 2 o más, puedes elegir como objetivo a una criatura adicional por cada nivel por encima de 1 que tenga el espacio que hayas empleado.",
+"Concentración, hasta 1 min",1,"1 acción","No tiene"),
+("Boca Mágica",30,
+"Implantas un mensaje en un objeto dentro del alcance, que será pronunciado en voz alta cuando se cumpla la condición de activación. Eliges un objeto que puedas ver y que no lleva o vista otra criatura. Después dices el mensaje, que debe estar formado por 25 palabras o menos, aunque puede ser retransmitido durante, como mucho, 10 minutos. Por último, determinas las circunstancias que activarán el conjuro para entregar tu mensaje. Cuando se den estas circunstancias, una boca mágica aparecerá en el objeto y recitará el mensaje, con tu voz y con el mismo volumen que utilizaste. Si el objeto que eliges tiene una boca o algo que parezca una boca (como la de una estatua, por ejemplo), la boca mágica aparcera ahí, con lo que parecerá que las palabras son pronunciadas por la boca del objeto. Cuando lanzas este conjuro, puedes hacer que termine después de entregar el mensaje o que permanezca y el mensaje sea repetido cada vez que ocurran las circunstancias que lo activan",
+"Hasta que sea disipado",2,"1 minuto","No tiene"),
+("Bola de Fuego",150,
+"na ráfaga brillante surge de tu dedo hacia un punto de tu elección dentro del alcance y después crece con un rugido sordo hasta convertirse en una explosión ardiente. Todas las criaturas en una esfera de 20 pies centrada en el punto deben hacer una tirada de salvación de Destreza. Sufrirán 8d6 de daño de fuego si fallan la tirada o la mitad del daño si la superan. El fuego se extiende más allá de las esquinas. Los objetos inflamables que se encuentren en el área que no lleve o vista alguien arderán. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 4 o más, el daño aumenta en 1d6 por cada nivel por encima de 3 que tenga el espacio que hayas empleado.",
+"0",3,"1 acción","Destreza"),
+("Brazos de Hadar",10,
+"Invocas el poder de Hadar, el Hambre Tenebrosa. Zarcillos de energía oscura surgen de ti y golpean a todas las criaturas a 10 pies o menos de tu posición. Cada criatura en el área debe hacer una tirada de salvación de Fuerza. Si falla, sufrirá 2d6 de daño necrótico y no podrá llevar a cabo reacciones hasta el comienzo de su próximo turno. Si supera la tirada, recibirá la mitad de daño, pero no sufrirá ningún otro efecto. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 2 o más, el daño aumenta en 1d6 por cada nivel por encima de 1 que tenga el espacio que hayas empleado.",
+"0",1,"1 acción","Fuerza"),
+("Buenas Bayas",0,
+"Aparecen en tu mano un máximo de diez bayas infundidas con magia hasta el final de la duración del conjuro. Una criatura puede utilizar su acción para comerse una baya. Si hace esto recuperará 1 punto de golpe y tendrá sustento para todo el día. Las bayas pierden su poder si no son consumidas dentro de las 24 horas siguientes al lanzamiento del conjuro.",
+"0",1,"1 acción","No tiene"),
+("Burla Dañina",60,
+"Profieres una sarta de improperios entremezclados con sutiles encantamientos hacia una criatura que puedas ver dentro del alcance. Si el objetivo puede oírte (aunque no necesita entenderte), debe tener éxito en una tirada de salvación de Sabiduría o recibirá 1d4 de daño psíquico y sufrirá desventaja en la siguiente tirada de ataque que realice antes del final de su próximo turno. A niveles superiores. El daño del conjuro aumenta en 1d4 cuando alcanzas nivel 5 (2d4), nivel 11 (3d4) y nivel 17 (4d4).",
+"0",0,"1 acción","Sabiduría");
 
+
+/*nombre, alcance INT,descripcion,duracion,nivel INT,tiempo_lanzamiento,tirada_salvacion*/
 /*RAZAS*/
 insert into CaracteristicasDevelop.razas (nombre, edad_maxima, altura_maxima, altura_minima,velocidad) values
 ("Dracónidos",80,8,6,30),
