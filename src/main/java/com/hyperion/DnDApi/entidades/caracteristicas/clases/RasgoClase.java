@@ -1,7 +1,6 @@
 package com.hyperion.DnDApi.entidades.caracteristicas.clases;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.hyperion.DnDApi.entidades.caracteristicas.razas.Raza;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

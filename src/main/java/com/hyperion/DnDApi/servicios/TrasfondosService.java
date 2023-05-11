@@ -1,6 +1,5 @@
 package com.hyperion.DnDApi.servicios;
 
-import com.hyperion.DnDApi.entidades.caracteristicas.Alineamiento;
 import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Idioma;
 import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Trasfondo;
 import org.springframework.data.domain.Page;
