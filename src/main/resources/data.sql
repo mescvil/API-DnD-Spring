@@ -1295,8 +1295,51 @@ insert into CaracteristicasDevelop.hechizos(nombre, alcance,descripcion,duracion
 "Profieres una sarta de improperios entremezclados con sutiles encantamientos hacia una criatura que puedas ver dentro del alcance. Si el objetivo puede oírte (aunque no necesita entenderte), debe tener éxito en una tirada de salvación de Sabiduría o recibirá 1d4 de daño psíquico y sufrirá desventaja en la siguiente tirada de ataque que realice antes del final de su próximo turno. A niveles superiores. El daño del conjuro aumenta en 1d4 cuando alcanzas nivel 5 (2d4), nivel 11 (3d4) y nivel 17 (4d4).",
 "0",0,"1 acción","Sabiduría"),
 
-/* O */
+/* N */
+("Nube Aniquiladora",120,
+"Creas una nube venenosa de niebla amarillo-verdosa que cubre un área esférica de 20 pies de radio alrededor de un punto de tu elección. La niebla se extiende más allá de las esquinas. Se mantiene hasta el final de la duración del conjuro o hasta que un viento fuerte la disperse, terminando el conjuro. El área se considera muy oscura. Cuando una criatura entre en el área del conjuro por primera vez en un turno, o cuando empiece su turno en ella, debe realizar una tirada de salvación de Constitución. Sufrirá 5d8 de daño de veneno si falla la tirada o la mitad del daño si la supera. La niebla afecta incluso a las criaturas que aguanten la respiración o que no necesiten respirar. La niebla se aleja 10 pies de ti al principio de cada uno de tus turnos, siguiendo la superficie del terreno. Al ser más densa que el aire, se desplazará hacia las cotas más bajas, derramándose por las aperturas que encuentre. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 6 o más, el daño aumenta en 1d8 por cada nivel por encima de 5 que tenga el espacio que hayas empleado.",
+"Concentración, hasta 10 minutos",5,"1 acción","Constitución"),
 
+("Nube Apestosa",90,
+"Creas una nube de gas amarillo nauseabundo que cubre una zona esférica de 20 pies de radio alrededor de un punto de tu elección. Se extiende más allá de las esquinas y el área se considera muy oscura. Permanecerá en el ambiente hasta el final de la duración del conjuro. Cada criatura que esté completamente dentro de la nube al comienzo de su turno debe hacer una tirada de salvación de Constitución contra venenos. Si fracasa, empleará su acción del turno en tambalearse y vomitar. Las criaturas que no necesitan respirar o que son inmunes a veneno tienen éxito automáticamente en esta tirada de salvación. Un viento moderado (por lo menos 10 millas por hora) dispersa la nube tras 4 asaltos. Un viento fuerte (de al menos 20 millas por hora / 32 km/hr) dispersa la nube tras 1 asalto.",
+"Concentración, hasta 1 minuto",3,"1 acción","Constitución"),
+
+("Nube de Dagas",60,
+"Llenas de dagas giratorias el aire de un cubo de 5 pies de lado centrado en un punto de tu elección dentro del alcance. Las criaturas reciben 4d4 de daño cortante si comienzan su turno en el área del conjuro o cuando entran por primera vez. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 3 o más, el daño aumenta en 2d4 por cada nivel por encima de 2 que tenga el espacio que hayas empleado.",
+"Concentración, hasta 1 minuto",2,"1 acción","No tiene"),
+
+("Nube de Oscurecimiento",120,
+"Creas una bruma que cubre un área esférica de 20 pies de radio alrededor de un punto de tu elección. La niebla se extiende más allá de las esquinas y el área se considera muy oscura. Se mantiene hasta el final de la duración del conjuro o hasta que un viento de velocidad moderada (al menos 10 millas por hora / 16 km/hr) la disperse. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 2 o más, el radio de la niebla aumenta en 20 pies por cada nivel por encima de 1 que tenga el espacio que hayas empleado.",
+"Concentración, hasta 1 hora",1,"1 acción","No tiene"),
+
+("Nube Incendiaria",150,
+"Una nube de humo turbulento, veteado de ascuas candentes, aparece en una zona esférica de 20 pies de radio centrada en un punto que se encuentre dentro del alcance. La nube se extiende más allá de las esquinas y la zona se considera muy oscura. Se mantiene hasta el final de la duración del conjuro o hasta que un viento de velocidad moderada (al menos 10 millas por hora / 16 km/hr) la disperse. Cuando la nube aparece, todas las criaturas en el área deben hacer una tirada de salvación de Destreza. Sufrirán 10d8 de daño de fuego si fallan la tirada o la mitad del daño si la superan. Las criaturas también deberán realizar esta tirada de salvación cuando entren en la zona del conjuro por primera vez en un turno dado o cuando acaben su turno en ella. Al principio de cada uno de tus turnos, la nube se mueve 10 pies alejándose de ti en la dirección que elijas.",
+"Concentración, hasta 1 minuto",8,"1 acción","Destreza"),
+
+/* O */
+("Ojo Arcano",30,
+"Creas un ojo mágico invisible, capaz de levitar y que permanece hasta el final de la duración del conjuro. Recibes mentalmente información visual del ojo, que posee vista normal y visión en la oscuridad hasta 30 pies. El ojo es capaz de mirar en cualquier dirección. Como acción, puedes mover el ojo hasta 30 pies a una nueva localización. No hay un límite de distancia establecido entre tú y el ojo, pero no puede pasar a otro plano de existencia. Si una barrera sólida bloquea el movimiento del ojo, este es capaz de cruzar a través de orificios con un diámetro de, al menos, 1 pulgada (2,5 cm).",
+"Concentración, hasta 1 hora",4,"1 acción","No tiene"),
+
+("Ola Atronadora",15,
+"Una ola de fuerza atronadora surge de tu cuerpo. Todas las criaturas en un cubo de 15 pies adyacente a ti deben hacer una tirada de salvación de Constitución. Las criaturas que fallen la tirada sufrirán 2d8 de daño de trueno y serán empujadas 10 pies, y las que la superen sufrirán la mitad del daño y no serán empujadas. Además, los objetos dentro del área de efecto que nadie lleve o vista son empujados automáticamente 10 pies en dirección contraria a ti. El conjuro crea una explosión sónica audible a 300 pies de distancia. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 2 o más, el daño aumenta en 1d8 por cada nivel por encima de 1 que tenga el espacio que hayas empleado.",
+"Instantáneo",1,"1 acción","Constitución"),
+
+("Ola Destructora",30,
+"Golpeas el suelo, creando una descarga de energía divina que forma ondas que se alejan de ti. Cada criatura que elijas en un radio de 30 pies debe tener éxito en una tirada de salvación de Constitución o recibirá 5d6 de daño de trueno 5d6 de daño radiante o necrótico (a tu elección) y quedará derribada. Una criatura que tenga éxito en la tirada de salvación solo recibe la mitad del daño y no queda derribada.",
+"Instantáneo",5,"1 acción","Constitución"),
+
+("Orbe Cromático",90,
+"Lanzas una esfera de energía de 4 pulgadas de diámetro a una criatura que puedas ver dentro del alcance. Elige entre ácido, frío, fuego, relámpago, veneno o trueno para el tipo de orbe creado y, después, haz un ataque de conjuro a distancia contra el objetivo. Si el ataque impacta, la criatura recibe 3d8 de daño del tipo elegido. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 2 o más, el daño aumenta en 1d8 por cada nivel por encima de 1 que tenga el espacio que hayas empleado.",
+"Instantáneo",1,"1 acción","No tiene"),
+
+("Orden Imperiosa",60,
+"Das una orden de una sola palabra a una criatura que puedas ver dentro del alcance. El objetivo debe tener éxito en una tirada de salvación de Sabiduría o verse obligada a obedecer la orden en su próximo turno. Este conjuro no tiene efecto si el objetivo es un muerto viviente, si no entiende tu idioma o si la orden implica dañar a la criatura de forma directa. Más abajo puedes encontrar ejemplos de órdenes típicas y sus efectos, aunque puedes dar otras distintas a las que se describen aquí. En ese caso, el DM decide cómo reacciona el objetivo. Si la criatura no puede obedecer la orden, el conjuro termina. Acércate. El objetivo se acerca a ti por el camino más corto y directo posible, acabando su turno si se mueve a 5 pies o menos de ti. Suelta. El objetivo suelta lo que esté sujetando y acaba su turno. Huye. El objetivo emplea su turno en alejarse de ti de la manera más rápida posible. Póstrate. El objetivo cae derribado y acaba su turno. Detente. El objetivo no se mueve ni realiza ninguna acción. Si le es posible, una criatura que esté volando permanecerá en el aire. Si para ello necesita moverse, volará la mínima distancia necesaria para no caer. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 2 o más, puedes elegir como objetivo a una criatura adicional por cada nivel por encima de 1 que tenga el espacio que hayas empleado. En el momento de elegirla como objetivo, cada criatura debe estar a 30 pies o menos de todas las demás.",
+"1 asalto",1,"1 acción","Sabiduría"),
+
+("Oscuridad",60,
+"Hasta el final de la duración del conjuro, una oscuridad mágica se propaga desde un punto a tu elección dentro del alcance y llena una esfera de 15 pies de radio. Esta oscuridad se extiende más allá de las esquinas. Una criatura con visión en la oscuridad no puede ver a través de ella, y la luz no mágica no puede alumbrarla. Si el punto elegido es un objeto que tu sujetes o uno que nadie lleve o vista, la oscuridad se extenderá desde el objeto y se desplazará con él. Cubrir completamente la fuente de la oscuridad con un objeto opaco, como una cazuela o un casco, la bloquea. Si cualquier parte del área de este conjuro se superpone con una zona de luz creada por un conjuro de nivel 2 o inferior, el conjuro que creó esa luz es disipado." ,
+"Concentración, hasta 10 minutos",2,"1 acción","No tiene"),
 
 /* P */
 ("Palabra de Curación",60,
