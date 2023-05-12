@@ -20,4 +20,13 @@ public class Utilidades {
         }
         return String.join(" ", palabras);
     }
+
+    public static boolean esNumerico(String cadena) {
+        try {
+            Double.parseDouble(cadena);
+            return true;
+        } catch (NumberFormatException ex) {
+            return false;
+        }
+    }
 }

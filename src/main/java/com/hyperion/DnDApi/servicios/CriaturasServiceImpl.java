@@ -108,12 +108,12 @@ public class CriaturasServiceImpl implements CriaturasService {
 
     // ----------------- ACCIONES -----------------
     @Override
+    @Cacheable("acciones-criaturas")
     public List<Accion> obtenerAcciones() {
         return repositorioAcciones.findAll();
     }
 
     @Override
-    @Cacheable("acciones-criaturas")
     public Page<Accion> obtenerAcciones(Pageable pageable) {
         return repositorioAcciones.findAll(pageable);
     }

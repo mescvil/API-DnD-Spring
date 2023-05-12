@@ -22,6 +22,8 @@ public interface EquipamientoService {
     // ----------------- HECHIZOS -----------------
     List<Hechizo> obtenerHechizos();
 
+    List<Hechizo> obtenerHechizosLetra(String letra);
+
     Page<Hechizo> obtenerHechizos(Pageable pageable);
 
     Hechizo obtenerHechizoPorNombre(String nombre);

@@ -61,6 +61,11 @@ public class EquipamientoServiceImpl implements EquipamientoService {
     }
 
     @Override
+    public List<Hechizo> obtenerHechizosLetra(String letra) {
+        return repositorioHechizos.findByNombreStartingWith(letra);
+    }
+
+    @Override
     public Page<Hechizo> obtenerHechizos(Pageable pageable) {
         return repositorioHechizos.findAll(pageable);
     }
