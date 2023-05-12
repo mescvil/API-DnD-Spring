@@ -15,6 +15,10 @@ import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.ArrayList;
+import java.util.logging.Logger;
+
+import static com.hyperion.DnDApi.utilidades.Utilidades.esNumerico;
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
@@ -62,6 +66,14 @@ public class EquipamientoController {
     @GetMapping("/hechizos")
     public RespuestaNoPaginada<Hechizo> obtenerHechizos() {
         return new RespuestaNoPaginada<>(servicio.obtenerHechizos(), Hechizo.class);
+    }
+
+    @GetMapping("/hechizos/agrupar/{letra}")
+    public RespuestaNoPaginada<Hechizo> obtenerHechizosPorLetra(@PathVariable("letra") String letra) {
+        if (letra.length() > 1 || esNumerico(letra))
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
+
+        return new RespuestaNoPaginada<>(servicio.obtenerHechizosLetra(letra), Hechizo.class);
     }
 
     @GetMapping("/hechizos/")
