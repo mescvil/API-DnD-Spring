@@ -1295,6 +1295,91 @@ insert into CaracteristicasDevelop.hechizos(nombre, alcance,descripcion,duracion
 "Profieres una sarta de improperios entremezclados con sutiles encantamientos hacia una criatura que puedas ver dentro del alcance. Si el objetivo puede oírte (aunque no necesita entenderte), debe tener éxito en una tirada de salvación de Sabiduría o recibirá 1d4 de daño psíquico y sufrirá desventaja en la siguiente tirada de ataque que realice antes del final de su próximo turno. A niveles superiores. El daño del conjuro aumenta en 1d4 cuando alcanzas nivel 5 (2d4), nivel 11 (3d4) y nivel 17 (4d4).",
 "0",0,"1 acción","Sabiduría"),
 
+/* O */
+
+
+/* P */
+("Palabra de Curación",60,
+"Una criatura de tu elección que puedas ver dentro del alcance recupera tantos puntos de golpe como 1d4 + tu modificador por aptitud mágica. Este conjuro no afecta a muertos vivientes o autómatas. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 2 o más, la curación aumenta en 1d4 por cada nivel por encima de 1 que tenga el espacio que hayas empleado",
+"Instantáneao",1,"1 acción adicional","Fuerza"),
+
+("Palabra de Poder: Aturdir",60,
+"Pronuncias una palabra de poder capaz de aturdir la mente de una criatura que puedas ver dentro del alcance, dejándola estupefacta. Si la criatura elegida posee 150 puntos de golpe o menos, queda aturdida. Si no es así, el conjuro no tiene efecto. Al final de cada uno de sus turnos, el objetivo puede realizar una tirada de salvación de Constitución. Si tiene éxito, este efecto aturdidor termina.",
+"Instantáneao",8,"1 acción","Constitución"),
+
+("Palabra de Regreso",5,
+"Tú y hasta cinco criaturas voluntarias a 5 pies de ti os teletransportáis instantáneamente a un santuario designado previamente. Apareceréis en el espacio libre más cercano al punto que elegiste al preparar tu santuario (ver más abajo). Si lanzas este conjuro sin haber dispuesto un santuario primero, este no tendrá ningún efecto. Primero debes designar un santuario lanzando este conjuro dentro de una localización, como un templo, dedicada o fuertemente vinculada a tu deidad. Si intentas lanzar el conjuro para este propósito en un área que no esté consagrada a tu divinidad, este no tendrá efecto.",
+"Instantáneao",6,"1 acción","No tiene"),
+
+("Parar el Tiempo",0,
+"Detienes brevemente el paso del tiempo para todo el mundo menos para ti. No pasa el tiempo para ninguna de las otras criaturas, pero tú puedes llevar a cabo 1d4 + 1 turnos seguidos, en los cuales puedes usar acciones y moverte de forma normal. El conjuro termina si una de las acciones que utilizas en este periodo o alguno de los efectos que creas durante este tiempo afectan a una criatura que no seas tú o a un objeto vestido o portado por alguien. Además, el conjuro termina si te alejas más de 1.000 pies del lugar donde lo lanzaste.",
+"Instantáneao",9,"1 acción","No tiene"),
+
+("Pasamuros",30,
+"Se abre un pasadizo en un punto que puedas ver dentro del alcance, sobre una superficie de madera, yeso o piedra (como un muro, pared o suelo). Eliges las dimensiones de la apertura: hasta 5 pies de ancho, 8 de alto y 20 de profundidad. El pasadizo no crea inestabilidad en la estructura circundante. Cuando desaparezca, cualquier criatura u objeto todavía dentro será expulsado de manera inofensiva a un espacio libre cerca de la superficie sobre la que lanzaste el conjuro.",
+"1 hora",5,"1 acción","No tiene"),
+
+("Polimorfar",60,
+"Este conjuro transforma a una criatura que puedas ver dentro del alcance en una nueva forma. Una criatura no voluntaria puede hacer una tirada de salvación de Sabiduría para evitar la transformación. El conjuro no tendrá efecto en un cambiaformas o en una criatura con 0 puntos de golpe. La transformación se mantiene hasta el final de la duración del conjuro o hasta que el objetivo muera o sea reducido a 0 puntos de golpe. La nueva forma puede ser la de cualquier bestia cuyo valor de desafío sea igual o menor que el del objetivo (o igual o menor que el nivel del objetivo, si este no tiene un valor de desafío). Reemplaza el perfil del objetivo por el perfil de la bestia elegida, incluyendo las puntuaciones de característica mentales. Únicamente mantendrá su alineamiento y personalidad.",
+"Concentración, hasta 1 hora",4,"1 acción","Sabiduría"),
+
+("Pasar sin Rastro",0,
+"Radias a tu alrededor un velo de sombras y silencio que impide que tú y tus compañeros seáis detectados. Hasta el final de la duración del conjuro, cada criatura que elijas a 30 pies de ti (incluido tú) tiene un bonificador de +10 a pruebas de Destreza (Sigilo) y no puede ser rastreada excepto por medias mágicos. Una criatura que recibe este bonificador no deja huellas ni rastro de su paso.",
+"Concentración, hasta 1 hora",2,"1 acción","No tiene"),
+
+("Piel Pétrea",0,
+"Este conjuro vuelve pétrea la carne de una criatura voluntaria a la que toques. Hasta el final del conjuro, el objetivo tiene resistencia al daño contundente, cortante y perforante que no sea mágico.",
+"Concentración, hasta 1 hora",4,"1 acción","No tiene"),
+
+("Prohibición",0,
+"Creas una guarda contra el desplazamiento mágico que protege hasta 40.000 pies cuadrados de terreno y hasta una altura de 30 pies sobre el nivel del suelo. Hasta el final de la duración del conjuro, ninguna criatura puede teletransportarse dentro del área o utilizar portales, como los creados por el conjuro portal, para entrar en el área. El conjuro impermeabiliza el área contra el viaje interplanar y, por tanto, evita que las criaturas accedan al área mediante el Plano Astral, el Plano Etéreo, el Feywild, el Shadowfell o el conjuro desplazamiento entre planos.",
+"1 día",6,"10 minutos","No tiene"),
+
+("Presagio",0,
+"Tocas a una criatura voluntaria, a la que otorgas una habilidad limitada para ver el futuro inmediato. Hasta el final de la duración del conjuro, el objetivo no puede ser sorprendido y tiene ventaja en tiradas de ataque, pruebas de característica y tiradas de salvación. Además, las otras criaturas tienen desventaja en tiradas de ataque contra el objetivo. El conjuro termina inmediatamente si lo lanzas de nuevo antes de que termine",
+"8 horas",9,"1 minuto","No tiene"),
+
+/* R */
+("Ráfaga de Viento",60,
+"Una corriente de viento que forma una línea recta de 60 pies de largo y 10 pies de ancho surge de ti en una dirección de tu elección y permanece hasta el final de la duración del conjuro. Cada criatura que comience su turno en la corriente debe tener éxito en una tirada de salvación de Fuerza o será empujada 15 pies alejándose de ti en la dirección de la corriente. Cualquier criatura en la línea de viento que quiera acercarse a ti debe emplear 2 pies de movimiento por cada pie que quiera mover. La ráfaga dispersa gases o vapores y apaga velas, antorchas y otras llamas desprotegidas en la zona. Hace que las que estén protegidas, como la de una lámpara, se agiten violentamente, y tiene un 50 % de posibilidades de apagarlas también. Hasta el final del conjuro, puedes usar una acción adicional en cada uno de tus turnos para cambiar la dirección en la que lacorriente surge de ti.",
+"Concentración, hasta 1 minuto",2,"1 acción","Fuerza"),
+
+("Regenerar",0,
+"Tocas a una criatura, estimulando su capacidad de curación natural. Recupera 4d8 + 15 puntos de golpe. Además, recuperará 1 punto de golpe al principio de cada uno de sus turnos (10 puntos de golpe por minuto) hasta el final de la duración del conjuro. Los miembros cercenados del objetivo (dedos, piernas, cola, etc.), si los tuviera, crecen de nuevo en 2 minutos. Si tienes el miembro separado y lo presionas contra el muñón, el conjuro hace que se reintegre inmediatamente.",
+"1 hora",7,"1 minuto","No tiene"),
+
+("Relámpago",100,
+"Un relámpago que forma una línea recta de 100 pies de largo y 5 pies de ancho surge de ti en una dirección de tu elección. Todas las criaturas en la línea deben hacer una tirada de salvación de Destreza. Sufrirán 8d6 de daño de relámpago si fallan la tirada o la mitad del daño si la superan. Los objetos inflamables que se encuentren en el área que no lleve o vista alguien arderán. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 4 o más, el daño aumenta en 1d6 por cada nivel por encima de 3 que tenga el espacio que hayas empleado",
+"Instantáneo",3,"1 acción","Destreza"),
+
+("Reparar",0,
+"Este conjuro repara una sola grieta o ruptura en un objeto que toques, como un eslabón roto en una cadena, las dos mitades de una llave partida, una capa rasgada o una fuga en una bota de vino. Mientras la grieta o desgarrón no sea de más de 1 pie en alguna dimensión, lo arreglas sin dejar rastro del daño. Este conjuro puede reparar el componente físico de un objeto mágico o de un autómata, pero no puede restaurar su magia.",
+"Instantáneo",0,"1 minuto","No tiene"),
+
+("Reprensión Infernal",0,
+"Apuntas con el dedo y la criatura que te dañó se ve envuelta momentáneamente en una llamarada infernal. Debe hacer una tirada de salvación de Destreza. Sufrirá 2d10 de daño de fuego si falla la tirada o la mitad del daño si la supera. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 2 o más, el daño aumenta en 1d10 por cada nivel por encima de 1 que tenga el espacio que hayas empleado.",
+"Instantáneo",1,"1 reacción","Destreza"),
+
+("Respirar bajo el Agua",30,
+"Este conjuro proporciona a un máximo de diez criaturas que puedas ver dentro del alcance la habilidad de respirar bajo el agua hasta el final del conjuro. Las criaturas afectadas también retienen su modo de respiración normal.",
+"24 horas",3,"1 acción","No tiene"),
+
+("Resurrección Verdadera",0,
+"Tocas a una criatura que lleve muerta menos de 200 años y que no haya fallecido de edad avanzada. Si su alma es libre y lo desea, la criatura vuelve a la vida con todos sus puntos de golpe. Este conjuro también neutraliza cualquier veneno, cura cualquier enfermedad y levanta cualquier maldición que afligiera a la criatura en el momento de su muerte. El conjuro también restaura órganos y miembros dañados o perdidos. Si la criatura es un muerto viviente, la resucitará en su estado previo a la muerte en vida. El conjuro puede incluso proporcionar un cuerpo nuevo si el original ya no existe, en cuyo caso deberás pronunciar el nombre de la criatura. Esta aparecerá en un espacio desocupado a 10 pies de ti.",
+"Instantáneo",9,"1 hora","No tiene"),
+
+("Retirada Expeditiva",0,
+"Este conjuro te permite moverte a una velocidad increíble. Puedes realizar la acción de Correr cuando lanzas este conjuro y posteriormente como acción adicional en cada uno de tus turnos hasta el final del conjuro.",
+"Concentración, hasta 10 minutos",1,"1 acción adicional","No tiene"),
+
+("Romper la Mente",150,
+"Atacas la mente de una criatura que puedas ver dentro del alcance, intentando destruir su intelecto y su personalidad. El objetivo recibe 4d6 de daño psíquico y debe hacer una tirada de salvación de Inteligencia. Si fracasa, la Inteligencia y el Carisma de la criatura pasan a ser 1. Tras esto, el objetivo no puede lanzar conjuros, activar objetos mágicos, comprender idiomas o comunicarse de forma inteligible. A pesar de ello, es capaz de identificar a sus amigos, seguirlos y defenderlos. Cada 30 días la criatura puede repetir la tirada de salvación de este conjuro. Si tiene éxito, el efecto del conjuro termina. También se puede finalizar este conjuro usando restablecimiento mayor, curar o deseo.",
+"Instantáneo",9,"1 acción","Carisma"),
+
+("Rayo Abrasador",120,
+"Creas tres rayos de fuego y los diriges contra uno o varios objetivos que se encuentren dentro del alcance. Haz un ataque de conjuro a distancia para cada rayo. Si impactas, el objetivo recibe 2d6 de daño de fuego. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 3 o más, creas un rayo adicional por cada nivel por encima de 2 del espacio.",
+"Instantáneo",2,"1 acción","No tiene"),
+
 /* S */
 ("Saber Druídico",30,
 "Creas un efecto sensorial diminuto e inofensivo que predice cómo será el tiempo atmosférico en tu localización en las próximas 24 horas. El efecto podría manifestarse como un orbe dorado para un día despejado, una nube indicando lluvia, copos de nieve para nieve, etc. Este efecto dura 1 asalto. · Haces que una flor florezca inmediatamente, que una vaina de semillas se abra o que el brote de una hoja germine. · Creas un efecto sensorial instantáneo e inofensivo, como hojas cayendo, una ráfaga de viento, el sonido de un animal pequeño o un leve olor a mofeta. El efecto debe quedar confinado a un cubo de 5 pies. · Apagas o enciendes de forma instantánea una vela, antorcha u hoguera pequeña.",
