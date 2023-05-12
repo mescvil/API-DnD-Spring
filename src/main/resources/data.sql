@@ -1293,8 +1293,45 @@ insert into CaracteristicasDevelop.hechizos(nombre, alcance,descripcion,duracion
 "0",1,"1 acción","No tiene"),
 ("Burla Dañina",60,
 "Profieres una sarta de improperios entremezclados con sutiles encantamientos hacia una criatura que puedas ver dentro del alcance. Si el objetivo puede oírte (aunque no necesita entenderte), debe tener éxito en una tirada de salvación de Sabiduría o recibirá 1d4 de daño psíquico y sufrirá desventaja en la siguiente tirada de ataque que realice antes del final de su próximo turno. A niveles superiores. El daño del conjuro aumenta en 1d4 cuando alcanzas nivel 5 (2d4), nivel 11 (3d4) y nivel 17 (4d4).",
-"0",0,"1 acción","Sabiduría");
+"0",0,"1 acción","Sabiduría"),
 
+/* V */
+("Ver Invisibilidad",0,
+"Hasta el final de la duración del conjuro, puedes ver criaturas y objetos invisibles como si fueran visibles, así como ver en el Plano Etéreo. Las criaturas y objetos etéreos se mostrarán translúcidos y fantasmales.",
+"1 hora",2,"1 acción","No tiene"),
+
+("Viajar con el Viento",30,
+"Hasta el final de la duración del conjuro, tú y hasta diez criaturas voluntarias que puedas ver dentro del alcance asumís una forma gaseosa, tomando la apariencia de jirones de nube. Mientras mantenga esta forma, cada criatura tendrá una velocidad volando de 300 pies y resistencia al daño de armas no mágicas. Las únicas acciones que una criatura puede realizar en esta forma son Correr o volver a su forma habitual. Transformarse de vuelta lleva 1 minuto, y durante este tiempo la criatura estará incapacitada y no podrá moverse. Hasta el final del conjuro, la criatura también podrá volver a convertirse en nube, acto que también precisa del proceso de transformación de 1 minuto detallado más arriba. Si una criatura está volando y en forma gaseosa cuando el efecto termina, descenderá 60 pies por asalto durante 1 minuto hasta que aterrice de forma segura. Si, pasado 1 minuto, no puede aterrizar, caerá la distancia restante.",
+"8 horas",2,"1 acción","No tiene"),
+
+("Viajar mediante Plantas",10,
+"El conjuro crea un enlace mágico entre una planta inanimada Grande o mayor dentro del alcance y otra planta a cualquier distancia en el mismo plano de existencia. Debes haber visto o tocado la planta destino al menos una vez. Hasta el final de la duración del conjuro, cualquier criatura puede entrar en la planta objetivo y salir de la planta destino empleando 5 pies de movimiento. ",
+"1 asalto",6,"1 acción","No tiene"),
+
+("Vinculo Protector",0,
+"Este conjuro protege a una criatura voluntaria a la que toques y crea una conexión mística entre vosotros hasta que el conjuro termine. Mientras el objetivo se encuentre a 60 pies o menos de ti, obtiene un modificador de +1 a su CA y tiradas de salvación, así como resistencia a todo el daño. Sin embargo, cada vez que reciba daño, tú sufrirás la misma cantidad de daño. El conjuro finaliza si llegas a tener 0 puntos de golpe o si el objetivo y tú os separáis más de 60 pies. También termina si se lanza otra vez sobre cualquiera de las dos criaturas conectadas o si utilizas una acción para finalizarlo.",
+"1 hora",2,"1 acción","No tiene"),
+
+("Visión en la Oscuridad",0,
+"Tocas a una criatura voluntaria, que gana la capacidad de ver en la oscuridad. Hasta el final de la duración del conjuro, el objetivo tiene visión en la oscuridad con un alcance de 60 pies.",
+"8 horas",2,"1 acción","No tiene"),
+
+("Visión Verzaz",0,
+"Este conjuro proporciona a la criatura voluntaria que toques la habilidad de ver las cosas tal y como son realmente. Hasta el final de la duración del conjuro, el objetivo disfrutará de visión verdadera, detectará las puertas ocultas mediante magia y podrá ver el Plano Etéreo, todo ello hasta 120 pies distancia.",
+"1 hora",6,"1 acción","No tiene"),
+
+("Volar",0,
+"Tocas a una criatura voluntaria. El objetivo gana una velocidad volando de 60 pies hasta el final de la duración del conjuro. Cuando este acabe, el objetivo caerá si todavía está en el aire y no puede parar la caída. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 4 o más, puedes elegir como objetivo a una criatura adicional por cada nivel por encima de 3 que tenga el espacio que hayas empleado",
+"Concentración, hasta 10 minutos",3,"1 acción","No tiene"),
+
+/* Z */
+("Zancada Prodigiosa",0,
+"Tocas a una criatura. Su velocidad aumenta en 10 pies hasta el final del conjuro. A niveles superiores. Cuando lanzas este conjuro utilizandoun espacio de conjuro de nivel 2 o más, puedes elegir como objetivo a una criatura adicional por cada nivel por encima de 1 que tenga el espacio que hayas empleado",
+"1 hora",1,"1 acción","No tiene"),
+
+("Zona de la Verdad",60,
+"Creas una zona mágica que protege contra el engaño. Sus dimensiones son las de una esfera de 15 pies de radio alrededor de un punto de tu elección dentro del alcance. Hasta el final del conjuro, cuando una criatura entre en la zona de la verdad por primera vez en un turno, o empiece su turno en ella, debe realizar una tirada de salvación de Carisma.  Si fracasa, no podrá mentir mientras esté en la zona mágica. Sabrás si una criatura ha tenido éxito o ha fracasado en su tirada de salvación.Cualquier criatura afectada es consciente del conjuro y, por tanto, puede evitar responder a preguntas a las que normalmente respondería con una mentira. Además, podrá ser evasiva en sus respuestas mientras se mantenga dentro de los límites de la verdad.",
+"10 minutos",2,"1 acción","Carisma");
 
 /*nombre, alcance INT,descripcion,duracion,nivel INT,tiempo_lanzamiento,tirada_salvacion*/
 /*RAZAS*/
