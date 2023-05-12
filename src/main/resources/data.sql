@@ -1295,6 +1295,93 @@ insert into CaracteristicasDevelop.hechizos(nombre, alcance,descripcion,duracion
 "Profieres una sarta de improperios entremezclados con sutiles encantamientos hacia una criatura que puedas ver dentro del alcance. Si el objetivo puede oírte (aunque no necesita entenderte), debe tener éxito en una tirada de salvación de Sabiduría o recibirá 1d4 de daño psíquico y sufrirá desventaja en la siguiente tirada de ataque que realice antes del final de su próximo turno. A niveles superiores. El daño del conjuro aumenta en 1d4 cuando alcanzas nivel 5 (2d4), nivel 11 (3d4) y nivel 17 (4d4).",
 "0",0,"1 acción","Sabiduría"),
 
+/* S */
+("Saber Druídico",30,
+"Creas un efecto sensorial diminuto e inofensivo que predice cómo será el tiempo atmosférico en tu localización en las próximas 24 horas. El efecto podría manifestarse como un orbe dorado para un día despejado, una nube indicando lluvia, copos de nieve para nieve, etc. Este efecto dura 1 asalto. · Haces que una flor florezca inmediatamente, que una vaina de semillas se abra o que el brote de una hoja germine. · Creas un efecto sensorial instantáneo e inofensivo, como hojas cayendo, una ráfaga de viento, el sonido de un animal pequeño o un leve olor a mofeta. El efecto debe quedar confinado a un cubo de 5 pies. · Apagas o enciendes de forma instantánea una vela, antorcha u hoguera pequeña.",
+"Instantáneo",0,"1 acción","No tiene"),
+
+("Salpicadura Ácida",60,
+"Lanzas una burbuja de ácido. Elige una o dos criaturas que puedas ver dentro del alcance separadas 5 pies o menos la una de la otra. Cada objetivo deberá tener éxito en una tirada de salvación de Destreza o sufrirá 1d6 de daño de ácido. A niveles superiores. El daño del conjuro aumenta en 1d6 cuando alcanzas nivel 5 (2d6), nivel 11 (3d6) y nivel 17 (4d6).",
+"Instantáneo",0,"1 acción","No tiene"),
+
+("Santuario",30,
+"Proteges de los ataques a una criatura dentro del alcance. Hasta el final de la duración del conjuro, cualquier criatura que elija como objetivo de un ataque o un conjuro hostil a la criatura protegida debe realizar antes una tirada de salvación de Sabiduría. Si la falla, la criatura debe elegir un nuevo objetivo o perder el ataque o conjuro. Sin embargo, santuario no salvaguarda a la criatura protegida de efectos de área, como por ejemplo la explosión de una bola de fuego. Por otro lado, si la criatura protegida realiza un ataque, lanza un conjuro que afecta a una criatura enemiga, o hace daño a una criatura enemiga, santuario termina inmediatamente.",
+"1 minuto",1,"1 acción","Sabidruía"),
+
+("Sentidos de la Bestia",0,
+"Tocas a una bestia voluntaria. Hasta el final de la duración del conjuro puedes usar tu acción para ver a través de los ojos de dicha criatura y oír lo que ella oye. Continuarás así hasta que utilices una acción para volver a tus sentidos normales. Mientras estás percibiendo el entorno a través de los sentidos de la bestia, ganas los beneficios de cualquier sentido especial que esta tenga. Sin embargo, estarás cegado y ensordecido en lo que a tus propios sentidos respecta.",
+"Concentración, hasta 1 hora",2,"1 acción","No tiene"),
+
+("Shillelagh",0,
+"La madera de un bastón o garrote que empuñas queda imbuida con el poder de la naturaleza. Hasta el final de la duración del conjuro puedes usar tu aptitud mágica en vez de tu Fuerza para las tiradas de ataque y daño al utilizar esta arma, y su dado de daño pasa a ser 1d8. Además, el arma se convierte en mágica si no lo era ya. El conjuro termina si lo lanzas de nuevo o si sueltasel arma.",
+"1 minuto",0,"1 acción adicional","Sabidruía"),
+
+("Silencio",120,
+"Creas una zona esférica de 20 pies de radio con centro en un punto de tu elección, que permanece allí hasta el final de la duración del conjuro. El sonido no puede atravesar dicha área ni originarse en su interior. Una criatura u objeto que se halle por completo dentro de la zona esférica es inmune al daño de trueno y, si se trata de una criatura también estará ensordecida. Por ello, lanzar un conjuro que precise de un componente verbal es imposible dentro de esta área.",
+"Concentración, hasta 10 minutos",2,"1 acción","No tiene"),
+
+("Sugestión",30,
+"Influencias mágicamente a una criatura a la que puedas ver dentro del alcance y que pueda oírte y comprenderte. Sugieres al objetivo un curso de acción (limitado a una o dos frases), pero siempre expresado de tal forma que parezca razonable. Pedirle a la criatura que se apuñale, se empale en una lanza, se inmole o realice cualquier otra actividad claramente dañina termina el conjuro. Las criaturas que no puedan ser hechizadas no se ven afectadas por este conjuro. El objetivo debe hacer una tirada de salvación de Sabiduría. Si falla, llevará a cabo la acción que le sugieres hasta donde le permitan sus capacidades. Esta acción puede continuar hasta el final de la duración del conjuro. Si la sugerencia puede ser llevada a cabo en menos tiempo, el conjuro terminará cuando el objetivo complete la tarea encomendada. Puedes especificar que ciertas condiciones disparen una actividad especial mientras el conjuro siga activo. Por ejemplo, puedes sugerir a un caballero que entregue su caballo de guerra al primer mendigo que vea. Si la condición no se cumple antes de que termine el conjuro, entonces la actividad no se lleva a cabo. Si tu o cualquiera de tus compañeros dañáis al objetivo, el conjuro termina.",
+"Concentración, hasta 8 horas",2,"1 acción","Sabiduría"),
+
+("Susurros Discordantes",60,
+"Susurras una melodía discordante que solo una criatura de tu elección dentro del alcance puede oír, inundándola con un terrible dolor. El objetivo debe hacer una tirada de salvación de Sabiduría. Si falla, sufre 3d6 de daño psíquico y debe utilizar su reacción inmediatamente, si es posible, para moverse tan lejos de ti como le permita su velocidad. Eso sí, la criatura no entrará en un terreno peligroso, como un fuego o un pozo. En cambio, si supera la tirada, recibirá la mitad del daño y no necesitará alejarse. Una criatura ensordecida tiene éxito automáticamente en la prueba. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 2 o más, el daño aumenta en 1d6 por cada nivel por encima de 1 que tenga el espacio que hayas empleado.",
+"Instantáneo",1,"1 acción","Sabiduría"),
+
+("Saeta guía",120,
+"Lanzas un rayo de luz hacia una criatura de tu elección dentro del alcance. Haz un ataque de conjuro a distancia contra el objetivo. Si impactas, la criatura recibe 4d6 de daño radiante. Además, la siguiente tirada de ataque contra el objetivo tiene ventaja si se realiza antes del final de tu siguiente turno, gracias a la tenue luz mística que lo iluminará hasta ese momento.A niveles superiores. Cuando lanzas este conjuro utilizandoun espacio de conjuro de nivel 2 o más, el daño aumenta en 1d6 por cada nivel por encima de 1 que tenga el espacio que hayas empleado.",
+"1 asalto",1,"1 acción","No tiene"),
+
+("Señal de Esperanza",30,
+"Este conjuro proporciona esperanza y vitalidad. Elige cualquier número de criaturas dentro del alcance. Hasta el final de la duración de) conjuro, todos los objetivos tienen ventaja en sus tiradas de salvación de Sabiduría y sus tiradas de salvación contra muerte. Además, al recibir cualquier tipo de curación recuperanla cantidad máxima posible de puntos de golpe.",
+"Concentración, hasta 1 minuto",3,"1 acción","Sabiduría"),
+
+/* T */
+("Terremoto",500,
+"Creas un fenómeno sísmico en un punto del suelo que puedas ver dentro del alcance. Hasta el final de la duración del conjuro, un intenso temblor arrasa el área en un radio de 100 pies alrededor del punto, haciendo temblar a las criaturas y estructuras en la zona y en contacto con el suelo. El terreno en el área pasa a considerarse difícil. Todas las criaturas sobre el que estén concentrándose deberá hacer una tirada de salvación de Constitución. Si fallan, su concentración se rompe. En el momento de lanzar el conjuro y al final de cada turno en el que sigas concentrándote en él, cada criatura sobre el suelo del área debe realizar una tirada de salvación de Destreza. Si falla, es derribada. Este conjuro puede tener efectos adiciónales dependiendo del tipo de terreno en el área, a determinar por el DM.",
+"Concentración, hasta 1 minuto",8,"1 acción","Constitución / Destreza"),
+
+("Terror",30,
+"Proyectas una visión fantasmal que encarna los peores miedos de una criatura. Cada criatura en un cono de 30 pies debe tener éxito en una tirada de salvación de Sabiduría o soltará lo que tenga agarrado y quedará asustada hasta el final de la duración del conjuro. Mientras permanezca asustada, en cada uno de sus turnos, cada criatura deberá utilizar una acción de Correr para alejarse de ti por la ruta más corta y segura, a menos que no haya donde huir. Si acaba su turno en un punto desde el cual no tiene línea de visión hacia ti, podrá hacer otra tirada de salvación. Si tiene éxito, el conjuro acaba para esa criatura.",
+"Concentración, hasta 1 minuto",3,"1 acción","Sabiduría"),
+
+("Telepatía",1000000,
+"Creas un enlace telepático entre tú y una criatura voluntaria con la que estés familiarizado. El objetivo debe estar en tu mismo plano de existencia. El conjuro termina si dejáis de estar en el mismo plano. Hasta el final de la duración del conjuro, la criatura y tú podéis compartir el uno con el otro y de forma instantánea a palabras, imágenes, sonidos y otros mensajes sensoriales, y el objetivo te reconoce como la criatura con la que se está comunicando. El conjuro permite que criaturas con una puntuación de Inteligencia de al menos 1 sean capaces de comprender el significado de tus palabras y mensajes.",
+"24 horas",8,"1 acción","No tiene"),
+
+("Tormeta de Hielo",300,
+"Una granizada de hielo duro como una roca machaca el suelo en una zona limitada por un cilindro de 20 pies de radio y 40 pies de altura centrado en un punto que se encuentre dentro del alcance. Todas las criaturas en el área deben hacer una tirada de salvación de Destreza. Sufrirán 2d8 de daño contundente y 4d6 de daño de frío si fallan la tirada o la mitad del daño si la superan. El granizo convierte el área de la tormenta en terreno difícil hasta el final de tu próximo turno. A niveles superiores. Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 5 o más, el daño contundente aumenta en 1d8 por cada nivel por encima de 4 que tenga el espacio que hayas empleado.",
+"Instantáneo",4,"1 acción","Destreza"),
+
+("Tormeta de Meteoritos",10000,
+"Abrasadores orbes de fuego caen en picado al suelo en cuatro puntos distintos que puedas ver dentro del alcance. Todas las criaturas en una esfera de 40 pies centrada en cada uno de esos puntos deben hacer una tirada de salvación de Destreza. La esfera se extiende más allá de las esquinas. Sufrirán 20d6 de daño contundente y 20d6 de daño de fuego si fallan la tirada o la mitad del daño si la superan. Una criatura en el área de más de uno de los estallidos solo se ve afectada una vez. El conjuro daña los objetos que se encuentren en el área, haciendo arder los que sean inflamables y que no lleve o vista alguien.",
+"Instantáneo",9,"1 acción","Destreza"),
+
+("Toque Helado",120,
+"Creas una mano fantasmagórica en el espacio de una criatura dentro del alcance. Haz un ataque de conjuro a distancia contra la criatura para agredirla con un frío sepulcral. Si impactas, el objetivo sufre 1d8 de daño necrótico y no podrá recuperar puntos de golpe hasta el comienzo de tu próximo turno. Hasta ese momento, la mano se aferra al objetivo. Si, además, el objetivo impactado es un muerto viviente, tendrá desventaja en sus tiradas de ataque contra ti hasta el final de tu próximo turno. A niveles superiores. El daño del conjuro aumenta en 1d8 cuando alcanzas nivel 5 (2d8), nivel 11 (3d8) y nivel 17 (4d8).",
+"1 asalto",0,"1 acción","No tiene"),
+
+("Teletransporte",10,
+"Percance. La impredecible magia del conjuro provoca un viaje dificultoso. Cada criatura teletransportada (o el objeto) recibe 3d10 de daño de fuerza y el DM vuelve a tirar en la tabla para ver dónde aparecéis (pueden ocurrir múltiples percances, que causan daño cada vez).",
+"Instantáneo",7,"1 acción","No tiene"),
+
+("Terror Abyecto",120,
+"Sirviéndote de los miedos más abyectos de un grupo de criaturas, creas en su mente seres ilusorios, que solo ellas pueden ver. Todas las criaturas en una esfera de 30 pies centrada en un punto de tu elección dentro del alcance deben hacer una tirada de salvación de Sabiduría. Aquellas que fallen quedan asustadas hasta el final de la duración del conjuro. La ilusión bebe de los terrores más profundos del objetivo, manifestando sus peores pesadillas como una amenaza implacable. Al final de cada uno de sus turnos, mientras no haya finalizado el conjuro, la criatura deberá tener éxito en una tirada de salvación de Sabiduría o sufrir 4d10 de daño psíquico. Si tiene éxito, el conjuro acaba para esa criatura.",
+"Instantáneo",9,"1 acción","Sabiduría"),
+
+("Truco de la Cuerda",0,
+"Tocas un segmento de cuerda de hasta 60 pies de longitud. Esto Fhace que un extremo de la cuerda se alce hasta que toda la cuerda cuelgue de manera perpendicular al suelo. En el extremo superior de la cuerda se abre una entrada mágica a un espacio extradimensional que durará hasta el final del conjuro. Este espacio puede ser alcanzado subiendo por la cuerda hasta su final. En él caben hasta ocho criaturas de tamaño Mediano o más pequeñas. Se puede tirar de la cuerda para meterla en el espacio, lo que hace que desaparezca de la vista de aquellos en el exterior. Los ataques y conjuros no pueden cruzar esta entrada al espacio extradimensional en ningún sentido, pero los que están dentro podrán ver hacia fuera como si hubiera una ventana de 3 por 5 pies centrada en la cuerda. Cualquier cosa dentro del espacio extradimensional cae al exterior cuando el conjuro termina.",
+"1 hora",2,"1 acción","No tiene"),
+
+("Telaraña",60,
+"Conjuras una masa de telarañas densa y pegajosa en un punto de tu elección dentro del alcance. Las telarañas ocupan un cubo de 20 pies de lado desde ese punto y permanecerán allí hasta el final de la duración del conjuro. La zona cubierta se considera ligeramente oscura y terreno difícil. Si las telarañas no están ancladas entre dos objetos sólidos (como muros o árboles) o extendidas sobre un suelo, muro o techo, se colapsarán sobre sí mismas y el conjuro terminará al final de tu próximo turno. Las telarañas dispuestas sobre una superficie plana tienen una profundidad de 5 pies. Cualquier criatura que comience su turno en las telarañas o que entre en ellas durante el mismo, debe hacer una tirada de salvación de Destreza. Si la falla, quedará apresada mientras siga en las telarañas o hasta que se libere. Una criatura apresada puede utilizar su acción para hacer una prueba de Fuerza contra tu CD de salvación de conjuro. Si la supera, dejará de estar apresada. Las telarañas son inflamables. Cualquier cubo de 5 pies de lado expuesto al fuego se quema por completo en 1 asalto, causando 2d4 de daño de fuego a cualquier criatura que comience su turno en el incendio.",
+"Concentración, hasta 1 hora",2,"1 acción","Destreza"),
+
+/* U */
+("Urna Mágica",0,
+"Tu cuerpo cae en estado catatónico cuando tu alma sale de él y entra en el contenedor que has usado como componente material del conjuro. Mientras tu alma habite en el contenedor, eres consciente de tus alrededores como si estuvieras en el espacio de este. No puedes moverte ni utilizar reacciones. La única acción que puedes hacer es proyectar tu alma hasta a 100 pies del contenedor, ya sea para volver a tu cuerpo vivo (lo cual termina el conjuro) o para intentar poseer el cuerpo de un humanoide. Puedes intentar poseer a cualquier humanoide a 100 pies o menos de ti al que puedas ver (las criaturas protegidas por un conjuro de protección contra el bien y el mal o círculo mágico no pueden ser poseídas).  El objetivo debe hacer una tirada de salvación de Carisma. Si fracasa, tu alma ocupa su cuerpo y su alma queda atrapada en el contenedor. Si tiene éxito, el objetivo resiste tus esfuerzos de poseerlo y no puedes volver a intentarlo hasta 24 horas después Una vez poseas el cuerpo de una criatura, podrás controlarlo. Tu perfil queda reemplazado por el de la criatura, con la excepción de tu alineamiento y tus puntuaciones de Inteligencia, Sabiduría y Carisma. Conservas los beneficios de tus rasgos de clase. Sin embargo, si el objetivo tiene niveles en alguna clase, no podrás usar sus rasgos de clase",
+"Basta con ser disparado",6,"1 acción","Carisma"),
+
 /* V */
 ("Ver Invisibilidad",0,
 "Hasta el final de la duración del conjuro, puedes ver criaturas y objetos invisibles como si fueran visibles, así como ver en el Plano Etéreo. Las criaturas y objetos etéreos se mostrarán translúcidos y fantasmales.",
@@ -1302,7 +1389,7 @@ insert into CaracteristicasDevelop.hechizos(nombre, alcance,descripcion,duracion
 
 ("Viajar con el Viento",30,
 "Hasta el final de la duración del conjuro, tú y hasta diez criaturas voluntarias que puedas ver dentro del alcance asumís una forma gaseosa, tomando la apariencia de jirones de nube. Mientras mantenga esta forma, cada criatura tendrá una velocidad volando de 300 pies y resistencia al daño de armas no mágicas. Las únicas acciones que una criatura puede realizar en esta forma son Correr o volver a su forma habitual. Transformarse de vuelta lleva 1 minuto, y durante este tiempo la criatura estará incapacitada y no podrá moverse. Hasta el final del conjuro, la criatura también podrá volver a convertirse en nube, acto que también precisa del proceso de transformación de 1 minuto detallado más arriba. Si una criatura está volando y en forma gaseosa cuando el efecto termina, descenderá 60 pies por asalto durante 1 minuto hasta que aterrice de forma segura. Si, pasado 1 minuto, no puede aterrizar, caerá la distancia restante.",
-"8 horas",2,"1 acción","No tiene"),
+"8 horas",2,"1 minuto","No tiene"),
 
 ("Viajar mediante Plantas",10,
 "El conjuro crea un enlace mágico entre una planta inanimada Grande o mayor dentro del alcance y otra planta a cualquier distancia en el mismo plano de existencia. Debes haber visto o tocado la planta destino al menos una vez. Hasta el final de la duración del conjuro, cualquier criatura puede entrar en la planta objetivo y salir de la planta destino empleando 5 pies de movimiento. ",
