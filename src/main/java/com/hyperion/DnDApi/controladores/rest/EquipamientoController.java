@@ -64,14 +64,12 @@ public class EquipamientoController {
 
     // ----------------- HECHIZOS -----------------
     @GetMapping("/hechizos")
-    public RespuestaNoPaginada<Hechizo> obtenerHechizos() {
-        return new RespuestaNoPaginada<>(servicio.obtenerHechizos(), Hechizo.class);
-    }
+    public RespuestaNoPaginada<Hechizo> obtenerHechizos(@RequestParam(name = "letra", required = false) String letra) {
+        if (letra == null)
+            return new RespuestaNoPaginada<>(servicio.obtenerHechizos(), Hechizo.class);
 
-    @GetMapping("/hechizos/agrupar/{letra}")
-    public RespuestaNoPaginada<Hechizo> obtenerHechizosPorLetra(@PathVariable("letra") String letra) {
         if (letra.length() > 1 || esNumerico(letra))
-            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
+            throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud, letra erronea");
 
         return new RespuestaNoPaginada<>(servicio.obtenerHechizosLetra(letra), Hechizo.class);
     }
