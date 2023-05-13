@@ -30,7 +30,7 @@ public class Hechizo {
     @Column(name = "tirada_salvacion")
     private String tiradaSalvacion;
 
-    @Column(length = 500)
+    @Column(length = 2000)
     private String descripcion;
 
     @ManyToMany(
