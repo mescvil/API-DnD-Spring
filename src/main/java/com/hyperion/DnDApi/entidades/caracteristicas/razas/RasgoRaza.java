@@ -17,7 +17,7 @@ public class RasgoRaza {
     @Id
     private String nombre;
 
-    @Column(length = 300)
+    @Column(length = 700)
     private String descripcion;
 
     @ManyToMany(
