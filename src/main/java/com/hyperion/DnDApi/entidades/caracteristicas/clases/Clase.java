@@ -4,7 +4,6 @@ import com.hyperion.DnDApi.entidades.caracteristicas.competencias.Competencia;
 import com.hyperion.DnDApi.entidades.caracteristicas.equipamiento.Arma;
 import com.hyperion.DnDApi.entidades.caracteristicas.equipamiento.Armadura;
 import com.hyperion.DnDApi.entidades.caracteristicas.equipamiento.Hechizo;
-import com.hyperion.DnDApi.entidades.caracteristicas.razas.RasgoRaza;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

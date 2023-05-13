@@ -2,7 +2,6 @@ package com.hyperion.DnDApi.controladores.rest;
 
 import com.hyperion.DnDApi.configuraciones.RespuestaNoPaginada;
 import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
-import com.hyperion.DnDApi.entidades.caracteristicas.Alineamiento;
 import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Idioma;
 import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Trasfondo;
 import com.hyperion.DnDApi.servicios.TrasfondosService;
@@ -13,8 +12,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-
-import java.util.List;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
