@@ -83,7 +83,7 @@ public class Clase {
             cascade = {CascadeType.PERSIST, CascadeType.MERGE}
     )
     @JoinTable(
-            name = "compentencias_clases",
+            name = "competencias_clases",
             joinColumns = @JoinColumn(name = "nombre_clase"),
             inverseJoinColumns = @JoinColumn(name = "nombre_competencia")
     )
