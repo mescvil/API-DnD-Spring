@@ -4,7 +4,9 @@
 
 */
 insert into CaracteristicasDevelop.idiomas values
-("Dracónico"),("Elfico");
+("Abisal"),("Aquan"),("Auran"),("Celestial"),("Común"),("Lengua de las profundidades"),("Dacónido"),("Druidico"),
+("Enano"),("Elfico"),("Gigante"),("Gnomico"),("Goblin"),("Mediano"),("Ignan"),("Infernal"),("Orco"),("Primordial"),
+("Sylvano"),("Terran"),("Supracomun");
 
 /*
 
