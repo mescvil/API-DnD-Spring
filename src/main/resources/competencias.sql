@@ -112,4 +112,195 @@ insert into CaracteristicasDevelop.competencias_trasfondos (nombre_trasfondo,nom
 ("Soldado","Competencia con Vehículos Terrestes"),
 ("Soldado","Competencia con Vehículos Marinos");
 
+/*
+
+========================= RELACION CLASES =========================
+
+*/
+insert into CaracteristicasDevelop.competencias_clases (nombre_clase,nombre_competencia) values
+/*Barbaro*/
+("Bárbaro","Competencia con Armaduras Ligeras"),
+("Bárbaro","Competencia con Armaduras Medias"),
+("Bárbaro","Competencia con Escudos"),
+("Bárbaro","Competencia con Armas Sencillas"),
+("Bárbaro","Competencia con Armas Marciales"),
+("Bárbaro","Competencia en Tiradas de Salvación de Fuerza"),
+("Bárbaro","Competencia en Tiradas de Salvación de Constitución"),
+("Bárbaro","Competencia en Atletismo"),
+("Bárbaro","Competencia en Intimidación"),
+("Bárbaro","Competencia en Naturaleza"),
+("Bárbaro","Competencia en Percepción"),
+("Bárbaro","Competencia en Supervivencia"),
+("Bárbaro","Competencia en Trato con Animales"),
+/*BARDO*/
+("Bardo","Competencia con Armaduras Ligeras"),
+("Bardo","Competencia con Armas Sencillas"),
+("Bardo","Competencia con Instrumentos"),
+("Bardo","Competencia en Tiradas de Salvación de Destreza"),
+("Bardo","Competencia en Tiradas de Salvación de Carisma"),
+("Bardo","Competencia en Acrobacias"),
+("Bardo","Competencia en Atletismo"),
+("Bardo","Competencia en Interpretación"),
+("Bardo","Competencia en Sigilo"),
+("Bardo","Competencia en Juego de Manos"),
+("Bardo","Competencia en Perspicacia"),
+/*BRUJO*/
+("Brujo","Competencia con Armaduras Ligeras"),
+("Brujo","Competencia con Armas Sencillas"),
+("Brujo","Competencia en Tiradas de Salvación de Sabiduría"),
+("Brujo","Competencia en Tiradas de Salvación de Carisma"),
+("Brujo","Competencia en Conocimiento Arcano"),
+("Brujo","Competencia en Engaño"),
+("Brujo","Competencia en Historia"),
+("Brujo","Competencia en Intimidación"),
+("Brujo","Competencia en Investigación"),
+("Brujo","Competencia en Naturaleza"),
+("Brujo","Competencia en Religión"),
+/*CLERIGO*/
+("Clérigo","Competencia con Armaduras Ligeras"),
+("Clérigo","Competencia con Armaduras Medias"),
+("Clérigo","Competencia con Escudos"),
+("Clérigo","Competencia con Armas Sencillas"),
+("Clérigo","Competencia en Tiradas de Salvación de Sabiduría"),
+("Clérigo","Competencia en Tiradas de Salvación de Carisma"),
+("Clérigo","Competencia en Historia"),
+("Clérigo","Competencia en Medicina"),
+("Clérigo","Competencia en Perspicacia"),
+("Clérigo","Competencia en Persuasión"),
+("Clérigo","Competencia en Religión"),
+/*DUIDA*/
+("Druida","Competencia con Armaduras Ligeras"),
+("Druida","Competencia con Armaduras Medias"),
+("Druida","Competencia con Escudos"),
+("Druida","Competencia con Armas Sencillas"),
+("Druida","Competencia con Herramientas de Herboristeria"),
+("Druida","Competencia en Tiradas de Salvación de Inteligencia"),
+("Druida","Competencia en Tiradas de Salvación de Sabiduría"),
+("Druida","Competencia en Conocimiento Arcano"),
+("Druida","Competencia en Medicina"),
+("Druida","Competencia en Naturaleza"),
+("Druida","Competencia en Percepción"),
+("Druida","Competencia en Perspicacia"),
+("Druida","Competencia en Religión"),
+("Druida","Competencia en Trato con Animales"),
+/*EXPLORADOR*/
+("Explorador","Competencia con Armaduras Ligeras"),
+("Explorador","Competencia con Armaduras Medias"),
+("Explorador","Competencia con Armas Sencillas"),
+("Explorador","Competencia con Armas Marciales"),
+("Explorador","Competencia con Escudos"),
+("Explorador","Competencia en Tiradas de Salvación de Fuerza"),
+("Explorador","Competencia en Tiradas de Salvación de Destreza"),
+("Explorador","Competencia en Atletismo"),
+("Explorador","Competencia en Investigación"),
+("Explorador","Competencia en Naturaleza"),
+("Explorador","Competencia en Percepción"),
+("Explorador","Competencia en Perspicacia"),
+("Explorador","Competencia en Sigilo"),
+("Explorador","Competencia en Supervivencia"),
+("Explorador","Competencia en Trato con Animales"),
+/*HECHICERO*/
+("Hechicero","Competencia con Armas Sencillas"),
+("Hechicero","Competencia en Tiradas de Salvación de Constitución"),
+("Hechicero","Competencia en Tiradas de Salvación de Carisma"),
+("Hechicero","Competencia en Conocimiento Arcano"),
+("Hechicero","Competencia en Engaño"),
+("Hechicero","Competencia en Intimidación"),
+("Hechicero","Competencia en Perspicacia"),
+("Hechicero","Competencia en Persuasión"),
+("Hechicero","Competencia en Religión"),
+/*MAGO*/
+("Mago","Competencia con Armas Sencillas"),
+("Mago","Competencia en Tiradas de Salvación de Inteligencia"),
+("Mago","Competencia en Tiradas de Salvación de Sabiduría"),
+("Mago","Competencia en Conocimiento Arcano"),
+("Mago","Competencia en Historia"),
+("Mago","Competencia en Investigación"),
+("Mago","Competencia en Medicina"),
+("Mago","Competencia en Perspicacia"),
+("Mago","Competencia en Religión"),
+/*MONJE*/
+("Monje","Competencia con Armas Sencillas"),
+("Monje","Competencia con Armas Marciales"),
+("Monje","Competencia con Instrumentos"),
+("Monje","Competencia con Herramientas de Caligrafía"),
+("Monje","Competencia en Tiradas de Salvación de Fuerza"),
+("Monje","Competencia en Tiradas de Salvación de Destreza"),
+("Monje","Competencia en Acrobacias"),
+("Monje","Competencia en Atletismo"),
+("Monje","Competencia en Historia"),
+("Monje","Competencia en Perspicacia"),
+("Monje","Competencia en Religión"),
+("Monje","Competencia en Sigilo"),
+/*PALADÍN*/
+("Paladín","Competencia con Armas Sencillas"),
+("Paladín","Competencia con Armas Marciales"),
+("Paladín","Competencia con Armaduras Ligeras"),
+("Paladín","Competencia con Armaduras Medias"),
+("Paladín","Competencia con Armaduras Pesadas"),
+("Paladín","Competencia con Escudos"),
+("Paladín","Competencia en Tiradas de Salvación de Sabiduría"),
+("Paladín","Competencia en Tiradas de Salvación de Carisma"),
+("Paladín","Competencia en Atletismo"),
+("Paladín","Competencia en Intimidación"),
+("Paladín","Competencia en Medicina"),
+("Paladín","Competencia en Perspicacia"),
+("Paladín","Competencia en Persuasión"),
+("Paladín","Competencia en Religión"),
+/*PÍCARO*/
+("Pícaro","Competencia con Armas Sencillas"),
+("Pícaro","Competencia con Armaduras Ligeras"),
+("Pícaro","Competencia con Herramientas de Ladrón"),
+("Pícaro","Competencia en Tiradas de Salvación de Destreza"),
+("Pícaro","Competencia en Tiradas de Salvación de Inteligencia"),
+("Pícaro","Competencia en Acrobacias"),
+("Pícaro","Competencia en Atletismo"),
+("Pícaro","Competencia en Engaño"),
+("Pícaro","Competencia en Interpretación"),
+("Pícaro","Competencia en Intimidación"),
+("Pícaro","Competencia en Investigación"),
+("Pícaro","Competencia en Juego de Manos"),
+("Pícaro","Competencia en Percepción"),
+("Pícaro","Competencia en Perspicacia"),
+("Pícaro","Competencia en Persuasión"),
+("Pícaro","Competencia en Sigilo");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
