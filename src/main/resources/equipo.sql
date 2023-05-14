@@ -68,9 +68,30 @@ insert into CaracteristicasDevelop.armaduras(nombre,tipo,clase_armadura,desventa
 
 */
 insert into CaracteristicasDevelop.clases_armas (nombre_clase,nombre_arma) values
-("Bárbaro","Espada Larga"),
-("Pícaro","Espada Larga"),
-("Paladín","Espada Larga");
+("Bárbaro","Hacha a Dos Manos"),
+("Bárbaro","Hacha de Mano"),
+("Bardo","Estoque"),
+("Bardo","Espada Larga"),
+("Brujo","Daga"),
+("Brujo","Ballesta Ligera"),
+("Clerigo","Maza"),
+("Clerigo","Martillo de Guerra"),
+("Druida","Cimitarra"),
+("Druida","Bastón"),
+("Explorador","Arco Largo"),
+("Explorador","Espada Corta"),
+("Guerrero","Espada Larga"),
+("Guerrero","Espadón"),
+("Hechicero","Daga"),
+("Hechicero","Ballesta Ligera"),
+("Mago","Bastón"),
+("Mago","Daga"),
+("Monje","Espada Corta"),
+("Monje","Bastón"),
+("Paladín","Espada Larga"),
+("Paladín","Jabalina"),
+("Pícaro","Estoque"),
+("Pícaro","Arco Corto");
 
 /*
 
