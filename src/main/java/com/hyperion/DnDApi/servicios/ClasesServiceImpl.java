@@ -35,9 +35,7 @@ public class ClasesServiceImpl implements ClasesService {
 
     @Override
     public Clase obtenerClasePorNombre(String nombre) {
-        if (repositorioClases.findById(nombre).isPresent()) {
-            return repositorioClases.findById(nombre).get();
-        } else return null;
+      return repositorioClases.findByNombre(nombre);
     }
 
     // ----------------- RASGOS DE CLASES -----------------

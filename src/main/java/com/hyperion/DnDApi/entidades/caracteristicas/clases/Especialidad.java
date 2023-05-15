@@ -18,15 +18,23 @@ public class Especialidad {
     private String nombre;
     @Column(length = 700)
     private String descripcion;
-    @ManyToOne
-    @JoinColumn(name = "clase_id")
-    @JsonIgnore
-    private Clase clases;
 
-    @OneToMany(mappedBy = "especialidad",
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+            mappedBy = "especialidades"
+    )
+    @JsonIgnore
+    private Set<Clase> clases;
+
+    @ManyToMany(
             fetch = FetchType.EAGER,
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE}
+    )
+    @JoinTable(
+            name = "especialidad_habilidades",
+            joinColumns = @JoinColumn(name = "nombre_especialidad"),
+            inverseJoinColumns = @JoinColumn(name = "nombre_habilidad")
     )
     private Set<HabilidadEspecialidad> habilidades;
 }
