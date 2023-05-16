@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CompetenciasRepository extends JpaRepository<Competencia,String> {
+    Competencia findByNombre(String nombre);
 }
