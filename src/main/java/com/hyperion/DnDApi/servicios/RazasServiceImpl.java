@@ -28,9 +28,7 @@ public class RazasServiceImpl implements RazasService {
 
     @Override
     public Raza obtenerRazaPorNombre(String nombre) {
-        if (repositorioRaza.findById(nombre).isPresent()) {
-            return repositorioRaza.findById(nombre).get();
-        } else return null;
+        return repositorioRaza.findByNombre(nombre);
     }
 
     // ----------------- RASGOS-RAZAS -----------------
@@ -47,8 +45,6 @@ public class RazasServiceImpl implements RazasService {
 
     @Override
     public RasgoRaza pbtenerRasgoPorNombre(String nombre) {
-        if (repositorioRasgos.findById(nombre).isPresent()) {
-            return repositorioRasgos.findById(nombre).get();
-        } else return null;
+       return repositorioRasgos.findByNombre(nombre);
     }
 }

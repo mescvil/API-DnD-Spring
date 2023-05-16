@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "habilidades_especialidad")
@@ -17,8 +18,12 @@ public class HabilidadEspecialidad {
     private String nombre;
     @Column(length = 1000)
     private String descripcion;
-    @ManyToOne
-    @JoinColumn(name = "especialidad_id")
+
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+            mappedBy = "habilidades"
+    )
     @JsonIgnore
-    private Especialidad especialidad;
+    private Set<Especialidad> especialidades;
 }

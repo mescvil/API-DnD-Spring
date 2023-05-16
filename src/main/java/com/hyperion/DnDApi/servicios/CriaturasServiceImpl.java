@@ -37,9 +37,7 @@ public class CriaturasServiceImpl implements CriaturasService {
 
     @Override
     public Enemigo obtenerEnemigoPorNombre(String nombre) {
-        if (repositorioEnemigos.findById(nombre).isPresent()) {
-            return repositorioEnemigos.findById(nombre).get();
-        } else return null;
+        return repositorioEnemigos.findByNombre(nombre);
     }
 
     @Override
@@ -79,9 +77,7 @@ public class CriaturasServiceImpl implements CriaturasService {
 
     @Override
     public RasgoCriatura obtenerRasgoPorNombre(String nombre) {
-        if (repositorioRasgos.findById(nombre).isPresent()) {
-            return repositorioRasgos.findById(nombre).get();
-        } else return null;
+        return repositorioRasgos.findByNombre(nombre);
     }
 
     @Override
@@ -120,9 +116,7 @@ public class CriaturasServiceImpl implements CriaturasService {
 
     @Override
     public Accion obtenerAccionPorNombre(String nombre) {
-        if (repositorioAcciones.findById(nombre).isPresent()) {
-            return repositorioAcciones.findById(nombre).get();
-        } else return null;
+        return repositorioAcciones.findByNombre(nombre);
     }
 
     @Override

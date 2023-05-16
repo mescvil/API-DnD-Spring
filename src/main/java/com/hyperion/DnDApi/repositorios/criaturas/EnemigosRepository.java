@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EnemigosRepository extends JpaRepository<Enemigo, String> {
+    Enemigo findByNombre(String nombre);
 }

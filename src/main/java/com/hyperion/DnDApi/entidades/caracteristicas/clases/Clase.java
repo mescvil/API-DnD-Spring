@@ -71,10 +71,16 @@ public class Clase {
             inverseJoinColumns = @JoinColumn(name = "nombre_hechizo")
     )
     private Set<Hechizo> hechizos;
-    @OneToMany(mappedBy = "clases",
+
+    @ManyToMany(
             fetch = FetchType.EAGER,
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE}
+    )
+
+    @JoinTable(
+            name = "clase_especilidades",
+            joinColumns = @JoinColumn(name = "nombre_clase"),
+            inverseJoinColumns = @JoinColumn(name = "nombre_especialidad")
     )
     private Set<Especialidad> especialidades;
 

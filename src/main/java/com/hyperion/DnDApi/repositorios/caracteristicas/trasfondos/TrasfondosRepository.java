@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TrasfondosRepository extends JpaRepository<Trasfondo,String> {
+    Trasfondo findByNombre(String nombre);
 }

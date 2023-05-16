@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ArmadurasRepository extends JpaRepository<Armadura, String> {
+    Armadura findByNombre(String nombre);
 }

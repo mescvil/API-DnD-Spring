@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RasgosCriaturasRepository extends JpaRepository<RasgoCriatura, String> {
+    RasgoCriatura findByNombre(String nombre);
 }

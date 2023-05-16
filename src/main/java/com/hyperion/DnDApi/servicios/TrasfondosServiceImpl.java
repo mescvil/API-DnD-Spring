@@ -33,10 +33,7 @@ public class TrasfondosServiceImpl implements TrasfondosService {
 
     @Override
     public Trasfondo obtenerTrasfondoPorNombre(String nombre) {
-        if (repositorioTrasfondos.findById(nombre).isPresent()) {
-            return repositorioTrasfondos.findById(nombre).get();
-        } else return null;
-
+        return repositorioTrasfondos.findByNombre(nombre);
     }
 
     // ----------------- IDIOMAS -----------------
@@ -47,9 +44,7 @@ public class TrasfondosServiceImpl implements TrasfondosService {
 
     @Override
     public Idioma obtenerIdiomaPorNombre(String nombre) {
-        if (repositorioIdiomas.findById(nombre).isPresent()) {
-            return repositorioIdiomas.findById(nombre).get();
-        } else return null;
+        return repositorioIdiomas.findByNombre(nombre);
     }
 
     // ----------------- ALINEAMIENTOS -----------------

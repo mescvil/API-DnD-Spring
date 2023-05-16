@@ -22,10 +22,7 @@ public class CompetenciasServiceImpl implements CompetenciasService {
 
     @Override
     public Competencia obtenerCompetenciaPorNombre(String nombre) {
-        if (repositorio.findById(nombre).isPresent()) {
-            return repositorio.findById(nombre).get();
-        }
-        return null;
+        return repositorio.findByNombre(nombre);
     }
 
     @Override

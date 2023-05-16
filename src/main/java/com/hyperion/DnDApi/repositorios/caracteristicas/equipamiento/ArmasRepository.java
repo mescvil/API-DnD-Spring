@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ArmasRepository extends JpaRepository<Arma, String> {
+    Arma findByNombre(String nombre);
 }

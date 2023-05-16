@@ -8,4 +8,6 @@ import java.util.List;
 public interface HechizosRepository extends JpaRepository<Hechizo, String> {
 
     List<Hechizo> findByNombreStartingWith(String prefijo);
+
+    Hechizo findByNombre(String nombre);
 }

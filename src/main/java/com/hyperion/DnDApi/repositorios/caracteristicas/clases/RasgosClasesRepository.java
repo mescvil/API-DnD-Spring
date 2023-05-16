@@ -5,5 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RasgosClasesRepository extends JpaRepository<RasgoClase,String> {
+public interface RasgosClasesRepository extends JpaRepository<RasgoClase, String> {
+    RasgoClase findByNombre(String nombre);
 }
