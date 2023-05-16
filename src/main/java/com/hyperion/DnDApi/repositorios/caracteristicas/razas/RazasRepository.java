@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RazasRepository extends JpaRepository<Raza,String> {
+    Raza findByNombre(String nombre);
 }
