@@ -16,7 +16,7 @@ import java.util.Set;
 public class Especialidad {
     @Id
     private String nombre;
-    @Column(length = 700)
+    @Column(length = 1500)
     private String descripcion;
 
     @ManyToMany(
