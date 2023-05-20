@@ -78,6 +78,31 @@ insert into CaracteristicasDevelop.especialidades(nombre,descripcion) values
 ("Magia Salvaje"
 ,"Tu magia innata proviene de las fuerzas del caos que sustentan el orden de la creación. Puede que hayas sido expuesto a magia en bruto, quizá través de un portal planar que llevaba al Limbo, los Planos Elementales o el Reino Lejano. A lo mejor fuiste bendecido por un ser feérico o marcado por un demonio. O incluso puede que tu magia se deba a un evento casual durante tu nacimiento, sin causa aparente alguna. Independientemente de su razón de ser, la magia hierve en tu interior, esperando la oportunidad de manifestarse."),
 
+/* Mago */
+("Escuela de Abjuración"
+,"La Escuela de Abjuración enfatiza la magia que detiene, destierra o protege. Los detractores de esta escuela afirman que se trata de una tradición enfocada en el rechazo, en la negación y no una afirmación positiva. Sin embargo, tu entiendes que acabar con efectos dañinos, proteger al inocente y desterrar las influencias malignas no es ni de lejos un vacío filosófico. Se trata de una vocación orgullosa y respetable. Conocidos como abjuradores, las miembros de esta escuela son especialmente demandados cuando aparecen espíritus siniestros a las que exorcizar, es necesario proteger localizaciones importantes del espionaje mágico o existen portales a otros planos que deben ser clausurados."),
+
+("Escuela de Adivinación"
+,"El consejo de un adivino es un bien preciado, perseguido por reyes y plebeyos por igual, pues todos anhelan poseer una comprensión más clara de su pasado, presente y futuro. Como adivino, buscas apartar los velos del espacio, el tiempo y la consciencia, para así poder ver con claridad. Trabajas para dominar los conjuros que proporcionan discernimiento, visión remota, conocimiento sobrenatural y presagios del futuro."),
+
+("Escuela de Conjuración"
+,"Como conjurador, prefieres los conjuros que crean objetos y criaturas a partir de la nada. Puedes invocar una niebla ondulante y mortífera o convocar criaturas para que acudan a combatir por ti. Cuando crezca tu dominio de la magia, aprenderás conjuros de transporte y podrás teletransportarte a ti mismo grandes distancias, e incluso a otros planos de existencia, en un instante."),
+
+("Escuela de Encantamiento"
+,"Como miembro de la Escuela de Encantamiento, has perfeccionado tu capacidad para embelesar y cautivar a otras personas y monstruos. Algunos encantadores son pacificadores, que embrujan a los violentos para que dejen las armas y hechizan a los crueles para que muestren misericordia. Otros son tiranos que recurran a la magia para atar a los reticentes a su voluntad. Pero la mayoría de los encantadores se encuentran entre ambos extremos."),
+
+("Escuela de Evocación"
+,"Haces hincapié en el estudio de la magia capaz de crear poderosos efectos elementales, como un frío penetrante, llamas abrasadoras, ácidos corrosivos, truenos reverberantes o violentos relámpagos. Algunos evocadores encuentran empleo en las fuerzas armadas, sirviendo en regimientos de artillería, destrozando a sus enemigos desde la distancia. Otros emplean sus espectaculares poderes para proteger a los débiles, y los hay que incluso buscan su propio beneficio, viviendo como bandidos, aventureros o aspirantes a tirano."),
+
+("Escuela de Ilusionismo"
+,"Concentras tus estudios en la magia capaz de deslumbrar los sentidos, aturdir la mente y engañar incluso a las más sabios. Tu magia es sutil, pero las ilusiones que tu aguda mente concibe hacen que lo imposible parezca real. Algunos ilusionistas, entre los que se encuentran muchos magos gnomos, son embaucadores bondadosos, que usan sus conjuros para entretener. Sin embargo, otros son siniestros amos del engaño, que recurren a sus ilusiones para asustar y confundir a otros en aras de su beneficio personal."),
+
+("Escuela de Nigromancia"
+,"La Escuela de Nigromancia explora las fuerzas cósmicas de la vida, la muerte y la muerte en vida. Al focalizar tus estudios en esta tradición aprendes a manipular la energía que anima a todos los seres vivos. Cuando progreses en ellos, serás capaz de succionar la fuerza vital de una criatura mientras tu magia destruye su cuerpo. transformando esa esencia fundamental en poder mágico que podrás manipular. Debido a su estrecha relación con la muerte, la mayoría de la gente percibe a los nigromantes como seres amenazadores o directamente malignos. Pero, aunque las fuerzas que controlan son considerarlas tabúes en muchas culturas. no todos los nigromantes son malvados."),
+
+("Escuela de Transmutación"
+,"Eres un estudioso de los conjuros que modifican la energía y la materia. Para ti el mundo no es estático, sino eminentemente mutable, y disfrutas comportándote como un agente del cambio. Posees la capacidad de empujar la materia pura de la creación y has aprendido cómo alterar tanto la forma física como las cualidades mentales. Tu magia te proporciona las herramientas necesarias para convertirte en el herrero de la forja de la realidad. Algunos transmutadores son inventores y bromistas que convierten a la gente en rana y transforman el cobre en plata, ya sea para divertirse o para obtener algún beneficio ocasional. Otros se afanan en su estudio de la magia con una seriedad absoluta, pues buscan el poder de los dioses para crear y destruir mundos."),
+
 /* Picaro */
 ("Ladrón"
 ,"Has decidido pulir aquellas habilidades útiles para el arte del latrocinio. Rateros, bandidos, carteristas y otros criminales tienden a seguir este arquetipo, pero también lo hacen aquellos pícaros que prefieren verse a sí mismo como buscadores de tesoros profesionales, exploradores, descubridores o investigadores. Además de mejorar tu agilidad y sigilo, también aprendes habilidades útiles para la exploración de ruinas antiguas, a leer idiomas con los que no estás familiarizado y a usar objetos mágicos que normalmente no podrías emplear."),
@@ -167,6 +192,31 @@ insert into CaracteristicasDevelop.clase_especilidades(nombre_especialidad,nombr
 
 ("Magia Salvaje"
 ,"Hechicero"),
+
+/* Mago */
+("Escuela de Abjuración"
+,"Mago"),
+
+("Escuela de Adivinación"
+,"Mago"),
+
+("Escuela de Conjuración"
+,"Mago"),
+
+("Escuela de Encantamiento"
+,"Mago"),
+
+("Escuela de Evocación"
+,"Mago"),
+
+("Escuela de Ilusionismo"
+,"Mago"),
+
+("Escuela de Nigromancia"
+,"Mago"),
+
+("Escuela de Transmutación"
+,"Mago"),
 
 /* Picaro */
 ("Ladrón"
@@ -555,6 +605,135 @@ insert into CaracteristicasDevelop.habilidades_especialidad(nombre,descripcion) 
 
 ("Bombardeo de Conjuros"
 ,"A partir de nivel 18, la energía dañina de tus conjuros se intensifica. Cuando tires el daño de un conjuro y obtengas el resultado máximo posible en alguno de los dados, escoge uno de estos dados, vuélvelo a lanzar y añade el nuevo resultado al daño, además del que ya habías añadido antes. Solo puede emplear este rasgo una vez por turno."),
+
+/* Mago */
+/* Escuela de Abjuración */
+("Experto en Abjuración"
+,"A partir del momento en el que eliges esta escuela, a nivel 2, solo necesitas la mitad de tiempo y dinero para copiar un conjuro de abjuración a tu libro de conjuros."),
+
+("Salvaguarda Arcana"
+,"A partir de nivel 2, puedes tejer una protección mágica a tu alrededor. Cuando lanzas un conjuro de abjuración de nivel 1 o superiores, puedes aprovechar una de las hebras mágicas del conjuro para tejer una salvaguarda sobre ti mismo, que durará hasta que termines un descanso largo. Esta salvaguarda tiene tantos puntos de golpe máximos como dos veces tu nivel de mago + tu modificador por Inteligencia. Cada vez que fueras a sufrir daño, será ella la que lo reciba en tu lugar. Si este daño reduce los puntos de golpe de la salvaguarda a 0, recibirás el daño restante. La salvaguarda no podrá absorber daño mientras tenga 0 puntos de golpe, pero su magia permanecerá activa. Cada vez que lances un conjuro de abjuración de nivel 1 o superiores, la salvaguarda recuperará tantos puntos de golpe como el doble del nivel del conjuro. Una vez creada la salvaguarda, deberás terminar un descanso largo para poder volver a formarla de nuevo."),
+
+("Salvaguarda Proyectada"
+,"A partir de nivel 6, cuando una criatura que puedas ver a 30 pies o menos de ti fuera a recibir daño, podrás utilizar tu reacción para hacer que tu Salvaguarda Arcana absorba dicho daño. Si este daño reduce los puntos de golpe de la salvaguarda a 0, la criatura original recibirá el daño restante"),
+
+("Abjuración Mejorada"
+,"A partir de nivel 10, cuando lanzas un conjuro de abjuración que te exige hacer una prueba de característica como parte del lanzamiento del mismo (como es el caso de contrahechizo o disipar magia), podrás añadir tu bonificador por competencia a la prueba."),
+
+("Resistencia a Conjuros"
+,"A partir de nivel 14 posees ventaja en las tiradas de salvación contra conjuros. Además, tienes resistencia al daño causado por conjuros."),
+
+/* Escuela de Adivinación */
+("Experto en Adivinación"
+,"A partir del momento en el que eliges esta escuela, a nivel 2, solo necesitas la mitad de tiempo y dinero para copiar un conjuro de adivinación a tu libro de conjuros."),
+
+("Presagio"
+,"A partir de nivel 2, cuando eliges esta escuela, empiezas a vislumbrar retazos del futuro en los límites de tu percepción. Después de terminar un descanso largo, tira 2d20 y apunta los dos resultados obtenidos. Puedes sustituir cualquier tirada de ataque, tirada de salvación o prueba de característica que vayáis a realizar o tu o una criatura que puedas ver por el número de una de las dos tiradas de presagio. Debes indicar que haces esto antes de que se lleve a cabo la tirada y solo puedes sustituir una tirada de esta forma una vez por turno. Cada tirada de presagio solo puede emplearse una vez. Perderás todas las tiradas de presagio que no hayas utilizado cuando finalices un descanso largo."),
+
+("Adivino Avezado"
+,"A partir de nivel 6, lanzar conjuros de adivinación te resulta tan fácil que solo requiere una pequeña parte de tus esfuerzos. Cuando lanzas un conjuro de adivinación de nivel 2 o más empleando un espacio de conjuro, recuperas otro espacio de conjuro ya gastado. El espacio recobrado debe ser de nivel"),
+
+("El Tercer Ojo"
+,"A partir de nivel 10 puedes usar tu acción para aumentar tus poderes de percepción. Cuando hagas esto, escoge uno de los beneficios que aparecen a continuación, que permanecerá activo hasta que quedes incapacitado o finalices un descanso corto o largo. Para poder volver a utilizar este rasgo tendrás que terminar un descanso, corto o largo. Visión en la Oscuridad. Obtienes visión en la oscuridad con un alcance de 60 pies. Visión Etérea. Puedes ver en el Plano Etéreo a 60 pies de distancia. Comprensión Superior. Puedes leer cualquier idioma. Ver Invisibilidad. Puedes ver las criaturas y objetos invisibles que estén en tu línea de visión y a 10 pies o muertos de ti."),
+
+("Presagio Mayor"
+,"A partir de nivel 14, las visiones de tus sueños se intensifican, dibujando en tu mente una imagen más clara de lo que está por acontecer. Puedes tirar tres d20 cuando uses tu rasgo Presagio en lugar de dos."),
+
+/* Escuela de Conjuración */
+("Experto en Conjuración"
+,"A partir del momento en el que eliges esta escuela, a nivel 2, solo necesitas la mitad de tiempo y dinero para copiar un conjuro de conjuración a tu libro de conjuros."),
+
+("Conjuración Menor"
+,"A partir de nivel 2, cuando escoges esta escuela, puedes utilizar tu acción para conjurar un objeto inanimado en tu propia mano o en el suelo, en un espacio desocupado que puedas ver a 10 pies o menos de ti. El objeto no puede medir más de 3 pies en cualquiera de sus lados ni pesar más de 10 libras, y debe tener la forma de un objeto no mágico que hayas visto antes. Este objeto es claramente mágico, pues emite luz tenue en un radio de 5 pies y desaparecerá tras 1 hora, cuando uses este rasgo de nuevo, o si causa o recibe cualquier cantidad de daño."),
+
+("Trasposición Benigna"
+,"A partir de nivel 6 puedes usar tu acción para teletransportarte hasta 30 pies a un espacio desocupado que puedas ver. Alternativamente, puedes elegir un espacio dentro del alcance que esté ocupado por una criatura Pequeña o Mediana. Si es una criatura voluntaria, ambos os teletransportaréis, intercambiando vuestras posiciones. Una vez utilizado este rasgo, deberás terminar un descanso largo o lanzar un conjuro de conjuración de nivel 1 o superiores para poder volver a usarlo otra vez."),
+
+("Conjuración Concentrada"
+,"A partir de nivel 10, recibir daño no te hará perder la concentración en tus conjuros de conjuración."),
+
+("Invocaciones Duraderas"
+,"A partir de nivel 14, cualquier criatura que invoques o crees con un conjuro de conjuración poseerá 30 puntos de golpe temporales."),
+
+/* Escuela de Encantamiento */
+("Experto en Encantamiento"
+,"A partir del momento en el que eliges esta escuela, a nivel 2, solo necesitas la mitad de tiempo y dinero para copiar un conjuro de encantamiento a tu libro de conjuros."),
+
+("Mirada Hipnótica"
+,"A partir de nivel 2, cuando escoges esta escuela, tus suaves palabras y fascinante mirada te permiten embelesar a otra criatura. Como acción, elige a una criatura que puedas ver a 5 pies o menos de ti. Si el objetivo puede verte u oírte, deberá hacer una tirada de salvación de Sabiduría con la misma CD que las tiradas de salvación de tus conjuros de mago. Si falla, estará hechizado por ti hasta el final de tu siguiente turno. La criatura hechizada queda incapacitada y está claramente afectada. Además, su velocidad baja a 0. En cada uno de los turnos subsiguientes, podrás utilizar tu acción para mantener este efecto, alargando su duración hasta el final de tu siguiente turno. Sin embargo, el efecto terminará si te mueves a más de 5 pies de distancia de la criatura, si esta dejar de poder verte u oírte o si la criatura recibe daño Una vez finaliza el efecto, o si la criatura tiene éxito en su tirada de salvación inicial contra él, no podrás volver a usar est rasgo contra dicha criatura hasta que termines un descans largo."),
+
+("Encantamiento Instintivo"
+,"A partir de nivel 6, cuando una criatura que puedas ver a 30 pies o menos de ti haga una tirada de ataque que te tenga como objetivo, podrás emplear tu reacción para redirigir el ataque. Para hacer esto es necesario que haya otra criatura dentro del alcance del ataque. El atacante deberá realizar una tirada de salvación de Sabiduría con la misma CD que las tiradas de salvación de tus conjuros de mago. Si la falla, debe elegir como objetivo de su ataque a la criatura más cercana a él, sin contaros ni a ti ni al propio atacante. En caso de que hubiera varias criaturas a la misma distancia, el atacante elige a cuál ataca. Si el atacante tiene éxito en su tirada de salvación, no podrás volver a usar este rasgo sobre él hasta que termines un descanso largo. Debes decidir utilizar este rasgo antes de saber si el ataque impacta o no. Las criaturas que no puedan ser hechizadas no se ven afectadas por este efecto."),
+
+("Duplicar Encantamiento"
+,"A partir de nivel 10, cuando lanzas un conjuro de encantamiento de nivel 1 o más cuyo objetivo sea una única criatura, puedes hacer que también tenga como objetivo a una segunda."),
+
+("Modificar Recuerdos"
+,"A nivel 14 obtienes la capacidad de provocar que una criatura no sea consciente de tu influencia mágica sobre ella. Cuando lanzas un conjuro de encantamiento para hechizar a una o más criaturas, puedes alterar el entendimiento de una de ellas para que no sea consciente de que ha sido hechizada. Además, una única vez antes de que el conjuro termine, puedes usar tu acción para intentar que la criatura escogida olvide parte del tiempo que ha pasado hechizada. La criatura deberá realizar una tirada de salvación de Inteligencia con la misma CD que las tiradas de salvación de tus conjuros de mago. Si falla, perderá los recuerdos correspondientes a 1 + tu modificador por Carisma horas (mínimo 1 hora). Puedes hacer que la criatura olvide menos tiempo, y el periodo olvidado nunca puede exceder la duración del conjuro de encantamiento."),
+
+/* Escuela de Evocación */
+("Experto en Evocación"
+,"A partir del momento en el que eliges esta escuela, a nivel 2, solo necesitas la mitad de tiempo y dinero para copiar un conjuro de evocación a tu libro de conjuros."),
+
+("Esculpir Conjuros"
+,"A partir de nivel 2 puedes crear espacios de relativa seguridad en el interior de los efectos generados por tus conjuros de evocación. Cuando lanzas un conjuro de evocación que afecta a otras criaturas que puedes ver, puedes elegir a tantas de estas criaturas como 1 + el nivel del conjuro. Las criaturas elegidas tienen éxito automáticamente en sus tiradas de salvación contra el conjuro, y no reciben daño alguno si normalmente recibirían la mitad de daño del mismo al superar una tirada de salvación."),
+
+("Truco Potente"
+,"A partir de nivel 6, tus trucos que causan daño pueden afectar incluso a aquellas criaturas que han evitado la peor parte del efecto. Cuando una criatura supere una tirada de salvación contra uno de tus trucos, aun así, recibirá la mitad del daño del truco (si es que causa alguno), pero no sufrirá ningún otro de sus efectos"),
+
+("Evocación Potenciada"
+,"A partir de nivel 10 puedes añadir tu modificador por Inteligencia a una de las tiradas de daño de cualquier conjuro de evocación de mago que lances."),
+
+("Sobrecanalizar"
+,"A partir de nivel 14 puedes aumentar el poder de tus conjuros más sencillos. Cuando lanzas un conjuro de mago de niveles entre 1 y 5 que causa daño, este inflige el daño máximo posible. La primera vez que hagas esto no sufrirás ningún efecto negativo, pero si usas este rasgo de nuevo sin haber finalizado un descanso largo antes, recibirás, inmediatamente después de lanzar el conjuro, 2d12 de daño necrótico por cada nivel del mismo. Cada vez que utilices este rasgo otra vez sin haber terminado un descanso largo, el daño necrótico por cada nivel del conjuro aumenta en 1d12. Este daño ignora cualquier resistencia e inmunidad."),
+
+/* Escuela de Ilusionismo */
+("Experto en Ilusionismo"
+,"A partir del momento en el que eliges esta escuela, a nivel 2, solo necesitas la mitad de tiempo y dinero para copiar un conjuro de ilusionismo a tu libro de conjuros."),
+
+("Ilusión Menor Mejorada"
+,"A nivel 2, cuando escoges esta escuela, aprendes el truco ilusión menor. Si ya lo conocías, puedes adquirir otro truco de mago a tu elección en su lugar. En cualquiera de los dos casos, este truco no cuenta contra tu límite de trucos conocidos. Además, cuando lanzas ilusión menor puedes crear tanto un sonido como una imagen en el mismo lanzamiento."),
+
+("Ilusiones Maleables"
+,"A partir de nivel 6, cuando lanzas un conjuro de ilusionismo cuya duración sea de al menos 1 minuto, puedes utilizar tu acción para cambiar la naturaleza de la ilusión (dentro de las para metros normales del conjuro), siempre y cuando estés viéndola."),
+
+("Yo Ilusorio"
+,"A partir de nivel 10, puedes crear un duplicado ilusorio de ti mismo instantáneamente, casi como una reacción instintiva al peligro. Cuando una criatura haga una tirada de ataque contra ti, puedes utilizar tu reacción para interponer tu doble falso entre el atacante y tú. Como consecuencia, el ataque fallará automáticamente y la ilusión se disipará. Una vez empleado este rasgo, deberás terminar un descanso corto o largo para poder volver a usarlo otra vez."),
+
+("Realidad Ilusoria"
+,"A nivel 14 has logrado aprender el secreto de como tejer magia de sombras en tus ilusiones, dotándolas así de una pseudorealidad. Cuando lanzas un conjuro de ilusión de nivel 1 o superiores, puedes elegir un objeto inanimado y no mágico que forme parte de la ilusión para hacerlo real. Puedes realizar esto mientras el conjuro esté activo, como una acción adicional durante tu turno. El objeto conserva su realidad durante 1 minuto. Podrías, por ejemplo, crear la ilusión de un puente que cruza un abismo y darle consistencia el tiempo suficiente como para que tus aliados puedan cruzarlo. El objeto no puede causar daño o dañar de forma directa a nadie."),
+
+/* Escuela de Nigromancia */
+("Experto en Nigromancia"
+,"A partir del momento en el que eliges esta escuela, a nivel 2, solo necesitas la mitad de tiempo y dinero para copiar un conjuro de nigromancia a tu libro de conjuros."),
+
+("Cosecha Siniestra"
+,"A nivel 2 obtienes la capacidad de segar la energía vital de las criaturas que mates con tus conjuros. Una vez por turno, cuando mates a al menos una criatura mediante un conjuro de nivel 1 o superiores, recuperarás tantos puntos de golpe como dos veces el nivel del conjuro, o tres veces si este pertenece a la escuela de nigromancia. No obtendrás este beneficio al matar autómatas o muertos vivientes."),
+
+("Siervos Muertos Vivientes"
+,"A nivel 6 añades el conjuro animar a los muertos a tu libro de conjuros, si es que no figuraba ya en él. Cuando lanzas animar a los muertos, puebles elegir como objetivo a un cadáver o pila de huesos adicional, formando así a otro zombi o esqueleto, lo que corresponda. Además, siempre que crees un muerto viviente mediante un conjuro de nigromancia, este disfrutará de los siguientes beneficios: · Los puntos de golpe máximos de la criatura aumentan en una cantidad igual a tu nivel de mago. · La criatura sumará tu bonificador por competencia a las tiradas de daño con armas."),
+
+("Habituado a la Muerte en Vida"
+,"A partir de nivel 10, posees resistencia al daño necrótico y tus puntos de golpe máximos no pueden ser reducidos. Has pasado tanto tiempo tratando con los muertos vivientes y a las fuerzas que las animan, que te has acostumbrado a sus peores efectos."),
+
+("Controlar Muertos Vivientes"
+,"A partir de nivel 14, puedes utilizar tu magia para someter a los muertos vivientes, incluso aquellos creados por otros magos, a tu control. Como acción, puedes elegir un muerto viviente que puedas ver a 60 pies o menos de ti. La criatura deberá hacer una tirada de salvación de Carisma con la misma CD que las tiradas de salvación de tus conjuros de mago. Si tiene éxito, no podrás volver a usar este rasgo sobre ella. Si falla, se volverá amistosa hacia ti y obedecerá tus órdenes hasta que vuelvas a utilizar este rasgo. Es más difícil controlar muertos vivientes inteligentes mediante este poder; si el objetivo tiene Inteligencia 8 o más, disfrutará de ventaja en la tirada de salvación. Además, si posee Inteligencia 12 o más y falla la tirada de salvación, podrá repetirla al final de cada hora hasta tener éxito y así liberarse."),
+
+/* Escuela de Transmutación */
+("Experto en Transmutación"
+,"A partir del momento en el que eliges esta escuela, a nivel 2, solo necesitas la mitad de tiempo y dinero para copiar un conjuro de transmutación a tu libro de conjuros."),
+
+("Alquimia Menor"
+,"A partir de nivel 2, cuando escoges esta escuela, eres capaz de alterar temporalmente las propiedades físicas de un objeto no mágico, cambiando la sustancia de la que está hecho por otra. Puedes llevar a cabo un procedimiento alquímico especial sobre un objeto hecho por completo de madera, piedra (pero no piedras preciosas), hierro, cobre o plata, transformándolo enteramente en otro cualquiera de los materiales nombrados. Por cada 10 minutos que inviertas en este proceso podrás transformar 1 pie cúbico de material. Después de 1 hora, o cuando pierdas la concentración (como si te estuvieras concentrando en un conjuro), el objeto volverá a estar hecho de la sustancia original."),
+
+("Piedra de Transmutador"
+,"A partir de nivel 6 puedes invertir 8 horas en crear una piedra de transmutador que almacena magia de esta escuela. Puedes beneficiarte tú mismo de los poderes de la piedra o dársela a otra criatura. Mientras mantenga la piedra en su posesión, el portador disfrutará de un beneficio a tu elección, que escogerás de entre las siguientes opciones cuando crees la piedra: · Visión en la oscuridad hasta un alcance de 60 pies, tal y como se describe en el capítulo 8: “Aventuras”. · Un incremento de 10 pies en la velocidad de la criatura, siempre y cuando esta no esté cargada. · Competencia en las tiradas de salvación de Constitución. · Resistencia a daño de ácido, frío, fuego, relámpago o trueno (tú eliges cuál cuando escoges este beneficio). Cada vez que lances un conjuro de transmutación de nivel 1 o superiores podrás cambiar el efecto de tu piedra, siempre y cuando la lleves contigo. Si creas una piedra de transmutador nueva, la anterior dejará de existir."),
+
+("Cambiar de Forma"
+,"A nivel 10 añades el conjuro polimorfar a tu libro de conjuros, si es que no figuraba ya en él. Además, puedes lanzar polimorfar sin gastar un espacio de conjuros, pero solo cuando el objetivo seas tú mismo y te transformes en una bestia cuyo valor de desafío sea de como mucho 1. Una vez hayas lanzado polimorfar de esta forma, no podrás volver a realizarlo de nuevo hasta que finalices un descanso corto o largo. Con todo, seguirás pudiendo lanzarlo de forma normal, utilizando un espacio de conjuro."),
+
+("Maestro Transmutador"
+,"A partir de nivel 14, puedes emplear tu acción para consumir todas las reservas de magia de transmutación almacenadas en tu piedra de transmutador de una sola vez. Cuando hagas esto, elige uno de los efectos que aparecen a continuación. Tu piedra de transmutador será destruida y no podrás volver a fabricar una hasta que termines un descanso largo. Transformación Mayor. Puedes transmutar un objeto no mágico cuyo tamaño sea de, como mucho, un cubo de 5 pies, en otro objeto no mágico de tamaño similar y una masa igual o inferior a la del original. Debes pasar 10 minutos manipulando el objeto para poder transformarlo. Panacea. Eliminas todas las maldiciones, enfermedades y venenos que estén afectando a una criatura que toques con la piedra de transmutador. Además, esta criatura también recupera todos sus puntos de golpe. Devolver la Vida. Puedes lanzar el conjuro alzar a los muertos sobre una criatura que toques con la piedra de transmutador. No es necesario que gastes un espacio de conjuro ni que alzar a los muertos figure en tu libro de conjuros. Devolver la Juventud. Tras tocar con la piedra de transmutador a una criatura voluntaria, su edad aparente se reduce en 3d10 años, hasta un mínimo de 13. Sin embargo, este efecto no prolonga la esperanza de vida de la criatura."),
 
 /* Picaro */
 /* Ladrón */
@@ -981,6 +1160,135 @@ insert into CaracteristicasDevelop.especialidad_habilidades(nombre_habilidad,nom
 
 ("Bombardeo de Conjuros"
 ,"Magia Salvaje"),
+
+/* Mago */
+/* Escuela de Abjuración */
+("Experto en Abjuración"
+,"Escuela de Abjuración"),
+
+("Salvaguarda Arcana"
+,"Escuela de Abjuración"),
+
+("Salvaguarda Proyectada"
+,"Escuela de Abjuración"),
+
+("Abjuración Mejorada"
+,"Escuela de Abjuración"),
+
+("Resistencia a Conjuros"
+,"Escuela de Abjuración"),
+
+/* Escuela de Adivinación */
+("Experto en Adivinación"
+,"Escuela de Adivinación"),
+
+("Presagio"
+,"Escuela de Adivinación"),
+
+("Adivino Avezado"
+,"Escuela de Adivinación"),
+
+("El Tercer Ojo"
+,"Escuela de Adivinación"),
+
+("Presagio Mayor"
+,"Escuela de Adivinación"),
+
+/* Escuela de Conjuración */
+("Experto en Conjuración"
+,"Escuela de Conjuración"),
+
+("Conjuración Menor"
+,"Escuela de Conjuración"),
+
+("Trasposición Benigna"
+,"Escuela de Conjuración"),
+
+("Conjuración Concentrada"
+,"Escuela de Conjuración"),
+
+("Invocaciones Duraderas"
+,"Escuela de Conjuración"),
+
+/* Escuela de Encantamiento */
+("Experto en Encantamiento"
+,"Escuela de Encantamiento"),
+
+("Mirada Hipnótica"
+,"Escuela de Encantamiento"),
+
+("Encantamiento Instintivo"
+,"Escuela de Encantamiento"),
+
+("Duplicar Encantamiento"
+,"Escuela de Encantamiento"),
+
+("Modificar Recuerdos"
+,"Escuela de Encantamiento"),
+
+/* Escuela de Evocación */
+("Experto en Evocación"
+,"Escuela de Evocación"),
+
+("Esculpir Conjuros"
+,"Escuela de Evocación"),
+
+("Truco Potente"
+,"Escuela de Evocación"),
+
+("Evocación Potenciada"
+,"Escuela de Evocación"),
+
+("Sobrecanalizar"
+,"Escuela de Evocación"),
+
+/* Escuela de Ilusionismo */
+("Experto en Ilusionismo"
+,"Escuela de Ilusionismo"),
+
+("Ilusión Menor Mejorada"
+,"Escuela de Ilusionismo"),
+
+("Ilusiones Maleables"
+,"Escuela de Ilusionismo"),
+
+("Yo Ilusorio"
+,"Escuela de Ilusionismo"),
+
+("Realidad Ilusoria"
+,"Escuela de Ilusionismo"),
+
+/* Escuela de Nigromancia */
+("Experto en Nigromancia"
+,"Escuela de Nigromancia"),
+
+("Cosecha Siniestra"
+,"Escuela de Nigromancia"),
+
+("Siervos Muertos Vivientes"
+,"Escuela de Nigromancia"),
+
+("Habituado a la Muerte en Vida"
+,"Escuela de Nigromancia"),
+
+("Controlar Muertos Vivientes"
+,"Escuela de Nigromancia"),
+
+/* Escuela de Transmutación */
+("Experto en Transmutación"
+,"Escuela de Transmutación"),
+
+("Alquimia Menor"
+,"Escuela de Transmutación"),
+
+("Piedra de Transmutador"
+,"Escuela de Transmutación"),
+
+("Cambiar de Forma"
+,"Escuela de Transmutación"),
+
+("Maestro Transmutador"
+,"Escuela de Transmutación"),
 
 /* Picaro */
 /* Ladrón */

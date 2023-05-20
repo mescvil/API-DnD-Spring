@@ -187,6 +187,13 @@ insert into CaracteristicasDevelop.rasgos_de_clases(nombre,descripcion) values
 ("Recuperación Mágica"
 ,"A nivel 20 recuperas 4 puntos de hechicería gastados cada vez que terminas un descanso corto."),
 
+/* Mago */
+("Recuperación Arcana"
+,"Has aprendido a recuperar parte de tus energías mágicas estudiando tu libro de conjuros. Una vez al día, tras finalizar un descanso corto, puedes elegir espacios de conjuro gastados y recuperarlos. La suma de niveles de estos espacios de conjuro debe ser igual o inferior a la mitad de tu nivel de mago (redondeando hacia arriba), y ninguno de los espacios puede ser de nivel 6 o más. Si, por ejemplo, eres un mago de nivel 4, podrás recuperar hasta dos niveles en espacios de conjuro: un espacio de nivel 2 o dos de nivel 1."),
+
+("Maestría sobre Conjuros"
+,"A nivel 18 has alcanzado tal maestría sobre ciertos conjuros que puedes lanzarlos a voluntad. Escoge un conjuro de mago de nivel 1 y otro de nivel 2 que figuren en tu libro de conjuros. Puedes lanzar estos conjuros a su nivel más bajo a voluntad, sin necesidad de gastar un espacio de conjuro. Eso sí, debes tener estos conjuros preparados. Si quieres lanzar cualquiera de los dos conjuros a un nivel superior deberás gastar un espacio de conjuro de forma normal. Tras estudiar durante 8 horas podrás intercambiar uno o ambos conjuros por otros del mismo nivel."),
+
 /* Picaro */
 ("Ataque Furtivo"
 ,"A partir de nivel 1 sabes cómo golpear sutilmente y aprovecharte de un enemigo distraído. Una vez por turno, puedes infligir 1d6 de daño adicional a una criatura a la que impactes con un ataque en cuya tirada de ataque tuvieras ventaja. Este ataque debe haber sido hecho utilizando un arma sutil o a distancia. No necesitas tener ventaja en la tirada de ataque si otro enemigo del objetivo está a 5 pies o menos de él, dicho enemigo no está incapacitado, y no sufres desventaja en la tirada de ataque. La cantidad de daño adicional aumenta según subes de nivel en esta clase, tal y como se indica en la columna “ataque furtivo” de la tabla del pícaro."),
@@ -318,6 +325,11 @@ insert into CaracteristicasDevelop.rasgos_clase (nombre_clase,nombre_rasgo) valu
 ("Hechicero","Metamagia - Conjuro Sutil"),
 ("Hechicero","Recuperación Mágica"),
 ("Hechicero","Mejora de Característica"),
+
+/* Mago */
+("Mago","Recuperación Arcana"),
+("Mago","Maestría sobre Conjuros"),
+("Mago","Mejora de Característica"),
 
 /* Picaro */
 ("Pícaro","Pericia"),
