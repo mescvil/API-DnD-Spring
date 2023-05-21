@@ -16,7 +16,7 @@ import java.util.Set;
 public class RasgoClase {
     @Id
     private String nombre;
-    @Column(length = 800)
+    @Column(length = 1500)
     private String descripcion;
     @ManyToMany(
             fetch = FetchType.LAZY,
