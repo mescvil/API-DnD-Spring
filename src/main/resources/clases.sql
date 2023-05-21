@@ -91,7 +91,7 @@ insert into CaracteristicasDevelop.rasgos_de_clases(nombre,descripcion) values
 ("Forma Salvaje"
 ,"A partir de nivel 2, puedes usar tu acción para, mediante la magia, adoptar la forma de una bestia que hayas vista antes. Puedes emplear este rasgo dos veces. Recuperas todos los usos tras hacer un descanso corto o largo. Tu nivel de druida determina aquellas bestias en las que te puedes transformar, tal y como indica la tabla “formas de bestia”. Por ejemplo, a nivel 2 puedes adoptar la forma de cualquier bestia que tenga un valor de desafío de 1/4 o menos y que no posea velocidades nadando ni volando."),
 
-("Cuerpo Atemporal"
+("Cuerpo Atemporal [Druida]"
 ,"A partir de nivel 18, la magia primordial que eres capaz de empuñar ralentiza tu envejecimiento. Tu cuerpo solo envejece un año por cada diez que pasan."),
 
 ("Conjurar como Bestia"
@@ -194,6 +194,61 @@ insert into CaracteristicasDevelop.rasgos_de_clases(nombre,descripcion) values
 ("Maestría sobre Conjuros"
 ,"A nivel 18 has alcanzado tal maestría sobre ciertos conjuros que puedes lanzarlos a voluntad. Escoge un conjuro de mago de nivel 1 y otro de nivel 2 que figuren en tu libro de conjuros. Puedes lanzar estos conjuros a su nivel más bajo a voluntad, sin necesidad de gastar un espacio de conjuro. Eso sí, debes tener estos conjuros preparados. Si quieres lanzar cualquiera de los dos conjuros a un nivel superior deberás gastar un espacio de conjuro de forma normal. Tras estudiar durante 8 horas podrás intercambiar uno o ambos conjuros por otros del mismo nivel."),
 
+/* Monje */
+("Tabla de Ki"
+,"Nivel 1 - 0, Nivel 2 - 2, Nivel 3 - 3, Nivel 4 - 4, Nivel 5 - 5, Nivel 6 - 6, Nivel 7 - 7, Nivel 8 - 8, Nivel 9 - 9, Nivel 10 - 10, Nivel 11 - 11, Nivel 12 - 12, Nivel 13 - 13, Nivel 14 - 14, Nivel 15 - 15, Nivel 16 - 16, Nivel 17 - 17, Nivel 18 - 18, Nivel 19 - 19, Nivel 20 - 20"),
+
+("Artes Marciales"
+,"A nivel 1 tu práctica de las artes marciales te ha otorgado un dominio de los estilos de combate que emplean ataques sin armas y armas de monje, que son las espadas cortas y cualquier arma sencilla que no posea las propiedades “a dos manos” o “pesada”. Obtienes los siguientes beneficios mientras no portes armadura ni escudo, y estés desarmado o empuñes únicamente armas de monje. · Puedes usar tu Destreza en lugar de tu Fuerza para las tiradas de ataque y de daño de tus ataques sin armas y tus armas de monje. · Puedes tirar 1d4 en lugar del daño normal de tus ataques sin armas o tus armas de monje. Este dado cambia según subes niveles como monje, tal y como se muestra en la columna “artes marciales” de la tabla del monje. · Cuando llevas a cabo la acción de Atacar con un ataque sin armas o un arma de monje durante tu turno, puedes utilizar tu acción adicional para hacer un ataque sin armas. De este modo, si empleas la acción de Atacar para atacar con un bastón, también puedes realizar un ataque sin armas con tu acción adicional, siempre y cuando no hayas usado ya está. Ciertos monasterios utilizan armas de monje específicas. Por ejemplo, podrías usar un garrote llamado nunchaku, que está compuesto de dos trozos de madera unidos por una cadena corta, o una hoz con un filo más corto y recto, que recibe el nombre de kama. Independientemente del nombre que reciba el arma de monje, esta utilizará los valores de juego del arma de la que se deriva"),
+
+("Ki"
+,"A partir de nivel 2, tu entrenamiento te permite controlar la energía mística llamada “ki”. Tu capacidad de emplearla se representa mediante una serie de puntos de ki. Tu nivel de monje determina cuántos de estos puntos posees, como se muestra en la columna “puntos de ki” de la tabla del monje. Puedes utilizar estos puntos para alimentar varios rasgos ki. Empiezas con tres de estos rasgos: Ráfaga de Golpes, Defensa Paciente y Paso del Viento. Aprenderás más rasgos ki según vayas subiendo de nivel en esta clase. Cuando uses un punto de ki, este dejará de estar disponible hasta que termines un descanso corto o largo, al final del cual volverás a reunir el ki en tu interior. Debes estar meditando durante al menos 30 minutos del descanso para poder recuperar los puntos de ki. Algunos de tus rasgos ki exigen a tu objetivo hacer una tirada de salvación para resistir sus efectos. La CD para estas tiradas de salvación se calcula de la siguiente forma: CD tirada de salvación de ki = 8 + tu bonificador por competencia + tu modificador por Sabiduría"),
+
+("Ráfaga de Golpes [Ki]"
+,"Inmediatamente después de llevar a cabo la acción de Atacar durante tu turno, puedes gastar un 1 punto de ki para hacer dos ataques sin armas como acción adicional."),
+
+("Defensa Paciente [Ki]"
+,"Puedes gastar 1 punto de ki para realizar la acción de Esquivar como acción adicional durante tu turno."),
+
+("Paso del Viento [Ki]"
+,"Puedes gastar 1 punto de ki para llevar a cabo las acciones de Destrabarse o Correr como acción adicional durante tu turno. Además, tu distancia de salto se duplica durante este turno."),
+
+("Movimiento sin Armadura"
+,"A partir de nivel 2, si no estás llevando armadura ni escudo, tu velocidad aumenta en 10 pies. Esta bonificación aumenta según alcanzas ciertos niveles de monje, tal y como se muestra en la tabla del monje. A nivel 9 obtienes la capacidad para moverte, durante tu turno, por superficies verticales y sobre líquidos sin caerte."),
+
+("Desviar Proyectiles"
+,"A partir de nivel 3, puedes usar tu reacción para desviar o atrapar el proyectil de un ataque con arma a distancia que te haya impactado. Si haces esto, el daño que recibes del ataque se reduce en 1d10 + tu modificador por Destreza + tu nivel de monje. Si disminuyes el daño a 0 podrás atrapar el proyectil, siempre y cuando este sea lo bastante pequeño como para que puedas sujetarlo con una mano y tengas al menos una mano libre. Si atrapas el proyectil, puedes gastar 1 punto de ki para, como parte de la misma reacción, realizar un ataque a distancia con el arma o unidad de munición que acabas de atrapar. Haces este ataque como si fueras competente, independientemente de tus competencias con armas, y el proyectil cuenta como un arma de monje a efectos del ataque, que tiene un alcance normal de 20 pies y un alcance largo de 60 pies."),
+
+("Caída Lenta"
+,"A partir de nivel 4, puedes usar tu reacción cuando caigas para reducir cualquier daño por caída que recibas en cinco veces tú nivel de monje."),
+
+("Golpe Aturdidor"
+,"A partir de nivel 5, puedes interferir con el flujo de ki del cuerpo de un oponente. Cuando impactes a una criatura con un ataque con arma cuerpo a cuerpo, puedes gastar 1 punto de ki para intentar realizar un golpe aturdidor. El objetivo debe tener éxito en una tirada de salvación de Constitución o quedará aturdido hasta el final de tu siguiente turno."),
+
+("Golpes Potenciados con Ki"
+,"A partir de nivel 6, tus ataques sin armas cuentan como mágicos a efectos de superar las resistencias e inmunidades a ataques y daño no mágicos."),
+
+("Quietud Mental"
+,"A partir de nivel 7, puedes utilizar tu acción para finalizar un efecto que te esté causando los estados “hechizado” o “asustado”."),
+
+("Pureza de Cuerpo"
+,"A nivel 10 tu maestría sobre el ki que fluye a través de ti te hace inmune a la enfermedad y el veneno."),
+
+("Lengua del Sol y la Luna"
+,"A partir de nivel 13, aprendes a tocar el ki de otras mentes, de tal forma que puedes entender todos los idiomas hablados. Además, cualquier criatura que pueda comprender al menos un idioma entenderá lo que digas."),
+
+("Alma Diamantina"
+,"A partir de nivel 14, tu dominio del ki te otorga competencia en todas las tiradas de salvación. Además, cada vez que intentes hacer una tirada de salvación y falles, podrás gastar 1 punto de ki para repetir la tirada y quedarte con el nuevo resultado."),
+
+("Cuerpo Atemporal [Monje]"
+,"A nivel 15 tu ki es capaz de mantenerte, de tal forma que no sufres de la fragilidad de la vejez y no puedes envejecer por medios mágicos. Aun así, todavía puedes morir de viejo. Además, ya no necesitas ni agua ni comida."),
+
+("Cuerpo Vacío"
+,"A partir de nivel 18, puedes usar tu acción y gastar 4 puntos de ki para volverte invisible durante 1 minuto. Durante este periodo de tiempo, también tendrás resistencia a todo el daño excepto el de fuerza. Asimismo, puedes gastar 8 puntos de ki para lanzar el conjuro proyección astral sin tener que utilizar componente material alguno. Sin embargo, no podrás llevar contigo a ninguna otra criatura."),
+
+("Yo Perfecto"
+,"A nivel 20, si cuando tiras iniciativa no te quedan puntos de ki, recuperas 4 de ellos."),
+
 /* Picaro */
 ("Ataque Furtivo"
 ,"A partir de nivel 1 sabes cómo golpear sutilmente y aprovecharte de un enemigo distraído. Una vez por turno, puedes infligir 1d6 de daño adicional a una criatura a la que impactes con un ataque en cuya tirada de ataque tuvieras ventaja. Este ataque debe haber sido hecho utilizando un arma sutil o a distancia. No necesitas tener ventaja en la tirada de ataque si otro enemigo del objetivo está a 5 pies o menos de él, dicho enemigo no está incapacitado, y no sufres desventaja en la tirada de ataque. La cantidad de daño adicional aumenta según subes de nivel en esta clase, tal y como se indica en la columna “ataque furtivo” de la tabla del pícaro."),
@@ -278,7 +333,7 @@ insert into CaracteristicasDevelop.rasgos_clase (nombre_clase,nombre_rasgo) valu
 
 /* Druida */
 ("Druida","Forma Salvaje"),
-("Druida","Cuerpo Atemporal"),
+("Druida","Cuerpo Atemporal [Druida]"),
 ("Druida","Conjurar como Bestia"),
 ("Druida","Archidruida"),
 ("Druida","Formas de Bestia"),
@@ -330,6 +385,29 @@ insert into CaracteristicasDevelop.rasgos_clase (nombre_clase,nombre_rasgo) valu
 ("Mago","Recuperación Arcana"),
 ("Mago","Maestría sobre Conjuros"),
 ("Mago","Mejora de Característica"),
+
+/* Monje */
+("Monje","Tabla de Ki"),
+("Monje","Movimiento sin Armadura"),
+("Monje","Defensa sin Armadura"),
+("Monje","Artes Marciales"),
+("Monje","Ki"),
+("Monje","Ráfaga de Golpes [Ki]"),
+("Monje","Defensa Paciente [Ki]"),
+("Monje","Paso del Viento [Ki]"),
+("Monje","Desviar Proyectiles"),
+("Monje","Caída Lenta"),
+("Monje","Golpe Aturdidor"),
+("Monje","Golpes Potenciados con Ki"),
+("Monje","Quietud Mental"),
+("Monje","Pureza de Cuerpo"),
+("Monje","Lengua del Sol y la Luna"),
+("Monje","Alma Diamantina"),
+("Monje","Cuerpo Atemporal [Monje]"),
+("Monje","Cuerpo Vacío"),
+("Monje","Yo Perfecto"),
+("Monje","Evasión"),
+("Monje","Mejora de Característica"),
 
 /* Picaro */
 ("Pícaro","Pericia"),

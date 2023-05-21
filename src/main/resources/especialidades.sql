@@ -103,6 +103,16 @@ insert into CaracteristicasDevelop.especialidades(nombre,descripcion) values
 ("Escuela de Transmutación"
 ,"Eres un estudioso de los conjuros que modifican la energía y la materia. Para ti el mundo no es estático, sino eminentemente mutable, y disfrutas comportándote como un agente del cambio. Posees la capacidad de empujar la materia pura de la creación y has aprendido cómo alterar tanto la forma física como las cualidades mentales. Tu magia te proporciona las herramientas necesarias para convertirte en el herrero de la forja de la realidad. Algunos transmutadores son inventores y bromistas que convierten a la gente en rana y transforman el cobre en plata, ya sea para divertirse o para obtener algún beneficio ocasional. Otros se afanan en su estudio de la magia con una seriedad absoluta, pues buscan el poder de los dioses para crear y destruir mundos."),
 
+/* Monje */
+("Camino de la Mano Abierta"
+,"Los monjes del Camino de la Mano Abierta son los maestros definitivos de las artes marciales, ya sea con o sin armas. Aprenden técnicas que les permiten empujar y derribar a sus oponentes, manipular el ki para curar sus propios cuerpos y practicar un tipo de meditación avanzada que les protege de toda agresión."),
+
+("Camino de la Sombra"
+,"Los monjes del Camino de la Sombra siguen una tradición que valora el sigilo y el subterfugio. Estos monjes son conocidos en ciertos lugares como ninjas o bailarines sombríos, y sirven como espías y asesinos. A veces los miembros de un monasterio de ninjas son parte de una misma familia, un clan que ha jurado mantener en secreto sus artes y sus misiones. Otros monasterios son más parecidos a un gremio de ladrones, ya que ofertan sus servicios a nobles, ricos mercaderes o cualquiera que pueda permitirse sus tarifas. Independientemente de sus métodos, los líderes de estos monasterios esperan una obediencia incondicional por parte de sus estudiantes."),
+
+("Camino de los Cuatro Elementos"
+,"Sigues una tradición monástica que te enseña a dominar los elementos. Cuando concentras tu ki, puedes alinearte con las fuerzas de la creación y doblegar los cuatro elementos a tu voluntad, utilizándolos como si de una extensión de tu propio cuerpo se trataran. Algunos miembros de esta tradición se entregan a un único elemento, mientras que otros los entrelazan. Muchos monjes del Camino de los Cuatro Elementos tatúan sus cuerpos con símbolos de sus poderes ki, representándolos habitualmente como dragones enroscados, aunque a veces también como peces, plantas, fénix, montañas o crestas de olas."),
+
 /* Picaro */
 ("Ladrón"
 ,"Has decidido pulir aquellas habilidades útiles para el arte del latrocinio. Rateros, bandidos, carteristas y otros criminales tienden a seguir este arquetipo, pero también lo hacen aquellos pícaros que prefieren verse a sí mismo como buscadores de tesoros profesionales, exploradores, descubridores o investigadores. Además de mejorar tu agilidad y sigilo, también aprendes habilidades útiles para la exploración de ruinas antiguas, a leer idiomas con los que no estás familiarizado y a usar objetos mágicos que normalmente no podrías emplear."),
@@ -217,6 +227,16 @@ insert into CaracteristicasDevelop.clase_especilidades(nombre_especialidad,nombr
 
 ("Escuela de Transmutación"
 ,"Mago"),
+
+/* Monje */
+("Camino de la Mano Abierta"
+,"Monje"),
+
+("Camino de la Sombra"
+,"Monje"),
+
+("Camino de los Cuatro Elementos"
+,"Monje"),
 
 /* Picaro */
 ("Ladrón"
@@ -734,6 +754,70 @@ insert into CaracteristicasDevelop.habilidades_especialidad(nombre,descripcion) 
 
 ("Maestro Transmutador"
 ,"A partir de nivel 14, puedes emplear tu acción para consumir todas las reservas de magia de transmutación almacenadas en tu piedra de transmutador de una sola vez. Cuando hagas esto, elige uno de los efectos que aparecen a continuación. Tu piedra de transmutador será destruida y no podrás volver a fabricar una hasta que termines un descanso largo. Transformación Mayor. Puedes transmutar un objeto no mágico cuyo tamaño sea de, como mucho, un cubo de 5 pies, en otro objeto no mágico de tamaño similar y una masa igual o inferior a la del original. Debes pasar 10 minutos manipulando el objeto para poder transformarlo. Panacea. Eliminas todas las maldiciones, enfermedades y venenos que estén afectando a una criatura que toques con la piedra de transmutador. Además, esta criatura también recupera todos sus puntos de golpe. Devolver la Vida. Puedes lanzar el conjuro alzar a los muertos sobre una criatura que toques con la piedra de transmutador. No es necesario que gastes un espacio de conjuro ni que alzar a los muertos figure en tu libro de conjuros. Devolver la Juventud. Tras tocar con la piedra de transmutador a una criatura voluntaria, su edad aparente se reduce en 3d10 años, hasta un mínimo de 13. Sin embargo, este efecto no prolonga la esperanza de vida de la criatura."),
+
+/* Monje */
+/* Camino de la Mano Abierta */
+("Técnica de la Mano Abierta"
+,"A partir del momento en el que escoges esta tradición, a nivel 3, puedes manipular el ki de tus enemigos mientras dominas el tuyo propio. Cuando impactas a una criatura con uno de los ataques que te proporciona Ráfaga de Golpes, puedes obligarla a sufrir uno de los siguientes efectos: · Debe superar una tirada de salvación de Destreza o será derribado. · Ha de hacer una tirada de salvación de Fuerza. Si falla, puedes empujarla hasta 15 pies en dirección contraria a ti. · No puede realizar reacciones hasta el final de tu siguiente turno."),
+
+("Plenitud de Cuerpo"
+,"A nivel 6 obtienes la capacidad de sanarte a ti mismo. Puedes usar una acción para recuperar tantos puntos de golpe como tres veces tu nivel de monje. Una vez utilizado este rasgo, debe ras terminar un descanso largo para poder volver emplearlo de nuevo."),
+
+("Tranquilidad"
+,"A partir de nivel 11, puedes iniciar una meditación especial que te rodea de un aura de paz. Al terminar un descanso largo obtienes los beneficios equivalentes a un conjuro santuario que dura hasta el comienzo de tu siguiente descanso largo. El conjuro puede terminar antes de tiempo de forma normal. La CD de la tirada de salvación del conjuro es de 8 + tu modificador por Sabiduría + tu bonificador por competencia."),
+
+("Palma Estremecedora"
+,"A nivel 17 consigues la capacidad para transmitir vibraciones letales al cuerpo de un oponente. Cuando impactas a una criatura con un ataque sin armas, puedes gastar 3 puntos de ki para iniciar estas vibraciones imperceptibles, que durarán tantos días como tu nivel de monje. Las vibraciones son inofensivas, salvo si usas tu acción para hacer que terminen. Para poder realizar esto, tu objetivo debe estar en el mismo plano de existencia que tú. Cuando lleves a cabo esta acción, la criatura deberá hacer una tirada de salvación de Constitución. Si falla, sus puntos de golpe bajarán a 0. Si tiene éxito, recibirá 10d10 de daño necrótico. Solo eres capaz de tener una criatura bajo los efectos de este rasgo al mismo tiempo. También puedes elegir dar por terminadas las vibraciones de forma inocua sin necesidad de usar ninguna acción."),
+
+/* Camino de la Sombra */
+("Artes Sombrías"
+,"A partir del momento en el que escoges esta tradición, a nivel 3, puedes utilizar tu ki para duplicar los efectos de ciertos conjuros. Como acción, puedes usar 2 puntos de ki para lanzar oscuridad, pasar sin rastro, silencio o visión en la oscuridad sin tener que emplear componente material alguno. Además, también obtienes el truco ilusión menor, si es que no lo conocías ya."),
+
+("Paso entre Sombras"
+,"A nivel 6 obtienes la facultad para saltar de una sombra a otra. Cuando estás en una zona de luz tenue u oscuridad, puedes usar una acción adicional para teletransportarte hasta 60 pies a un espacio desocupado que puedas ver y que también esté en un área de luz tenue u oscuridad. Después de hacer esto, tendrás ventaja en el primer ataque cuerpo a cuerpo que realices antes del final del turno."),
+
+("Capa de Sombras"
+,"A nivel 11 ya has aprendido a fundirte por completo con las sombras. Cuando estás en una zona de luz tenue u oscuridad, puedes emplear tu acción para volverte invisible. Seguirás siendo invisible hasta que ataques, lances un conjuro o te encuentres en una zona de luz brillante."),
+
+("Oportunista"
+,"A nivel 17 puedes aprovecharte de la distracción fugaz que produce en una criatura el ser impactada por un ataque. Cuando una criatura que se encuentre a 5 pies o menos de ti sea impactada por un ataque hecho por otra criatura que no seas tú, podrás usar tu reacción para realizar un ataque cuerpo a cuerpo contra la criatura impactada."),
+
+/* Camino de los Cuatro Elementos */
+("Discípulo de los Elementos"
+,"A partir del momento en el que escoges esta tradición, a nivel 3, puedes aprender disciplinas mágicas que te permiten controlar el poder de los cuatro elementos. Cada vez que uses una disciplina tendrás que gastar puntos de ki. Conoces la disciplina Armonía con los Elementos y otra disciplina de tu elección. Estas están detalladas en la sección “Disciplinas elementales”, que se encuentra más adelante. Aprendes una disciplina adicional de tu elección cuando alcanzas los niveles 6, 11 y 17. Cada vez que aprendas una disciplina elemental nueva, también podrás reemplazar una de las que ya conozcas por otra distinta. Lanzar conjuros elementales. Algunas disciplinas elementales te permiten lanzar conjuros. El capítulo 10 contiene las reglas necesarias para ello. Para lanzar uno de estos conjuros, utilizarás su tiempo de lanzamiento, así como cualquier otra regla pertinente, pero no tendrás que aportar componentes materiales. Una vez alcances el nivel 5 de esta clase, podrás invertir puntos de ki adicionales para aumentar el nivel del conjuro de una disciplina elemental que lances, siempre y cuando dicho conjuro produzca un efecto mejorado a niveles superiores, como es el caso de, por ejemplo, manos ardientes. El nivel del conjuro aumenta en uno por cada punto de ki adicional que gastes. Así, si eres un monje de nivel 5 y usas Barrido de las Ascuas para lanzar manos ardientes, podrás gastar 3 puntos de ki para lanzarlo como si fuera un conjuro de nivel 2 (el coste base de la disciplina de 2 puntos de ki más 1). La cantidad máxima de puntos de ki que puedes invertir en lanzar un conjuro de esta forma (incluye tanto el coste base como los puntos de ki adicionales para aumentar el nivel) viene determinado por tu nivel de monje, tal y como se indica en la tabla “conjuros y puntos de ki”."),
+
+("Tabla Conjuros y Puntos de Ki"
+,"Nivel [5-8] - 3, Nivel [9-12] - 4, Nivel [13-16] - 5, Nivel [17-20] - 6"),
+
+("Disciplinas Elementales"
+,"Si una disciplina exige un nivel mínimo, deberás haber alcanzado dicho nivel en esta clase para poder aprender dicha disciplina."),
+
+("Agarre del Viento del Norte (requiere nivel 6) [Disciplina Elemental]"
+,"Puedes gastar 3 puntos de ki para lanzar inmovilizar persona."),
+
+("Barrido de las Ascuas [Disciplina Elemental]"
+,"Puedes gastar 2 puntos de ki para lanzar manos ardientes."),
+
+("Cabalgar el Viento (requiere nivel 11) [Disciplina Elemental]"
+,"Puedes gastar 4 puntos de ki para lanzar volar eligiéndote como objetivo a ti mismo."),
+
+("Defensa de la Montaña Eterna (requiere nivel 17) [Disciplina Elemental]"
+,"Puedes gastar 5 puntos de ki para lanzar piel pétrea eligiéndote como objetivo a ti mismo"),
+
+("Gong de la Cumbre (requiere nivel 6) [Disciplina Elemental]"
+,"Puedes gastar 3 puntos de ki para lanzar hacer añicos."),
+
+("Llamas del Fénix (requiere nivel 11) [Disciplina Elemental]"
+,"Puedes gastar 4 puntos de ki para lanzar bola de fuego."),
+
+("Ola de la Tierra Ondulante (requiere nivel 17) [Disciplina Elemental]"
+,"Puedes gastar 6 puntos de ki para lanzar muro de piedra"),
+
+("Puño de los Cuatro Truenos [Disciplina Elemental]"
+,"Puedes gastar 2 puntos de ki para lanzar ola atronadora."),
+
+("Ráfaga de los Espíritus del Vendaval [Disciplina Elemental]"
+,"Puedes gastar 2 puntos de ki para lanzar ráfaga de viento."),
 
 /* Picaro */
 /* Ladrón */
@@ -1289,6 +1373,70 @@ insert into CaracteristicasDevelop.especialidad_habilidades(nombre_habilidad,nom
 
 ("Maestro Transmutador"
 ,"Escuela de Transmutación"),
+
+/* Camino de la Mano Abierta */
+("Técnica de la Mano Abierta"
+,"Camino de la Mano Abierta"),
+
+("Plenitud de Cuerpo"
+,"Camino de la Mano Abierta"),
+
+("Tranquilidad"
+,"Camino de la Mano Abierta"),
+
+("Palma Estremecedora"
+,"Camino de la Mano Abierta"),
+
+/* Camino de la Sombra */
+("Artes Sombrías"
+,"Camino de la Sombra"),
+
+("Paso entre Sombras"
+,"Camino de la Sombra"),
+
+("Capa de Sombras"
+,"Camino de la Sombra"),
+
+("Oportunista"
+,"Camino de la Sombra"),
+
+/* Camino de los Cuatro Elementos */
+("Discípulo de los Elementos"
+,"Camino de los Cuatro Elementos"),
+
+("Tabla Conjuros y Puntos de Ki"
+,"Camino de los Cuatro Elementos"),
+
+("Disciplinas Elementales"
+,"Camino de los Cuatro Elementos"),
+
+("Agarre del Viento del Norte (requiere nivel 6) [Disciplina Elemental]"
+,"Camino de los Cuatro Elementos"),
+
+("Barrido de las Ascuas [Disciplina Elemental]"
+,"Camino de los Cuatro Elementos"),
+
+("Cabalgar el Viento (requiere nivel 11) [Disciplina Elemental]"
+,"Camino de los Cuatro Elementos"),
+
+("Defensa de la Montaña Eterna (requiere nivel 17) [Disciplina Elemental]"
+,"Camino de los Cuatro Elementos"),
+
+("Gong de la Cumbre (requiere nivel 6) [Disciplina Elemental]"
+,"Camino de los Cuatro Elementos"),
+
+("Llamas del Fénix (requiere nivel 11) [Disciplina Elemental]"
+,"Camino de los Cuatro Elementos"),
+
+("Ola de la Tierra Ondulante (requiere nivel 17) [Disciplina Elemental]"
+,"Camino de los Cuatro Elementos"),
+
+("Puño de los Cuatro Truenos [Disciplina Elemental]"
+,"Camino de los Cuatro Elementos"),
+
+("Ráfaga de los Espíritus del Vendaval [Disciplina Elemental]"
+,"Camino de los Cuatro Elementos"),
+
 
 /* Picaro */
 /* Ladrón */
