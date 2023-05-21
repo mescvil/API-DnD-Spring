@@ -113,6 +113,16 @@ insert into CaracteristicasDevelop.especialidades(nombre,descripcion) values
 ("Camino de los Cuatro Elementos"
 ,"Sigues una tradición monástica que te enseña a dominar los elementos. Cuando concentras tu ki, puedes alinearte con las fuerzas de la creación y doblegar los cuatro elementos a tu voluntad, utilizándolos como si de una extensión de tu propio cuerpo se trataran. Algunos miembros de esta tradición se entregan a un único elemento, mientras que otros los entrelazan. Muchos monjes del Camino de los Cuatro Elementos tatúan sus cuerpos con símbolos de sus poderes ki, representándolos habitualmente como dragones enroscados, aunque a veces también como peces, plantas, fénix, montañas o crestas de olas."),
 
+/* Paladín */
+("Juramento de Entrega"
+,"El juramento de Entrega vincula al paladín con tres ideales sublimes: la justicia, la virtud y el orden. También llamados adalides, caballeros blancos o guerreros sagrados, estos paladines encarnan el ideal del caballero de brillante armadura, que actúa con honor y persigue la justicia y el bien mayor. Se exigen a sí mismos los más altos estándares de conducta y algunos de ellos, para bien o para mal, esperan lo mismo del resto del mundo. Muchos de los que pronuncian este juramento veneran a dioses de la ley y la bondad y emplean los mandamientos de estas deidades como vara de medir de su propia entrega. Conciben a los ángeles (los siervos perfectos del bien) como el ideal al que aspirar e incorporan imágenes de alas angelicales en sus yelmos o blasones."),
+
+("Juramento de los Antiguos"
+,"El juramento de los Antiguos es tan antiguo como los elfos y los rituales de los druidas. También llamados caballeros feéricos, caballeros verdes o caballeros astados, los paladines que pronuncian este juramento se alinean con el bando de la luz en el conflicto cósmico contra la oscuridad. Pero lo hacen porque aman las cosas bellas y capaces de dar vida del mundo, y no necesariamente porque crean en principios como el honor, el valor o la justicia. Adornan su armadura y sus prendas con imágenes que representan seres capaces de crecer, como hojas, astas o flores, para reflejar su compromiso con el cuidado de la vida y la luz en el mundo."),
+
+("Juramento de Venganza"
+,"El Juramento de Venganza es el propósito solemne de castigar a aquellos que han cometido un pecado grave. Cuando las fuerzas del mal masacran a aldeanos indefensos, una comunidad entera se vuelve contra la voluntad de los dioses, un gremio de ladrones se torna excesivamente violentos y poderoso o un dragón arrasa los campos de cultivo, surgen los paladines que pronuncian el Juramento de la Venganza, decididos a enderezar aquello que se ha torcido. Para estos paladines, que a veces reciben el nombre de vengadores o caballeros oscuros, su propia pureza carece de importancia frente a la necesidad de impartir justicia."),
+
 /* Picaro */
 ("Ladrón"
 ,"Has decidido pulir aquellas habilidades útiles para el arte del latrocinio. Rateros, bandidos, carteristas y otros criminales tienden a seguir este arquetipo, pero también lo hacen aquellos pícaros que prefieren verse a sí mismo como buscadores de tesoros profesionales, exploradores, descubridores o investigadores. Además de mejorar tu agilidad y sigilo, también aprendes habilidades útiles para la exploración de ruinas antiguas, a leer idiomas con los que no estás familiarizado y a usar objetos mágicos que normalmente no podrías emplear."),
@@ -237,6 +247,16 @@ insert into CaracteristicasDevelop.clase_especilidades(nombre_especialidad,nombr
 
 ("Camino de los Cuatro Elementos"
 ,"Monje"),
+
+/* Paladín */
+("Juramento de Entrega"
+,"Paladín"),
+
+("Juramento de los Antiguos"
+,"Paladín"),
+
+("Juramento de Venganza"
+,"Paladín"),
 
 /* Picaro */
 ("Ladrón"
@@ -818,6 +838,64 @@ insert into CaracteristicasDevelop.habilidades_especialidad(nombre,descripcion) 
 
 ("Ráfaga de los Espíritus del Vendaval [Disciplina Elemental]"
 ,"Puedes gastar 2 puntos de ki para lanzar ráfaga de viento."),
+
+/* Paladín */
+/* Juramento de Entrega */
+("Principios de la Entrega",
+"Aunque las palabras y escrituras exactas del juramento de Entrega varían, los paladines de este juramento comparten los siguientes principios: Honestidad. No mientas ni engañes. Que tus palabras sean siempre promesas. Valor. Nunca temas actuar, aunque los sabios son cautelosos. Compasión. Ayuda a los demás, protege al débil y castiga a los que amenazan a otros. Sé compasivo con tus enemigos, pero con sabiduría. Honor. Trata a los demás con ecuanimidad, y deja que tus hechos honorables sean un ejemplo para ellos. Haz todo el bien que este en tu mano causando el menor daño posible. Deber. Sé responsable de tus actos y sus consecuencias, protege a aquellos a tu cargo y obedece a quienes poseen una autoridad justa sobre ti."),
+
+("Arma Sagrada [Canalizar Divinidad]",
+"Como acción, puedes usar Canalizar Divinidad para imbuir de energía positiva una de las armas que estés sujetando. Durante 1 minuto, añades tu modificador por Carisma a las tiradas de ataque hechas con dicha arma (bonificador mínimo de +1). El arma también emite luz brillante en un radio de 20 pies y luz tenue 20 pies más allá. Además, si no lo era ya, el arma se convierte en mágica mientras dure este efecto. Puedes dar por finalizado este efecto durante tu turno, como parte de cualquier otra acción. También terminará si dejas d empuñar o llevar el arma, o si caes inconsciente."),
+
+("Expulsar lo Impío [Canalizar Divinidad]",
+"Puedes utilizar Canalizar Divinidad e invertir tu acción para mostrar tu símbolo sagrado y rezar una oración que condene a los infernales y los muertos vivientes. Todos los infernales y muertos vivientes que puedan verte u oírte a 30 pies o menos de ti deben realizar una tirada de salvación de Sabiduría. Si el objetivo falla su tirada de salvación, estará expulsado durante 1 minuto o hasta recibir daño. Una criatura expulsada deberá dedicar su turno a alejarse lo más lejos posible de ti, si es que puede, y no podrá moverse a ningún espacio a 30 pies o menos de ti. Además, tampoco será capaz de llevar a cabo reacciones. Solo puede realizar la acción de Correr o intentar escapar de un efecto que le impida moverse. Si no tiene a dónde moverse, llevará a cabo la acción de Esquivar."),
+
+("Aura de Entrega"
+,"A partir de nivel 7, ni tu ni las criaturas amistosas a 10 pies o menos de ti podéis ser hechizadas mientras permanezcas consciente. A nivel 18 el alcance de esta aura aumenta a 30 pies."),
+
+("Pureza de Espíritu"
+,"A partir de nivel 11, estás siempre bajo los efectos de un conjuro de protección contra el bien y el mal."),
+
+("Halo Sagrado"
+,"A partir de nivel 20 puedes, como acción, emanar un aura de luz solar. Durante 1 minuto, emites luz brillante en un radio de 30 pies y luz tenue 30 pies más allá. Cuando una criatura enemiga empiece su turno en la zona de luz brillante, sufrirá 10 de daño radiante. Además, mientras dure este efecto tendrás ventaja en las tiradas de salvación hechas contra conjuros lanzados por infernales o muertos vivientes. Una vez utilizado este rasgo deberás terminar un descanso largo para poder volver a usarlo otra vez."),
+
+/* Juramento de los Antiguos */
+("Principios de los Antiguos"
+,"Los principios del Juramento de los Antiguos han sido preservados durante incontables siglos. Este juramento enfatiza el bien por encima de cualquier otra cosa, sin preocuparse por la ley o el caos. Sus cuatro principios fundamentales son sencillos. Prende la luz. Debes prender la luz de la esperanza en el mundo a través de tus actos de caridad, bondad y perdón, haciendo retroceder al desespero. Cobija la luz. Debes montar guardia allá donde haya bondad, belleza, amor y risa, pues la maldad aspira a devorarlos. Debes montar guardia allá donde la vida florezca, pues existen fuerzas que anhelan volverla estéril. Conserva tu propia luz. Regocíjate con la canción y la risa, la belleza y el arte. Si dejas morir la luz de tu corazón, no tendrás forma alguna de preservar la del resto del mundo. Sé la luz. Conviértete en un faro para todos aquellos que viven en la desesperación. Permite que la luz de tu alegría y tu coraje se deje ver a través de tus obras."),
+
+("Ira de la Naturaleza [Canalizar Divinidad]"
+,"Puedes utilizar tu Canalizar Divinidad para invocar fuerzas primordiales que atrapan a un enemigo. Como acción, puedes hacer que aparezcan enredaderas espectrales y se abalancen sobre una criatura a 10 pies o menos de ti que puedas ver. Dicho objetivo debe tener éxito en una tirada de salvación de Fuerza o Destreza (a su elección) o estará apresado. Mientras permanezca apresada por las enredaderas, la criatura puede repetir la tirada de salvación al final de cada uno de sus turnos. Si tiene éxito, se libera de su prisión y las enredaderas se desvanecen."),
+
+("Expulsar Infieles [Canalizar Divinidad]"
+,"Puedes usar Canalizar Divinidad para pronunciar palabras ancestrales, que causan dolor a los seres feéricos y los infernales que las escuchan. Como acción, puedes mostrar tu símbolo sagrado y todos los infernales y feéricos a 30 pies o menos de ti que puedan oírte deben realizar una tirada de salvación de Sabiduría. Si el objetivo falla su tirada de salvación, estará expulsado durante 1 minuto o hasta recibir daño. Una criatura expulsada deberá dedicar su turno a alejarse lo más lejos posible de ti, si es que puede, y no podrá moverse a ningún espacio a 30 pies o menos de ti. Además, tampoco será capaz de llevar a cabo reacciones. Solo puede realizar la acción de Correr o intentar escapar de un efecto que le impida moverse. Si no tiene a dónde moverse, llevará a cabo la acción de Esquivar. Si el verdadero aspecto de la criatura está oculto tras una ilusión, cambio de forma u otro efecto similar, este es revelado mientras el objetivo permanezca expulsado."),
+
+("Aura de Salvaguarda"
+,"A partir de nivel 7, la magia antigua te ha impregnado hasta tal punto que ha formado una protección sobrenatural. Tanto tu como las criaturas amistosas a 10 pies o menos de ti tenéis resistencia al daño proveniente de conjuros. A nivel 18 el alcance de esta aura aumenta a 30 pies."),
+
+("Centinela Imperecedero"
+,"A partir de nivel 15, si tus puntos de golpe se ven reducidos a 0 pero no mueres instantáneamente, puedes volver a tener 1 punto de golpe. Una vez utilizado este rasgo, deberás terminar un descanso largo para poder volver a usarlo otra vez. Además, no sufres de ninguno de los inconvenientes de la vejez y no puedes envejecer por medias mágicos."),
+
+("Campeón Ancestral"
+,"A nivel 20 puedes asumir la forma de una antigua fuerza de la naturaleza, tornando una apariencia de tu elección. Por ejemplo: tu piel podría volverse verduzca o desarrollar una textura parecida a la corteza de un árbol, tupelo podría mutar en hojas o musgo e incluso podrían salirte astas o una melena como la de un león. Puedes usar tu acción para llevar a cabo esta transformación. Obtienes los siguientes beneficios durante 1 minuto: · Al comienzo de cada uno de tus turnos recuperas 10 puntos de golpe. · Puedes lanzar un conjuro de paladín con un tiempo de lanzamiento de 1 acción empleando únicamente una acción adicional. · Las criaturas enemigas a 10 pies o menos de ti tienen desventaja en las tiradas de salvación hechas contra tus conjuros de paladín o tus opciones de Canalizar Divinidad. Una vez utilizado este rasgo, deberás terminar un descanso largo para poder volver a usarlo otra vez."),
+
+/* Juramento de Venganza */
+("Principios de la Venganza"
+,"Los principios del Juramento de Venganza varían de paladín a paladín, pero todos ellos giran en torno al deseo de castigar a los criminales cueste lo que cueste. Los paladines que honran estos principios están dispuestos a sacrificar incluso su propia virtud para traer la justicia a aquellos que hacen el mal, por lo que muchos de ellos son de alineamiento neutral o legal neutral. Los pilares fundamentales de estos principios son brutalmente simples. Combatir el mal mayor. Si tengo que elegir entre luchar contra mis enemigos jurados o combatir un mal menor, escogeré el mal mayor. Sin piedad para los malvados. Los enemigos corrientes podrían ganarse mi misericordia, pero mis enemigos jurados jamás. Cualquier medio que sea necesario. Mis escrúpulos no pueden interponerse en el camino al exterminio de mis enemigos. Restituir. Si mis enemigos traen la ruina al mundo es porque fracasé intentando detenerlos. Debo ayudar a aquellos que han sufrido por culpa de mis errores."),
+
+("Abjurar Enemigo [Canalizar Divinidad]"
+,"Puedes utilizar Canalizar Divinidad e invertir tu acción para mostrar tu símbolo sagrado y rezar una oración de denuncia. Como acción, elige a una criatura que puedas ver a 60 pies o menos de ti. Dicha criatura, salvo que sea inmune a ser asustada, deberá hacer una tirada de salvación de Sabiduría. Los muertos vivientes y los infernales tienen desventaja en esta tirada de salvación. Si el objetivo falla su tirada de salvación, estará asustado durante 1 minuto o hasta recibir daño. Mientras esté asustada, la velocidad de la criatura será 0 y no podrá beneficiarse de ningún bonificador a su velocidad. Si el objetivo tiene éxito en la tirada de salvación, su velocidad se verá reducida a la mitad durante 1 minuto o hasta recibir daño."),
+
+("Voto de Enemistad [Canalizar Divinidad]"
+,"Como acción adicional, puedes emplear Canalizar Divinidad para pronunciar un voto de enemistad contra una criatura que puedas ver a 10 pies o menos de ti. Tienes ventaja en las tiradas de ataque contra dicho objetivo durante 1 minuto, hasta que sus puntos de golpe se reduzcan a 0 o quede inconsciente."),
+
+("Vengador Implacable"
+,"Cuando alcanzas el nivel 7 tu concentración sobrenatural te permite impedir la retirada de un enemigo. Cuando impactas a una criatura con un ataque de oportunidad, puedes moverte hasta la mitad de tu velocidad inmediatamente después de haber hecho el ataque como parte de la misma reacción. Este movimiento no provoca ataques de oportunidad."),
+
+("Espíritu Vengativo"
+,"A partir de nivel 15, la autoridad con la que pronuncias tu Voto de Enemistad te proporciona aún más poder sobre tu enemigo. Cuando una criatura bajo los efectos de tu Voto de Enemistad ataque, podrás usar tu reacción para realizar un ataque con arma cuerpo a cuerpo contra dicho objetivo, si es que este se encuentra dentro de tu alcance."),
+
+("Ángel Vengador"
+,"A nivel 20 puedes asumir la forma de un ángel vengador. Puedes usar tu acción para transformarte. Obtienes los siguientes beneficios durante 1 hora: · Un par de alas surge de tu espalda y te proporcionan una velocidad volando de 60 pies. · Emanas un aura de amenaza en un radio de 30 pies. La primera vez que cualquier criatura enemiga entre en el área o comience su turno en ella, debe tener éxito en una tirada de salvación de Sabiduría o estará asustada de ti durante 1 minuto o hasta recibir daño. Las tiradas de ataque contra la criatura asustada tienen ventaja. Una vez utilizado este rasgo, deberás terminar un descanso largo para poder volver a usarlo otra vez."),
 
 /* Picaro */
 /* Ladrón */
@@ -1437,6 +1515,63 @@ insert into CaracteristicasDevelop.especialidad_habilidades(nombre_habilidad,nom
 ("Ráfaga de los Espíritus del Vendaval [Disciplina Elemental]"
 ,"Camino de los Cuatro Elementos"),
 
+/* Paladín */
+/* Juramento de Entrega */
+("Principios de la Entrega",
+"Juramento de Entrega"),
+
+("Arma Sagrada [Canalizar Divinidad]",
+"Juramento de Entrega"),
+
+("Expulsar lo Impío [Canalizar Divinidad]",
+"Juramento de Entrega"),
+
+("Aura de Entrega"
+,"Juramento de Entrega"),
+
+("Pureza de Espíritu"
+,"Juramento de Entrega"),
+
+("Halo Sagrado"
+,"Juramento de Entrega"),
+
+/* Juramento de los Antiguos */
+("Principios de los Antiguos"
+,"Juramento de los Antiguos"),
+
+("Ira de la Naturaleza [Canalizar Divinidad]"
+,"Juramento de los Antiguos"),
+
+("Expulsar Infieles [Canalizar Divinidad]"
+,"Juramento de los Antiguos"),
+
+("Aura de Salvaguarda"
+,"Juramento de los Antiguos"),
+
+("Centinela Imperecedero"
+,"Juramento de los Antiguos"),
+
+("Campeón Ancestral"
+,"Juramento de los Antiguos"),
+
+/* Juramento de Venganza */
+("Principios de la Venganza"
+,"Juramento de Venganza"),
+
+("Abjurar Enemigo [Canalizar Divinidad]"
+,"Juramento de Venganza"),
+
+("Voto de Enemistad [Canalizar Divinidad]"
+,"Juramento de Venganza"),
+
+("Vengador Implacable"
+,"Juramento de Venganza"),
+
+("Espíritu Vengativo"
+,"Juramento de Venganza"),
+
+("Ángel Vengador"
+,"Juramento de Venganza"),
 
 /* Picaro */
 /* Ladrón */

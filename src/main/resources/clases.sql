@@ -249,6 +249,34 @@ insert into CaracteristicasDevelop.rasgos_de_clases(nombre,descripcion) values
 ("Yo Perfecto"
 ,"A nivel 20, si cuando tiras iniciativa no te quedan puntos de ki, recuperas 4 de ellos."),
 
+/* Paladín */
+("Sentidos Divinos"
+,"La presencia de un fuerte mal se manifiesta en tus sentidos como un hedor nauseabundo, mientras que un poderoso bien resuena en tus oídos como música celestial. Como acción, puedes expandir tu percepción para detectar estas fuerzas. Hasta el final de tu siguiente turno, sabrás la ubicación de cualquier celestial, infernal o muerto viviente a 60 pies o menos de ti que no se encuentre tras cobertura completa. Conocerás el tipo (celestial, infernal o muerto viviente) de cualquier ser cuya presencia puedas percibir, pero no su identidad (el conde vampiro Strahdvon Zarovich, por ejemplo). Dentro de esa misma distancia también podrás detectar la presencia de cualquier lugar u objeto que haya sido consagrado o profanado, como con el conjuro consagrar: Puedes emplear este rasgo tantas veces como 1 + tu modificador por Carisma. Recuperas todos los usos tras finalizar un descanso largo."),
+
+("Imponer las Manos"
+,"Tu toque bendito puede sanar heridas. Posees una reserva de poder curativo que se recupera cuando llevas a cabo un descanso largo. Puedes recurrir a esta reserva para restaurar tantos puntos de golpe como cinco veces tu nivel de paladín. Como acción, puedes tocar a una criatura y tomar cierta cantidad de poder de tu reserva para hacer recuperar a la criatura los puntos de golpe que elijas, siempre que este número no supere la cantidad restante en tu reserva. Como alternativa, puedes gastar 5 puntos de golpe de tu reserva para curar al objetivo de una enfermedad o neutralizar un veneno que le esté afectando. Eres capaz de curar varias enfermedades y neutralizar varios venenos con un solo uso de Imponer las Manos, pero deberás gastar los puntos de golpe necesarios para todos ellos. Este rasgo no afecta a muertos vivientes ni a autómatas."),
+
+("Canalizador Mágico"
+,"Puedes utilizar un símbolo sagrado como canalizador mágico para los conjuros de paladín."),
+
+("Castigo Divino"
+,"A partir de nivel 2, cuando impactas a una criatura con un ataque con arma cuerpo a cuerpo, puedes gastar uno de tus espacios de conjuro para infligir daño radiante al objetivo, además del que ya causa el arma. Este daño adicional es de 2d8 si inviertes un espacio de nivel 1, más 1d8 adicionales por cada nivel del espacio por encima de 1, hasta un máximo de 5d8. Este daño aumenta en 1d8 si el objetivo es un muerto viviente o un infernal."),
+
+("Salud Divina"
+,"A partir de nivel 3, la magia que fluye a través de ti le hace inmune a las enfermedades."),
+
+("Aura de Protección"
+,"A partir de nivel 6, cuando tú o una criatura amistosa a 10 pies o menos de ti debáis hacer una tirada de salvación, obtendréis un bombeador igual a tu modificador por Carisma (mínimo de +1) a dicha tirada. Debes estar consciente para poder conceder este bonificador. A nivel 18 el alcance de esta aura aumenta a 30 pies"),
+
+("Aura de Coraje"
+,"A partir de nivel 10, ni tu ni las criaturas amistosas a 10 pies o menos de ti podréis ser asustadas mientras permanezcas consciente. A nivel 18 el alcance de esta aura aumenta a 30 pies."),
+
+("Castigo Divino Mejorado"
+,"A nivel 11 estás tan bañado en el poder de la virtud que todos los golpes de tus armas cuerpo a cuerpo llevan consigo una fuerza divina. Siempre que impactes a una criatura con un ataque cuerpo a cuerpo, este infligirá 1d8 de daño radiante adicional."),
+
+("Toque Purificador"
+,"A partir de nivel 14, puedes utilizar tu acción para finalizar un conjuro que te esté afectando a ti o a una criatura voluntaria a la que toques. Puedes emplear este rasgo tantas veces como tu modificador por Carisma (mínimo una vez). Recuperas todos los usos tras finalizar un descanso largo."),
+
 /* Picaro */
 ("Ataque Furtivo"
 ,"A partir de nivel 1 sabes cómo golpear sutilmente y aprovecharte de un enemigo distraído. Una vez por turno, puedes infligir 1d6 de daño adicional a una criatura a la que impactes con un ataque en cuya tirada de ataque tuvieras ventaja. Este ataque debe haber sido hecho utilizando un arma sutil o a distancia. No necesitas tener ventaja en la tirada de ataque si otro enemigo del objetivo está a 5 pies o menos de él, dicho enemigo no está incapacitado, y no sufres desventaja en la tirada de ataque. La cantidad de daño adicional aumenta según subes de nivel en esta clase, tal y como se indica en la columna “ataque furtivo” de la tabla del pícaro."),
@@ -408,6 +436,23 @@ insert into CaracteristicasDevelop.rasgos_clase (nombre_clase,nombre_rasgo) valu
 ("Monje","Yo Perfecto"),
 ("Monje","Evasión"),
 ("Monje","Mejora de Característica"),
+
+/* Paladín */
+("Paladín","Combate con Dos Armas (Estilo de Combate)"),
+("Paladín","Defensa (Estilo de Combate)"),
+("Paladín","Duelo (Estilo de Combate)"),
+("Paladín","Protección (Estilo de Combate)"),
+("Paladín","Mejora de Característica"),
+("Paladín","Ataque Adicional"),
+("Paladín","Sentidos Divinos"),
+("Paladín","Imponer las Manos"),
+("Paladín","Canalizador Mágico"),
+("Paladín","Castigo Divino"),
+("Paladín","Salud Divina"),
+("Paladín","Aura de Protección"),
+("Paladín","Aura de Coraje"),
+("Paladín","Castigo Divino Mejorado"),
+("Paladín","Toque Purificador"),
 
 /* Picaro */
 ("Pícaro","Pericia"),
