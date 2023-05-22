@@ -1,0 +1,152 @@
+/* ===== 1700px ===== */
+
+@media only screen and (max-width: 1700px) {
+
+    .contenedor-json,
+    .seccion>table {
+        width: 70%;
+    }
+}
+
+
+/* ===== Pantalla de 1440p ===== */
+
+@media only screen and (max-width: 1440px) {
+    aside {
+        width: 18%;
+    }
+
+    #main {
+        width: 82%;
+        margin-left: 18%;
+    }
+
+    .contenedor-json,
+    .seccion>table {
+        width: 75%;
+    }
+}
+
+/* ===== 1350px ===== */
+
+@media only screen and (max-width: 1350px) {
+
+    .contenedor-json,
+    .seccion>table {
+        width: 80%;
+    }
+}
+
+/* ===== 1210px ===== */
+
+@media only screen and (max-width: 1350px) {
+
+    .contenedor-json,
+    .seccion>table {
+        width: 95%;
+    }
+}
+
+/* ===== Pantalla de 1024p ===== */
+
+@media only screen and (max-width: 1024px) {
+    #banner>h1 {
+        font-size: 80px;
+    }
+
+    aside {
+        display: block;
+        width: 20%;
+    }
+
+    #main {
+        width: 80%;
+        margin-left: 20%;
+    }
+
+    .contenedor-json,
+    .seccion>table {
+        width: 100%;
+    }
+}
+
+/* ===== Pantalla de movil y tableta ===== */
+
+@media only screen and (max-width: 1000px) {
+
+    #barra-movil {
+        display: block;
+    }
+
+    aside {
+        margin-top: 8%;
+        display: none;
+        z-index: 5;
+        width: 100%;
+        height: fit-content;
+    }
+
+    aside>img {
+        display: none;
+    }
+
+    aside>nav {
+        text-align: center;
+    }
+
+    .lista {
+        font-size: x-large;
+    }
+
+    #main {
+        width: 100%;
+        margin-top: 80px;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #main {
+        width: 100%;
+        padding: 0
+    }
+
+    /* Textos */
+
+    .seccion>h1 {
+        font-size: 50px;
+    }
+
+    .seccion>h2 {
+        font-size: 40px;
+    }
+
+    .seccion>p {
+        font-size: 25px;
+    }
+
+    .seccion>ul {
+        font-size: 25px;
+    }
+
+    .seccion>p>a {
+        font-size: 25px;
+    }
+
+    .texto-gris {
+        font-size: 30px;
+    }
+
+    table {
+        font-size: 20px;
+    }
+
+    pre>code {
+        font-size: 20px;
+    }
+
+    .seccion {
+        margin-top: 12px;
+        margin-bottom: 36px;
+    }
+}

@@ -12,1669 +12,1734 @@
     <link rel="stylesheet" th:href="@{/css/colores_fuentes.css}">
     <link rel="stylesheet" th:href="@{/css/estilo_general.css}">
     <link rel="stylesheet" th:href="@{/css/estilo_lista.css}">
+    <link rel="stylesheet" th:href="@{/css/estilo_responsivo.css}">
 
     <title>D&D API - Inicio</title>
+    <link rel="icon" type="image/x-icon" th:href="@{/img/caco.png}">
 </head>
 
 <body>
-<aside>
-    <img th:src="@{/img/logo.png}" alt="">
-    <nav>
-        <ul>
-            <a href="#inicio">
-                <li class="lista lista-inicio inicio activa">Inicio</li>
-            </a>
-            <a href="#enemigos">
-                <li class="lista lista-enemigo enemigos">Enemigos</li>
-            </a>
-            <a href="#rasgos-enemigos">
-                <li class="lista lista-enemigo rasgos-enemigos">Rasgos enemigos</li>
-            </a>
-            <a href="#acciones-enemigas">
-                <li class="lista lista-enemigo acciones-enemigas">Accciones enemigas</li>
-            </a>
-            <a href="#razas">
-                <li class="lista lista-raza razas">Razas</li>
-            </a>
-            <a href="#rasgos-razas">
-                <li class="lista lista-raza rasgos-razas">Rasgos razas</li>
-            </a>
-            <a href="#clases">
-                <li class="lista lista-clase clases">Clases</li>
-            </a>
-            <a href="#rasgos-clases">
-                <li class="lista lista-clase rasgos-clases">Rasgos clases</li>
-            </a>
-            <a href="#especialidades">
-                <li class="lista lista-clase especialidades">Especialidad</li>
-            </a>
-            <a href="#habilidades">
-                <li class="lista lista-clase habilidades">Habilidades especialidad</li>
-            </a>
-            <a href="#armas">
-                <li class="lista lista-equipo armas">Armas</li>
-            </a>
-            <a href="#armaduras">
-                <li class="lista lista-equipo armaduras">Armaduras</li>
-            </a>
-            <a href="#magic">
-                <li class="lista lista-magic magic">Hechizos</li>
-            </a>
-            <a href="#trasfondo">
-                <li class="lista lista-vida trasfondo">Trasfondos</li>
-            </a>
-            <a href="#alineamiento">
-                <li class="lista lista-vida alineamiento">Alineamientos</li>
-            </a>
-            <a href="#idiomas">
-                <li class="lista lista-vida idiomas">Idiomas</li>
-            </a>
-            <a href="#competencias">
-                <li class="lista lista-comp competencias">Competencias</li>
-            </a>
-        </ul>
-    </nav>
-</aside>
-<div id="main">
-    <section id="inicio">
-        <div id="banner">
-            <img th:src="@{/img/banner.png}" alt="">
-            <h1>API D&D</h1>
-        </div>
-    </section>
-    <section id="enemigos" class="seccion">
+    <div id="barra-movil">
+        <button id="click">
+            <img th:src="@{/img/menu.svg}" alt="">
+        </button>
+    </div>
 
-        <h1>Enemigos</h1>
-        <div class="separador color-enemigo"></div>
+    <aside>
+        <img th:src="@{/img/logo.png}" alt="">
+        <nav>
+            <ul>
+                <a href="#inicio">
+                    <li class="lista lista-inicio inicio activa">Información</li>
+                </a>
+                <a href="#enemigos">
+                    <li class="lista lista-enemigo enemigos">Enemigos</li>
+                </a>
+                <a href="#rasgos-enemigos">
+                    <li class="lista lista-enemigo rasgos-enemigos">Rasgos enemigos</li>
+                </a>
+                <a href="#acciones-enemigas">
+                    <li class="lista lista-enemigo acciones-enemigas">Accciones enemigas</li>
+                </a>
+                <a href="#razas">
+                    <li class="lista lista-raza razas">Razas</li>
+                </a>
+                <a href="#rasgos-razas">
+                    <li class="lista lista-raza rasgos-razas">Rasgos razas</li>
+                </a>
+                <a href="#clases">
+                    <li class="lista lista-clase clases">Clases</li>
+                </a>
+                <a href="#rasgos-clases">
+                    <li class="lista lista-clase rasgos-clases">Rasgos clases</li>
+                </a>
+                <a href="#especialidades">
+                    <li class="lista lista-clase especialidades">Especialidad</li>
+                </a>
+                <a href="#habilidades">
+                    <li class="lista lista-clase habilidades">Habilidades especialidad</li>
+                </a>
+                <a href="#armas">
+                    <li class="lista lista-equipo armas">Armas</li>
+                </a>
+                <a href="#armaduras">
+                    <li class="lista lista-equipo armaduras">Armaduras</li>
+                </a>
+                <a href="#magic">
+                    <li class="lista lista-magic magic">Hechizos</li>
+                </a>
+                <a href="#trasfondo">
+                    <li class="lista lista-vida trasfondo">Trasfondos</li>
+                </a>
+                <a href="#alineamiento">
+                    <li class="lista lista-vida alineamiento">Alineamientos</li>
+                </a>
+                <a href="#idiomas">
+                    <li class="lista lista-vida idiomas">Idiomas</li>
+                </a>
+                <a href="#competencias">
+                    <li class="lista lista-comp competencias">Competencias</li>
+                </a>
+            </ul>
+        </nav>
+    </aside>
+    <div id="main">
 
-        <h2>Enemigos <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
-                href="http://rrr2dam.com/api/enemigos"><code>http://rrr2dam.com/api/enemigos</code></a></p>
+        <section id="inicio">
+            <div id="banner">
+                <img th:src="@{/img/banner.png}" alt="">
+                <h1>API D&D</h1>
+            </div>
+        </section>
 
-        <div class="contenedor-json">
+        <div class="seccion">
+            <p><span class="texto-negrita">Consejo rápido:</span> Usa la función "buscar en la página" de tu navegador
+                para encontrar un
+                recurso específico
+                más rápido (<kbd>Ctrl+F</kbd>)</p>
+            <h2>Información</h2>
+            <div class="separador color-rojo"></div>
+            <p>Esta API es <span class="texto-negrita">solo de consumo</span>. - Sólo el método <span
+                    class="texto-negrita">HTTP GET</span> está
+                disponible
+                para los diferentes recurosos.
+
+            <p>No se requiere autenticación para acceder a esta API, todos los recursos están totalmente abiertos y
+                disponibles.</p>
+
+            <h2>Uso Legítimo (Fair Use)</h2>
+            <p>En nombre de Miguel Escoz y Rafael Rus, entendemos y respetamos los derechos de autor de Dungeons &
+                Dragons (D&D) y nos
+                esforzamos por operar dentro de los límites del "fair use" (uso legítimo) en relación a su contenido. El
+                "fair use" es una excepción en las leyes de derechos de autor que permite el uso limitado de material
+                protegido sin obtener una autorización expresa del titular de los derechos. A continuación, se
+                establecen los principios que seguimos en esta web para cumplir con las pautas del "fair use"
+                en relación a D&D:</p>
+            <ol>
+                <li>Propósitos educativos: Utilizamos información, reglas y otros elementos de D&D con el fin de
+                    presentar el proyecto final de ciclo superior, responsabilizandonos de su debido uso y su posterior
+                    eliminación.</li>
+                <li>Uso limitado y selectivo: Seleccionamos y utilizamos extractos y ejemplos de material protegido de
+                    D&D de manera limitada y selectiva. Nos aseguramos de que el uso de dicho material sea relevante
+                    para los temas que estamos abordando y que no reemplace la necesidad de adquirir el material
+                    original.</li>
+                <li>Atribución y reconocimiento: Siempre proporcionamos atribución adecuada y reconocemos la propiedad
+                    intelectual de D&D. Incluimos referencias claras y enlaces a las fuentes originales cuando
+                    utilizamos contenido específico de D&D, de modo que los creadores y editores reciban el crédito que
+                    les corresponde.</li>
+                <li>No afectar negativamente el mercado: Nos aseguramos de que nuestro uso de material protegido no
+                    cause un impacto negativo en el mercado potencial de D&D o en la venta de sus productos. Nuestro
+                    enfoque se centra en la educación y la promoción de D&D, y no en la explotación comercial del
+                    material original.</li>
+            </ol>
+            <p>Es importante destacar que este apartado sobre "fair use" es informativo y no constituye asesoramiento
+                legal. Siempre recomendamos a nuestros usuarios y visitantes que consulten a profesionales
+                especializados en derecho de autor para obtener orientación específica sobre sus proyectos individuales.
+            </p>
+
+            <h2>Paginación</h2>
+            <p>
+                Al llamar a cualquier 'endpoint' de la API, esta devolverá todos los elementos. Si se desea estos pueden
+                ser devueltos mediante "páginas" agregando una barra al final del endpoint.
+                Por defecto, una "página" contendrá hasta 20 recursos. Si desea cambiar este valor, añada un
+                parámetro de consulta 'size' a la solicitud GET. También puede ordenar los elemenots de la "página" por
+                algún atributo si el endpoint lo permite agregando el parámetro 'sort'. Ejemplo:
+                <code>{endpoint}/?page=0&size=31</code>
+            </p>
+            <p>Actualmente los siguientes endpoint disponen de paginación:</p>
+            <ul>
+                <li>Rasgos de clase</li>
+                <li>Enemigos</li>
+                <li>Acciones enemigas</li>
+                <li>Rasgos enemigos</li>
+                <li>Hechizos</li>
+                <li>Rasgos de raza</li>
+                <li>Trasfondos</li>
+                <li>Competencias</li>
+            </ul>
+
+            <h2>Ejemplo de paginación</h2>
+            <div class="separador color-rojo"></div>
+            <p class="p-peticion"><span class="tipo-peticion color-rojo">GET</span><a
+                    href="http://rrr2dam.com/api/enemigos"><code>http://rrr2dam.com/api/enemigos/?page=0&size=31&sort=fuerza</code></a>
+            </p>
+
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "tipo": "Enemigo",
-        "elementos": 61,
-        "resultado": [
+    
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">61</span>,
+        <span class="color-propiedad">"paginas"</span>: <span class="color-integer">2</span>,
+        <span class="color-propiedad">"anterior"</span>: <span class="color-string">null</span>,
+        <span class="color-propiedad">"siguiente"</span>: <span class="color-integer">2</span>,
+        <span class="color-propiedad">"resultado"</span>: [
             {
-                "nombre": "Anjanath",
-                "imagen": "img/anjanath.png",
-                "alineamiento": "Neutral_puro",
-                "tipo": "Bestia",
-                "tamanio": "Enorme",
-                "idiomas": "",
-                "sentidos": "Percepcion Pasiva 14",
-                "habilidades": "Percepcion +4",
-                "rasgoCriaturas": [
-                        .
-                        .
-                        .
-                ],
-                "acciones": [
-                        .
-                        .
-                        .
-                ],
-                "desafio": 8.0,
-                "claseArmadura": 13,
-                "puntosGolpe": 136,
-                "fuerza": 25,
-                "destreza": 10,
-                "constitucion": 19,
-                "inteligencia": 2,
-                "sabiduria": 12,
-                "carisma": 9
+                <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Fuego Fatuo"</span>,
+                <span class="color-propiedad">"imagen"</span>: <span class="color-string">"img/fuegoFauto.png"</span>,
+                <span class="color-propiedad">"alineamiento"</span>: <span class="color-string">"Caótico_malo"</span>,
+                <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Muerto viviente"</span>,
+                <span class="color-propiedad">"tamanio"</span>: <span class="color-string">"Diminuto"</span>",
+
+                ...
+
+                <span class="color-propiedad">"puntosGolpe"</span>: <span class="color-integer">22</span>,
+                <span class="color-propiedad">"fuerza"</span>: <span class="color-integer">1</span>,
+                <span class="color-propiedad">"destreza"</span>: <span class="color-integer">28</span>,
             },
-                    .
-                    .
-                    .
+            
+            ...
 
             ]
-
-    }
+    
+    }             
                 </code>
             </pre>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>elementos</td>
+                        <td>Número total de elementos</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>paginas</td>
+                        <td>Número total de paginas</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>anterior</td>
+                        <td>Página anterior (null si no tiene)</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>siguiente</td>
+                        <td>Página siguiente (null si no tiene)</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>resultado</td>
+                        <td>Resultado de la busqueda</td>
+                        <td>Lista de elementos</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
-                href="http://rrr2dam.com/api/enemigos/anjanath"><code>http://rrr2dam.com/api/enemigos/{nombre}</code></a>
-        </p>
+        <section id="enemigos" class="seccion">
 
-        <div class="contenedor-json">
+            <h1>Enemigos</h1>
+            <div class="separador color-enemigo"></div>
+
+            <h2>Enemigos <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
+                    href="http://rrr2dam.com/api/enemigos"><code>http://rrr2dam.com/api/enemigos</code></a></p>
+
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "nombre": "Anjanath",
-        "imagen": "img/anjanath.png",
-        "alineamiento": "Neutral_puro",
-        "tipo": "Bestia",
-        "tamanio": "Enorme",
-        "idiomas": "",
-        "sentidos": "Percepcion Pasiva 14",
-        "habilidades": "Percepcion +4",
-        "rasgoCriaturas": [
-                .
-                .
-                .
-        ],
-        "acciones": [
-                .
-                .
-                .
-        ],
-        "desafio": 8.0,
-        "claseArmadura": 13,
-        "puntosGolpe": 136,
-        "fuerza": 25,
-        "destreza": 10,
-        "constitucion": 19,
-        "inteligencia": 2,
-        "sabiduria": 12,
-        "carisma": 9
-
-    }
-                </code>
-            </pre>
-        </div>
-
-        <h2>Enemigo <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td>Nombre del enemigo</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>imagen</td>
-                <td>Url de la imagen</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>alineamiento</td>
-                <td>Alineamiento moral del enemigo</td>
-                <td>Enum de <a href="#alineamiento">Alineamientos</a></td>
-            </tr>
-            <tr>
-                <td>tipo</td>
-                <td>Familia del enemigo</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>tamanio</td>
-                <td>Tamaño del enemigo</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>idiomas</td>
-                <td>Idiomas que conoce o habla el enemigo</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>sentidos</td>
-                <td>Forma en la que percibe el mundo el enemigo</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>habilidades</td>
-                <td>Habilidades que posee el enemigo</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>rasgoEnemigos</td>
-                <td>Rasgos del enemigo</td>
-                <td>Lista de <a href="#rasgos-enemigos">Rasgos</a></td>
-            </tr>
-            <tr>
-                <td>acciones</td>
-                <td>Acciones que ejecuta el enemigo</td>
-                <td>Lista de <a href="#acciones-enemigas">Acciones</a></td>
-            </tr>
-            <tr>
-                <td>desafio</td>
-                <td>Nivel de dificultad del enemigo</td>
-                <td>Float</td>
-            </tr>
-            <tr>
-                <td>claseArmadura</td>
-                <td>Umbral de armadura de enemigo</td>
-                <td>Integer</td>
-            </tr>
-            <tr>
-                <td>puntosGolpe</td>
-                <td>Vida total de enemigo</td>
-                <td>Integer</td>
-            </tr>
-            <tr>
-                <td>fuerza</td>
-                <td>Caracteristica de fuerza</td>
-                <td>Integer</td>
-            </tr>
-            <tr>
-                <td>destreza</td>
-                <td>Caracteristica de destreza</td>
-                <td>Integer</td>
-            </tr>
-            <tr>
-                <td>constitucion</td>
-                <td>Caracteristica de constitución</td>
-                <td>Integer</td>
-            </tr>
-            <tr>
-                <td>inteligencia</td>
-                <td>Caracteristica de inteligencia</td>
-                <td>Integer</td>
-            </tr>
-            <tr>
-                <td>sabiduria</td>
-                <td>Caracteristica de sabiduría</td>
-                <td>Integer</td>
-            </tr>
-            <tr>
-                <td>carisma</td>
-                <td>Caracteristica de carisma</td>
-                <td>Integer</td>
-            </tr>
-            </tbody>
-        </table>
-
-    </section>
-
-    <section id="rasgos-enemigos" class="seccion">
-
-        <h1>Rasgos Enemigos</h1>
-        <div class="separador color-enemigo"></div>
-
-        <h2>Enemigos / Rasgos <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
-                href="http://rrr2dam.com/api/enemigos/rasgos"><code>http://rrr2dam.com/api/enemigos/rasgos</code></a>
-        </p>
-
-        <div class="contenedor-json">
-                <pre>
-                    <code>
-    {
-
-        "tipo": "RasgoCriatura",
-        "elementos": 127,
-        "resultado": [
+    
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Enemigo"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">61</span>,
+        <span class="color-propiedad">"resultado"</span>: [
             {
-                "nombre": "Absorción de Ácido",
-                "descripcion": "No recibe daño de este tipo, en su lugar recupera vida"
+                <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Anjanath"</span>,
+                <span class="color-propiedad">"imagen"</span>: <span class="color-string">"img/anjanath.png"</span>,
+                <span class="color-propiedad">"alineamiento"</span>: <span class="color-string">"Neutral_puro"</span>,
+                <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Bestia"</span>,
+                <span class="color-propiedad">"tamanio"</span>: <span class="color-string">"Enorme"</span>",
+                <span class="color-propiedad">"idiomas"</span>: <span class="color-string">""</span>,
+                <span class="color-propiedad">"sentidos"</span>: <span
+                            class="color-string">"Percepcion Pasiva 14"</span>",
+                <span class="color-propiedad">"habilidades"</span>: <span class="color-string">"Percepcion +4"</span>,
+                <span class="color-propiedad">"rasgoCriaturas"</span>: [ ... ],
+                <span class="color-propiedad">"acciones"</span>: [ ... ],
+                <span class="color-propiedad">"desafio"</span>: <span class="color-integer">8.0</span>,
+                <span class="color-propiedad">"claseArmadura"</span>: <span class="color-integer">13</span>,
+                <span class="color-propiedad">"puntosGolpe"</span>: <span class="color-integer">136</span>,
+                <span class="color-propiedad">"fuerza"</span>: <span class="color-integer">25</span>,
+                <span class="color-propiedad">"destreza"</span>: <span class="color-integer">10</span>,
+                <span class="color-propiedad">"constitucion"</span>: <span class="color-integer">19</span>,
+                <span class="color-propiedad">"inteligencia"</span>: <span class="color-integer">2</span>,
+                <span class="color-propiedad">"sabiduria"</span>: <span class="color-integer">12</span>,
+                <span class="color-propiedad">"carisma"</span>: <span class="color-integer">9</span>
             },
-                    .
-                    .
-                    .
+            
+            ...
 
             ]
-
-    }
+    
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
-                href="http://rrr2dam.com/api/enemigos/rasgos/absorción de ácido"><code>http://rrr2dam.com/api/enemigos/rasgos/{nombre}</code></a>
-        </p>
+            <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
+                    href="http://rrr2dam.com/api/enemigos/anjanath"><code>http://rrr2dam.com/api/enemigos/{nombre}</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
 
-        "nombre": "Absorción de Ácido",
-        "descripcion": "No recibe daño de este tipo, en su lugar recupera vida"
-
-    }
+        <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Anjanath"</span>,
+        <span class="color-propiedad">"imagen"</span>: <span class="color-string">"img/anjanath.png"</span>,
+        <span class="color-propiedad">"alineamiento"</span>: <span class="color-string">"Neutral_puro"</span>,
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Bestia"</span>,
+        <span class="color-propiedad">"tamanio"</span>: <span class="color-string">"Enorme"</span>",
+        <span class="color-propiedad">"idiomas"</span>: <span class="color-string">""</span>,
+        <span class="color-propiedad">"sentidos"</span>: <span class="color-string">"Percepcion Pasiva 14"</span>",     
+        <span class="color-propiedad">"habilidades"</span>: <span class="color-string">"Percepcion +4"</span>,
+        <span class="color-propiedad">"rasgoCriaturas"</span>: [ ... ],
+        <span class="color-propiedad">"acciones"</span>: [ ... ],
+        <span class="color-propiedad">"desafio"</span>: <span class="color-integer">8.0</span>,
+        <span class="color-propiedad">"claseArmadura"</span>: <span class="color-integer">13</span>,
+        <span class="color-propiedad">"puntosGolpe"</span>: <span class="color-integer">136</span>,
+        <span class="color-propiedad">"fuerza"</span>: <span class="color-integer">25</span>,
+        <span class="color-propiedad">"destreza"</span>: <span class="color-integer">10</span>,
+        <span class="color-propiedad">"constitucion"</span>: <span class="color-integer">19</span>,
+        <span class="color-propiedad">"inteligencia"</span>: <span class="color-integer">2</span>,
+        <span class="color-propiedad">"sabiduria"</span>: <span class="color-integer">12</span>,
+        <span class="color-propiedad">"carisma"</span>: <span class="color-integer">9</span>
+    
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <h2>Rasgo Enemigo <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td>Nombre del rasgo</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>descripcion</td>
-                <td>Descripción del rasgo</td>
-                <td>String</td>
-            </tr>
-            </tbody>
-        </table>
+            <h2>Enemigo <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del enemigo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>imagen</td>
+                        <td>Url de la imagen</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>alineamiento</td>
+                        <td>Alineamiento moral del enemigo</td>
+                        <td>Enum de <a href="#alineamiento">Alineamientos</a></td>
+                    </tr>
+                    <tr>
+                        <td>tipo</td>
+                        <td>Familia del enemigo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>tamanio</td>
+                        <td>Tamaño del enemigo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>idiomas</td>
+                        <td>Idiomas que conoce o habla el enemigo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>sentidos</td>
+                        <td>Forma en la que percibe el mundo el enemigo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>habilidades</td>
+                        <td>Habilidades que posee el enemigo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>rasgoEnemigos</td>
+                        <td>Rasgos del enemigo</td>
+                        <td>Lista de <a href="#rasgos-enemigos">Rasgos</a></td>
+                    </tr>
+                    <tr>
+                        <td>acciones</td>
+                        <td>Acciones que ejecuta el enemigo</td>
+                        <td>Lista de <a href="#acciones-enemigas">Acciones</a></td>
+                    </tr>
+                    <tr>
+                        <td>desafio</td>
+                        <td>Nivel de dificultad del enemigo</td>
+                        <td>Float</td>
+                    </tr>
+                    <tr>
+                        <td>claseArmadura</td>
+                        <td>Umbral de armadura de enemigo</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>puntosGolpe</td>
+                        <td>Vida total de enemigo</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>fuerza</td>
+                        <td>Caracteristica de fuerza</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>destreza</td>
+                        <td>Caracteristica de destreza</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>constitucion</td>
+                        <td>Caracteristica de constitución</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>inteligencia</td>
+                        <td>Caracteristica de inteligencia</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>sabiduria</td>
+                        <td>Caracteristica de sabiduría</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>carisma</td>
+                        <td>Caracteristica de carisma</td>
+                        <td>Integer</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    </section>
+        </section>
 
-    <section id="acciones-enemigas" class="seccion">
+        <section id="rasgos-enemigos" class="seccion">
 
-        <h1>Acciones Enemigas</h1>
-        <div class="separador color-enemigo"></div>
+            <h1>Rasgos Enemigos</h1>
+            <div class="separador color-enemigo"></div>
 
-        <h2>Enemigos / Acciones <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
-                href="http://rrr2dam.com/api/enemigos/acciones"><code>http://rrr2dam.com/api/enemigos/acciones</code></a>
-        </p>
+            <h2>Enemigos / Rasgos <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
+                    href="http://rrr2dam.com/api/enemigos/rasgos"><code>http://rrr2dam.com/api/enemigos/rasgos</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "tipo": "Accion",
-        "elementos": 104,
-        "resultado": [
+        
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"RasgoCriatura"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">127</span>,
+        <span class="color-propiedad">"resultado"</span>: [
             {
-                "nombre": "Invisibilidad Superior",
-                "descripcion": "Te vuelves invisible tu y tu equipo hasta realizar
-                                otra accion que no sea de movimiento o pierdas la
-                                concentración"
+                <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Absorción de Ácido"</span>,
+                <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"No recibe daño de este tipo, en su lugar recupera vida"</span>
             },
-                    .
-                    .
-                    .
 
+            ...
+    
             ]
 
-    }
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
-                href="http://rrr2dam.com/api/enemigos/acciones/Invisibilidad Superior"><code>http://rrr2dam.com/api/enemigos/acciones/{nombre}</code></a>
-        </p>
+            <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
+                    href="http://rrr2dam.com/api/enemigos/rasgos/absorción de ácido"><code>http://rrr2dam.com/api/enemigos/rasgos/{nombre}</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
 
-        "nombre": "Invisibilidad Superior",
-        "descripcion": "Te vuelves invisible tu y tu equipo hasta realizar
-                        otra accion que no sea de movimiento o pierdas la
-                        concentración"
-
-    }
+        <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Absorción de Ácido"</span>,
+        <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"No recibe daño de este tipo, en su lugar recupera vida"</span>
+    
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <h2>Acción Enemiga <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td>Nombre de la acción</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>descripcion</td>
-                <td>Descripción de la acción</td>
-                <td>String</td>
-            </tr>
-            </tbody>
-        </table>
+            <h2>Rasgo Enemigo <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del rasgo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción del rasgo</td>
+                        <td>String</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    </section>
+        </section>
 
-    <section id="razas" class="seccion">
+        <section id="acciones-enemigas" class="seccion">
 
-        <h1>Razas</h1>
-        <div class="separador color-razas"></div>
+            <h1>Acciones Enemigas</h1>
+            <div class="separador color-enemigo"></div>
 
-        <h2>Razas <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-razas">GET</span><a
-                href="http://rrr2dam.com/api/razas"><code>http://rrr2dam.com/api/razas</code></a>
-        </p>
+            <h2>Enemigos / Acciones <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
+                    href="http://rrr2dam.com/api/enemigos/acciones"><code>http://rrr2dam.com/api/enemigos/acciones</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "tipo": "Raza",
-        "elementos": 9,
-        "resultado": [
+    
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Accion"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">104</span>,
+        <span class="color-propiedad">"resultado"</span>: [
             {
-                "nombre": "Dracónidos",
-                "edadMaxima": 80,
-                "alturaMinima": 6.0,
-                "alturaMaxima": 8.0,
-                "velocidad": 30,
-                "rasgosRaza": [
-                    .
-                    .
-                    .
-                ]
+                <span class="color-propiedad">"nombre"</span>: <span
+                            class="color-string">"Invisibilidad Superior"</span>,
+                <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"Te vuelves invisible tu y tu equipo hasta realizar 
+                                otra accion que no sea de movimiento o pierdas la 
+                                concentración"</span>
             },
-                    .
-                    .
-                    .
 
+            ...
+    
             ]
 
-    }
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <p class="p-peticion"><span class="tipo-peticion color-razas">GET</span><a
-                href="http://rrr2dam.com/api/razas/Dracónidos"><code>http://rrr2dam.com/api/razas/{nombre}</code></a>
-        </p>
+            <p class="p-peticion"><span class="tipo-peticion color-enemigo">GET</span><a
+                    href="http://rrr2dam.com/api/enemigos/acciones/Invisibilidad Superior"><code>http://rrr2dam.com/api/enemigos/acciones/{nombre}</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
 
-        "nombre": "Dracónidos",
-        "edadMaxima": 80,
-        "alturaMinima": 6.0,
-        "alturaMaxima": 8.0,
-        "velocidad": 30,
-        "rasgosRaza": [
-            .
-            .
-            .
-        ]
-
-    }
+        <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Invisibilidad Superior"</span>,
+        <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"Te vuelves invisible tu y tu equipo hasta realizar 
+                        otra accion que no sea de movimiento o pierdas la 
+                        concentración"</span>
+    
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <h2>Raza <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td>Nombre de la raza</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>edadMaxima</td>
-                <td>Esperanza de vida de la raza</td>
-                <td>Integer</td>
-            </tr>
-            <tr>
-                <td>alturaMinima</td>
-                <td>Altura mínima esperable de la raza</td>
-                <td>Float</td>
-            </tr>
-            <tr>
-                <td>alturaMaxima</td>
-                <td>Altura máxima esperable de la raza</td>
-                <td>Float</td>
-            </tr>
-            <tr>
-                <td>velocidad</td>
-                <td>Capacidad de movimiento de la raza</td>
-                <td>Integer</td>
-            </tr>
-            <tr>
-                <td>rasgoRaza</td>
-                <td>Rasgos de la raza</td>
-                <td>Lista de <a href="#rasgos-raza">Rasgos</a></td>
-            </tr>
-            </tbody>
-        </table>
+            <h2>Acción Enemiga <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre de la acción</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción de la acción</td>
+                        <td>String</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    </section>
+        </section>
 
-    <section id="rasgos-razas" class="seccion">
+        <section id="razas" class="seccion">
 
-        <h1>Rasgos Razas</h1>
-        <div class="separador color-razas"></div>
+            <h1>Razas</h1>
+            <div class="separador color-razas"></div>
 
-        <h2>Razas / Rasgos <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-razas">GET</span><a
-                href="http://rrr2dam.com/api/razas/rasgos"><code>http://rrr2dam.com/api/razas/rasgos</code></a>
-        </p>
+            <h2>Razas <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-razas">GET</span><a
+                    href="http://rrr2dam.com/api/razas"><code>http://rrr2dam.com/api/razas</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "tipo": "RasgoRaza",
-        "elementos": 89,
-        "resultado": [
+    
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Raza"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">9</span>,
+        <span class="color-propiedad">"resultado"</span>: [
             {
-                "nombre": "Linaje Draconido Azul",
-                "descripcion": "Daño de Aliento tipo Relámpàgo en un cono de 5 por
-                                30 pies (Salvación DES)"
+                <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Dracónidos"</span>,
+                <span class="color-propiedad">"edadMaxima"</span>: <span class="color-integer">80</span>,
+                <span class="color-propiedad">"alturaMinima"</span>: <span class="color-integer">6.0</span>,
+                <span class="color-propiedad">"alturaMaxima"</span>: <span class="color-integer">8.0</span>,
+                <span class="color-propiedad">"velocidad"</span>: <span class="color-integer">30</span>,
+                <span class="color-propiedad">"rasgosRaza"</span>: [ ... ]
             },
-                    .
-                    .
-                    .
+
+            ...
 
             ]
 
-    }
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <p class="p-peticion"><span class="tipo-peticion color-razas">GET</span><a
-                href="http://rrr2dam.com/api/razas/rasgos/Linaje Draconido Azul"><code>http://rrr2dam.com/api/razas/rasgos/{nombre}</code></a>
-        </p>
+            <p class="p-peticion"><span class="tipo-peticion color-razas">GET</span><a
+                    href="http://rrr2dam.com/api/razas/Dracónidos"><code>http://rrr2dam.com/api/razas/{nombre}</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
 
-        "nombre": "Linaje Draconido Azul",
-        "descripcion": "Daño de Aliento tipo Relámpàgo en un cono de 5 por
-                        30 pies (Salvación DES)"
-
-    }
+        <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Dracónidos"</span>,
+        <span class="color-propiedad">"edadMaxima"</span>: <span class="color-integer">80</span>,
+        <span class="color-propiedad">"alturaMinima"</span>: <span class="color-integer">6.0</span>,
+        <span class="color-propiedad">"alturaMaxima"</span>: <span class="color-integer">8.0</span>,
+        <span class="color-propiedad">"velocidad"</span>: <span class="color-integer">30</span>,
+        <span class="color-propiedad">"rasgosRaza"</span>: [ ... ]
+    
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <h2>Ragos Raza <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td>Nombre del rasgo</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>descripcion</td>
-                <td>Descripción del rasgo</td>
-                <td>String</td>
-            </tr>
-            </tbody>
-        </table>
+            <h2>Raza <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre de la raza</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>edadMaxima</td>
+                        <td>Esperanza de vida de la raza</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>alturaMinima</td>
+                        <td>Altura mínima esperable de la raza</td>
+                        <td>Float</td>
+                    </tr>
+                    <tr>
+                        <td>alturaMaxima</td>
+                        <td>Altura máxima esperable de la raza</td>
+                        <td>Float</td>
+                    </tr>
+                    <tr>
+                        <td>velocidad</td>
+                        <td>Capacidad de movimiento de la raza</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>rasgoRaza</td>
+                        <td>Rasgos de la raza</td>
+                        <td>Lista de <a href="#rasgos-raza">Rasgos</a></td>
+                    </tr>
+                </tbody>
+            </table>
 
-    </section>
+        </section>
 
-    <section id="clases" class="seccion">
+        <section id="rasgos-razas" class="seccion">
 
-        <h1>Clases</h1>
-        <div class="separador color-clases"></div>
+            <h1>Rasgos Razas</h1>
+            <div class="separador color-razas"></div>
 
-        <h2>Clases <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
-                href="http://rrr2dam.com/api/clases"><code>http://rrr2dam.com/api/clases</code></a>
-        </p>
+            <h2>Razas / Rasgos <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-razas">GET</span><a
+                    href="http://rrr2dam.com/api/razas/rasgos"><code>http://rrr2dam.com/api/razas/rasgos</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "tipo": "Clase",
-        "elementos": 12,
-        "resultado": [
+    
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"RasgoRaza"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">89</span>,
+        <span class="color-propiedad">"resultado"</span>: [
             {
-                "nombre": "Bárbaro",
-                "dadosGolpe": "1d12",
-                "descripcion": "Los bárbaros se definen por su furia: una ira
-                                desenfrenada, insaciable e irreflexiva. Para algunos
-                                bárbaros, su furia ...",
-                "caracteristicaPrincipal": "Fuerza y Constitución",
-                "tiradasSalvacion": "Fuerza y Constitución",
-                "rasgosClase": [
-                    .
-                    .
-                    .
-                ],
-                "armas": [
-                    .
-                    .
-                    .
-                ],
-                "armaduras": [
-                    .
-                    .
-                    .
-                ],
-                "hechizos": [
-                    .
-                    .
-                    .
-                ],
-                "especialidades": [
-                    .
-                    .
-                    .
-                ],
-                "competencias": [
-                    .
-                    .
-                    .
-                ]
+                <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Linaje Draconido Azul"</span>,
+                <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"Daño de Aliento tipo Relámpàgo en un cono de 5 por 
+                                30 pies (Salvación DES)"</span>
             },
-                    .
-                    .
-                    .
+            
+            ...
 
             ]
 
-    }
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
-                href="http://rrr2dam.com/api/clases/Bárbaro"><code>http://rrr2dam.com/api/clases/{nombre}</code></a>
-        </p>
+            <p class="p-peticion"><span class="tipo-peticion color-razas">GET</span><a
+                    href="http://rrr2dam.com/api/razas/rasgos/Linaje Draconido Azul"><code>http://rrr2dam.com/api/razas/rasgos/{nombre}</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
 
-        "nombre": "Bárbaro",
-        "dadosGolpe": "1d12",
-        "descripcion": "Los bárbaros se definen por su furia: una ira
-                        desenfrenada, insaciable e irreflexiva. Para algunos
-                        bárbaros, su furia ...",
-        "caracteristicaPrincipal": "Fuerza y Constitución",
-        "tiradasSalvacion": "Fuerza y Constitución",
-        "rasgosClase": [
-            .
-            .
-            .
-        ],
-        "armas": [
-            .
-            .
-            .
-        ],
-        "armaduras": [
-            .
-            .
-            .
-        ],
-        "hechizos": [
-            .
-            .
-            .
-        ],
-        "especialidades": [
-            .
-            .
-            .
-        ],
-        "competencias": [
-            .
-            .
-            .
-        ]
-
-    }
+        <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Linaje Draconido Azul"</span>,
+        <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"Daño de Aliento tipo Relámpàgo en un cono de 5 por 
+                        30 pies (Salvación DES)"</span>
+    
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <h2>Clase <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td>Nombre de la clase</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>dadosGolpe</td>
-                <td>Aumento de la vida por nivel</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>caracteristicaPrincipal</td>
-                <td>Caracteristica por la cual se rige la clase</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>tiradasSalvacion</td>
-                <td>Tiradas de salvación en las cuales se tiene ventaja</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>rasgosClase</td>
-                <td>Rasgos de la clase</td>
-                <td>Lista de <a href="#rasgos-clases">Rasgos</a></td>
-            </tr>
-            <tr>
-                <td>armas</td>
-                <td>Armas usables por la clase</td>
-                <td>Lista de <a href="#armas">Armas</a></td>
-            </tr>
-            <tr>
-                <td>armaduras</td>
-                <td>Armaduras usables por la clase</td>
-                <td>Lista de <a href="#armaduras">Armaduras</a></td>
-            </tr>
-            <tr>
-                <td>hechizos</td>
-                <td>Hechizos usables por la clase</td>
-                <td>Lista de <a href="#magic">Hechizos</a></td>
-            </tr>
-            <tr>
-                <td>especialidades</td>
-                <td>Especialidades de la clase</td>
-                <td>Lista de <a href="#especialidades">Especialidades</a></td>
-            </tr>
-            <tr>
-                <td>competencias</td>
-                <td>Competencias de la clase</td>
-                <td>Lista de <a href="#competencias">Competencias</a></td>
-            </tr>
-            </tbody>
-        </table>
+            <h2>Ragos Raza <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del rasgo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción del rasgo</td>
+                        <td>String</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    </section>
+        </section>
 
-    <section id="rasgos-clases" class="seccion">
+        <section id="clases" class="seccion">
 
-        <h1>Rasgos Clases</h1>
-        <div class="separador color-clases"></div>
+            <h1>Clases</h1>
+            <div class="separador color-clases"></div>
 
-        <h2>Clases / Rasgos <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
-                href="http://rrr2dam.com/api/clases/rasgos"><code>http://rrr2dam.com/api/clases/rasgos</code></a>
-        </p>
+            <h2>Clases <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases"><code>http://rrr2dam.com/api/clases</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "tipo": "RasgoClase",
-        "elementos": 144,
-        "resultado": [
+    
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Clase"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">12</span>,
+        <span class="color-propiedad">"resultado"</span>: [
             {
-                "nombre": "Ataque Temerario",
-                "descripcion": "A partir del nivel 2, puedes dejar a un lado
-                                toda preocupación por defenderte para atacar
-                                con una desesperación feroz..."
+                <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Bárbaro"</span>,
+                <span class="color-propiedad">"dadosGolpe"</span>: <span class="color-string">"1d12"</span>,
+                <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"Los bárbaros se definen por su furia: una ira 
+                                desenfrenada, insaciable e irreflexiva. Para algunos 
+                                bárbaros, su furia ..."</span>,
+                <span class="color-propiedad">"caracteristicaPrincipal"</span>: <span class="color-string">"Fuerza y Constitución"</span>,
+                <span class="color-propiedad">"tiradasSalvacion"</span>: <span class="color-string">"Fuerza y Constitución"</span>,
+                <span class="color-propiedad">"rasgosClase"</span>: [ ... ],
+                <span class="color-propiedad">"armas"</span>: [ ... ],
+                <span class="color-propiedad">"armaduras"</span>: [ ... ],
+                <span class="color-propiedad">"hechizos"</span>: [ ... ],
+                <span class="color-propiedad">"especialidades"</span>: [ ... ],
+                <span class="color-propiedad">"competencias"</span>: [ ... ]
             },
-                .
-                .
-                .
 
+            ...
+    
             ]
 
-    }
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
-                href="http://rrr2dam.com/api/clases/rasgos/Ataque Temerario"><code>http://rrr2dam.com/api/clases/rasgos/{nombre}</code></a>
-        </p>
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases/Bárbaro"><code>http://rrr2dam.com/api/clases/{nombre}</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
 
-        "nombre": "Ataque Temerario",
-        "descripcion": "A partir del nivel 2, puedes dejar a un lado
-                        toda preocupación por defenderte para atacar
-                        con una desesperación feroz..."
-
-    }
+        <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Bárbaro"</span>,
+        <span class="color-propiedad">"dadosGolpe"</span>: <span class="color-string">"1d12"</span>,
+        <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"Los bárbaros se definen por su furia: una ira 
+                        desenfrenada, insaciable e irreflexiva. Para algunos 
+                        bárbaros, su furia ..."</span>,
+        <span class="color-propiedad">"caracteristicaPrincipal"</span>: <span class="color-string">"Fuerza y Constitución"</span>,
+        <span class="color-propiedad">"tiradasSalvacion"</span>: <span
+                            class="color-string">"Fuerza y Constitución"</span>,
+        <span class="color-propiedad">"rasgosClase"</span>: [ ... ],
+        <span class="color-propiedad">"armas"</span>: [ ... ],
+        <span class="color-propiedad">"armaduras"</span>: [ ... ],
+        <span class="color-propiedad">"hechizos"</span>: [ ... ],
+        <span class="color-propiedad">"especialidades"</span>: [ ... ],
+        <span class="color-propiedad">"competencias"</span>: [ ... ]
+    
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <h2>Rasgo Clase <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td>Nombre del rasgo</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>descripcion</td>
-                <td>Descripción del rasgo</td>
-                <td>String</td>
-            </tr>
-            </tbody>
-        </table>
+            <h2>Clase <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre de la clase</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>dadosGolpe</td>
+                        <td>Aumento de la vida por nivel</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>caracteristicaPrincipal</td>
+                        <td>Caracteristica por la cual se rige la clase</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>tiradasSalvacion</td>
+                        <td>Tiradas de salvación en las cuales se tiene ventaja</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>rasgosClase</td>
+                        <td>Rasgos de la clase</td>
+                        <td>Lista de <a href="#rasgos-clases">Rasgos</a></td>
+                    </tr>
+                    <tr>
+                        <td>armas</td>
+                        <td>Armas usables por la clase</td>
+                        <td>Lista de <a href="#armas">Armas</a></td>
+                    </tr>
+                    <tr>
+                        <td>armaduras</td>
+                        <td>Armaduras usables por la clase</td>
+                        <td>Lista de <a href="#armaduras">Armaduras</a></td>
+                    </tr>
+                    <tr>
+                        <td>hechizos</td>
+                        <td>Hechizos usables por la clase</td>
+                        <td>Lista de <a href="#magic">Hechizos</a></td>
+                    </tr>
+                    <tr>
+                        <td>especialidades</td>
+                        <td>Especialidades de la clase</td>
+                        <td>Lista de <a href="#especialidades">Especialidades</a></td>
+                    </tr>
+                    <tr>
+                        <td>competencias</td>
+                        <td>Competencias de la clase</td>
+                        <td>Lista de <a href="#competencias">Competencias</a></td>
+                    </tr>
+                </tbody>
+            </table>
 
-    </section>
+        </section>
 
-    <section id="especialidades" class="seccion">
+        <section id="rasgos-clases" class="seccion">
 
-        <h1>Especialidad Clases</h1>
-        <div class="separador color-clases"></div>
+            <h1>Rasgos Clases</h1>
+            <div class="separador color-clases"></div>
 
-        <h2>Clases / Especialidades <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
-                href="http://rrr2dam.com/api/clases/especialidades"><code>http://rrr2dam.com/api/clases/especialidades</code></a>
-        </p>
+            <h2>Clases / Rasgos <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases/rasgos"><code>http://rrr2dam.com/api/clases/rasgos</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "tipo": "Especialidad",
-        "elementos": 34,
-        "resultado": [
+    
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"RasgoClase"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">144</span>,
+        <span class="color-propiedad">"resultado"</span>: [
             {
-                "nombre": "Senda del Guerrero Totémico",
-                "descripcion": "La Senda del Guerrero Totémico es un viaje
-                                espiritual, en el que el bárbaro acepta
-                                un espíritu animal como guía...",
-                "habilidades": [
-                    .
-                    .
-                    .
-                ]
+                <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Ataque Temerario"</span>,
+                <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"A partir del nivel 2, puedes dejar a un lado 
+                                toda preocupación por defenderte para atacar 
+                                con una desesperación feroz..."</span>
             },
-                .
-                .
-                .
+
+            ...
 
             ]
 
-    }
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
-                href="http://rrr2dam.com/api/clases/especialidades/Senda del Guerrero Totémico"><code>http://rrr2dam.com/api/clases/especialidades/{nombre}</code></a>
-        </p>
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases/rasgos/Ataque Temerario"><code>http://rrr2dam.com/api/clases/rasgos/{nombre}</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
 
-        "nombre": "Senda del Guerrero Totémico",
-        "descripcion": "La Senda del Guerrero Totémico es un viaje
-                        espiritual, en el que el bárbaro acepta
-                        un espíritu animal como guía...",
-        "habilidades": [
-            .
-            .
-            .
-        ]
-
-    }
+        <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Ataque Temerario"</span>,
+        <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"A partir del nivel 2, puedes dejar a un lado 
+                        toda preocupación por defenderte para atacar 
+                        con una desesperación feroz..."</span>
+    
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <h2>Especialidad Clase <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td>Nombre de la especialidad</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>descripcion</td>
-                <td>Descripción de la especialidad</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>habilidades</td>
-                <td>Habilidades que posee la especialidad</td>
-                <td>Lista con las <a href="#habilidades">Habilidades</a></td>
-            </tr>
-            </tbody>
-        </table>
+            <h2>Rasgo Clase <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del rasgo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción del rasgo</td>
+                        <td>String</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    </section>
+        </section>
 
-    <section id="habilidades" class="seccion">
+        <section id="especialidades" class="seccion">
 
-        <h1>Habilidades Especialidad</h1>
-        <div class="separador color-clases"></div>
+            <h1>Especialidad Clases</h1>
+            <div class="separador color-clases"></div>
 
-        <h2>Clases / Especialidades / Habilidades <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
-                href="http://rrr2dam.com/api/clases/especialidades/habilidades"><code>http://rrr2dam.com/api/clases/especialidades/habilidades</code></a>
-        </p>
+            <h2>Clases / Especialidades <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases/especialidades"><code>http://rrr2dam.com/api/clases/especialidades</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "tipo": "HabilidadEspecialidad",
-        "elementos": 136,
-        "resultado": [
+    
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Especialidad"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">34</span>,
+        <span class="color-propiedad">"resultado"</span>: [
             {
-                "nombre": "Buscador de Espiritus",
-                "descripcion": "La tuya es una senda que busca la vinculación con el
-                                mundo natural, otorgándote parentesco con bestias.
-                                Cuando adoptas esta senda al nivel 3, ganas..."
+                <span class="color-propiedad">"nombre"</span>: <span
+                            class="color-string">"Senda del Guerrero Totémico"</span>,
+                <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"La Senda del Guerrero Totémico es un viaje 
+                                espiritual, en el que el bárbaro acepta 
+                                un espíritu animal como guía..."</span>,
+                <span class="color-propiedad">"habilidades"</span>: [ ... ]
             },
-                .
-                .
-                .
+
+            ...
 
             ]
 
-    }
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
-                href="http://rrr2dam.com/api/clases/especialidades/habilidades/Buscador de Espiritus"><code>http://rrr2dam.com/api/clases/especialidades/habilidades/{nombre}</code></a>
-        </p>
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases/especialidades/Senda del Guerrero Totémico"><code>http://rrr2dam.com/api/clases/especialidades/{nombre}</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
 
-        "nombre": "Buscador de Espiritus",
-        "descripcion": "La tuya es una senda que busca la vinculación con el
-                        mundo natural, otorgándote parentesco con bestias.
-                        Cuando adoptas esta senda al nivel 3, ganas..."
-
-    }
+        <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Senda del Guerrero Totémico"</span>,
+        <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"La Senda del Guerrero Totémico es un viaje 
+                        espiritual, en el que el bárbaro acepta 
+                        un espíritu animal como guía..."</span>,
+        <span class="color-propiedad">"habilidades"</span>: [ ... ]
+    
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <h2>Habilidades Especialidad <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td>Nombre de la habilidad</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>descripcion</td>
-                <td>Descripción de la habilidad</td>
-                <td>String</td>
-            </tr>
-            </tbody>
-        </table>
+            <h2>Especialidad Clase <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre de la especialidad</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción de la especialidad</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>habilidades</td>
+                        <td>Habilidades que posee la especialidad</td>
+                        <td>Lista con las <a href="#habilidades">Habilidades</a></td>
+                    </tr>
+                </tbody>
+            </table>
 
-    </section>
+        </section>
 
-    <section id="armas" class="seccion">
+        <section id="habilidades" class="seccion">
 
-        <h1>Armas</h1>
-        <div class="separador color-equipo"></div>
+            <h1>Habilidades Especialidad</h1>
+            <div class="separador color-clases"></div>
 
-        <h2>Equipamiento / Armas <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-equipo">GET</span><a
-                href="http://rrr2dam.com/api/equipamiento/armas"><code>http://rrr2dam.com/api/equipamiento/armas</code></a>
-        </p>
+            <h2>Clases / Especialidades / Habilidades <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases/especialidades/habilidades"><code>http://rrr2dam.com/api/clases/especialidades/habilidades</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "tipo": "Arma",
-        "elementos": 37,
-        "resultado": [
+    
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"HabilidadEspecialidad"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">136</span>,
+        <span class="color-propiedad">"resultado"</span>: [
             {
-                "nombre": "Hacha a Dos Manos",
-                "danio": "1d12 cortante",
-                "dosManos": true,
-                "arrojadiza": false,
-                "propiedad": "Marcial, Pesada",
-                "precio": "30 piezas de oro"
+                <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Buscador de Espiritus"</span>,
+                <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"La tuya es una senda que busca la vinculación con el 
+                                mundo natural, otorgándote parentesco con bestias. 
+                                Cuando adoptas esta senda al nivel 3, ganas..."</span>
             },
-                .
-                .
-                .
 
+            ...
+    
             ]
 
-    }
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <p class="p-peticion"><span class="tipo-peticion color-equipo">GET</span><a
-                href="http://rrr2dam.com/api/equipamiento/armas/Hacha a Dos Manos"><code>http://rrr2dam.com/api/equipamiento/armas/{nombre}</code></a>
-        </p>
+            <p class="p-peticion"><span class="tipo-peticion color-clases">GET</span><a
+                    href="http://rrr2dam.com/api/clases/especialidades/habilidades/Buscador de Espiritus"><code>http://rrr2dam.com/api/clases/especialidades/habilidades/{nombre}</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
 
-        "nombre": "Hacha a Dos Manos",
-        "danio": "1d12 cortante",
-        "dosManos": true,
-        "arrojadiza": false,
-        "propiedad": "Marcial, Pesada",
-        "precio": "30 piezas de oro"
-
-    }
+        <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Buscador de Espiritus"</span>,
+        <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"La tuya es una senda que busca la vinculación con el 
+                        mundo natural, otorgándote parentesco con bestias. 
+                        Cuando adoptas esta senda al nivel 3, ganas..."</span>
+    
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <h2>Armas <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td>Nombre del arma</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>danio</td>
-                <td>Dados y tipo de daño del arma</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>dosManos</td>
-                <td>Obligación de usarse a dos manos</td>
-                <td>Boolean</td>
-            </tr>
-            <tr>
-                <td>arrojadiza</td>
-                <td>Posibilidad de lanzar el arma como un proyectil</td>
-                <td>Boolean</td>
-            </tr>
-            <tr>
-                <td>propiedad</td>
-                <td>Descripción de las cualidades del arma</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>precio</td>
-                <td>Precio del arma en tiendas</td>
-                <td>String</td>
-            </tr>
-            </tbody>
-        </table>
+            <h2>Habilidades Especialidad <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre de la habilidad</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción de la habilidad</td>
+                        <td>String</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    </section>
+        </section>
 
-    <section id="armaduras" class="seccion">
+        <section id="armas" class="seccion">
 
-        <h1>Armaduras</h1>
-        <div class="separador color-equipo"></div>
+            <h1>Armas</h1>
+            <div class="separador color-equipo"></div>
 
-        <h2>Equipamiento / Armaduras <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-equipo">GET</span><a
-                href="http://rrr2dam.com/api/equipamiento/armaduras"><code>http://rrr2dam.com/api/equipamiento/armaduras</code></a>
-        </p>
+            <h2>Equipamiento / Armas <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-equipo">GET</span><a
+                    href="http://rrr2dam.com/api/equipamiento/armas"><code>http://rrr2dam.com/api/equipamiento/armas</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "tipo": "Armadura",
-        "elementos": 13,
-        "resultado": [
+    
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Arma"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">37</span>,
+        <span class="color-propiedad">"resultado"</span>: [
             {
-                "nombre": "Armadura de Placas",
-                "tipo": "Pesada",
-                "peso": 65,
-                "claseArmadura": "18",
-                "precio": "1500 piezas de oro",
-                "fuerzaRequerida": 15,
-                "desventajaSigilo": true
+                <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Hacha a Dos Manos"</span>,
+                <span class="color-propiedad">"danio"</span>: <span class="color-string">"1d12 cortante"</span>,
+                <span class="color-propiedad">"dosManos"</span>: <span class="color-integer">true</span>,
+                <span class="color-propiedad">"arrojadiza"</span>: <span class="color-integer">false</span>,
+                <span class="color-propiedad">"propiedad"</span>: <span class="color-string">"Marcial, Pesada"</span>,
+                <span class="color-propiedad">"precio"</span>: <span class="color-string">"30 piezas de oro"</span>
             },
-                .
-                .
-                .
-
+                
+            ...
+    
             ]
 
-    }
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <p class="p-peticion"><span class="tipo-peticion color-equipo">GET</span><a
-                href="http://rrr2dam.com/api/equipamiento/armaduras/Armadura de Placas"><code>http://rrr2dam.com/api/equipamiento/armaduras/{nombre}</code></a>
-        </p>
+            <p class="p-peticion"><span class="tipo-peticion color-equipo">GET</span><a
+                    href="http://rrr2dam.com/api/equipamiento/armas/Hacha a Dos Manos"><code>http://rrr2dam.com/api/equipamiento/armas/{nombre}</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
 
-        "nombre": "Armadura de Placas",
-        "tipo": "Pesada",
-        "peso": 65,
-        "claseArmadura": "18",
-        "precio": "1500 piezas de oro",
-        "fuerzaRequerida": 15,
-        "desventajaSigilo": true
-
-    }
+        <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Hacha a Dos Manos"</span>,
+        <span class="color-propiedad">"danio"</span>: <span class="color-string">"1d12 cortante"</span>,
+        <span class="color-propiedad">"dosManos"</span>: <span class="color-integer">true</span>,
+        <span class="color-propiedad">"arrojadiza"</span>: <span class="color-integer">false</span>,
+        <span class="color-propiedad">"propiedad"</span>: <span class="color-string">"Marcial, Pesada"</span>,
+        <span class="color-propiedad">"precio"</span>: <span class="color-string">"30 piezas de oro"</span>
+    
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <h2>Armadura <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td>Nombre del arma</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>tipo</td>
-                <td>Clasificación de la armadura por peso</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>peso</td>
-                <td>Peso de la armadura en libras</td>
-                <td>Integer</td>
-            </tr>
-            <tr>
-                <td>claseArmadura</td>
-                <td>Umbral de la armadura</td>
-                <td>Integer</td>
-            </tr>
-            <tr>
-                <td>precio</td>
-                <td>Precio de la armadura en tiendas</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>fuerzaRequerida</td>
-                <td>Fureza necesaria para portar la armadura</td>
-                <td>Integer</td>
-            </tr>
-            <tr>
-                <td>desventajaSigilo</td>
-                <td>Penalización por usar la armadura en sigilo</td>
-                <td>Boolean</td>
-            </tr>
-            </tbody>
-        </table>
+            <h2>Armas <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del arma</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>danio</td>
+                        <td>Dados y tipo de daño del arma</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>dosManos</td>
+                        <td>Obligación de usarse a dos manos</td>
+                        <td>Boolean</td>
+                    </tr>
+                    <tr>
+                        <td>arrojadiza</td>
+                        <td>Posibilidad de lanzar el arma como un proyectil</td>
+                        <td>Boolean</td>
+                    </tr>
+                    <tr>
+                        <td>propiedad</td>
+                        <td>Descripción de las cualidades del arma</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>precio</td>
+                        <td>Precio del arma en tiendas</td>
+                        <td>String</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    </section>
+        </section>
 
-    <section id="magic" class="seccion">
+        <section id="armaduras" class="seccion">
 
-        <h1>Hechizos</h1>
-        <div class="separador color-magic"></div>
+            <h1>Armaduras</h1>
+            <div class="separador color-equipo"></div>
 
-        <h2>Equipamiento / Hechizos <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-magic">GET</span><a
-                href="http://rrr2dam.com/api/equipamiento/hechizos"><code>http://rrr2dam.com/api/equipamiento/hechizos</code></a>
-        </p>
+            <h2>Equipamiento / Armaduras <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-equipo">GET</span><a
+                    href="http://rrr2dam.com/api/equipamiento/armaduras"><code>http://rrr2dam.com/api/equipamiento/armaduras</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "tipo": "Hechizo",
-        "elementos": 13,
-        "resultado": [
+    
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Armadura"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">13</span>,
+        <span class="color-propiedad">"resultado"</span>: [
             {
-                "nombre": "Agarre Electrizante",
-                "nivel": 0,
-                "tiempoLanzamiento": "1 acción",
-                "alcance": 0,
-                "duracion": "0",
-                "tiradaSalvacion": "No Tiene",
-                "descripcion": "Un relámpago salta de tu mano para dar una
-                                descarga eléctrica a la criatura que intentas
-                                tocar. Haz un ataque de conjuro..."
+                <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Armadura de Placas"</span>,
+                <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Pesada"</span>,
+                <span class="color-propiedad">"peso"</span>: <span class="color-integer">65</span>,
+                <span class="color-propiedad">"claseArmadura"</span>: <span class="color-integer">18</span>,
+                <span class="color-propiedad">"precio"</span>: <span class="color-string">"1500 piezas de oro"</span>,
+                <span class="color-propiedad">"fuerzaRequerida"</span>: <span class="color-integer">15</span>,
+                <span class="color-propiedad">"desventajaSigilo"</span>: <span class="color-integer">true</span>
             },
-                .
-                .
-                .
 
+            ...
+    
             ]
 
-    }
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <p class="p-peticion"><span class="tipo-peticion color-magic">GET</span><a
-                href="http://rrr2dam.com/api/equipamiento/hechizos/Agarre Electrizante"><code>http://rrr2dam.com/api/equipamiento/hechizos/{nombre}</code></a>
-        </p>
+            <p class="p-peticion"><span class="tipo-peticion color-equipo">GET</span><a
+                    href="http://rrr2dam.com/api/equipamiento/armaduras/Armadura de Placas"><code>http://rrr2dam.com/api/equipamiento/armaduras/{nombre}</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
 
-        "nombre": "Agarre Electrizante",
-        "nivel": 0,
-        "tiempoLanzamiento": "1 acción",
-        "alcance": 0,
-        "duracion": "0",
-        "tiradaSalvacion": "No Tiene",
-        "descripcion": "Un relámpago salta de tu mano para dar una
-                        descarga eléctrica a la criatura que intentas
-                        tocar. Haz un ataque de conjuro..."
-
-    }
+        <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Armadura de Placas"</span>,
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Pesada"</span>,
+        <span class="color-propiedad">"peso"</span>: <span class="color-integer">65</span>,
+        <span class="color-propiedad">"claseArmadura"</span>: <span class="color-integer">18</span>,
+        <span class="color-propiedad">"precio"</span>: <span class="color-string">"1500 piezas de oro"</span>,
+        <span class="color-propiedad">"fuerzaRequerida"</span>: <span class="color-integer">15</span>,
+        <span class="color-propiedad">"desventajaSigilo"</span>: <span class="color-integer">true</span>
+    
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <h2>Hechizo <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td>Nombre del hechizo</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>nivel</td>
-                <td>Nivel del hechizo</td>
-                <td>Integer</td>
-            </tr>
-            <tr>
-                <td>tiempoLanzamiento</td>
-                <td>Acciones necesarias durante el combate para su uso</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>alcance</td>
-                <td>Alcance del hechizo en pies</td>
-                <td>Integer</td>
-            </tr>
-            <tr>
-                <td>duracion</td>
-                <td></td>
-                <td>String
-                </td>
-            </tr>
-            <tr>
-                <td>tiradaSalvacion</td>
-                <td></td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>descripcion</td>
-                <td>Descripción del hechizo</td>
-                <td>Integer</td>
-            </tr>
-            </tbody>
-        </table>
+            <h2>Armadura <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del arma</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>tipo</td>
+                        <td>Clasificación de la armadura por peso</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>peso</td>
+                        <td>Peso de la armadura en libras</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>claseArmadura</td>
+                        <td>Umbral de la armadura</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>precio</td>
+                        <td>Precio de la armadura en tiendas</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>fuerzaRequerida</td>
+                        <td>Fureza necesaria para portar la armadura</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>desventajaSigilo</td>
+                        <td>Penalización por usar la armadura en sigilo</td>
+                        <td>Boolean</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    </section>
+        </section>
 
-    <section id="trasfondo" class="seccion">
+        <section id="magic" class="seccion">
 
-        <h1>Trasfondos</h1>
-        <div class="separador color-vida"></div>
+            <h1>Hechizos</h1>
+            <div class="separador color-magic"></div>
 
-        <h2>Trasfondos <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-vida">GET</span><a
-                href="http://rrr2dam.com/api/trasfondos"><code>http://rrr2dam.com/api/trasfondos</code></a>
-        </p>
+            <h2>Equipamiento / Hechizos <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-magic">GET</span><a
+                    href="http://rrr2dam.com/api/equipamiento/hechizos"><code>http://rrr2dam.com/api/equipamiento/hechizos</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "tipo": "Trasfondo",
-        "elementos": 13,
-        "resultado": [
+    
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Hechizo"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">13</span>,
+        <span class="color-propiedad">"resultado"</span>: [
             {
-                "nombre": "Acólito",
-                "descripcion": "Has dedicado tu vida al servicio de un templo
-                                de un dios específico o un panteón de dioses.
-                                Actúas como intermediario entre el reino..."
-                "competencias": [
-                    .
-                    .
-                    .
-                ]
+                <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Agarre Electrizante"</span>,
+                <span class="color-propiedad">"nivel"</span>: <span class="color-integer">0</span>,
+                <span class="color-propiedad">"tiempoLanzamiento"</span>: <span class="color-string">"1 acción"</span>,
+                <span class="color-propiedad">"alcance"</span>: <span class="color-integer">0</span>,
+                <span class="color-propiedad">"duracion"</span>: <span class="color-string">"0"</span>,
+                <span class="color-propiedad">"tiradaSalvacion"</span>: <span class="color-string">"No Tiene"</span>,
+                <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"Un relámpago salta de tu mano para dar una 
+                                descarga eléctrica a la criatura que intentas 
+                                tocar. Haz un ataque de conjuro..."</span>
             },
-                .
-                .
-                .
+
+            ...
+    
+            ]
+
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <p class="p-peticion"><span class="tipo-peticion color-magic">GET</span><a
+                    href="http://rrr2dam.com/api/equipamiento/hechizos/Agarre Electrizante"><code>http://rrr2dam.com/api/equipamiento/hechizos/{nombre}</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+
+        <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Agarre Electrizante"</span>,
+        <span class="color-propiedad">"nivel"</span>: <span class="color-integer">0</span>,
+        <span class="color-propiedad">"tiempoLanzamiento"</span>: <span class="color-string">"1 acción"</span>,
+        <span class="color-propiedad">"alcance"</span>: <span class="color-integer">0</span>,
+        <span class="color-propiedad">"duracion"</span>: <span class="color-string">"0"</span>,
+        <span class="color-propiedad">"tiradaSalvacion"</span>: <span class="color-string">"No Tiene"</span>,
+        <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"Un relámpago salta de tu mano para dar una 
+                        descarga eléctrica a la criatura que intentas 
+                        tocar. Haz un ataque de conjuro..."</span>
+    
+    }             
+                </code>
+            </pre>
+            </div>
+
+            <h2>Hechizo <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del hechizo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>nivel</td>
+                        <td>Nivel del hechizo</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>tiempoLanzamiento</td>
+                        <td>Acciones necesarias durante el combate para su uso</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>alcance</td>
+                        <td>Alcance del hechizo en pies</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>duracion</td>
+                        <td>Duración del hechizo</td>
+                        <td>String
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>tiradaSalvacion</td>
+                        <td>Si se necesitara, tirada contraria al efecto del hechizo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción del hechizo</td>
+                        <td>String</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section id="trasfondo" class="seccion">
+
+            <h1>Trasfondos</h1>
+            <div class="separador color-vida"></div>
+
+            <h2>Trasfondos <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-vida">GET</span><a
+                    href="http://rrr2dam.com/api/trasfondos"><code>http://rrr2dam.com/api/trasfondos</code></a>
+            </p>
+
+            <div class="contenedor-json">
+                <pre>
+                    <code>
+    {
+    
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Trasfondo"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">13</span>,
+        <span class="color-propiedad">"resultado"</span>: [
+            {
+                <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Acólito"</span>,
+                <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"Has dedicado tu vida al servicio de un templo 
+                                de un dios específico o un panteón de dioses. 
+                                Actúas como intermediario entre el reino..."</span>,
+                <span class="color-propiedad">"competencias"</span>: [ ... ]
+            },
+
+            ...
 
             ]
 
-    }
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <p class="p-peticion"><span class="tipo-peticion color-vida">GET</span><a
-                href="http://rrr2dam.com/api/trasfondos/Acólito"><code>http://rrr2dam.com/api/trasfondos/{nombre}</code></a>
-        </p>
+            <p class="p-peticion"><span class="tipo-peticion color-vida">GET</span><a
+                    href="http://rrr2dam.com/api/trasfondos/Acólito"><code>http://rrr2dam.com/api/trasfondos/{nombre}</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
 
-        "nombre": "Acólito",
-        "descripcion": "Has dedicado tu vida al servicio de un templo
-                        de un dios específico o un panteón de dioses.
-                        Actúas como intermediario entre el reino..."
-        "competencias": [
-            .
-            .
-            .
-        ]
-
-    }
+        <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Acólito"</span>,
+        <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"Has dedicado tu vida al servicio de un templo 
+                        de un dios específico o un panteón de dioses. 
+                        Actúas como intermediario entre el reino..."</span>,
+        <span class="color-propiedad">"competencias"</span>: [ ... ]
+    
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <h2>Trasfondo <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td>Nombre del trasfondo</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>descripcion</td>
-                <td>Descripción del trasfondo</td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>competencias</td>
-                <td>Competencias del trasfondo</td>
-                <td>Lista de <a href="#competencias">Competencias</a></td>
-            </tr>
-            </tbody>
-        </table>
+            <h2>Trasfondo <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del trasfondo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción del trasfondo</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>competencias</td>
+                        <td>Competencias del trasfondo</td>
+                        <td>Lista de <a href="#competencias">Competencias</a></td>
+                    </tr>
+                </tbody>
+            </table>
 
-    </section>
+        </section>
 
-    <section id="alineamiento" class="seccion">
+        <section id="alineamiento" class="seccion">
 
-        <h1>Alineamientos</h1>
-        <div class="separador color-vida"></div>
+            <h1>Alineamientos</h1>
+            <div class="separador color-vida"></div>
 
-        <h2>Trasfondos / Alineamientos <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-vida">GET</span><a
-                href="http://rrr2dam.com/api/trasfondos/alineamientos"><code>http://rrr2dam.com/api/trasfondos/alineamientos</code></a>
-        </p>
+            <h2>Trasfondos / Alineamientos <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-vida">GET</span><a
+                    href="http://rrr2dam.com/api/trasfondos/alineamientos"><code>http://rrr2dam.com/api/trasfondos/alineamientos</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "tipo": "String",
-        "elementos": 7,
-        "resultado": [
-            "Neutral puro",
-            "Neutral malo",
-            "Legal malo",
-            "Caótico malo",
-            "Legal bueno",
-            "Neutral bueno",
-            "Caótico neutral"
+    
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"String"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">7</span>,
+        <span class="color-propiedad">"resultado"</span>: [
+                <span class="color-string">"Neutral puro"</span>,
+                <span class="color-string">"Neutral malo"</span>,
+                <span class="color-string">"Legal malo"</span>,
+                <span class="color-string">"Caótico malo"</span>,
+                <span class="color-string">"Legal bueno"</span>,
+                <span class="color-string">"Neutral bueno"</span>,
+                <span class="color-string">"Caótico neutral"</span>
             ]
 
-    }
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <h2>Alineamiento <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td>Nombre del alineamiento</td>
-                <td>String</td>
-            </tr>
-            </tr>
-            </tbody>
-        </table>
+            <h2>Alineamiento <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del alineamiento</td>
+                        <td>String</td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>
 
-    </section>
+        </section>
 
-    <section id="idiomas" class="seccion">
+        <section id="idiomas" class="seccion">
 
-        <h1>Idiomas</h1>
-        <div class="separador color-vida"></div>
+            <h1>Idiomas</h1>
+            <div class="separador color-vida"></div>
 
-        <h2>Trasfondos / Idiomas <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-vida">GET</span><a
-                href="http://rrr2dam.com/api/trasfondos/idiomas"><code>http://rrr2dam.com/api/trasfondos/idiomas</code></a>
-        </p>
+            <h2>Trasfondos / Idiomas <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-vida">GET</span><a
+                    href="http://rrr2dam.com/api/trasfondos/idiomas"><code>http://rrr2dam.com/api/trasfondos/idiomas</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "tipo": "Idioma",
-        "elementos": 8,
-        "resultado": [
+    
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Idioma"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">8</span>,
+        <span class="color-propiedad">"resultado"</span>: [
         {
-            "nombre": "Dracónico"
+            <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Dracónico"</span>
         },
         {
-            "nombre": "Elfico"
+            <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Elfico"</span>
         },
-            .
-            .
-            .
+
+        ...
 
         ]
 
-    }
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <h2>Idioma <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td>Nombre del idioma</td>
-                <td>String</td>
-            </tr>
-            </tr>
-            </tbody>
-        </table>
+            <h2>Idioma <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre del idioma</td>
+                        <td>String</td>
+                    </tr>
+                    </tr>
+                </tbody>
+            </table>
 
-    </section>
+        </section>
 
-    <section id="competencias" class="seccion">
+        <section id="competencias" class="seccion">
 
-        <h1>Competencias</h1>
-        <div class="separador color-comp"></div>
+            <h1>Competencias</h1>
+            <div class="separador color-comp"></div>
 
-        <h2>Competencias <span class="texto-gris">(endpoint)</span></h2>
-        <p class="p-peticion"><span class="tipo-peticion color-comp">GET</span><a
-                href="http://rrr2dam.com/api/competencias"><code>http://rrr2dam.com/api/competencias</code></a>
-        </p>
+            <h2>Competencias <span class="texto-gris">(endpoint)</span></h2>
+            <p class="p-peticion"><span class="tipo-peticion color-comp">GET</span><a
+                    href="http://rrr2dam.com/api/competencias"><code>http://rrr2dam.com/api/competencias</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
-
-        "tipo": "Competencia",
-        "elementos": 13,
-        "resultado": [
+    
+        <span class="color-propiedad">"tipo"</span>: <span class="color-string">"Competencia"</span>,
+        <span class="color-propiedad">"elementos"</span>: <span class="color-integer">50</span>,
+        <span class="color-propiedad">"resultado"</span>: [
             {
-
+                <span class="color-propiedad">"nombre"</span>: <span class="color-string">"Competencia con Armaduras Ligeras"</span>
+                <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"Te permite usar cualquier armadura catalogada como Ligera"</span>
 
             },
-                .
-                .
-                .
 
+            ...
+    
             ]
 
-    }
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <p class="p-peticion"><span class="tipo-peticion color-comp">GET</span><a
-                href="http://rrr2dam.com/api/competencia"><code>http://rrr2dam.com/api/competencia/{nombre}</code></a>
-        </p>
+            <p class="p-peticion"><span class="tipo-peticion color-comp">GET</span><a
+                    href="http://rrr2dam.com/api/competencia"><code>http://rrr2dam.com/api/competencia/{nombre}</code></a>
+            </p>
 
-        <div class="contenedor-json">
+            <div class="contenedor-json">
                 <pre>
                     <code>
     {
 
-
-
-    }
+        <span class="color-propiedad">"nombre"</span>: <span
+                            class="color-string">"Competencia con Armaduras Ligeras"</span>
+        <span class="color-propiedad">"descripcion"</span>: <span class="color-string">"Te permite usar cualquier armadura catalogada como Ligera"</span>
+    
+    }             
                 </code>
             </pre>
-        </div>
+            </div>
 
-        <h2>Trasfondo <span class="texto-gris">(entidad)</span></h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Tipo</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>nombre</td>
-                <td></td>
-                <td>String</td>
-            </tr>
-            <tr>
-                <td>descripcion</td>
-                <td></td>
-                <td>String</td>
-            </tr>
-            </tbody>
-        </table>
+            <h2>Competencias <span class="texto-gris">(entidad)</span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nombre</td>
+                        <td>Nombre de la competencia</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>descripcion</td>
+                        <td>Descripción de la comptencia</td>
+                        <td>String</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    </section>
-</div>
+        </section>
+
+        <footer>
+            <p> Creado por Miguel Escoz Vilches y Rafael Rus Ruiz. Dungeons & Dragons (D&D) 5e y sus criaturas son
+                marcas registradas de Wizards of the Coast.</p>
+            <a href="https://github.com/mescvil/API-DnD-Spring">
+                <img class="imagen-footer" src="img/github.png" alt="">
+            </a>
+        </footer>
+    </div>
 </body>
 
 </html>

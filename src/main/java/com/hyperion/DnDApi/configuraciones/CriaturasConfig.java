@@ -41,7 +41,7 @@ public class CriaturasConfig {
             @Qualifier("dataSource") DataSource dataSource
     ) {
         Map<String, String> propiedadesConexion = new HashMap<>();
-        propiedadesConexion.put("hibernate.hbm2ddl.auto", "create");
+        propiedadesConexion.put("hibernate.hbm2ddl.auto", "update");
 
         return builder
                 .dataSource(dataSource)
