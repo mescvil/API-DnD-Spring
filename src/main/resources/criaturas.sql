@@ -30,7 +30,7 @@ values
 /*LETRA F*/
 ('Flumph','img/flumph.png','Legal_bueno','Aberración','Pequeño','Telepatia','Vision en la Oscuridad, Percepcion Pasiva 12','C.Arcano +4, Historia +4, Religion +4',0.12,12,7,6,15,10,14,14,11),
 ('Fomoré','img/fomore.png','Caótico_malo','Gigante','Enorme','Gigante, Infracomun','Vision en la Oscuridad, Percepcion Pasiva 18','Percepcion +8, Sigilo +3',8,14,149,23,10,20,9,14,6),
-('Fuego Fatuo','img/fuegoFauto.png','Caótico_malo','Muerto viviente','Diminuto','','Vision en la Oscuridad, Percepcion Pasiva 12','',2,19,22,1,28,10,13,14,11),
+('Fuego Fatuo','img/fuegoFatuo.png','Caótico_malo','Muerto viviente','Diminuto','','Vision en la Oscuridad, Percepcion Pasiva 12','',2,19,22,1,28,10,13,14,11),
 /*LETRA G*/
 ('Garra Reptante','img/garraReptante.png','Neutral_malo','Muerto viviente','Diminuto','','Vision Ciega, Percepcion Pasiva 10','',0,12,2,13,14,11,5,10,4),
 ('Gigante de Piedra','img/gigantePiedra.png','Neutral_puro','Gigante','Enorme','Gigante','Vision en la Oscuridad, Percepcion Pasiva 14','Atletismo +12, Percepcion +4',7,17,126,23,15,20,10,12,9),
