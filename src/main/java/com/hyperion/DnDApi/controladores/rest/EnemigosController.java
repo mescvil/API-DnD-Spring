@@ -2,10 +2,10 @@ package com.hyperion.DnDApi.controladores.rest;
 
 import com.hyperion.DnDApi.configuraciones.RespuestaNoPaginada;
 import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
-import com.hyperion.DnDApi.entidades.criaturas.Accion;
-import com.hyperion.DnDApi.entidades.criaturas.Enemigo;
-import com.hyperion.DnDApi.entidades.criaturas.RasgoCriatura;
-import com.hyperion.DnDApi.servicios.CriaturasService;
+import com.hyperion.DnDApi.entidades.enemigos.Accion;
+import com.hyperion.DnDApi.entidades.enemigos.Enemigo;
+import com.hyperion.DnDApi.entidades.enemigos.RasgoEnemigo;
+import com.hyperion.DnDApi.servicios.EnemigosService;
 import com.hyperion.DnDApi.utilidades.Utilidades;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -21,11 +21,11 @@ import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RestController
-@RequestMapping("/api/criaturas")
-public class CriaturasController {
+@RequestMapping("/api/enemigos")
+public class EnemigosController {
 
     @Autowired
-    private CriaturasService servicio;
+    private EnemigosService servicio;
 
     // ----------------- ENEMIGOS -----------------
     @GetMapping
@@ -84,19 +84,19 @@ public class CriaturasController {
 
     // ----------------- RASGOS -----------------
     @GetMapping("/rasgos")
-    public RespuestaNoPaginada<RasgoCriatura> obtenerRasgos() {
-        return new RespuestaNoPaginada<>(servicio.obtenerRasgos(), RasgoCriatura.class);
+    public RespuestaNoPaginada<RasgoEnemigo> obtenerRasgos() {
+        return new RespuestaNoPaginada<>(servicio.obtenerRasgos(), RasgoEnemigo.class);
     }
 
     @GetMapping("/rasgos/")
-    public RespuestaPaginacion<RasgoCriatura> obtenerRagos(@RequestParam(name = "page", defaultValue = "0") int numeroPagina,
-                                                           @RequestParam(name = "size", defaultValue = "20") int tamanioPagina
+    public RespuestaPaginacion<RasgoEnemigo> obtenerRagos(@RequestParam(name = "page", defaultValue = "0") int numeroPagina,
+                                                          @RequestParam(name = "size", defaultValue = "20") int tamanioPagina
     ) {
         if (numeroPagina < 0)
             throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
 
         Pageable configPagina = PageRequest.of(numeroPagina, tamanioPagina);
-        Page<RasgoCriatura> pagina = servicio.obtenerRasgos(configPagina);
+        Page<RasgoEnemigo> pagina = servicio.obtenerRasgos(configPagina);
 
         if (numeroPagina >= pagina.getTotalPages())
             throw new ResponseStatusException(BAD_REQUEST, "No es posible procesar la solicitud");
@@ -110,24 +110,24 @@ public class CriaturasController {
     }
 
     @GetMapping("/rasgos/{nombre}")
-    public RasgoCriatura obtenerRasgoPorId(@PathVariable("nombre") String nombre) {
+    public RasgoEnemigo obtenerRasgoPorId(@PathVariable("nombre") String nombre) {
         nombre = Utilidades.capitalizaCadena(nombre);
-        RasgoCriatura rasgoCriatura = servicio.obtenerRasgoPorNombre(nombre);
+        RasgoEnemigo rasgoEnemigo = servicio.obtenerRasgoPorNombre(nombre);
 
-        if (rasgoCriatura == null)
+        if (rasgoEnemigo == null)
             throw new ResponseStatusException(NOT_FOUND, "Imposible encontrar el recurso solicitado");
         else
-            return rasgoCriatura;
+            return rasgoEnemigo;
     }
 
     @PutMapping("/rasgos")
-    public boolean agregarRasgo(@Valid @RequestBody RasgoCriatura rasgoCriatura) {
-        return servicio.agregarRasgo(rasgoCriatura);
+    public boolean agregarRasgo(@Valid @RequestBody RasgoEnemigo rasgoEnemigo) {
+        return servicio.agregarRasgo(rasgoEnemigo);
     }
 
     @PostMapping("/rasgos")
-    public boolean actualizarRasgo(@Valid @RequestBody RasgoCriatura rasgoCriatura) {
-        return servicio.actualizarRasgo(rasgoCriatura);
+    public boolean actualizarRasgo(@Valid @RequestBody RasgoEnemigo rasgoEnemigo) {
+        return servicio.actualizarRasgo(rasgoEnemigo);
     }
 
     @DeleteMapping("/rasgos/{nombre}")

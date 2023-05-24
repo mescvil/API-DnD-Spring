@@ -1,11 +1,11 @@
 package com.hyperion.DnDApi.servicios;
 
-import com.hyperion.DnDApi.entidades.criaturas.Accion;
-import com.hyperion.DnDApi.entidades.criaturas.Enemigo;
-import com.hyperion.DnDApi.entidades.criaturas.RasgoCriatura;
-import com.hyperion.DnDApi.repositorios.criaturas.AccionesRepository;
-import com.hyperion.DnDApi.repositorios.criaturas.EnemigosRepository;
-import com.hyperion.DnDApi.repositorios.criaturas.RasgosCriaturasRepository;
+import com.hyperion.DnDApi.entidades.enemigos.Accion;
+import com.hyperion.DnDApi.entidades.enemigos.Enemigo;
+import com.hyperion.DnDApi.entidades.enemigos.RasgoEnemigo;
+import com.hyperion.DnDApi.repositorios.enemigos.AccionesRepository;
+import com.hyperion.DnDApi.repositorios.enemigos.EnemigosRepository;
+import com.hyperion.DnDApi.repositorios.enemigos.RasgosCriaturasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class CriaturasServiceImpl implements CriaturasService {
+public class EnemigosServiceImpl implements EnemigosService {
 
     @Autowired
     private EnemigosRepository repositorioEnemigos;
@@ -66,36 +66,36 @@ public class CriaturasServiceImpl implements CriaturasService {
     // ----------------- RASGOS -----------------
     @Override
     @Cacheable("ragos-criaturas")
-    public List<RasgoCriatura> obtenerRasgos() {
+    public List<RasgoEnemigo> obtenerRasgos() {
         return repositorioRasgos.findAll();
     }
 
     @Override
-    public Page<RasgoCriatura> obtenerRasgos(Pageable pageable) {
+    public Page<RasgoEnemigo> obtenerRasgos(Pageable pageable) {
         return repositorioRasgos.findAll(pageable);
     }
 
     @Override
-    public RasgoCriatura obtenerRasgoPorNombre(String nombre) {
+    public RasgoEnemigo obtenerRasgoPorNombre(String nombre) {
         return repositorioRasgos.findByNombre(nombre);
     }
 
     @Override
-    public boolean agregarRasgo(RasgoCriatura rasgoCriatura) {
-        repositorioRasgos.save(rasgoCriatura);
+    public boolean agregarRasgo(RasgoEnemigo rasgoEnemigo) {
+        repositorioRasgos.save(rasgoEnemigo);
         return true;
     }
 
     @Override
-    public boolean actualizarRasgo(RasgoCriatura rasgoCriatura) {
-        repositorioRasgos.save(rasgoCriatura);
+    public boolean actualizarRasgo(RasgoEnemigo rasgoEnemigo) {
+        repositorioRasgos.save(rasgoEnemigo);
         return true;
     }
 
     @Override
     public boolean eliminaRasgo(String nombre) {
         if (repositorioRasgos.findById(nombre).isPresent()) {
-            RasgoCriatura r = repositorioRasgos.findById(nombre).get();
+            RasgoEnemigo r = repositorioRasgos.findById(nombre).get();
             repositorioRasgos.delete(r);
             return true;
         } else

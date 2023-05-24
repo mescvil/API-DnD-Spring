@@ -1,5 +1,4 @@
-package com.hyperion.DnDApi.entidades.criaturas;
-
+package com.hyperion.DnDApi.entidades.enemigos;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
@@ -10,16 +9,15 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "acciones")
+@Table(name = "rasgos_criaturas")
 @Getter
 @Setter
 @NoArgsConstructor
-public class Accion {
+public class RasgoEnemigo {
     @Id
     @Column(length = 100)
     private String nombre;
 
-    @Column(length = 300)
     private String descripcion;
 
     @ManyToMany(fetch = FetchType.LAZY,
@@ -27,7 +25,7 @@ public class Accion {
                     CascadeType.PERSIST,
                     CascadeType.MERGE
             },
-            mappedBy = "acciones")
+            mappedBy = "rasgoEnemigos")
     @JsonIgnore
     private Set<Enemigo> enemigos;
 }

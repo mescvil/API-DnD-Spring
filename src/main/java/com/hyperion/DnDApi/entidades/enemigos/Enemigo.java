@@ -1,4 +1,4 @@
-package com.hyperion.DnDApi.entidades.criaturas;
+package com.hyperion.DnDApi.entidades.enemigos;
 
 import com.hyperion.DnDApi.entidades.caracteristicas.Alineamiento;
 import lombok.Getter;
@@ -51,7 +51,7 @@ public class Enemigo {
             joinColumns = @JoinColumn(name = "nombre_enemigo"),
             inverseJoinColumns = @JoinColumn(name = "nombre_rasgo")
     )
-    private Set<RasgoCriatura> rasgoCriaturas;
+    private Set<RasgoEnemigo> rasgoEnemigos;
 
     @ManyToMany(
             fetch = FetchType.EAGER,
