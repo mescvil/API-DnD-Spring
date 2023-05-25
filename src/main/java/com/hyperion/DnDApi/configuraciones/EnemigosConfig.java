@@ -22,9 +22,9 @@ import java.util.Map;
 @EnableTransactionManagement
 @EnableJpaRepositories(
         entityManagerFactoryRef = "entityManagerFactory",
-        basePackages = {"com.hyperion.DnDApi.repositorios.criaturas"}
+        basePackages = {"com.hyperion.DnDApi.repositorios.enemigos"}
 )
-public class CriaturasConfig {
+public class EnemigosConfig {
 
     @Primary
     @Bean(name = "dataSource")
@@ -45,7 +45,7 @@ public class CriaturasConfig {
 
         return builder
                 .dataSource(dataSource)
-                .packages("com.hyperion.DnDApi.entidades.criaturas")
+                .packages("com.hyperion.DnDApi.entidades.enemigos")
                 .persistenceUnit("criaturas")
                 .properties(propiedadesConexion)
                 .build();

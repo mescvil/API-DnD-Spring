@@ -1,6 +1,6 @@
-package com.hyperion.DnDApi.repositorios.criaturas;
+package com.hyperion.DnDApi.repositorios.enemigos;
 
-import com.hyperion.DnDApi.entidades.criaturas.Accion;
+import com.hyperion.DnDApi.entidades.enemigos.Accion;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

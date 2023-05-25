@@ -1,14 +1,14 @@
 package com.hyperion.DnDApi.servicios;
 
-import com.hyperion.DnDApi.entidades.criaturas.Accion;
-import com.hyperion.DnDApi.entidades.criaturas.Enemigo;
-import com.hyperion.DnDApi.entidades.criaturas.RasgoCriatura;
+import com.hyperion.DnDApi.entidades.enemigos.Accion;
+import com.hyperion.DnDApi.entidades.enemigos.Enemigo;
+import com.hyperion.DnDApi.entidades.enemigos.RasgoEnemigo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
-public interface CriaturasService {
+public interface EnemigosService {
 
     // ----------------- ENEMIGOS -----------------
     List<Enemigo> obtenerEnemigos();
@@ -24,15 +24,15 @@ public interface CriaturasService {
     boolean eliminaEnemigo(String nombre);
 
     // ----------------- RASGOGS -----------------
-    List<RasgoCriatura> obtenerRasgos();
+    List<RasgoEnemigo> obtenerRasgos();
 
-    Page<RasgoCriatura> obtenerRasgos(Pageable pageable);
+    Page<RasgoEnemigo> obtenerRasgos(Pageable pageable);
 
-    RasgoCriatura obtenerRasgoPorNombre(String nombre);
+    RasgoEnemigo obtenerRasgoPorNombre(String nombre);
 
-    boolean agregarRasgo(RasgoCriatura rasgoCriatura);
+    boolean agregarRasgo(RasgoEnemigo rasgoEnemigo);
 
-    boolean actualizarRasgo(RasgoCriatura rasgoCriatura);
+    boolean actualizarRasgo(RasgoEnemigo rasgoEnemigo);
 
     boolean eliminaRasgo(String nombre);
 
