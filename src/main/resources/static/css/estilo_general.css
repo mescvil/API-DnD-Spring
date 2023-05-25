@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    display: inline-block;
+}
+
+body {
+    display: inline-block;
+    background-color: var(--fondo-negro);
+    color: var(--texto-gris);
+    font-family: NotoSans;
+}
+
+.texto-negrita {
+    font-weight: bold;
+}
+
+kbd {
+    display: inline-block;
+    margin: 0 0.1em;
+    padding: 0.1em 0.6em;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #242729;
+    text-shadow: 0 1px 0 #fff;
+    background-color: #e4e6e8;
+    border: 1px solid #9fa6ad;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(12, 13, 14, .14901960784313725), inset 0 1px 0 0 #fff;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
+/* ===== Barra de desplazamiento ===== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--fondo-negro);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-inicio);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--fondo-rojo);
+}
+
+/* ===== Barra para moviles ===== */
+
+#barra-movil {
+    display: none;
+
+    position: fixed;
+    z-index: 10;
+
+    width: 100%;
+    height: 5%;
+
+    background-color: var(--fondo-tarjeta);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#barra-movil>button {
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: transparent;
+    display: block;
+    height: 100%;
+    width: 10%;
+    font-size: 1.5em;
+}
+
+#barra-movil>button>img {
+    height: 100%;
+}
+
+/* ===== Interior ===== */
+
+#main {
+    width: 88%;
+
+    padding: 8px;
+    margin-left: 12%;
+
+    display: block;
+}
+
+#banner {
+    width: 100%;
+    height: fit-content;
+
+    position: relative;
+}
+
+#banner>img {
+    width: 100%;
+
+    border-radius: 16px;
+}
+
+#banner>h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Kelm;
+
+    color: white;
+    font-size: 100px;
+}
+
+/* ===== Secciones ===== */
+
+.seccion {
+    margin: 12px;
+    margin-bottom: 36px;
+    padding: 16px;
+    border-radius: 8px;
+
+    background-color: var(--fondo-tarjeta);
+}
+
+.seccion>h1 {
+    font-size: 35px;
+}
+
+.seccion>h2 {
+    font-size: 22px;
+}
+
+.texto-gris {
+    color: var(--texto-gris-menos);
+    font-size: 18px;
+}
+
+.seccion>.separador {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    height: 6px;
+    border-radius: 4px;
+}
+
+.seccion>.p-peticion {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.tipo-peticion {
+    padding: 8px;
+    margin-right: 12px;
+    border-radius: 8px;
+    font-weight: 900;
+}
+
+.p-peticion>a {
+    color: var(--texto-gris);
+    font-size: 18px;
+}
+
+.seccion>p {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.seccion>ul,
+.seccion>ol {
+    margin-left: 24px;
+    margin-bottom: 24px;
+}
+
+ol>li {
+    margin-bottom: 8px;
+}
+
+/* ===== Contendor JSON ===== */
+
+.contenedor-json {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 55%;
+
+    font-size: large;
+    background-color: var(--fondo-json);
+    border-radius: 8px;
+}
+
+/* ===== Tabla Entidad ===== */
+
+.seccion>table {
+    width: 55%;
+    margin: 12px;
+
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+td>a {
+    color: var(--fondo-rojo);
+}
+
+
+#inicio {
+    height: fit-content;
+    margin: 10px;
+}
+
+/* ===== Footer ===== */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    padding: 16px;
+    border-radius: 8px;
+
+    background-color: var(--fondo-azul);
+}
+
+.imagen-footer {
+    width: 50px;
+}

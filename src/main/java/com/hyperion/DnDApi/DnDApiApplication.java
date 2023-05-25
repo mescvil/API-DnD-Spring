@@ -5,9 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class DnDApiApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(DnDApiApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DnDApiApplication.class, args);
+    }
 
 }
