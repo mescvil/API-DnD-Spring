@@ -30,18 +30,24 @@ aside {
 	overflow-x: hidden;
 }
 
-aside>img {
-	width: 40%;
-	margin-top: 16px;
-	margin-left: auto;
-	margin-right: auto;
+#contenedor-imagen-nav {
+	width: inherit;
+	height: 120px;
+	position: fixed;
+	background-color: inherit;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
 
-	display: block;
+#contenedor-imagen-nav>img {
+	height: inherit;
 }
 
 nav {
 	height: fit-content;
-	margin-top: 24px;
+	padding-top: 137px;
 	margin-left: 8px;
 	margin-right: 8px;
 }
