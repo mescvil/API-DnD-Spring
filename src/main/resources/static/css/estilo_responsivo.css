@@ -86,11 +86,12 @@
         height: fit-content;
     }
 
-    aside>img {
+    #contenedor-imagen-nav {
         display: none;
     }
 
     aside>nav {
+    	padding-top: 5%;
         text-align: center;
     }
 
