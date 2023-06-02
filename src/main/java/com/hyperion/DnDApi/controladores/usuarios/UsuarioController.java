@@ -1,18 +1,20 @@
 package com.hyperion.DnDApi.controladores.usuarios;
 
 import com.hyperion.DnDApi.entidades.fichas.Usuario;
+import com.hyperion.DnDApi.excepciones.UsuarioExistenteException;
 import com.hyperion.DnDApi.servicios.UsuariosService;
 import com.hyperion.DnDApi.utilidades.Seguridad;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.validation.Valid;
 import java.util.List;
 
 import static org.springframework.http.HttpStatus.*;
 
 @RestController
-@RequestMapping("/private")
+@RequestMapping("api/private")
 public class UsuarioController {
 
     @Autowired
@@ -42,9 +44,20 @@ public class UsuarioController {
     public Usuario login(@RequestBody Usuario usuarioLogin) {
         Usuario usuario = servicio.obtenerUsuarioPorCorreoYContrasenia(usuarioLogin.getCorreo(), usuarioLogin.getContrasenia());
         if (usuario == null)
-            throw new ResponseStatusException(NOT_FOUND, "Usuario o contraseña incorrecta");
+            throw new ResponseStatusException(UNAUTHORIZED, "Usuario o contraseña incorrecta");
         else
             return usuario;
+    }
+
+    @PostMapping("/register")
+    public void registrarUsuario(@Valid @RequestBody Usuario usuario) {
+        try {
+            servicio.registrarUsuario(usuario);
+            throw new ResponseStatusException(CREATED, String.format("Usuario [%s] registrado", usuario.getCorreo()));
+
+        } catch (UsuarioExistenteException e) {
+            throw new ResponseStatusException(BAD_REQUEST, e.getMessage());
+        }
     }
 
     @GetMapping("/encriptar")

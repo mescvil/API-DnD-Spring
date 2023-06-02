@@ -1,6 +1,7 @@
 package com.hyperion.DnDApi.servicios;
 
 import com.hyperion.DnDApi.entidades.fichas.Usuario;
+import com.hyperion.DnDApi.excepciones.UsuarioExistenteException;
 import com.hyperion.DnDApi.repositorios.fichas.UsuariosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,9 +32,11 @@ public class UsuariosServiceImpl implements UsuariosService {
     }
 
     @Override
-    public boolean registrarUsuario(Usuario usuario) {
+    public void registrarUsuario(Usuario usuario) throws UsuarioExistenteException {
+        if (obtenerUsuarioPorCorreo(usuario.getCorreo()) != null)
+            throw new UsuarioExistenteException("El correo ya esta registrado");
+
         repositorioUsuarios.save(usuario);
-        return true;
     }
 
     @Override

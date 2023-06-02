@@ -1,6 +1,7 @@
 package com.hyperion.DnDApi.servicios;
 
 import com.hyperion.DnDApi.entidades.fichas.Usuario;
+import com.hyperion.DnDApi.excepciones.UsuarioExistenteException;
 
 import java.util.List;
 
@@ -14,7 +15,7 @@ public interface UsuariosService {
 
     Usuario obtenerUsuarioPorCorreoYContrasenia(String correo, String contrasenia);
 
-    boolean registrarUsuario(Usuario usuario);
+    void registrarUsuario(Usuario usuario) throws UsuarioExistenteException;
 
     boolean eliminarUsuario(String nombre);
 }
