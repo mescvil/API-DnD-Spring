@@ -427,6 +427,25 @@ insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
 ('Golpe 1','Broza Movediza'),
 ('Absorber','Broza Movediza');
 
+/*Cambion*/
+insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
+('Resistencia a Frío','Cambion),
+('Resistencia a Fuego','Cambion'),
+('Resistencia a Relámpago','Cambion'),
+('Resistencia a Veneno','Cambion'),
+('Resistencia a Contundente','Cambion'),
+('Resistencia a Perforante','Cambion'),
+('Resistencia a Cortante','Cambion'),
+('Visión en la Oscuridad','Cambion'),
+('Bendición Infernal','Cambion'),
+('Lanzamiento de Conjuros Innato','Cambion');
+
+insert into acciones_enemigos(nombre_accion,nombre_enemigo) values
+('Ataque Múltiple 1','Cambion'),
+('Lanza','Cambion'),
+('Rayo de Fuego','Cambion'),
+('Encanto Infernal','Cambion');
+
 /*Cocatriz*/
 insert into rasgos_enemigos(nombre_rasgo,nombre_enemigo) values
 ('Velocidad a Pie 1','Cocatriz'),
