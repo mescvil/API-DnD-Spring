@@ -37,4 +37,10 @@ public class Raza {
             inverseJoinColumns = @JoinColumn(name = "nombre_rasgo")
     )
     private Set<RasgoRaza> rasgosRaza;
+
+    @Column(length = 100, name="imagen_varon")
+    private String imagenVaron;
+
+    @Column(length = 100, name="imagen_hembra")
+    private String imagenHembra;
 }
