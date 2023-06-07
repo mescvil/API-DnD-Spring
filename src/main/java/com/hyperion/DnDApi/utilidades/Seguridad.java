@@ -1,6 +1,5 @@
 package com.hyperion.DnDApi.utilidades;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import javax.crypto.BadPaddingException;
