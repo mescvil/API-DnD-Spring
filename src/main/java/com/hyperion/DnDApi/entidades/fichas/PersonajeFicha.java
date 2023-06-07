@@ -23,7 +23,7 @@ public class PersonajeFicha {
     private float tamanio;
     private int fuerza;
     private int destreza;
-    private int copnstitucion;
+    private int constitucion;
     private int inteligencia;
     private int sabiduria;
     private int carisma;
