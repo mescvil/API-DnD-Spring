@@ -638,7 +638,7 @@ insert into CaracteristicasDevelop.clases_hechizos(nombre_clase,nombre_hechizo) 
 ("Bardo","Disipar Magia"),
 ("Bardo","Don de Lenguas"),
 ("Bardo","Fingir Muerte"),
-("Bardo","Hablar con las PLantas"),
+("Bardo","Hablar con las Plantas"),
 ("Bardo","Hablar con los Muertos"),
 ("Bardo","Imagen Mayor"),
 ("Bardo","Indetectable"),
