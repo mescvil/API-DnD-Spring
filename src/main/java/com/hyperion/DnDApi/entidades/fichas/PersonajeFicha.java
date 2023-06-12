@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "personajes")
@@ -16,7 +17,7 @@ import java.util.List;
 public class PersonajeFicha {
     @Id
     @GeneratedValue
-    private long id;
+    private long idFicha;
     private String nombre;
     private int edad;
     private String alineamiento;
@@ -54,5 +55,13 @@ public class PersonajeFicha {
     )
     @JsonIgnore
     private List<Usuario> usuarios;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PersonajeFicha that = (PersonajeFicha) o;
+        return idFicha == that.idFicha;
+    }
 
 }

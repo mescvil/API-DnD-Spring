@@ -38,5 +38,14 @@ public class FichasServiceImpl implements FichasService{
         usuariosRepository.save(usuario);
     }
 
+    @Override
+    public void eliminarFicha(String correo, long idFicha) {
+        Usuario usuario = usuariosRepository.findByCorreo(correo);
+        PersonajeFicha ficha = personajeFichaRepository.findByIdFicha(idFicha);
+        usuario.deleteFicha(ficha);
+        usuariosRepository.save(usuario);
+        personajeFichaRepository.delete(ficha);
+    }
+
 
 }

@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -35,5 +36,9 @@ public class Usuario {
 
     public void addFicha(PersonajeFicha ficha){
         personajes.add(ficha);
+    }
+
+    public void deleteFicha(PersonajeFicha ficha){
+        personajes.remove(ficha);
     }
 }
