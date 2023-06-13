@@ -15,26 +15,26 @@ import static org.springframework.http.HttpStatus.OK;
 
 
 @RestController
-@RequestMapping("/api/fichas")
+@RequestMapping("api/private/fichas")
 public class FichasController {
 
     @Autowired
     private FichasService servicio;
 
-    @GetMapping
-    public RespuestaNoPaginada<PersonajeFicha> obtenerPersonajes (@RequestBody Usuario usuario){
-        return new RespuestaNoPaginada<>(servicio.obtenerPersonajesUsuario(usuario.getCorreo()),PersonajeFicha.class);
-    }
-
     @PostMapping
-    public void registraFichas (@RequestBody PayloadUsuarioFicha payload){
-            servicio.registraFicha(payload.getFicha(), payload.getCorreo());
-            throw new ResponseStatusException(CREATED, "La ficha se ha añadido correctamente");
+    public RespuestaNoPaginada<PersonajeFicha> obtenerPersonajes(@RequestBody Usuario usuario) {
+        return new RespuestaNoPaginada<>(servicio.obtenerPersonajesUsuario(usuario.getCorreo()), PersonajeFicha.class);
     }
 
-    @DeleteMapping
-    public void eliminarFicha(@RequestBody PayloadFichaCorreo payload){
-        servicio.eliminarFicha(payload.getCorreo(),payload.getIdFicha());
+    @PostMapping("/registrar")
+    public void registraFichas(@RequestBody PayloadUsuarioFicha payload) {
+        servicio.registraFicha(payload.getFicha(), payload.getCorreo());
+        throw new ResponseStatusException(CREATED, "La ficha se ha añadido correctamente");
+    }
+
+    @PostMapping("/borrar")
+    public void eliminarFicha(@RequestBody PayloadFichaCorreo payload) {
+        servicio.eliminarFicha(payload.getCorreo(), payload.getIdFicha());
         throw new ResponseStatusException(OK, "La ficha se ha eliminado correctamente");
     }
 
