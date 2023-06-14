@@ -7,8 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
-public class FichasServiceImpl implements FichasService{
+public class FichasServiceImpl implements FichasService {
 
     // ----------------- REPOSITORIOS -----------------
     @Autowired
@@ -34,8 +35,10 @@ public class FichasServiceImpl implements FichasService{
     @Override
     public void registraFicha(PersonajeFicha ficha, String correo) {
         Usuario usuario = usuariosRepository.findByCorreo(correo);
-        usuario.addFicha(ficha);
-        usuariosRepository.save(usuario);
+        if (usuario != null) {
+            usuario.addFicha(ficha);
+            usuariosRepository.save(usuario);
+        }
     }
 
     @Override

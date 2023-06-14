@@ -1,11 +1,11 @@
 package com.hyperion.DnDApi.controladores.rest;
 
-import com.hyperion.DnDApi.configuraciones.RespuestaNoPaginada;
-import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Idioma;
 import com.hyperion.DnDApi.entidades.caracteristicas.trasfondos.Trasfondo;
 import com.hyperion.DnDApi.servicios.TrasfondosService;
 import com.hyperion.DnDApi.utilidades.Utilidades;
+import com.hyperion.DnDApi.utilsRest.RespuestaNoPaginada;
+import com.hyperion.DnDApi.utilsRest.RespuestaPaginacion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

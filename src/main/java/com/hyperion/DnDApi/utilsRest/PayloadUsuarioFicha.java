@@ -1,12 +1,13 @@
-package com.hyperion.DnDApi.configuraciones;
+package com.hyperion.DnDApi.utilsRest;
 
 import com.hyperion.DnDApi.entidades.fichas.PersonajeFicha;
-import lombok.Getter;
+import lombok.Data;
 
-@Getter
+@Data
 public class PayloadUsuarioFicha {
-    private final String correo;
-    private final PersonajeFicha ficha;
+
+    private String correo;
+    private PersonajeFicha ficha;
 
     public PayloadUsuarioFicha(String correo, PersonajeFicha ficha) {
         this.correo = correo;

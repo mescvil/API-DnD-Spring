@@ -29,6 +29,7 @@ public class ClaseFicha {
     @Column(name = "tiradas_salvacion")
     private String tiradasSalvacion;
 
+    @Column(length = 2500)
     private String rasgos;
 
     private String especialidad;

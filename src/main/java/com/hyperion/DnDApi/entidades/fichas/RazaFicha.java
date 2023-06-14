@@ -18,7 +18,10 @@ public class RazaFicha {
     @GeneratedValue
     private long idRaza;
     private String nombre;
+
+    @Column(length = 2000)
     private String rasgos;
+
     @OneToOne(mappedBy = "raza")
     @JsonIgnore
     private PersonajeFicha ficha;

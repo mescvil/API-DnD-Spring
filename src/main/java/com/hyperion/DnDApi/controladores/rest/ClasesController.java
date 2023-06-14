@@ -1,13 +1,13 @@
 package com.hyperion.DnDApi.controladores.rest;
 
-import com.hyperion.DnDApi.configuraciones.RespuestaNoPaginada;
-import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.caracteristicas.clases.Clase;
 import com.hyperion.DnDApi.entidades.caracteristicas.clases.Especialidad;
 import com.hyperion.DnDApi.entidades.caracteristicas.clases.HabilidadEspecialidad;
 import com.hyperion.DnDApi.entidades.caracteristicas.clases.RasgoClase;
 import com.hyperion.DnDApi.servicios.ClasesService;
 import com.hyperion.DnDApi.utilidades.Utilidades;
+import com.hyperion.DnDApi.utilsRest.RespuestaNoPaginada;
+import com.hyperion.DnDApi.utilsRest.RespuestaPaginacion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

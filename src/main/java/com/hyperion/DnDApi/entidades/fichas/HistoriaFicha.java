@@ -20,6 +20,7 @@ public class HistoriaFicha {
 
     private String idiomas;
 
+    @Column(length = 3000)
     private String competencias;
 
     @OneToOne(mappedBy = "historia")

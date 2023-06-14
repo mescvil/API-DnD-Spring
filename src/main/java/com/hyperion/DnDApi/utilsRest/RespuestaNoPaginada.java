@@ -1,4 +1,4 @@
-package com.hyperion.DnDApi.configuraciones;
+package com.hyperion.DnDApi.utilsRest;
 
 import lombok.Getter;
 

@@ -17,10 +17,13 @@ public class EquipamientoFicha {
     @GeneratedValue
     private long idEquipamiento;
 
+    @Column(length = 2000)
     private String armas;
 
+    @Column(length = 2000)
     private String armaduras;
 
+    @Column(length = 2000)
     private String hechizos;
 
     @OneToOne(mappedBy = "equipamiento")
