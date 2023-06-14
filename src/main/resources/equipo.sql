@@ -48,19 +48,19 @@ insert into CaracteristicasDevelop.armas (nombre,arrojadiza,danio,dos_manos,prop
 
 */
 insert into CaracteristicasDevelop.armaduras(nombre,tipo,clase_armadura,desventaja_sigilo,fuerza_requerida,peso,precio) values
-("Acolchada","Ligera","11 + Des",false,0,8,"5 piezas de oro"),
-("Cuero","Ligera","11 + Des",false,0,10,"10 piezas de oro"),
-("Cuero Tachonado","Ligera","12 + Des",false,0,13,"45 piezas de oro"),
-("Camisa de Malla","Media","13 + Des (máx. 2)",false,0,20,"50 piezas de oro"),
-("Cota de Escamas","Media","14 + Des (máx. 2)",true,0,45,"50 piezas de oro"),
-("Coraza","Media","14 + Des (máx. 2)",false,0,20,"400 piezas de oro"),
-("Media Armadura","Media","15 + Des(máx. 2)",true,0,40,"750 piezas de oro"),
-("Pieles","Media","12 + Des (máx. 2)",false,0,12,"10 piezas de oro"),
-("Armadura de Bandas","Pesada","17",true,15,60,"200 piezas de oro"),
-("Armadura de Placas","Pesada","18", true, 15, 65,"1500 piezas de oro"),
-("Cota Guarnecida","Pesada","14",true,0,40,"30 piezas de oro"),
-("Cota de Malla","Pesada","16",true,13,55,"75 piezas de oro"),
-("Escudo","Escudo","+2",false,0,6,"10 piezas de oro");
+("Acolchada","Ligera",11,false,0,8,"5 piezas de oro"),
+("Cuero","Ligera",11,false,0,10,"10 piezas de oro"),
+("Cuero Tachonado","Ligera",12,false,0,13,"45 piezas de oro"),
+("Camisa de Malla","Media",13,false,0,20,"50 piezas de oro"),
+("Cota de Escamas","Media",14,true,0,45,"50 piezas de oro"),
+("Coraza","Media",15,false,0,20,"400 piezas de oro"),
+("Media Armadura","Media",15,true,0,40,"750 piezas de oro"),
+("Pieles","Media",12,false,0,12,"10 piezas de oro"),
+("Armadura de Bandas","Pesada",17,true,15,60,"200 piezas de oro"),
+("Armadura de Placas","Pesada",18, true, 15, 65,"1500 piezas de oro"),
+("Cota Guarnecida","Pesada",14,true,0,40,"30 piezas de oro"),
+("Cota de Malla","Pesada",16,true,13,55,"75 piezas de oro"),
+("Escudo","Escudo",2,false,0,6,"10 piezas de oro");
 
 /*
 
