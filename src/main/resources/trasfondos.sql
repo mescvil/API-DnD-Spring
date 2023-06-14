@@ -23,7 +23,7 @@ insert into CaracteristicasDevelop.trasfondos (nombre, descripcion) values
 
 */
 insert into CaracteristicasDevelop.idiomas values
-("Abisal"),("Aquan"),("Auran"),("Celestial"),("Común"),("Lengua de las profundidades"),("Dacónido"),("Druidico"),
+("Abisal"),("Aquan"),("Auran"),("Celestial"),("Común"),("Lengua de las profundidades"),("Dracónido"),("Druidico"),
 ("Enano"),("Elfico"),("Gigante"),("Gnomico"),("Goblin"),("Mediano"),("Ignan"),("Infernal"),("Orco"),("Primordial"),
 ("Sylvano"),("Terran"),("Supracomun");
 
@@ -69,8 +69,6 @@ insert into CaracteristicasDevelop.trasfondos_idiomas (nombre_trasfondo,nombre_i
 ("Salvaje","Común"),
 ("Salvaje","Dracónido"),
 ("Salvaje","Enano"),
-
-
 ("Soldado","Común"),
 ("Soldado","Enano"),
 ("Soldado","Orco");
