@@ -3,16 +3,16 @@
 ========================= RAZAS =========================
 
 */
-insert into CaracteristicasDevelop.razas (nombre, edad_maxima, altura_maxima, altura_minima,velocidad) values
-("Dracónidos",80,8,6,30),
-("Tiefling",110,6,5,30),
-("Enanos",350,5,4,25),
-("Elfos",750,6,5,30),
-("Mediano",250,3,3,25),
-("Humano",95,6,5,30),
-("Gnomo",500,4,3,25),
-("Semielfo",180,6,5,30),
-("Semiorco",75,6,5,30);
+insert into CaracteristicasDevelop.razas (nombre, edad_maxima, altura_maxima, altura_minima,velocidad,imagen_varon,imagen_hembra) values
+("Dracónidos",80,8,6,30,"img/draconido.png","img/draconida.png"),
+("Tiefling",110,6,5,30,"img/tieflingo.png","img/tieflinga.png"),
+("Enanos",350,5,4,25,"img/enano.png","img/enana.png"),
+("Elfos",750,6,5,30,"img/elfo.png","img/elfa.png"),
+("Mediano",250,3,3,25,"img/mediano.png","img/mediana.png"),
+("Humano",95,6,5,30,"img/humano.png","img/humana.png"),
+("Gnomo",500,4,3,25,"img/gnomo.png","img/gnoma.png"),
+("Semielfo",180,6,5,30,"img/semi_elfo.png","img/semi_elfa.png"),
+("Semiorco",75,6,5,30,"img/semi_orco.png","img/semi_orca.png");
 
 /*
 

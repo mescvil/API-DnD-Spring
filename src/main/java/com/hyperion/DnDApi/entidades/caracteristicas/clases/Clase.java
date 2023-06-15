@@ -95,4 +95,7 @@ public class Clase {
     )
     private Set<Competencia> competencias;
 
+    @Column(length = 100)
+    private String imagen;
+
 }

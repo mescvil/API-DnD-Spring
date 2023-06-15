@@ -1,12 +1,12 @@
 package com.hyperion.DnDApi.controladores.rest;
 
-import com.hyperion.DnDApi.configuraciones.RespuestaNoPaginada;
-import com.hyperion.DnDApi.configuraciones.RespuestaPaginacion;
 import com.hyperion.DnDApi.entidades.caracteristicas.equipamiento.Arma;
 import com.hyperion.DnDApi.entidades.caracteristicas.equipamiento.Armadura;
 import com.hyperion.DnDApi.entidades.caracteristicas.equipamiento.Hechizo;
 import com.hyperion.DnDApi.servicios.EquipamientoService;
 import com.hyperion.DnDApi.utilidades.Utilidades;
+import com.hyperion.DnDApi.utilsRest.RespuestaNoPaginada;
+import com.hyperion.DnDApi.utilsRest.RespuestaPaginacion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -14,9 +14,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-
-import java.util.ArrayList;
-import java.util.logging.Logger;
 
 import static com.hyperion.DnDApi.utilidades.Utilidades.esNumerico;
 import static org.springframework.http.HttpStatus.BAD_REQUEST;

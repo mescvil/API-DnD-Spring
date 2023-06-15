@@ -1,15 +1,5 @@
 /*
 
-========================= IDIOMAS =========================
-
-*/
-insert into CaracteristicasDevelop.idiomas values
-("Abisal"),("Aquan"),("Auran"),("Celestial"),("Común"),("Lengua de las profundidades"),("Dacónido"),("Druidico"),
-("Enano"),("Elfico"),("Gigante"),("Gnomico"),("Goblin"),("Mediano"),("Ignan"),("Infernal"),("Orco"),("Primordial"),
-("Sylvano"),("Terran"),("Supracomun");
-
-/*
-
 ========================= TRASFONDOS =========================
 
 */
@@ -27,3 +17,58 @@ insert into CaracteristicasDevelop.trasfondos (nombre, descripcion) values
 ("Noble","Entiendes las riquezas, el poder y los privilegios. Posees un título nobiliario y tu familia es dueña de tierras, recauda impuestos y ostenta una influencia política no desdeñable."),
 ("Salvaje","Creciste en la naturaleza, apartado de la civilización y las comodidades que la ciudad y la tecnología proporcionan. Has sido testigo de migraciones de rebaños más grandes que algunos bosques, has sobrevivido a climas más extremos de lo que cualquier urbanita podría concebir y has disfrutado de la soledad de quien se sabe el único ser inteligente en millas a la redonda"),
 ("Soldado","Desde que tienes memoria, la guerra ha sido tu vida. Te entrenaste desde pequeño, estudiando el uso de tus armas y tu armadura. Aprendiste técnicas básicas de supervivencia, entre las que se encontraban como salir vivo del campo de batalla. Puede que formaras parte de las fuerzas regulares de un ejército nacional o una compañía mercenaria, o tal vez luchabas en una milicia local que adquirió protagonismo durante una guerra reciente.");
+/*
+
+========================= IDIOMAS =========================
+
+*/
+insert into CaracteristicasDevelop.idiomas values
+("Abisal"),("Aquan"),("Auran"),("Celestial"),("Común"),("Lengua de las profundidades"),("Dracónido"),("Druidico"),
+("Enano"),("Elfico"),("Gigante"),("Gnomico"),("Goblin"),("Mediano"),("Ignan"),("Infernal"),("Orco"),("Primordial"),
+("Sylvano"),("Terran"),("Supracomun");
+
+/*
+
+========================= RELACION-TRASFONDOS =========================
+
+*/
+insert into CaracteristicasDevelop.trasfondos_idiomas (nombre_trasfondo,nombre_idioma) values
+("Acólito","Común"),
+("Acólito","Elfico"),
+("Acólito","Infernal"),
+("Animador","Común"),
+("Animador","Dracónido"),
+("Animador","Enano"),
+("Artesano gremial","Común"),
+("Artesano gremial","Elfico"),
+("Artesano gremial","Enano"),
+("Charlatán","Común"),
+("Charlatán","Elfico"),
+("Charlatán","Orco"),
+("Criminal","Común"),
+("Criminal","Dracónido"),
+("Criminal","Enano"),
+("Ermitaño","Común"),
+("Ermitaño","Dracónido"),
+("Ermitaño","Enano"),
+("Erudito","Común"),
+("Erudito","Elfico"),
+("Erudito","Enano"),
+("Héroe del Pueblo","Común"),
+("Héroe del Pueblo","Orco"),
+("Héroe del Pueblo","Mediano"),
+("Huérfano","Común"),
+("Huérfano","Dracónido"),
+("Huérfano","Orco"),
+("Marinero","Común"),
+("Marinero","Elfico"),
+("Marinero","Enano"),
+("Noble","Común"),
+("Noble","Elfico"),
+("Noble","Mediano"),
+("Salvaje","Común"),
+("Salvaje","Dracónido"),
+("Salvaje","Enano"),
+("Soldado","Común"),
+("Soldado","Enano"),
+("Soldado","Orco");

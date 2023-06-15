@@ -24,7 +24,7 @@ public class Armadura {
     private int peso;
 
     @Column(name = "clase_armadura")
-    private String claseArmadura;
+    private int claseArmadura;
 
     private String precio;
 

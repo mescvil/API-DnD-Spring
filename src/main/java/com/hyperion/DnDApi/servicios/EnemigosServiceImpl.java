@@ -60,7 +60,6 @@ public class EnemigosServiceImpl implements EnemigosService {
             return true;
         } else
             return false;
-
     }
 
     // ----------------- RASGOS -----------------
