@@ -2,6 +2,10 @@
 
 @media only screen and (max-width: 1700px) {
 
+    aside {
+        display: block;
+    }
+
     .contenedor-json,
     .seccion>table {
         width: 70%;
@@ -12,6 +16,10 @@
 /* ===== Pantalla de 1440p ===== */
 
 @media only screen and (max-width: 1440px) {
+    aside {
+        display: block;
+    }
+
     aside {
         width: 18%;
     }
@@ -31,6 +39,10 @@
 
 @media only screen and (max-width: 1350px) {
 
+    aside {
+        display: block;
+    }
+
     .contenedor-json,
     .seccion>table {
         width: 80%;
@@ -41,6 +53,10 @@
 
 @media only screen and (max-width: 1350px) {
 
+    aside {
+        display: block;
+    }
+
     .contenedor-json,
     .seccion>table {
         width: 95%;
@@ -49,26 +65,7 @@
 
 /* ===== Pantalla de 1024p ===== */
 
-@media only screen and (max-width: 1024px) {
-    #banner>h1 {
-        font-size: 80px;
-    }
-
-    aside {
-        display: block;
-        width: 20%;
-    }
-
-    #main {
-        width: 80%;
-        margin-left: 20%;
-    }
-
-    .contenedor-json,
-    .seccion>table {
-        width: 100%;
-    }
-}
+@media only screen and (max-width: 1024px) {}
 
 /* ===== Pantalla de movil y tableta ===== */
 
@@ -76,14 +73,14 @@
 
     #barra-movil {
         display: block;
+        height: 75px;
     }
 
     aside {
-        margin-top: 8%;
         display: none;
         z-index: 5;
         width: 100%;
-        height: fit-content;
+        height: 100%;
     }
 
     #contenedor-imagen-nav {
@@ -91,8 +88,9 @@
     }
 
     aside>nav {
-    	padding-top: 5%;
+        padding-top: 85px;
         text-align: center;
+        height: 100%;
     }
 
     .lista {
@@ -101,16 +99,13 @@
 
     #main {
         width: 100%;
-        margin-top: 80px;
+        margin-top: 85px;
         margin-left: 0;
     }
 }
 
 @media only screen and (max-width: 900px) {
-    #main {
-        width: 100%;
-        padding: 0
-    }
+
 
     /* Textos */
 
